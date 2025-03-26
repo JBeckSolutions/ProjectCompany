@@ -9,29 +9,40 @@ public class MazeGenerator : MonoBehaviour
     private Cell mazeCellPrefab;
 
     [SerializeField]
+    private Cell mazeCellPrefab2;
+
+    [SerializeField]
     private int _mazeWidth;
     [SerializeField]
     private int _mazeDepth;
+    [SerializeField]
+    private int _levels;
 
     private Cell[,] _mazeGrid;
+    private Cell[,] _2mazeGrid;
     // To Start with fully functional Maze, switch IEnumerator for void and remove yield return
     IEnumerator Start()
     {
         _mazeGrid = new Cell[_mazeWidth, _mazeDepth];
-
-        for (int x = 0; x < _mazeWidth; x++)
+        _2mazeGrid = new Cell[_mazeWidth, _mazeDepth];
+        for (int y = 0; y < _levels; y++)
         {
-            for (int z = 0; z < _mazeDepth; z++)
+            for (int x = 0; x < _mazeWidth; x++)
             {
-                _mazeGrid[x, z] = Instantiate(mazeCellPrefab, new Vector3(x, 0, z), Quaternion.identity);
+                for (int z = 0; z < _mazeDepth; z++)
+                {
+                    if(y % 2 == 0)
+                        _mazeGrid[x, z] = Instantiate(mazeCellPrefab, new Vector3(x, y, z), Quaternion.identity);
+                    else
+                        _mazeGrid[x, z] = Instantiate(mazeCellPrefab2, new Vector3(x, y, z), Quaternion.identity);
+                }
             }
+            yield return GenerateMaze(null, _mazeGrid[0, 0], _mazeGrid);
         }
 
-        yield return GenerateMaze(null, _mazeGrid[0, 0]);
-        
     }
 
-    private IEnumerator GenerateMaze(Cell previousCell, Cell currentCell)
+    private IEnumerator GenerateMaze(Cell previousCell, Cell currentCell, Cell[,] mazeGrid)
     {
         currentCell.Visit();
         ClearWalls(previousCell, currentCell);
@@ -43,32 +54,32 @@ public class MazeGenerator : MonoBehaviour
         do
         {
 
-            nextCell = GetNextUnvisitedCell(currentCell);
+            nextCell = GetNextUnvisitedCell(currentCell, mazeGrid);
 
             if (nextCell != null)
             {
-                yield return GenerateMaze(currentCell, nextCell);
+                yield return GenerateMaze(currentCell, nextCell, mazeGrid);
             }
 
         } while (nextCell != null); 
     }
 
-    private Cell GetNextUnvisitedCell(Cell currentCell)
+    private Cell GetNextUnvisitedCell(Cell currentCell,Cell[,] mazeGrid)
     {
-        var unvisitedCell = GetUnvisitedCell(currentCell);
+        var unvisitedCell = GetUnvisitedCell(currentCell, mazeGrid);
 
         return unvisitedCell.OrderBy(_  => Random.Range(1,10)).FirstOrDefault();
 
     }
 
-    private IEnumerable<Cell> GetUnvisitedCell(Cell currentCell)
+    private IEnumerable<Cell> GetUnvisitedCell(Cell currentCell, Cell[,] mazeGrid)
     {
         int x = (int) currentCell.transform.position.x;
         int z = (int) currentCell.transform.position.z;
 
         if(x+1 < _mazeWidth)
         {
-            var cellToRight = _mazeGrid[x+1, z];
+            var cellToRight = mazeGrid[x+1, z];
 
             if(cellToRight.IsVisited == false)
             {
@@ -77,7 +88,7 @@ public class MazeGenerator : MonoBehaviour
         }
         if (x - 1 >= 0)
         {
-            var cellToLeft = _mazeGrid[x - 1, z];
+            var cellToLeft = mazeGrid[x - 1, z];
 
             if (cellToLeft.IsVisited == false)
             {
@@ -86,7 +97,7 @@ public class MazeGenerator : MonoBehaviour
         }
         if (z + 1 < _mazeDepth)
         {
-            var cellToFront = _mazeGrid[x, z + 1];
+            var cellToFront = mazeGrid[x, z + 1];
 
             if (cellToFront.IsVisited == false)
             {
@@ -95,7 +106,7 @@ public class MazeGenerator : MonoBehaviour
         }
         if (z - 1 >= 0)
         {
-            var cellToBack = _mazeGrid[x, z - 1];
+            var cellToBack = mazeGrid[x, z - 1];
 
             if (cellToBack.IsVisited == false)
             {
