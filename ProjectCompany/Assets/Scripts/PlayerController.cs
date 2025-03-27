@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
 using UnityEngine.Jobs;
+using UnityEngine.Animations;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private CharacterController characterController;
 
     [SerializeField] private GameObject playerCamera;
+
+    [SerializeField] private PlayerInventoryManager playerInventory;
 
     private Vector2 moveInput;
     private float yAxisVelocity;
@@ -83,7 +86,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnSprint(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.performed)
+        if (characterController.isGrounded && context.started)
         {
             sprinting = true;
         }
@@ -95,7 +98,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.performed)
+        if (characterController.isGrounded && context.started)
         {
             yAxisVelocity = 0;
             yAxisVelocity += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
@@ -108,7 +111,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnOpenMenu(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.started)
         {
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -119,6 +122,32 @@ public class PlayerController : NetworkBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+            }
+        }
+    }
+    public void OnInventoryScroll(InputAction.CallbackContext context)
+    {
+        //Doesnt work yet
+
+        //if (context.performed)
+        //{
+        //    playerInventory.ChangeActiveInventorySlot((int)context.ReadValue<float>());
+        //}
+    }
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        Debug.Log("Interact");
+        if (context.started)
+        {
+            Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
+            if (Physics.Raycast(ray, out RaycastHit hitinfo, 5f))
+            {
+                Debug.Log(hitinfo.transform.name);
+                if (hitinfo.collider.transform.GetComponent<Item>())
+                {
+                    playerInventory.AddItem(hitinfo.collider.transform.GetComponent<Item>());
+                }
             }
         }
     }
