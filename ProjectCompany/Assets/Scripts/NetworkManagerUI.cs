@@ -5,13 +5,20 @@ using UnityEngine.UI;
 public class NetworkManagerUI : MonoBehaviour
 {
     [SerializeField] private Button serverButton;
-    [SerializeField] private Button HostButton;
-    [SerializeField] private Button ClientButton;
+    [SerializeField] private Button hostButton;
+    [SerializeField] private Button clientButton;
+    [SerializeField] private Button loadLvl;
 
     private void Awake()
     {
         serverButton.onClick.AddListener(() => NetworkManager.Singleton.StartServer());
-        HostButton.onClick.AddListener(() => NetworkManager.Singleton.StartHost());
-        ClientButton.onClick.AddListener(() => NetworkManager.Singleton.StartClient());
+        hostButton.onClick.AddListener(() => NetworkManager.Singleton.StartHost());
+        clientButton.onClick.AddListener(() => NetworkManager.Singleton.StartClient());
+        loadLvl.onClick.AddListener(() => LoadTestLvl());
+    }
+
+    public void LoadTestLvl()
+    {
+        NetworkManager.Singleton.SceneManager.LoadScene("TestLevel", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 }
