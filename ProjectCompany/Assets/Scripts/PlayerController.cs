@@ -125,21 +125,50 @@ public class PlayerController : NetworkBehaviour
             }
         }
     }
-    public void OnInventoryScroll(InputAction.CallbackContext context)
+    public void OnDrop(InputAction.CallbackContext context)
     {
-        //Doesnt work yet
-
-        //if (context.performed)
-        //{
-        //    playerInventory.ChangeActiveInventorySlot((int)context.ReadValue<float>());
-        //}
+        if (context.started)
+        {
+            playerInventory.DropItem();
+        }
     }
+    #region InventorySlotControls
+    public void OnInventorySlotOne(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(0);
+        }
+    }
+    public void OnInventorySlotTwo(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(1);
+        }
+    }
+    public void OnInventorySlotThree(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(2);
+        }
+    }
+    public void OnInventorySlotFour(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(3);
+        }
+    }
+    #endregion
     public void OnInteract(InputAction.CallbackContext context)
     {
         Debug.Log("Interact");
         if (context.started)
         {
-            Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+            Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(screenCenter);
             Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
             if (Physics.Raycast(ray, out RaycastHit hitinfo, 5f))
             {

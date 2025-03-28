@@ -1,10 +1,14 @@
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Item : NetworkBehaviour
 {
     public NetworkVariable<bool> PickupAble = new NetworkVariable<bool>(true);
     [SerializeField] private GameObject model;
+    [SerializeField] private Collider itemCollider;
+    public Texture2D InventoryImage;
+
     [ServerRpc(RequireOwnership = false)]
     public virtual void PickUpServerRpc(NetworkObjectReference PlayerReference) //Server picks the item up for the client
     {
@@ -40,6 +44,12 @@ public class Item : NetworkBehaviour
         PickupAble.Value = true;
         this.transform.SetParent(null);
         this.transform.position = position;
+        DropClientRpc(position);
+    }
+    [ClientRpc]
+    public virtual void DropClientRpc(Vector3 position)
+    {
+        this.transform.position = position;
     }
     [ServerRpc]
     public void ToggleVisibilityServerRpc(bool state)   //Server send all clients the message to run the ToggleVisibilityClientRpc function
@@ -50,5 +60,6 @@ public class Item : NetworkBehaviour
     private void ToggleVisibilityClientRpc(bool state)  //Toggles visibility on all clients
     {
         model.SetActive(state);
+        itemCollider.enabled = state;
     }
 }
