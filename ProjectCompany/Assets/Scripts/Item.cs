@@ -33,7 +33,7 @@ public class Item : NetworkBehaviour
         }
     }
     [ClientRpc]
-    private void SyncLocalPositionToClientsClientRpc(Vector3 localHandPosition)
+    private void SyncLocalPositionToClientsClientRpc(Vector3 localHandPosition) //Syncs the position to the clients
     {
         this.transform.localPosition = localHandPosition;
         this.transform.localRotation = Quaternion.identity;
@@ -47,7 +47,7 @@ public class Item : NetworkBehaviour
         DropClientRpc(position);
     }
     [ClientRpc]
-    public virtual void DropClientRpc(Vector3 position)
+    public virtual void DropClientRpc(Vector3 position) //Syncs the position to the clients
     {
         this.transform.position = position;
     }

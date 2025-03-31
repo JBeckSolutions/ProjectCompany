@@ -164,7 +164,7 @@ public class PlayerController : NetworkBehaviour
     #endregion
     public void OnInteract(InputAction.CallbackContext context)
     {
-        Debug.Log("Interact");
+        //Debug.Log("Interact");
         if (context.started)
         {
             Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
@@ -172,10 +172,14 @@ public class PlayerController : NetworkBehaviour
             Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
             if (Physics.Raycast(ray, out RaycastHit hitinfo, 5f))
             {
-                Debug.Log(hitinfo.transform.name);
-                if (hitinfo.collider.transform.GetComponent<Item>())
+                //Debug.Log(hitinfo.transform.name);
+                if (hitinfo.collider.GetComponent<Item>())
                 {
-                    playerInventory.AddItem(hitinfo.collider.transform.GetComponent<Item>());
+                    playerInventory.AddItem(hitinfo.collider.GetComponent<Item>());
+                }
+                if (hitinfo.collider.GetComponent<InteractableObject>())
+                {
+                    hitinfo.collider.GetComponent<InteractableObject>().Use();
                 }
             }
         }
