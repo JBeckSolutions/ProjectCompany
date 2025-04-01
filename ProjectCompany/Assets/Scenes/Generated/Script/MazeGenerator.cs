@@ -18,13 +18,14 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField]
     private int _levels;
 
-    private Cell[,] _mazeGrid;
-    private Cell[,] _2mazeGrid;
+    private Cell[,] mazeGrid;
+
+    private string mazeSeed;
     // To Start with fully functional Maze, switch IEnumerator for void and remove yield return
     IEnumerator Start()
     {
-        _mazeGrid = new Cell[_mazeWidth, _mazeDepth];
-        _2mazeGrid = new Cell[_mazeWidth, _mazeDepth];
+        mazeSeed = "D:" + _mazeWidth + "X" + _mazeDepth + "???";
+        mazeGrid = new Cell[_mazeWidth, _mazeDepth];
         for (int y = 0; y < _levels; y++)
         {
             for (int x = 0; x < _mazeWidth; x++)
@@ -32,12 +33,13 @@ public class MazeGenerator : MonoBehaviour
                 for (int z = 0; z < _mazeDepth; z++)
                 {
                     if(y % 2 == 0)
-                        _mazeGrid[x, z] = Instantiate(mazeCellPrefab, new Vector3(x, y, z), Quaternion.identity);
+                        mazeGrid[x, z] = Instantiate(mazeCellPrefab, new Vector3(x, y, z), Quaternion.identity);
                     else
-                        _mazeGrid[x, z] = Instantiate(mazeCellPrefab2, new Vector3(x, y, z), Quaternion.identity);
+                        mazeGrid[x, z] = Instantiate(mazeCellPrefab2, new Vector3(x, y, z), Quaternion.identity);
                 }
             }
-            yield return GenerateMaze(null, _mazeGrid[0, 0], _mazeGrid);
+            yield return GenerateMaze(null, mazeGrid[0, 0], mazeGrid);
+            GenerateMazeSeed();
         }
 
     }
@@ -146,6 +148,17 @@ public class MazeGenerator : MonoBehaviour
             currentCell.ClearFrontWall();
             return;
         }
+
+    }
+
+    public void GenerateMazeSeed()
+    {
+        foreach(Cell c in mazeGrid)
+        {
+            mazeSeed += c.getSeed().ToString() + "#";
+        }
+        mazeSeed.Remove(mazeSeed.Length - 1);
+        mazeSeed += "&&&";
 
     }
 
