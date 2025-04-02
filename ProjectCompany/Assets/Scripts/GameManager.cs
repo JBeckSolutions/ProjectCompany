@@ -32,7 +32,7 @@ public class GameManager : NetworkBehaviour
     [ServerRpc]
     public void StartRoundServerRpc()   //Starts a round (Only the host can start it)
     {
-        NetworkManager.Singleton.SceneManager.LoadScene("TestLevel", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        NetworkManager.Singleton.SceneManager.LoadScene("TestLevel", LoadSceneMode.Single);
         RoundRunning = true;
     }
     [ServerRpc(RequireOwnership = false)]
