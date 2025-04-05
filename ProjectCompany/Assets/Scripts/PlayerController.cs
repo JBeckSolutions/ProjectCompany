@@ -32,7 +32,6 @@ public class PlayerController : NetworkBehaviour
             playerCamera.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            DontDestroyOnLoad(gameObject);
         }
     }
     private void Update()
