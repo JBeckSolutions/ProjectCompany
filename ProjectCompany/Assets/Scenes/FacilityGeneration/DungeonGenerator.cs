@@ -18,11 +18,6 @@ public class DungeonGenerator : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(GenerateDungeon());
-    }
-
-    public IEnumerator GenerateDungeon()
-    {
         if (useRandomSeed)
         {
             seed = Random.Range(int.MinValue, int.MaxValue);
@@ -31,6 +26,11 @@ public class DungeonGenerator : MonoBehaviour
         Random.InitState(seed);
         Debug.Log("Dungeon Seed: " + seed);
 
+        StartCoroutine(GenerateDungeon());
+    }
+
+    public IEnumerator GenerateDungeon()
+    {
         GameObject start = Instantiate(startingRoomPrefab, Vector3.zero, Quaternion.identity);
         Room startRoom = start.GetComponent<Room>();
         placedRooms.Add(startRoom);
@@ -70,7 +70,7 @@ public class DungeonGenerator : MonoBehaviour
             connectionPoint.gameObject.SetActive(false);
             availableConnections.Remove(newRoomEntrance);
 
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
     }
