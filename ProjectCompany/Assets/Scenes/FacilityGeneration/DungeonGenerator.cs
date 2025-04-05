@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,10 +18,10 @@ public class DungeonGenerator : MonoBehaviour
 
     private void Start()
     {
-        GenerateDungeon();
+        StartCoroutine(GenerateDungeon());
     }
 
-    public void GenerateDungeon()
+    public IEnumerator GenerateDungeon()
     {
         if (useRandomSeed)
         {
@@ -66,7 +67,10 @@ public class DungeonGenerator : MonoBehaviour
             placedRooms.Add(roomComponent);
             availableConnections.AddRange(roomComponent.connectionPoints);
             availableConnections.Remove(connectionPoint);
+            connectionPoint.gameObject.SetActive(false);
             availableConnections.Remove(newRoomEntrance);
+
+            yield return null;
         }
 
     }
