@@ -31,6 +31,10 @@ public class PlayerController : NetworkBehaviour
         {
             gameObject.GetComponent<PlayerInput>().enabled = false;
             playerCamera.SetActive(false);
+        }
+
+        if (IsOwner)
+        {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }

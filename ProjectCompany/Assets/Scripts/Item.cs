@@ -1,5 +1,6 @@
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Item : NetworkBehaviour
@@ -42,7 +43,14 @@ public class Item : NetworkBehaviour
     public virtual void DropServerRpc(Vector3 position) //Server drops the item at the specefied position and sets the item parent to null
     {
         PickupAble.Value = true;
-        this.transform.SetParent(null);
+        if (GameObject.Find("GeneratedItems"))
+        {
+            this.transform.SetParent(GameObject.Find("GeneratedItems").transform);
+        }
+        else
+        {
+            this.transform.SetParent(null);
+        }
         this.transform.position = position;
         DropClientRpc(position);
     }
