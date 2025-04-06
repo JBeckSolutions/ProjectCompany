@@ -12,6 +12,7 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float sensitivity = 0.2f;
     [SerializeField] private CharacterController characterController;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private GameObject playerCamera;
 
@@ -30,15 +31,20 @@ public class PlayerController : NetworkBehaviour
         {
             gameObject.GetComponent<PlayerInput>().enabled = false;
             playerCamera.SetActive(false);
+        }
+
+        if (IsOwner)
+        {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            DontDestroyOnLoad(gameObject);
         }
     }
     private void Update()
     {
+        if (!IsOwner) return;
         HandleLook();
-        HandleMovement();
+        HandleMovementAndAnimation();
+
     }
    
     //Handles Rotation based on the input of the player
@@ -56,7 +62,7 @@ public class PlayerController : NetworkBehaviour
         transform.Rotate(Vector3.up * mouseX);
     }
     //Handles Movement based on the input of the player
-    private void HandleMovement()
+    private void HandleMovementAndAnimation()
     {
         Vector3 forward = playerCamera.transform.forward;
         Vector3 right = playerCamera.transform.right;
@@ -71,6 +77,9 @@ public class PlayerController : NetworkBehaviour
             _moveInput *= movementSpeed;
         }
 
+        animator.SetFloat("Speed", _moveInput.magnitude); //Set animation for client
+        HandleAnimationServerRpc(_moveInput.magnitude, false);   //Set animation for everyone else
+
         Vector3 moveDirection = (forward.normalized * _moveInput.y) + (right.normalized * _moveInput.x);
         yAxisVelocity += gravityValue * Time.deltaTime;
         moveDirection.y = yAxisVelocity;
@@ -79,6 +88,18 @@ public class PlayerController : NetworkBehaviour
         {
             yAxisVelocity = 0f;
         }
+    }
+    [ServerRpc]
+    private void HandleAnimationServerRpc(float speed, bool isJumping)
+    {
+        HandleAnimationClientRpc(speed, isJumping);
+    }
+    [ClientRpc]
+    private void HandleAnimationClientRpc(float speed, bool isJumping)
+    {
+        if (IsOwner) return;
+        animator.SetFloat("Speed", speed);
+        animator.SetBool("isJumping", isJumping);
     }
     public void OnMove(InputAction.CallbackContext context)
     {

@@ -8,4 +8,9 @@ public class PlayerState : NetworkBehaviour
     {
         GameManager.Singelton.PlayerStates.Add(this);
     }
+
+    public override void OnNetworkSpawn()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 }
