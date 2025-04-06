@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class DungeonGenerator : MonoBehaviour
 {
@@ -18,19 +19,20 @@ public class DungeonGenerator : MonoBehaviour
 
     private void Start()
     {
-        if (useRandomSeed)
-        {
-            seed = Random.Range(int.MinValue, int.MaxValue);
-        }
-
-        Random.InitState(seed);
-        Debug.Log("Dungeon Seed: " + seed);
-
         StartCoroutine(GenerateDungeon());
     }
 
     public IEnumerator GenerateDungeon()
     {
+        if (useRandomSeed)
+        {
+            Random CreateSeed = new Random();
+            seed = CreateSeed.Next(int.MinValue, int.MaxValue);
+        }
+
+        Random Random = new Random(seed);
+        Debug.Log("Dungeon Seed: " + seed);
+
         GameObject start = Instantiate(startingRoomPrefab, Vector3.zero, Quaternion.identity);
         Room startRoom = start.GetComponent<Room>();
         placedRooms.Add(startRoom);
@@ -40,8 +42,8 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (availableConnections.Count == 0) break;
 
-            Transform connectionPoint = availableConnections[Random.Range(0, availableConnections.Count)];
-            GameObject roomPrefab = roomPrefabs[Random.Range(0, roomPrefabs.Count)];
+            Transform connectionPoint = availableConnections[Random.Next(availableConnections.Count)];
+            GameObject roomPrefab = roomPrefabs[Random.Next(0, roomPrefabs.Count)];
             GameObject newRoom = Instantiate(roomPrefab);
 
             Room roomComponent = newRoom.GetComponent<Room>();
@@ -58,6 +60,8 @@ public class DungeonGenerator : MonoBehaviour
             newRoom.transform.position = connectionPoint.position;
             newRoom.transform.localPosition += offset;
 
+            yield return new WaitForFixedUpdate();
+
             if (IsOverlapping(newRoom))
             {
                 Destroy(newRoom);
@@ -69,8 +73,6 @@ public class DungeonGenerator : MonoBehaviour
             availableConnections.Remove(connectionPoint);
             connectionPoint.gameObject.SetActive(false);
             availableConnections.Remove(newRoomEntrance);
-
-            yield return new WaitForFixedUpdate();
         }
 
     }

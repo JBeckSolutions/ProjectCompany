@@ -271,8 +271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomPrefabs:
   - {fileID: 2940436588932720859, guid: 665975ca8f2e24845b38a366bf810d09, type: 3}
+  - {fileID: 722010845794418520, guid: 7dd521a4a965c6344ac7dbaaf8fadd31, type: 3}
   startingRoomPrefab: {fileID: 7718902646292200323, guid: 6417d70b4680c1f47aee6cc4f3ef8017, type: 3}
-  maxRooms: 200
+  maxRooms: 2000
   useRandomSeed: 1
   seed: 0
   placedRooms: []
