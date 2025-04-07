@@ -10,7 +10,7 @@
     "com.unity.multiplayer.samples.coop": "https://github.com/Unity-Technologies/com.unity.multiplayer.samples.coop.git?path=/Packages/com.unity.multiplayer.samples.coop#main",
     "com.unity.multiplayer.tools": "2.2.3",
     "com.unity.netcode.gameobjects": "2.2.0",
-    "com.unity.render-pipelines.universal": "17.0.4",
+    "com.unity.render-pipelines.high-definition": "17.0.4",
     "com.unity.test-framework": "1.4.6",
     "com.unity.timeline": "1.8.7",
     "com.unity.ugui": "2.0.0",
