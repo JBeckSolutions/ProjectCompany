@@ -4,13 +4,9 @@ using UnityEngine;
 public class PlayerState : NetworkBehaviour
 {
     public NetworkVariable<bool> PlayerReadyState = new NetworkVariable<bool>(false);
-    private void Start()
-    {
-        GameManager.Singelton.PlayerStates.Add(this);
-    }
 
     public override void OnNetworkSpawn()
     {
-        DontDestroyOnLoad(gameObject);
+        GameManager.Singelton.PlayerStates.Add(this);
     }
 }

@@ -15,10 +15,12 @@ public class DungeonGenerator : NetworkBehaviour
     [SerializeField] private List<GameObject> itemPrefabs;
     [SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] private GameObject generatedItemsParent;
+    [SerializeField] private GameObject generatedEnemiesParent;
 
     [Header("Generation Options")]
     [SerializeField] private int maxRooms;
     [SerializeField] private int itemCount;
+    [SerializeField] private int enemyCount;
 
     [Header("Seed")]
     [SerializeField] private bool useRandomSeed = true;
@@ -26,6 +28,7 @@ public class DungeonGenerator : NetworkBehaviour
 
     [Header("Generated objects")]
     [SerializeField] private List<Room> placedRooms = new List<Room>();
+    [SerializeField] private List<GameObject> placedEnemies = new List<GameObject>();
     [SerializeField] private List<Transform> availableConnections = new List<Transform>();
     [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();
     [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();
@@ -195,7 +198,7 @@ public class DungeonGenerator : NetworkBehaviour
             //Item Spawning
 
             //Spawn parent for items
-            GameObject generatedItemParent = Instantiate(generatedItemsParent, Vector3.zero, Quaternion.identity);
+            GameObject generatedItemParent = Instantiate(this.generatedItemsParent, Vector3.zero, Quaternion.identity);
             generatedItemParent.GetComponent<NetworkObject>().Spawn(true);
 
             //Genrate and spawn the items
@@ -213,6 +216,28 @@ public class DungeonGenerator : NetworkBehaviour
                 itemsSpawned += 1;
             }
             Debug.Log(itemsSpawned + " Items Spawned");
+
+            //Enemy Spawning
+
+            //Spawn parent for Enemies
+            GameObject generatedEnemiesParent = Instantiate(this.generatedEnemiesParent, Vector3.zero, Quaternion.identity);
+            generatedEnemiesParent.GetComponent<NetworkObject>().Spawn(true);
+
+            //Genrate and spawn the Enemies
+            int enemiesSpawned = 0;
+            for (int i = 0; i < enemyCount; i++)
+            {
+                int randomEnemySpawnpoint = Random.Next(0, availableEnemySpawns.Count);
+                int randomEnemy = Random.Next(0, enemyPrefabs.Count);
+                float randomRotation = (float)(0.0 + (360.0 - 0.0) * Random.NextDouble());
+                Quaternion Rotation = Quaternion.Euler(0f, randomRotation, 0f);
+                GameObject newEnemy = Instantiate(enemyPrefabs[randomEnemy], availableEnemySpawns[randomEnemySpawnpoint].position, Rotation);
+                newEnemy.GetComponent<NetworkObject>().Spawn(true);
+                newEnemy.transform.SetParent(generatedEnemiesParent.transform);
+                availableEnemySpawns.Remove(availableEnemySpawns[randomEnemySpawnpoint]);
+                enemiesSpawned += 1;
+            }
+            Debug.Log(enemiesSpawned + " Enemies spawned");
         }
 
         

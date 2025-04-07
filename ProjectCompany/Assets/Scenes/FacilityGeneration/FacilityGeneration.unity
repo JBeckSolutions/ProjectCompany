@@ -156,13 +156,17 @@ MonoBehaviour:
   startingRoomPrefab: {fileID: 7718902646292200323, guid: 6417d70b4680c1f47aee6cc4f3ef8017, type: 3}
   itemPrefabs:
   - {fileID: 2156017288405549669, guid: 0feeba41a541b2e4f9777d1e646ffbe3, type: 3}
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 8924282795677139858, guid: 2ffed25f58727034a88f99b61fb95d05, type: 3}
   generatedItemsParent: {fileID: 7841871041383228874, guid: 86f130f5f76670f4e9a13afd7e7e9215, type: 3}
+  generatedEnemiesParent: {fileID: 7841871041383228874, guid: 7053a261f6c37a7428a44e38f5b5c89e, type: 3}
   maxRooms: 500
   itemCount: 50
+  enemyCount: 10
   useRandomSeed: 1
   seed: 0
   placedRooms: []
+  placedEnemies: []
   availableConnections: []
   availableItemSpawns: []
   availableEnemySpawns: []
