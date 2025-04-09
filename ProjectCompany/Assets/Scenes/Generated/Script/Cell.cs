@@ -35,12 +35,22 @@ public class Cell : MonoBehaviour
     {
         String walls = Convert.ToString(Seed, 2);
         wallBinary = new int[6];
-        wallBinary[0] = walls[0];
-        wallBinary[1] = walls[1];
-        wallBinary[2] = walls[2];
-        wallBinary[3] = walls[3];
-        wallBinary[4] = walls[4];
-        wallBinary[5] = walls[5];
+        for (int i = 0; i < 6; i++)
+        {
+            wallBinary[i] = walls[i] - '0';
+        }
+        setSeed();
+        GenerateCell();
+    }
+
+    public void Init(int bitcode)
+    {
+        String walls = Convert.ToString(bitcode, 2).PadLeft(6, '0');
+        wallBinary = new int[6];
+        for (int i = 0; i < 6; i++)
+        {
+            wallBinary[i] = walls[i] - '0';
+        }
         setSeed();
         GenerateCell();
     }
@@ -123,14 +133,20 @@ public class Cell : MonoBehaviour
 
     public void ClearTopWall()
     {
-        _topWall.SetActive(false);
+        if (_topWall != null)
+        {
+            _topWall.SetActive(false);
+        }
         wallBinary[4] = 0;
         setSeed();
     }
 
     public void ClearBottomWall()
-    { 
-        _bottomWall.SetActive(false);
+    {
+        if (_bottomWall != null)
+        {
+            _bottomWall.SetActive(false);
+        }
         wallBinary[5] = 0;
         setSeed();
     }

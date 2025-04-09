@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scenes/Generated/UI/ButtonStyles.uss?fileID=7433441132597879392&amp;guid=4071a5cdcfa59b448b0ca79d26ca5faf&amp;type=3#ButtonStyles" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: flex-end; align-self: auto; align-content: auto;">
+        <ui:RadioButtonGroup label="Additional Modifications" name="RoomsRadioButtonGroup" choices="1 Big Room,1 Big Room + 1 Small Room,4 Small Rooms" style="align-items: center; flex-direction: column; justify-content: flex-start; align-self: auto; background-color: rgb(255, 255, 255); align-content: auto;" />
+        <ui:VisualElement name="Container" style="flex-grow: 1; justify-content: flex-start; align-items: center; flex-basis: auto; width: auto; background-color: rgba(56, 56, 56, 0); align-content: auto; align-self: auto;">
+            <ui:IntegerField label="Dimensions AXA" value="42" name="DimensionInteger" />
+            <ui:IntegerField label="Level" value="42" name="LevelInteger" />
+            <ui:IntegerField label="Path Limit" value="42" name="PathLimitInteger" />
+            <ui:Button text="Generate" name="GenerateButton" class="button" style="-unity-text-align: middle-center;" />
+            <ui:VisualElement style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

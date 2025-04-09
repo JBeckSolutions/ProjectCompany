@@ -1,0 +1,14 @@
+.button {
+    border-left-color: rgb(248, 8, 8);
+    border-top-color: rgb(248, 8, 8);
+    border-right-color: rgb(248, 8, 8);
+    border-bottom-color: rgb(248, 8, 8);
+    align-items: auto;
+    align-content: auto;
+}
+
+.radiobutton {
+}
+
+.radiobutton.checkmark {
+}
