@@ -32,7 +32,7 @@ public class GameManager : NetworkBehaviour
     [ServerRpc]
     public void StartRoundServerRpc()   //Starts a round (Only the host can start it)
     {
-        NetworkManager.Singleton.SceneManager.LoadScene("FacilityGeneration", LoadSceneMode.Additive);
+        NetworkManager.Singleton.SceneManager.LoadScene("DungeonGenerator", LoadSceneMode.Additive);
         RoundRunning = true;
     }
     [ServerRpc(RequireOwnership = false)]
@@ -41,6 +41,6 @@ public class GameManager : NetworkBehaviour
         RoundRunning = false;
         itemsDroppedOff = DropOffAreaManager.ItemList;
         DropOffAreaManager = null;
-        NetworkManager.Singleton.SceneManager.LoadScene("NetcodeLobbyRunning", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        NetworkManager.Singleton.SceneManager.LoadScene("Lobby", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 }

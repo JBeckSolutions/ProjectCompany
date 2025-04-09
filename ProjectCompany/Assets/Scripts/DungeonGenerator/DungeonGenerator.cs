@@ -294,7 +294,7 @@ public class DungeonGenerator : NetworkBehaviour
             Debug.Log(enemiesSpawned + " Enemies spawned");
         }
 
-        
+        PlayerSpawnManager.Singelton.TeleportLocalPlayer();
 
     }
 
