@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.AI.Navigation;
 using Unity.Netcode;
 using UnityEngine;
@@ -9,6 +10,21 @@ using Random = System.Random;
 
 public class DungeonGenerator : NetworkBehaviour
 {
+    private struct Connection
+    {
+        public Transform ConnectionLocation;
+        public int ConnectionPriority;
+
+        public Connection (Transform transform, int value)
+        {
+            ConnectionLocation = transform;
+            ConnectionPriority = value;
+        }
+    }
+
+
+
+
     [Header("Prefabs")]
     [SerializeField] private List<GameObject> roomPrefabs;
     [SerializeField] private GameObject startingRoomPrefab;
@@ -29,7 +45,7 @@ public class DungeonGenerator : NetworkBehaviour
     [Header("Generated objects")]
     [SerializeField] private List<Room> placedRooms = new List<Room>();
     [SerializeField] private List<GameObject> placedEnemies = new List<GameObject>();
-    [SerializeField] private List<Transform> availableConnections = new List<Transform>();
+    [SerializeField] private List<Connection> availableConnections = new List<Connection>();
     [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();
     [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();
 
@@ -71,14 +87,17 @@ public class DungeonGenerator : NetworkBehaviour
 
         Room startRoom = start.GetComponent<Room>();
         placedRooms.Add(startRoom);
-        availableConnections.AddRange(startRoom.ConnectionPoints);
+        availableConnections.AddRange(startRoom.ConnectionPoints.Select(item => new Connection(item, -1)));
 
         for (int i = 0; i < maxRooms; i++)
         {
             if (availableConnections.Count == 0) break;
 
-            Transform connectionPoint = availableConnections[Random.Next(availableConnections.Count)];
-            GameObject roomPrefab = roomPrefabs[Random.Next(0, roomPrefabs.Count)];
+            int randomConnectionIndex = Random.Next(availableConnections.Count);
+            Transform connectionPoint = availableConnections[randomConnectionIndex].ConnectionLocation;
+
+            int randomRoomPrefabIndex = Random.Next(0, roomPrefabs.Count);
+            GameObject roomPrefab = roomPrefabs[randomRoomPrefabIndex];
             GameObject newRoom = Instantiate(roomPrefab);
 
             Room roomComponent = newRoom.GetComponent<Room>();
@@ -113,12 +132,28 @@ public class DungeonGenerator : NetworkBehaviour
             }
 
             placedRooms.Add(roomComponent);
-            availableConnections.AddRange(roomComponent.ConnectionPoints);
-            availableConnections.Remove(connectionPoint);
-            availableConnections.Remove(newRoomEntrance);
+            availableConnections.AddRange((roomComponent.ConnectionPoints.Select(item => new Connection(item, randomRoomPrefabIndex))));
 
-            connectionPoint.gameObject.SetActive(false);
-            newRoomEntrance.gameObject.SetActive(false);
+            if (availableConnections.FirstOrDefault(item => item.ConnectionLocation == connectionPoint).ConnectionPriority <= availableConnections.FirstOrDefault(item => item.ConnectionLocation == newRoomEntrance).ConnectionPriority)
+            {
+                connectionPoint.Find("Wall").gameObject.SetActive(false);
+                connectionPoint.Find("Door").gameObject.SetActive(true);
+
+                newRoomEntrance.Find("Wall").gameObject.SetActive(false);
+                newRoomEntrance.Find("Door").gameObject.SetActive(false);
+            }
+            else
+            {
+                connectionPoint.Find("Wall").gameObject.SetActive(false);
+                connectionPoint.Find("Door").gameObject.SetActive(false);
+
+                newRoomEntrance.Find("Wall").gameObject.SetActive(false);
+                newRoomEntrance.Find("Door").gameObject.SetActive(true);
+            }
+
+            availableConnections.RemoveAll(item => item.ConnectionLocation == connectionPoint);
+            availableConnections.RemoveAll(item => item.ConnectionLocation == newRoomEntrance);
+
         }
 
 
@@ -130,11 +165,11 @@ public class DungeonGenerator : NetworkBehaviour
 
         for (int i = 0; i < availableConnections.Count; i++)
         {
-            Transform connection = availableConnections[i];
+            Transform connection = availableConnections[i].ConnectionLocation.transform;
 
             for (int j = i + 1; j < availableConnections.Count; j++)
             {
-                Transform connectionToCompare = availableConnections[j];
+                Transform connectionToCompare = availableConnections[j].ConnectionLocation.transform;
                 
                 if (connection.transform.position == connectionToCompare.transform.position)
                 {
@@ -144,8 +179,8 @@ public class DungeonGenerator : NetworkBehaviour
 
                     if (randomDoor <= 1)
                     {
-                        availableConnections.Remove(connectionToCompare);
-                        availableConnections.Remove(connection);
+                        availableConnections.RemoveAll(item => item.ConnectionLocation == connectionToCompare);
+                        availableConnections.RemoveAll(item => item.ConnectionLocation == connection);
 
                         possibleDoorsRemoved += 1;
 
@@ -154,10 +189,25 @@ public class DungeonGenerator : NetworkBehaviour
                     }
                     else if (randomDoor > 1)
                     {
-                        availableConnections.Remove(connectionToCompare);
-                        availableConnections.Remove(connection);
-                        connection.gameObject.SetActive(false);
-                        connectionToCompare.gameObject.SetActive(false);
+                        if (availableConnections.FirstOrDefault(item => item.ConnectionLocation == connection).ConnectionPriority <= availableConnections.FirstOrDefault(item => item.ConnectionLocation == connectionToCompare).ConnectionPriority)
+                        {
+                            connection.Find("Wall").gameObject.SetActive(false);
+                            connection.Find("Door").gameObject.SetActive(true);
+
+                            connectionToCompare.Find("Wall").gameObject.SetActive(false);
+                            connectionToCompare.Find("Door").gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            connection.Find("Wall").gameObject.SetActive(false);
+                            connection.Find("Door").gameObject.SetActive(false);
+
+                            connectionToCompare.Find("Wall").gameObject.SetActive(false);
+                            connectionToCompare.Find("Door").gameObject.SetActive(true);
+                        }
+
+                        availableConnections.RemoveAll(item => item.ConnectionLocation == connectionToCompare);
+                        availableConnections.RemoveAll(item => item.ConnectionLocation == connection);
 
                         doorsAdded += 1;
 
@@ -205,6 +255,8 @@ public class DungeonGenerator : NetworkBehaviour
             int itemsSpawned = 0;
             for (int i = 0; i < itemCount; i++)
             {
+                if (availableItemSpawns.Count <= 0) break;
+
                 int randomItemSpawnpoint = Random.Next(0, availableItemSpawns.Count);
                 int randomItem = Random.Next(0, itemPrefabs.Count);
                 float randomRotation = (float)(0.0 + (360.0 - 0.0) * Random.NextDouble());
@@ -227,6 +279,8 @@ public class DungeonGenerator : NetworkBehaviour
             int enemiesSpawned = 0;
             for (int i = 0; i < enemyCount; i++)
             {
+                if (availableEnemySpawns.Count <= 0) break;
+
                 int randomEnemySpawnpoint = Random.Next(0, availableEnemySpawns.Count);
                 int randomEnemy = Random.Next(0, enemyPrefabs.Count);
                 float randomRotation = (float)(0.0 + (360.0 - 0.0) * Random.NextDouble());

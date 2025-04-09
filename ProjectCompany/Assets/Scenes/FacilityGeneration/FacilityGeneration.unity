@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -151,9 +151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   roomPrefabs:
-  - {fileID: 1595446153090595809, guid: c00cf1dcca5b709489435e49cde390b5, type: 3}
   - {fileID: 111126949708525185, guid: d49d0d08db6e6c54fa0bb48105f40759, type: 3}
   - {fileID: 6846202440844278822, guid: 1f0686de4637fb04793ebf46f83f5f7d, type: 3}
+  - {fileID: 1595446153090595809, guid: c00cf1dcca5b709489435e49cde390b5, type: 3}
   startingRoomPrefab: {fileID: 7718902646292200323, guid: 6417d70b4680c1f47aee6cc4f3ef8017, type: 3}
   itemPrefabs:
   - {fileID: 2156017288405549669, guid: 0feeba41a541b2e4f9777d1e646ffbe3, type: 3}
@@ -168,7 +168,6 @@ MonoBehaviour:
   seed: 0
   placedRooms: []
   placedEnemies: []
-  availableConnections: []
   availableItemSpawns: []
   availableEnemySpawns: []
 --- !u!4 &649975217
