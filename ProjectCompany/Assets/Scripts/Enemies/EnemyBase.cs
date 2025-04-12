@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using Unity.IO.LowLevel.Unsafe;
 
 public class EnemyBase : NetworkBehaviour
 {
@@ -21,8 +22,8 @@ public class EnemyBase : NetworkBehaviour
     [SerializeField] private bool validNewPosition = false;             //Tracks if the Enemy has a valid path to move towards to when in the patrolling state
 
     [Header("Movement")]
-    [SerializeField] private float walkingSpeed;    //Speed when the enemy is walking
-    [SerializeField] private float sprintSpeed;     //Speed when the enemy is sprinting
+    [SerializeField] private float walkingSpeed = 3.5f;    //Speed when the enemy is walking
+    [SerializeField] private float sprintSpeed = 3.5f;     //Speed when the enemy is sprinting
 
     [Header("Detection")]
     [SerializeField] private List<PlayerState> playerList;      //List of all players in the game
@@ -35,7 +36,11 @@ public class EnemyBase : NetworkBehaviour
     [SerializeField] private float attackRange = 2f;    //How far the player has to be for the attack to Start
     [SerializeField] private float attackCoooldown = 1; //Cooldown of the Attack
     [SerializeField] private float timeUntilNextAttack; //Time until the next Attack can happen
-    [SerializeField] private Collider hitbox;           //Collider that is used by the Attack to check what is being hit
+    [SerializeField] private float timeStunnedAfterAttack = 1f; //Time how long the enemy cant move after an attack
+    [SerializeField] private float timeUntilStunOver;           //Counts down until the enemy can move again
+    [SerializeField] private AbilityHitbox hitbox;           //Script that is used by the Attack to check what is being hit
+    [SerializeField] private bool canMoveWhileAttacking = false;    //Can the enemy Move while attacking? (might be unneeded)
+    [SerializeField] private bool isAttacking = false; //Is the attack finished? (might be unneeded)
 
     [SerializeField] private NavMeshAgent agent;
 
@@ -53,6 +58,14 @@ public class EnemyBase : NetworkBehaviour
     {
         if (!IsServer) return;
 
+        //Counts the cooldowns down
+        timeUntilNextAction -= Time.deltaTime;
+        timeUntilNextAttack -= Time.deltaTime;
+        timeUntilStunOver -= Time.deltaTime;
+        
+        if (isAttacking && canMoveWhileAttacking == false) return;  //checks if enemy is still attacking and cant move while attacking
+        if (timeUntilStunOver >= 0) return; //checks if it is able to act again after an attack
+
         var (playerSeen, player) = CanSeePlayer(playerSeenThisFrame);
 
         //Check if Enemy sees a player
@@ -68,10 +81,6 @@ public class EnemyBase : NetworkBehaviour
             player = null;
         }
 
-        //Counts the cooldowns down
-        timeUntilNextAction -= Time.deltaTime;
-        timeUntilNextAttack -= Time.deltaTime;
-
         if (currentState == EnemyState.Chasing)
         {
             if (playerSeenThisFrame && player != null)
@@ -80,8 +89,16 @@ public class EnemyBase : NetworkBehaviour
                 ChooseNewDestination(player.transform.position);
                 if (timeUntilNextAttack <= 0 && Vector3.Distance(transform.position, player.transform.position) < attackRange)
                 {
-                    StartCoroutine(Attack());
+                    Debug.Log("Starting attack");
+
+                    if (canMoveWhileAttacking == false)
+                    {
+                        agent.SetDestination(transform.position);   //Stops the enemy to Attack
+                    }
+                    isAttacking = true;
+                    TargetsToHitAndAttack();
                     timeUntilNextAttack = attackCoooldown;
+                    timeUntilStunOver = timeStunnedAfterAttack;
                 }
             }
             else 
@@ -162,9 +179,22 @@ public class EnemyBase : NetworkBehaviour
         return (closestSeenPlayer != null, closestSeenPlayer);
     }
 
-    public virtual IEnumerator Attack()
+    public virtual void TargetsToHitAndAttack()
     {
-        yield return null;
+        hitbox.GetPlayersToHit((players) =>
+        {
+            Attack(players);
+        });
+    }
+
+    public virtual void Attack(List<PlayerState> Targets)
+    {
+        foreach (var player in Targets)
+        {
+            Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
+        }
+
+        isAttacking = false;
     }
 
     private void OnDrawGizmos()
