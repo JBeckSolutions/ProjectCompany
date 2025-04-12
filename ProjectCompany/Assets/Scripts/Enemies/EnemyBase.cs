@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Unity.Netcode;
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 
@@ -14,20 +15,29 @@ public class EnemyBase : NetworkBehaviour
     }
 
     [SerializeField] private EnemyState currentState = EnemyState.Idle;
-    [SerializeField] private float timeUntilNextAction;
-    [SerializeField] private float maxDistance = 10f;   //Maximum distance it can move with one Patrol
-    [SerializeField] private bool validNewPosition = false;
+    [SerializeField] private float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
+    [SerializeField] private float timeUntilNextAction;                 //How long the enemy will stay in the Idle State
+    [SerializeField] private float maxDistance = 10f;                   //Maximum distance it can move with one Patrol
+    [SerializeField] private bool validNewPosition = false;             //Tracks if the Enemy has a valid path to move towards to when in the patrolling state
+
+    [Header("Movement")]
+    [SerializeField] private float walkingSpeed;    //Speed when the enemy is walking
+    [SerializeField] private float sprintSpeed;     //Speed when the enemy is sprinting
 
     [Header("Detection")]
-    [SerializeField] private List<PlayerState> playerList;
-    [SerializeField] float viewRadius = 10f;
+    [SerializeField] private List<PlayerState> playerList;      //List of all players in the game
+    [SerializeField] private float viewRadius = 10f;
     [UnityEngine.Range(0, 360)]
-    public float viewAngle = 90f;
-    [SerializeField] bool playerSeenThisFrame = false;
-    [SerializeField] int layerMask;
+    [SerializeField] private float viewAngle = 90f;
+    [SerializeField] private bool playerSeenThisFrame = false;  
+    [SerializeField] private int layerMask;                     //Layer Mask that will be ignored in the Raycast check so it doesnt collide with the "Enemy" Layer
+    [Header("Attack")]
+    [SerializeField] private float attackRange = 2f;    //How far the player has to be for the attack to Start
+    [SerializeField] private float attackCoooldown = 1; //Cooldown of the Attack
+    [SerializeField] private float timeUntilNextAttack; //Time until the next Attack can happen
+    [SerializeField] private Collider hitbox;           //Collider that is used by the Attack to check what is being hit
 
-
-    [SerializeField] NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
 
     private void Start()
     {
@@ -44,7 +54,9 @@ public class EnemyBase : NetworkBehaviour
         if (!IsServer) return;
 
         var (playerSeen, player) = CanSeePlayer(playerSeenThisFrame);
-        
+
+        //Check if Enemy sees a player
+
         if (playerSeen)
         {
             currentState = EnemyState.Chasing;
@@ -56,20 +68,30 @@ public class EnemyBase : NetworkBehaviour
             player = null;
         }
 
+        //Counts the cooldowns down
         timeUntilNextAction -= Time.deltaTime;
+        timeUntilNextAttack -= Time.deltaTime;
+
         if (currentState == EnemyState.Chasing)
         {
             if (playerSeenThisFrame && player != null)
             {
+                agent.speed = sprintSpeed;  // Set speed to sprint when player is chased
                 ChooseNewDestination(player.transform.position);
+                if (timeUntilNextAttack <= 0 && Vector3.Distance(transform.position, player.transform.position) < attackRange)
+                {
+                    StartCoroutine(Attack());
+                    timeUntilNextAttack = attackCoooldown;
+                }
             }
             else 
             {
                 if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 {
+                    agent.speed = walkingSpeed; // Set speed to walking speed when player is lost
                     currentState = EnemyState.Idle;
                     validNewPosition = false;
-                    timeUntilNextAction = Random.Range(0, 2);
+                    timeUntilNextAction = Random.Range(0, 2);  
                 }
             }
         }
@@ -93,7 +115,7 @@ public class EnemyBase : NetworkBehaviour
             {
                 currentState = EnemyState.Idle;
                 validNewPosition = false;
-                timeUntilNextAction = Random.Range(0, 2);
+                timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);   
             }
         }
         
@@ -138,6 +160,11 @@ public class EnemyBase : NetworkBehaviour
         }
 
         return (closestSeenPlayer != null, closestSeenPlayer);
+    }
+
+    public virtual IEnumerator Attack()
+    {
+        yield return null;
     }
 
     private void OnDrawGizmos()
