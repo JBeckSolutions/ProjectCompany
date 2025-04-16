@@ -59,11 +59,7 @@ public class EnemyBase : NetworkBehaviour
     {
         playerList = GameManager.Singelton.PlayerStates;
     }
-    
-    protected virtual float GetChaseSpeed()
-    {
-        return sprintSpeed;
-    }
+
     protected virtual void Update()
     {
         if (!IsServer) return;
@@ -95,7 +91,7 @@ public class EnemyBase : NetworkBehaviour
         {
             if (playerSeenThisFrame && player != null)
             {
-                agent.speed = GetChaseSpeed();  // Set speed to sprint when player is chased
+                agent.speed = sprintSpeed;  // Set speed to sprint when player is chased
                 ChooseNewDestination(player.transform.position);
                 if (timeUntilNextAttack <= 0 && Vector3.Distance(transform.position, player.transform.position) < attackRange)
                 {
