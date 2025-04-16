@@ -755,7 +755,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryItems: []
-  InventorySpace: 7
+  inventroyImages: []
+  activeInventroySlot: []
+  InventorySpace: 4
   ActiveInvetorySlot: 0
   playerHand: {fileID: 5401785166968592877}
   dropLocation: {fileID: 6205219328851093515}
