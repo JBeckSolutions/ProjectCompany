@@ -10,13 +10,32 @@ public class PlayerState : NetworkBehaviour
     {
         GameManager.Singelton.PlayerStates.Add(this);
     }
-
-    public void TakeDamage(int Amount)
+    [ServerRpc(RequireOwnership = false)]
+    public void TakeDamageServerRpc(int Amount)
     {
         PlayerHealth.Value -= Amount;
         if (PlayerHealth.Value <= 0)
         {
             Debug.Log("Player " + OwnerClientId + " died");
         }
+    }
+
+    [ClientRpc]
+    public void DisableClientControlsAndGravityClientRpc()
+    {
+        this.transform.GetComponent<PlayerController>().enabled = false;
+        this.transform.GetComponent<CharacterController>().enabled = false;
+    }
+
+    [ClientRpc]
+    public void EnableClientControlsAndGravityClientRpc()
+    {
+        this.transform.GetComponent<PlayerController>().enabled = true;
+        this.transform.GetComponent<CharacterController>().enabled = true;
+    }
+    [ClientRpc]
+    public void SetPlayerPositionClientRpc(Vector3 position)
+    {
+        this.transform.position = position;
     }
 }

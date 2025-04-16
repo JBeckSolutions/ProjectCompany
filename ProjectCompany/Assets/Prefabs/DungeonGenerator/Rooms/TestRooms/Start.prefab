@@ -203,6 +203,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   ItemList: []
   DropOffArea: {fileID: 8425676976003029762}
+  ItemValue: 0
 --- !u!65 &8425676976003029762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -497,7 +498,7 @@ Transform:
   m_GameObject: {fileID: 7094971698755160641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0.2, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -740,7 +741,7 @@ Transform:
   m_GameObject: {fileID: 7830845617681332398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0.02, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

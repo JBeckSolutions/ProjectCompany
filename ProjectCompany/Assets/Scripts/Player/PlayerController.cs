@@ -37,6 +37,7 @@ public class PlayerController : NetworkBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            transform.Find("Model").gameObject.SetActive(false);
         }
     }
     private void Update()
