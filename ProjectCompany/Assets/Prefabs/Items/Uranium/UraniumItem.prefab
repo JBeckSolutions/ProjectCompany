@@ -248,9 +248,12 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   PickupAble:
     m_InternalValue: 1
+  itemName: Uranium
+  itemValue: 25
+  InventoryImage: {fileID: 2800000, guid: 11a87dc9363dde2449c669383167d88f, type: 3}
   model: {fileID: 9098151255441494086}
   itemCollider: {fileID: 428000437282272014}
-  InventoryImage: {fileID: 2800000, guid: 11a87dc9363dde2449c669383167d88f, type: 3}
+  ItemWeight: 1
 --- !u!65 &428000437282272014
 BoxCollider:
   m_ObjectHideFlags: 0
