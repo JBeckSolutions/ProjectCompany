@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyJumper :EnemyBase
 {
     [Header("Faster when in sight")]
-    [SerializeField] private float speedMultiplier = 2.0f; // Multiplier to increase chase speed
+    //[SerializeField] private float speedMultiplier = 2.0f; // Multiplier to increase chase speed
 
     // Override the chasing speed
 
@@ -14,18 +14,18 @@ public class EnemyJumper :EnemyBase
         enemyRenderer = GetComponent<Renderer>();
     }
 
-    protected override float GetChaseSpeed()
-    {
-        // Check if a Renderer exists and if the enemy is visible
-        if (enemyRenderer != null && enemyRenderer.isVisible)
-        {
-            // The enemy is seen by a camera, so run faster
-            return sprintSpeed * speedMultiplier;
-        }
-        else
-        {
-            // Not visible – use normal chase speed
-            return sprintSpeed;
-        }
-    }
+    //protected override float GetChaseSpeed()
+    //{
+    //    // Check if a Renderer exists and if the enemy is visible
+    //    if (enemyRenderer != null && enemyRenderer.isVisible)
+    //    {
+    //        // The enemy is seen by a camera, so run faster
+    //        return sprintSpeed * speedMultiplier;
+    //    }
+    //    else
+    //    {
+    //        // Not visible – use normal chase speed
+    //        return sprintSpeed;
+    //    }
+    //}
 }
