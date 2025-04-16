@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         menuRoot = root.Q<VisualElement>("MainMenu");
@@ -16,12 +17,14 @@ public class MainMenu : MonoBehaviour
         newGameButton.clicked += () => {
             NetworkManager.Singleton.StartHost();
             menuRoot.style.display = DisplayStyle.None;
+            Destroy(this.gameObject);
             FindFirstObjectByType<Interface>().EnableInventory();
         };
         var joinButton = root.Q<Button>("JoinButton");
         joinButton.clicked += () => {
             NetworkManager.Singleton.StartClient();
             menuRoot.style.display = DisplayStyle.None;
+            Destroy(this.gameObject);
             FindFirstObjectByType<Interface>().EnableInventory();
         };
         var settingsButton = root.Q<Button>("SettingsButton");

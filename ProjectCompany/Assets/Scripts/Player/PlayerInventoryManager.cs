@@ -17,17 +17,17 @@ public class PlayerInventoryManager : MonoBehaviour
 
     private StyleColor activeColor = Color.blue;
     private StyleColor oldColor;
-    private VisualElement[] slots;
+    [SerializeField] private VisualElement[] slots;
     private UnityEngine.UIElements.StyleBackground defaultImage;
 
     private void Start()
     {
-        inventoryItems = new Item[InventorySpace-1];
-        slots = new VisualElement[InventorySpace - 1];
+        inventoryItems = new Item[InventorySpace];
+        slots = new VisualElement[InventorySpace];
         //inventroyImages = new RawImage[InventorySpace-1];
         //activeInventroySlot = new RawImage[InventorySpace - 1];
 
-        var root = GetComponent<UIDocument>().rootVisualElement;
+        var root = GameObject.Find("Interface").GetComponent<UIDocument>().rootVisualElement;
         slots[0] = root.Q<VisualElement>("Slot1");
         slots[1] = root.Q<VisualElement>("Slot2");
         slots[2] = root.Q<VisualElement>("Slot3");
