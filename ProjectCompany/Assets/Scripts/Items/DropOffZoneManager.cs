@@ -11,7 +11,7 @@ public class DropOffAreaManager : NetworkBehaviour
     public List<Item> ItemList;
 
     [SerializeField] private Collider DropOffArea;
-    public int ItemValue = 0;
+
     private void Start()
     {
         GameManager.Singelton.DropOffAreaManager = this;
@@ -24,18 +24,7 @@ public class DropOffAreaManager : NetworkBehaviour
             if (!ItemList.Contains(itemToAdd))
             {
                 ItemList.Add(itemToAdd);
-                CountValue();
             }
-        }
-    }
-
-    private void CountValue()
-    {
-        ItemValue = 0;
-
-        foreach (var item in ItemList)
-        {
-            ItemValue += item.itemValue;
         }
     }
 
@@ -47,7 +36,6 @@ public class DropOffAreaManager : NetworkBehaviour
             if (ItemList.Contains(itemToRemove))
             {
                 ItemList.Remove(itemToRemove);
-                CountValue();
             }
         }
     }

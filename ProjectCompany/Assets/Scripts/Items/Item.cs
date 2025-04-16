@@ -6,13 +6,9 @@ using UnityEngine.UI;
 public class Item : NetworkBehaviour
 {
     public NetworkVariable<bool> PickupAble = new NetworkVariable<bool>(true);
-    public string itemName = "Item";
-    public int itemValue = 10;
-    public Texture2D InventoryImage;
-
     [SerializeField] private GameObject model;
     [SerializeField] private Collider itemCollider;
-    [SerializeField] private int ItemWeight = 1;
+    public Texture2D InventoryImage;
 
     [ServerRpc(RequireOwnership = false)]
     public virtual void PickUpServerRpc(NetworkObjectReference PlayerReference) //Server picks the item up for the client
@@ -47,9 +43,9 @@ public class Item : NetworkBehaviour
     public virtual void DropServerRpc(Vector3 position) //Server drops the item at the specefied position and sets the item parent to null
     {
         PickupAble.Value = true;
-        if (GameObject.Find("GeneratedItems(Clone)"))
+        if (GameObject.Find("GeneratedItems"))
         {
-            this.transform.SetParent(GameObject.Find("GeneratedItems(Clone)").transform);
+            this.transform.SetParent(GameObject.Find("GeneratedItems").transform);
         }
         else
         {
@@ -61,14 +57,6 @@ public class Item : NetworkBehaviour
     [ClientRpc]
     public virtual void DropClientRpc(Vector3 position) //Syncs the position to the clients
     {
-        if (GameObject.Find("GeneratedItems(Clone)"))
-        {
-            this.transform.SetParent(GameObject.Find("GeneratedItems(Clone)").transform);
-        }
-        else
-        {
-            this.transform.SetParent(null);
-        }
         this.transform.position = position;
     }
     [ServerRpc]

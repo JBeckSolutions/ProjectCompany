@@ -201,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   DropOffAreaManager: {fileID: 0}
-  ItemValueLastRound: 0
+  itemsDroppedOff: []
   Quota: 0
   PlayerStates: []
 --- !u!4 &302103462

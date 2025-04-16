@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3519108564483672428}
   - component: {fileID: 4389020458096892786}
   - component: {fileID: 1629408954511568472}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4123217313
+  GlobalObjectIdHash: 1440108014
   InScenePlacedSourceGlobalObjectIdHash: 4123217313
   DeferredDespawnTick: 0
   Ownership: 1
@@ -97,12 +97,9 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   PickupAble:
     m_InternalValue: 1
-  itemName: Testcube
-  itemValue: 10
-  InventoryImage: {fileID: 2800000, guid: 8e672eab0c2e1b74f9b4463a60d92a1c, type: 3}
   model: {fileID: 5118609058765622453}
   itemCollider: {fileID: 1688976576672291614}
-  ItemWeight: 1
+  InventoryImage: {fileID: 2800000, guid: 8e672eab0c2e1b74f9b4463a60d92a1c, type: 3}
 --- !u!54 &1629408954511568472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,7 +138,7 @@ GameObject:
   - component: {fileID: 4050974858319624788}
   - component: {fileID: 3511402515794838717}
   - component: {fileID: 7407403313243413446}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
