@@ -284,7 +284,7 @@ MonoBehaviour:
   sprintSpeed: 3.5
   playerList: []
   viewRadius: 10
-  viewAngle: 120
+  viewAngle: 150
   playerSeenThisFrame: 0
   layerMask: 0
   attackRange: 1
