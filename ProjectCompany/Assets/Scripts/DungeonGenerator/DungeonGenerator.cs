@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,48 +7,47 @@ using Unity.AI.Navigation;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = System.Random;
+using UnityEngine.SocialPlatforms;
+using Random = System.Random;   // Uses the c# Random class since the one from unity is not deterministic across multiple frames
 
 public class DungeonGenerator : NetworkBehaviour
 {
-    private struct Connection
+    private struct Connection   // Struct to store the connection location and the priority of their door pieces
     {
         public Transform ConnectionLocation;
         public int ConnectionPriority;
 
         public Connection (Transform transform, int value)
         {
-            ConnectionLocation = transform;
-            ConnectionPriority = value;
+            ConnectionLocation = transform; // Saves the location
+            ConnectionPriority = value;     // Saves the priority
         }
     }
-
-
-
-
     [Header("Prefabs")]
-    [SerializeField] private List<GameObject> roomPrefabs;
-    [SerializeField] private GameObject startingRoomPrefab;
-    [SerializeField] private List<GameObject> itemPrefabs;
-    [SerializeField] private List<GameObject> enemyPrefabs;
-    [SerializeField] private GameObject generatedItemsParent;
-    [SerializeField] private GameObject generatedEnemiesParent;
+    [SerializeField] private GameObject startingRoomPrefab; // Starting room of the dungeon
+    [SerializeField] private List<GameObject> roomPrefabs;  // List of rooms that can be placed by the generation process
+    [SerializeField] private List<GameObject> itemPrefabs;  // List of items the generation process can spawn
+    [SerializeField] private List<GameObject> enemyPrefabs; // List of enemies the generation process can spawn
+    [SerializeField] private GameObject generatedItemsParent;   // Parent of all items that will be generated
+    [SerializeField] private GameObject generatedEnemiesParent; // Parent of all enemies that will be generated
 
     [Header("Generation Options")]
-    [SerializeField] private int maxRooms;
-    [SerializeField] private int itemCount;
-    [SerializeField] private int enemyCount;
+    [SerializeField] private int maxRooms;      // How many rooms can spawn
+    [SerializeField] private int maxItemCount;  // How many items can spawn
+    [SerializeField] private int maxEnemyCount; // How many enemies can spawn
+    [UnityEngine.Range(0f, 100f)]
+    [SerializeField] private float doorSpawnChanceForLoops = 50f; // Chance out of 100 to spawn a door
 
     [Header("Seed")]
-    [SerializeField] private bool useRandomSeed = true;
-    [SerializeField] private int seed = 0;
+    [SerializeField] private bool useRandomSeed = true; // Toggles if a random seed should be used
+    [SerializeField] private int seed = 0;              // Seed value for generation
 
     [Header("Generated objects")]
-    [SerializeField] private List<Room> placedRooms = new List<Room>();
-    [SerializeField] private List<GameObject> placedEnemies = new List<GameObject>();
-    [SerializeField] private List<Connection> availableConnections = new List<Connection>();
-    [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();
-    [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();
+    [SerializeField] private List<Room> placedRooms = new List<Room>();                         // List of all rooms that were placed down
+    [SerializeField] private List<GameObject> placedEnemies = new List<GameObject>();           // List of all enemies that were spawned
+    [SerializeField] private List<Connection> availableConnections = new List<Connection>();    // List of all room connections that are placed down and avaliable (not used)
+    [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();       // List of all possible item spawns that are placed down and avaliable (not used)
+    [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();      // List of all possible enemy spawns that are placed down and avaliable (not used)
 
 
     public override void OnNetworkSpawn()
@@ -59,7 +59,7 @@ public class DungeonGenerator : NetworkBehaviour
     }
 
     [ServerRpc]
-    private void GenerateDungeonServerRpc()
+    private void GenerateDungeonServerRpc() //Generates a seed on the server
     {
         Debug.Log("Server Rpc called");
         if (useRandomSeed)
@@ -67,14 +67,14 @@ public class DungeonGenerator : NetworkBehaviour
             Random CreateSeed = new Random();
             seed = CreateSeed.Next(int.MinValue, int.MaxValue);
         }
-        GenerareDungeonClientRpc(seed);
+        GenerareDungeonClientRpc(seed); //Starts a client rpc to generate a dungeon with the seed created from this function
     }
     [ClientRpc]
     private void GenerareDungeonClientRpc(int seed)
     {
         Debug.Log("Client Rpc called");
         this.seed = seed;
-        StartCoroutine(GenerateDungeon());
+        StartCoroutine(GenerateDungeon());  //Starts a Corutine that handles generating the dungeon
     }
 
 
@@ -83,57 +83,55 @@ public class DungeonGenerator : NetworkBehaviour
         Random Random = new Random(seed);
         Debug.Log("Dungeon Seed: " + seed);
 
-        GameObject start = Instantiate(startingRoomPrefab, Vector3.zero, Quaternion.identity);
-
+        //places starting room at origin
+        GameObject start = Instantiate(startingRoomPrefab, Vector3.zero, Quaternion.identity);  
         Room startRoom = start.GetComponent<Room>();
-        placedRooms.Add(startRoom);
+        placedRooms.Add(startRoom); //Adds the starting room to the list
         availableConnections.AddRange(startRoom.ConnectionPoints.Select(item => new Connection(item, -1)));
 
         for (int i = 0; i < maxRooms; i++)
         {
             if (availableConnections.Count == 0) break;
 
-            int randomConnectionIndex = Random.Next(availableConnections.Count);
-            Transform connectionPoint = availableConnections[randomConnectionIndex].ConnectionLocation;
+            // Select a random connection point to attach a room
+            int randomConnectionIndex = Random.Next(availableConnections.Count);                        
+            Transform connectionPoint = availableConnections[randomConnectionIndex].ConnectionLocation; 
 
-            int randomRoomPrefabIndex = Random.Next(0, roomPrefabs.Count);
-            GameObject roomPrefab = roomPrefabs[randomRoomPrefabIndex];
-            GameObject newRoom = Instantiate(roomPrefab);
-
+            // Choose and instantiate a random room
+            int randomRoomPrefabIndex = Random.Next(0, roomPrefabs.Count);                      
+            GameObject roomPrefab = roomPrefabs[randomRoomPrefabIndex];                                 
+            GameObject newRoom = Instantiate(roomPrefab);           
             Room roomComponent = newRoom.GetComponent<Room>();
-            if (roomComponent.ConnectionPoints.Count == 0)
+
+            if (roomComponent.ConnectionPoints.Count == 0)                                              
             {
                 Destroy(newRoom);
                 continue;
             }
 
-            int randomEntrance = Random.Next(0, roomComponent.ConnectionPoints.Count);
+            // Align entrance with the selected connection
+            int randomEntrance = Random.Next(0, roomComponent.ConnectionPoints.Count);                  //Picks which connection point of the room should be used as an entrance
             Transform newRoomEntrance = roomComponent.ConnectionPoints[randomEntrance];
-            Quaternion targetRotation = Quaternion.LookRotation(-connectionPoint.forward, newRoomEntrance.up);
+            Quaternion targetRotation = Quaternion.LookRotation(-connectionPoint.forward, newRoomEntrance.up);  //saves the -z rotation of the chosen connection for this room
 
-            Quaternion rotationDelta = targetRotation * Quaternion.Inverse(newRoomEntrance.rotation);
-            newRoom.transform.rotation = rotationDelta * newRoom.transform.rotation;
+            Quaternion rotationDelta = targetRotation * Quaternion.Inverse(newRoomEntrance.rotation);           //Multiplies the inverse of the entrance position with the -z rotation of the connection so that the z axis of the entrance and the connection look against each other
+            newRoom.transform.rotation = rotationDelta * newRoom.transform.rotation;                            //Rotates the room based on the calculated rotation
 
-            Vector3 offset = connectionPoint.position - newRoomEntrance.position;
-            newRoom.transform.position += offset;
+            Vector3 offset = connectionPoint.position - newRoomEntrance.position;                               //Calculates how the entrance of the room has to move for both connections to overlap
+            newRoom.transform.position += offset;                                                               //Moves the room based on the calculated result
 
+            yield return new WaitForFixedUpdate();                                                              //Ensure collider is updated
 
-            //newRoom.transform.rotation = targetRotation;
-            //Vector3 offset = newRoom.transform.position - newRoomEntrance.transform.position;
-            //newRoom.transform.position = connectionPoint.position;
-            //newRoom.transform.localPosition += offset;
-
-            yield return new WaitForFixedUpdate();
-
-            if (IsOverlapping(newRoom))
+            if (IsOverlapping(newRoom))                                                                        
             {
                 Destroy(newRoom);
                 continue;
             }
+                
+            placedRooms.Add(roomComponent);                                                                                                         
+            availableConnections.AddRange((roomComponent.ConnectionPoints.Select(item => new Connection(item, randomRoomPrefabIndex))));    
 
-            placedRooms.Add(roomComponent);
-            availableConnections.AddRange((roomComponent.ConnectionPoints.Select(item => new Connection(item, randomRoomPrefabIndex))));
-
+            // Determine which room should place its door at the connection point
             if (availableConnections.FirstOrDefault(item => item.ConnectionLocation == connectionPoint).ConnectionPriority <= availableConnections.FirstOrDefault(item => item.ConnectionLocation == newRoomEntrance).ConnectionPriority)
             {
                 connectionPoint.Find("Wall").gameObject.SetActive(false);
@@ -151,6 +149,7 @@ public class DungeonGenerator : NetworkBehaviour
                 newRoomEntrance.Find("Door").gameObject.SetActive(true);
             }
 
+            // Remove used connections
             availableConnections.RemoveAll(item => item.ConnectionLocation == connectionPoint);
             availableConnections.RemoveAll(item => item.ConnectionLocation == newRoomEntrance);
 
@@ -160,7 +159,9 @@ public class DungeonGenerator : NetworkBehaviour
         Debug.Log("Room Placements complete");
         Debug.Log("placed " + placedRooms.Count + " romms");
 
-        int doorsAdded = 0;
+
+        // Checks if there are overlapping connections after the generation finishes and decides if they should be a door or stay as a wall
+        int doorsAdded = 0; 
         int possibleDoorsRemoved = 0;
 
         for (int i = 0; i < availableConnections.Count; i++)
@@ -173,11 +174,9 @@ public class DungeonGenerator : NetworkBehaviour
                 
                 if (connection.transform.position == connectionToCompare.transform.position)
                 {
-                    int randomDoor = Random.Next(0, 3);
+                    double roll = Random.NextDouble() * 100.0;
 
-                    //Debug.Log(randomDoor);
-
-                    if (randomDoor <= 1)
+                    if (roll > doorSpawnChanceForLoops)
                     {
                         availableConnections.RemoveAll(item => item.ConnectionLocation == connectionToCompare);
                         availableConnections.RemoveAll(item => item.ConnectionLocation == connection);
@@ -187,7 +186,7 @@ public class DungeonGenerator : NetworkBehaviour
                         i = -1;
                         break;
                     }
-                    else if (randomDoor > 1)
+                    else
                     {
                         if (availableConnections.FirstOrDefault(item => item.ConnectionLocation == connection).ConnectionPriority <= availableConnections.FirstOrDefault(item => item.ConnectionLocation == connectionToCompare).ConnectionPriority)
                         {
@@ -221,7 +220,7 @@ public class DungeonGenerator : NetworkBehaviour
         Debug.Log("Added " + doorsAdded + " doors");
         Debug.Log("Removed " + possibleDoorsRemoved + " possible doors");
 
-        //Generate Empty for parenting rooms
+        // Parent generated rooms to a single object
         GameObject generatedLevelParent = new GameObject("GeneratedLevel");
         generatedLevelParent.transform.position = Vector3.zero;
 
@@ -240,20 +239,18 @@ public class DungeonGenerator : NetworkBehaviour
 
         if (NetworkManager.Singleton.IsServer)
         {
-            //Navmesh generation
+            // Generate navmesh
             NavMeshSurface navMesh = generatedLevelParent.AddComponent<NavMeshSurface>();
             navMesh.collectObjects = CollectObjects.Children;
             navMesh.BuildNavMesh();
 
-            //Item Spawning
-
-            //Spawn parent for items
+            // Instantiate parent for items
             GameObject generatedItemParent = Instantiate(this.generatedItemsParent, Vector3.zero, Quaternion.identity);
             generatedItemParent.GetComponent<NetworkObject>().Spawn(true);
 
-            //Genrate and spawn the items
+            // Spawn items
             int itemsSpawned = 0;
-            for (int i = 0; i < itemCount; i++)
+            for (int i = 0; i < maxItemCount; i++)
             {
                 if (availableItemSpawns.Count <= 0) break;
 
@@ -269,15 +266,13 @@ public class DungeonGenerator : NetworkBehaviour
             }
             Debug.Log(itemsSpawned + " Items Spawned");
 
-            //Enemy Spawning
-
-            //Spawn parent for Enemies
+            // Instantiate parent for enemies
             GameObject generatedEnemiesParent = Instantiate(this.generatedEnemiesParent, Vector3.zero, Quaternion.identity);
             generatedEnemiesParent.GetComponent<NetworkObject>().Spawn(true);
 
-            //Genrate and spawn the Enemies
+            // Spawn enemies
             int enemiesSpawned = 0;
-            for (int i = 0; i < enemyCount; i++)
+            for (int i = 0; i < maxEnemyCount; i++)
             {
                 if (availableEnemySpawns.Count <= 0) break;
 
@@ -298,7 +293,7 @@ public class DungeonGenerator : NetworkBehaviour
 
     }
 
-    private bool IsOverlapping(GameObject room)
+    private bool IsOverlapping(GameObject room) //Checks if rooms overlap each other
     {
         Collider[] colliders = Physics.OverlapBox(
             room.transform.position,

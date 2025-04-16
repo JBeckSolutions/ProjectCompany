@@ -10,7 +10,7 @@ public class GameManager : NetworkBehaviour
 
     public static GameManager Singelton;
     public DropOffAreaManager DropOffAreaManager;
-    [SerializeField] private List<Item> itemsDroppedOff;
+    public int ItemValueLastRound = 0;
     public float Quota;
     public List<PlayerState> PlayerStates;
 
@@ -39,7 +39,7 @@ public class GameManager : NetworkBehaviour
     public void EndRoundServerRpc() //Ends a round
     {
         RoundRunning = false;
-        itemsDroppedOff = DropOffAreaManager.ItemList;
+        ItemValueLastRound = DropOffAreaManager.ItemValue;
         DropOffAreaManager = null;
         NetworkManager.Singleton.SceneManager.LoadScene("Lobby", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
