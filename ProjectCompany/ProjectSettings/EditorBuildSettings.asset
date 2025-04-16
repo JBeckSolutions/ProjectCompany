@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 488b76afc4097f54ba05f7a9e18d3a17
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Scenes/Netcode Test Scene.unity
     guid: 1b905c705a45df44a9def70ab0961637
   - enabled: 1
     path: Assets/Scenes/TestScene/TestLevel.unity
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonGenerator.unity
     guid: b46e58e17dbcfa044ae3177297dc4746
+  - enabled: 1
+    path: Assets/Scenes/Start with new UI.unity
+    guid: f060da3cacf63b24298c1acafdea3f69
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

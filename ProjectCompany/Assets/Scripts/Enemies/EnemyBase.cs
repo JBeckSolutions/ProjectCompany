@@ -22,8 +22,8 @@ public class EnemyBase : NetworkBehaviour
     [SerializeField] private bool validNewPosition = false;             //Tracks if the Enemy has a valid path to move towards to when in the patrolling state
 
     [Header("Movement")]
-    [SerializeField] private float walkingSpeed = 3.5f;    //Speed when the enemy is walking
-    [SerializeField] private float sprintSpeed = 3.5f;     //Speed when the enemy is sprinting
+    [SerializeField] protected float walkingSpeed = 3.5f;    //Speed when the enemy is walking
+    [SerializeField] protected float sprintSpeed = 3.5f;     //Speed when the enemy is sprinting
 
     [Header("Detection")]
     [SerializeField] private List<PlayerState> playerList;      //List of all players in the game
@@ -52,6 +52,11 @@ public class EnemyBase : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         playerList = GameManager.Singelton.PlayerStates;
+    }
+
+    protected virtual float GetChaseSpeed()
+    {
+        return sprintSpeed;
     }
 
     public virtual void Update()
@@ -85,7 +90,7 @@ public class EnemyBase : NetworkBehaviour
         {
             if (playerSeenThisFrame && player != null)
             {
-                agent.speed = sprintSpeed;  // Set speed to sprint when player is chased
+                agent.speed = GetChaseSpeed();  // Set speed to sprint when player is chased
                 ChooseNewDestination(player.transform.position);
                 if (timeUntilNextAttack <= 0 && Vector3.Distance(transform.position, player.transform.position) < attackRange)
                 {
