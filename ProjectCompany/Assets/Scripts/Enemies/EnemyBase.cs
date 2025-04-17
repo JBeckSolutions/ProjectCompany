@@ -237,6 +237,7 @@ public class EnemyBase : NetworkBehaviour
         foreach (var player in Targets)
         {
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
+            player.TakeDamageServerRpc(40);
         }
 
         isAttacking = false;

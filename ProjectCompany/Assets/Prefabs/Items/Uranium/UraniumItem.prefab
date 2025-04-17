@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 4092501848448766823}
   - component: {fileID: 5267790698291885675}
   - component: {fileID: 428000437282272014}
+  - component: {fileID: 9182204873710670290}
   m_Layer: 0
   m_Name: UraniumItem
   m_TagString: Untagged
@@ -249,7 +250,7 @@ MonoBehaviour:
   PickupAble:
     m_InternalValue: 1
   itemName: Uranium
-  itemValue: 25
+  itemValue: 35
   InventoryImage: {fileID: 2800000, guid: 11a87dc9363dde2449c669383167d88f, type: 3}
   model: {fileID: 9098151255441494086}
   itemCollider: {fileID: 428000437282272014}
@@ -275,3 +276,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.25, z: 0.3}
   m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!54 &9182204873710670290
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134976987606893072}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

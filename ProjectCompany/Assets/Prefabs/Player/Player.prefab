@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  movementSpeed: 2
+  movementSpeed: 2.5
   sprintSpeed: 5
   jumpHeight: 1
   gravityValue: -9.81
@@ -706,6 +706,10 @@ MonoBehaviour:
   animator: {fileID: 3959352941244176416}
   playerCamera: {fileID: 3680675649726996254}
   playerInventory: {fileID: 3887017362229013079}
+  stamina: 5
+  currentStamina: 0
+  MaxTimeUntilStaminaRefresh: 3
+  timeUntilStaminaRefresh: 0
 --- !u!114 &-2735287924375658040
 MonoBehaviour:
   m_ObjectHideFlags: 0

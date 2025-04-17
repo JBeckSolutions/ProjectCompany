@@ -165,9 +165,9 @@ MonoBehaviour:
   - {fileID: 2092756375646722572, guid: 40ab83d7cada60b4ab0a76c7bed584fe, type: 3}
   generatedItemsParent: {fileID: 7841871041383228874, guid: 86f130f5f76670f4e9a13afd7e7e9215, type: 3}
   generatedEnemiesParent: {fileID: 7841871041383228874, guid: 7053a261f6c37a7428a44e38f5b5c89e, type: 3}
-  maxRooms: 500
+  maxRooms: 300
   maxItemCount: 50
-  maxEnemyCount: 5
+  maxEnemyCount: 1
   doorSpawnChanceForLoops: 100
   useRandomSeed: 1
   seed: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   placedEnemies: []
   availableItemSpawns: []
   availableEnemySpawns: []
+  enemyParent: {fileID: 0}
 --- !u!4 &649975217
 Transform:
   m_ObjectHideFlags: 0

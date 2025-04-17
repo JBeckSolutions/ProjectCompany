@@ -11,12 +11,19 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float sensitivity = 0.2f;
+
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Animator animator;
 
     [SerializeField] private GameObject playerCamera;
 
     [SerializeField] private PlayerInventoryManager playerInventory;
+
+    [Header("Stamina")]
+    [SerializeField] private float stamina = 5f;
+    [SerializeField] private float currentStamina = 0;
+    [SerializeField] private float MaxTimeUntilStaminaRefresh = 3;
+    [SerializeField] private float timeUntilStaminaRefresh = 0;
 
     private Vector2 moveInput;
     private float yAxisVelocity;
@@ -27,6 +34,9 @@ public class PlayerController : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+
+        currentStamina = stamina;
+
         if (!IsOwner)
         {
             gameObject.GetComponent<PlayerInput>().enabled = false;
@@ -69,12 +79,23 @@ public class PlayerController : NetworkBehaviour
         Vector3 right = playerCamera.transform.right;
         Vector2 _moveInput = moveInput; //Helper variable so moveInput doesnt multiply infinitly
 
-        if (sprinting)
+        timeUntilStaminaRefresh -= Time.deltaTime;
+
+        if (sprinting && currentStamina > 0)
         {
+            timeUntilStaminaRefresh = MaxTimeUntilStaminaRefresh;
+            currentStamina -= Time.deltaTime;
+            currentStamina = Mathf.Max(currentStamina, 0);
             _moveInput *= sprintSpeed;
         }
         else
         {
+            if (timeUntilStaminaRefresh <= 0)
+            {
+                currentStamina += Time.deltaTime * 1.5f;
+                currentStamina = Mathf.Min(currentStamina, stamina);
+            }
+
             _moveInput *= movementSpeed;
         }
 

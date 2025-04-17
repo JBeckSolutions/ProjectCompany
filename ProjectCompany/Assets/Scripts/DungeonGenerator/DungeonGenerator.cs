@@ -45,13 +45,17 @@ public class DungeonGenerator : NetworkBehaviour
     [Header("Generated objects")]
     [SerializeField] private List<Room> placedRooms = new List<Room>();                         // List of all rooms that were placed down
     [SerializeField] private List<GameObject> placedEnemies = new List<GameObject>();           // List of all enemies that were spawned
+    [SerializeField] private List<Item> placedItems = new List<Item>();
     [SerializeField] private List<Connection> availableConnections = new List<Connection>();    // List of all room connections that are placed down and avaliable (not used)
     [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();       // List of all possible item spawns that are placed down and avaliable (not used)
     [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();      // List of all possible enemy spawns that are placed down and avaliable (not used)
-
+    [SerializeField] private GameObject enemyParent;
 
     public override void OnNetworkSpawn()
     {
+
+        GameManager.Singelton.MapGenerator = this;
+
         if (NetworkManager.Singleton.IsServer)
         {
             GenerateDungeonServerRpc();
@@ -89,7 +93,7 @@ public class DungeonGenerator : NetworkBehaviour
         placedRooms.Add(startRoom); //Adds the starting room to the list
         availableConnections.AddRange(startRoom.ConnectionPoints.Select(item => new Connection(item, -1)));
 
-        for (int i = 0; i < maxRooms; i++)
+        for (int i = 0; i < GameManager.Singelton.DungeonSize.Value; i++)
         {
             if (availableConnections.Count == 0) break;
 
@@ -125,6 +129,7 @@ public class DungeonGenerator : NetworkBehaviour
             if (IsOverlapping(newRoom))                                                                        
             {
                 Destroy(newRoom);
+                i--;
                 continue;
             }
                 
@@ -249,8 +254,10 @@ public class DungeonGenerator : NetworkBehaviour
             generatedItemParent.GetComponent<NetworkObject>().Spawn(true);
 
             // Spawn items
+            int valueToGenerate = (int)(GameManager.Singelton.Quota.Value * 1.3 + Random.NextDouble() * (1.8 - 1.3));
+            int valueGenerated = 0;
             int itemsSpawned = 0;
-            for (int i = 0; i < maxItemCount; i++)
+            while(valueGenerated < valueToGenerate)
             {
                 if (availableItemSpawns.Count <= 0) break;
 
@@ -263,12 +270,18 @@ public class DungeonGenerator : NetworkBehaviour
                 newItem.transform.SetParent(generatedItemParent.transform);
                 availableItemSpawns.Remove(availableItemSpawns[randomItemSpawnpoint]);
                 itemsSpawned += 1;
+
+                placedItems.Add(newItem.GetComponent<Item>());
+
+                valueGenerated += newItem.GetComponent<Item>().itemValue;
             }
             Debug.Log(itemsSpawned + " Items Spawned");
+            Debug.Log("Value of all items " + valueGenerated);
 
             // Instantiate parent for enemies
             GameObject generatedEnemiesParent = Instantiate(this.generatedEnemiesParent, Vector3.zero, Quaternion.identity);
             generatedEnemiesParent.GetComponent<NetworkObject>().Spawn(true);
+            enemyParent = generatedEnemiesParent;
 
             // Spawn enemies
             int enemiesSpawned = 0;
@@ -287,10 +300,30 @@ public class DungeonGenerator : NetworkBehaviour
                 enemiesSpawned += 1;
             }
             Debug.Log(enemiesSpawned + " Enemies spawned");
+
+            GameManager.Singelton.LvlStartingServerRpc();
         }
 
         PlayerSpawnManager.Singelton.TeleportLocalPlayer();
+        GameManager.Singelton.LvlStartingServerRpc();
 
+    }
+
+    [ServerRpc]
+    public void SpawnEnemyServerRpc()
+    {
+        Random random = new Random();
+
+        if (enemyPrefabs.Count == 0 || availableEnemySpawns.Count == 0) return;
+
+        GameObject enemyPrefab = enemyPrefabs[random.Next(0, enemyPrefabs.Count)];
+        Transform spawnPoint = availableEnemySpawns[random.Next(0, availableEnemySpawns.Count)];
+
+        GameObject newEnemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+        newEnemy.GetComponent<NetworkObject>().Spawn();
+        newEnemy.transform.SetParent(enemyParent.transform);
+
+        Debug.Log(newEnemy.name + " Spawned");
     }
 
     private bool IsOverlapping(GameObject room) //Checks if rooms overlap each other

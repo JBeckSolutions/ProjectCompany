@@ -5,7 +5,7 @@ public class PlayerState : NetworkBehaviour
 {
     //public NetworkVariable<bool> PlayerReadyState = new NetworkVariable<bool>(false);
     public NetworkVariable<int> PlayerHealth = new NetworkVariable<int>(100);
-
+    public NetworkVariable<bool> PlayerAlive = new NetworkVariable<bool>(true);
     public override void OnNetworkSpawn()
     {
         GameManager.Singelton.PlayerStates.Add(this);
@@ -14,9 +14,11 @@ public class PlayerState : NetworkBehaviour
     public void TakeDamageServerRpc(int Amount)
     {
         PlayerHealth.Value -= Amount;
-        if (PlayerHealth.Value <= 0)
+        if (PlayerHealth.Value <= 0 && PlayerAlive.Value)
         {
             Debug.Log("Player " + OwnerClientId + " died");
+            GameManager.Singelton.playerDeaths.Value += 1;
+            PlayerAlive.Value = false;
         }
     }
 

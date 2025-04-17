@@ -98,7 +98,7 @@ MonoBehaviour:
   PickupAble:
     m_InternalValue: 1
   itemName: Testcube
-  itemValue: 10
+  itemValue: 20
   InventoryImage: {fileID: 2800000, guid: 8e672eab0c2e1b74f9b4463a60d92a1c, type: 3}
   model: {fileID: 5118609058765622453}
   itemCollider: {fileID: 1688976576672291614}

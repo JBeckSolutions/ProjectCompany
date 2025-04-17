@@ -7,6 +7,7 @@ public class StartRoundButton : InteractableObject
     public override void Use()
     {
         GameManager.Singelton.StartRoundServerRpc();
+        this.enabled = false;
     }
     
     
