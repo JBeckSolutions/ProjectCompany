@@ -3,29 +3,27 @@ using UnityEngine;
 public class EnemyJumper :EnemyBase
 {
     [Header("Faster when in sight")]
-    [SerializeField] private float speedMultiplier = 2.0f; // Multiplier to increase chase speed
-
-    // Override the chasing speed
-
-    private Renderer enemyRenderer;
-
-    private void Awake()
-    {
-        enemyRenderer = GetComponent<Renderer>();
-    }
+    [SerializeField] private float sprintSpeedMultiplier = 2.0f;
+    [SerializeField] private float walkingSpeedMultiplier = 1.5f;
 
     protected override float GetChaseSpeed()
     {
-        // Check if a Renderer exists and if the enemy is visible
-        if (enemyRenderer != null && enemyRenderer.isVisible)
+        if (playerSeenThisFrame)
         {
-            // The enemy is seen by a camera, so run faster
-            return sprintSpeed * speedMultiplier;
+            return base.sprintSpeed * sprintSpeedMultiplier;
         }
-        else
+        return base.sprintSpeed;
+    }
+
+    public override void ChooseNewDestination(Vector3? Destination = null)
+    {
+        // Call base method first to preserve core functionality
+        base.ChooseNewDestination(Destination);
+
+        // Apply walking speed boost if patrolling while player is seen
+        if (playerSeenThisFrame && currentState == EnemyState.Patrolling)
         {
-            // Not visible – use normal chase speed
-            return sprintSpeed;
+            agent.speed = walkingSpeed * walkingSpeedMultiplier;
         }
     }
 }

@@ -8,41 +8,41 @@ using Unity.IO.LowLevel.Unsafe;
 
 public class EnemyBase : NetworkBehaviour
 {
-    private enum EnemyState
+    protected enum EnemyState
     {
         Idle,
         Patrolling,
         Chasing
     }
 
-    [SerializeField] private EnemyState currentState = EnemyState.Idle;
-    [SerializeField] private float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
-    [SerializeField] private float timeUntilNextAction;                 //How long the enemy will stay in the Idle State
-    [SerializeField] private float maxDistance = 10f;                   //Maximum distance it can move with one Patrol
-    [SerializeField] private bool validNewPosition = false;             //Tracks if the Enemy has a valid path to move towards to when in the patrolling state
+    [SerializeField] protected EnemyState currentState = EnemyState.Idle;
+    [SerializeField] protected float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
+    [SerializeField] protected float timeUntilNextAction;                 //How long the enemy will stay in the Idle State
+    [SerializeField] protected float maxDistance = 10f;                   //Maximum distance it can move with one Patrol
+    [SerializeField] protected bool validNewPosition = false;             //Tracks if the Enemy has a valid path to move towards to when in the patrolling state
 
     [Header("Movement")]
     [SerializeField] protected float walkingSpeed = 3.5f;    //Speed when the enemy is walking
     [SerializeField] protected float sprintSpeed = 3.5f;     //Speed when the enemy is sprinting
 
     [Header("Detection")]
-    [SerializeField] private List<PlayerState> playerList;      //List of all players in the game
-    [SerializeField] private float viewRadius = 10f;
+    [SerializeField] protected List<PlayerState> playerList;      //List of all players in the game
+    [SerializeField] protected float viewRadius = 10f;
     [UnityEngine.Range(0, 360)]
-    [SerializeField] private float viewAngle = 90f;
-    [SerializeField] private bool playerSeenThisFrame = false;  
-    [SerializeField] private int layerMask;                     //Layer Mask that will be ignored in the Raycast check so it doesnt collide with the "Enemy" Layer
+    [SerializeField] protected float viewAngle = 90f;
+    [SerializeField] protected bool playerSeenThisFrame = false;  
+    [SerializeField] protected int layerMask;                     //Layer Mask that will be ignored in the Raycast check so it doesnt collide with the "Enemy" Layer
     [Header("Attack")]
-    [SerializeField] private float attackRange = 2f;    //How far the player has to be for the attack to Start
-    [SerializeField] private float attackCoooldown = 1; //Cooldown of the Attack
-    [SerializeField] private float timeUntilNextAttack; //Time until the next Attack can happen
-    [SerializeField] private float timeStunnedAfterAttack = 1f; //Time how long the enemy cant move after an attack
-    [SerializeField] private float timeUntilStunOver;           //Counts down until the enemy can move again
-    [SerializeField] private AbilityHitbox hitbox;           //Script that is used by the Attack to check what is being hit
-    [SerializeField] private bool canMoveWhileAttacking = false;    //Can the enemy Move while attacking? (might be unneeded)
-    [SerializeField] private bool isAttacking = false; //Is the attack finished? (might be unneeded)
+    [SerializeField] protected float attackRange = 2f;    //How far the player has to be for the attack to Start
+    [SerializeField] protected float attackCoooldown = 1; //Cooldown of the Attack
+    [SerializeField] protected float timeUntilNextAttack; //Time until the next Attack can happen
+    [SerializeField] protected float timeStunnedAfterAttack = 1f; //Time how long the enemy cant move after an attack
+    [SerializeField] protected float timeUntilStunOver;           //Counts down until the enemy can move again
+    [SerializeField] protected AbilityHitbox hitbox;           //Script that is used by the Attack to check what is being hit
+    [SerializeField] protected bool canMoveWhileAttacking = false;    //Can the enemy Move while attacking? (might be unneeded)
+    [SerializeField] protected bool isAttacking = false; //Is the attack finished? (might be unneeded)
 
-    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] protected NavMeshAgent agent;
 
     private void Start()
     {
