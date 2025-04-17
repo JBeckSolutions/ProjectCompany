@@ -184,6 +184,42 @@ public class EnemyBase : NetworkBehaviour
         return (closestSeenPlayer != null, closestSeenPlayer);
     }
 
+    public virtual bool IsSeenByAnyPlayer()
+    {
+        foreach (var playerState in playerList)
+        {
+            if (playerState == null) continue;
+
+            var playerObject = playerState.GetComponent<PlayerController>();
+            if (playerObject == null || !playerObject.IsOwner) continue;
+
+            Camera playerCam = playerObject.GetComponentInChildren<Camera>();
+            if (playerCam == null) continue;
+
+            Vector3 dirToEnemy = (transform.position - playerCam.transform.position).normalized;
+            float distanceToEnemy = Vector3.Distance(playerCam.transform.position, transform.position);
+
+            float playerViewAngle = 90f; // You can adjust or expose this in PlayerController
+            float viewRadius = 15f;      // Also tweakable
+
+            // Check if within view cone
+            if (distanceToEnemy < viewRadius)
+            {
+                float angleToEnemy = Vector3.Angle(playerCam.transform.forward, dirToEnemy);
+                if (angleToEnemy < playerViewAngle / 2f)
+                {
+                    // Check for obstacles
+                    if (!Physics.Raycast(playerCam.transform.position, dirToEnemy, distanceToEnemy, layerMask))
+                    {
+                        return true; // Player sees this enemy
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
     public virtual void TargetsToHitAndAttack()
     {
         hitbox.GetPlayersToHit((players) =>

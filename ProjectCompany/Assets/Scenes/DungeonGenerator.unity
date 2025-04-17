@@ -160,7 +160,7 @@ MonoBehaviour:
   itemPrefabs:
   - {fileID: 2156017288405549669, guid: 0feeba41a541b2e4f9777d1e646ffbe3, type: 3}
   enemyPrefabs:
-  - {fileID: 1408361746316415149, guid: ee525343dbb495d4685f3ac7478c9c0d, type: 3}
+  - {fileID: 8924282795677139858, guid: 2ffed25f58727034a88f99b61fb95d05, type: 3}
   generatedItemsParent: {fileID: 7841871041383228874, guid: 86f130f5f76670f4e9a13afd7e7e9215, type: 3}
   generatedEnemiesParent: {fileID: 7841871041383228874, guid: 7053a261f6c37a7428a44e38f5b5c89e, type: 3}
   maxRooms: 200
