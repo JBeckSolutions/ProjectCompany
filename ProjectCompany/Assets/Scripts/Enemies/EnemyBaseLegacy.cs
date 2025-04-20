@@ -1,12 +1,20 @@
-using UnityEngine;
 using NUnit.Framework;
 using Unity.Netcode;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 
-public class EnemyBase : NetworkBehaviour
+public class EnemyBaseLegacy : NetworkBehaviour
 {
+    protected enum EnemyState
+    {
+        Idle,
+        Patrolling,
+        Chasing
+    }
+
+    [SerializeField] protected EnemyState currentState = EnemyState.Idle;
     [SerializeField] protected float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
     [SerializeField] protected float timeUntilNextAction;                 //How long the enemy will stay in the Idle State
     [SerializeField] protected float maxDistance = 10f;                   //Maximum distance it can move with one Patrol
@@ -49,6 +57,89 @@ public class EnemyBase : NetworkBehaviour
         playerList = GameManager.Singelton.PlayerStates;
     }
 
+    protected virtual void Update()
+    {
+        if (!IsServer) return;
+
+        //Counts the cooldowns down
+        timeUntilNextAction -= Time.deltaTime;
+        timeUntilNextAttack -= Time.deltaTime;
+        timeUntilStunOver -= Time.deltaTime;
+
+        if (isAttacking && canMoveWhileAttacking == false) return;  //checks if enemy is still attacking and cant move while attacking
+        if (timeUntilStunOver >= 0) return; //checks if it is able to act again after an attack
+
+        var (playerSeen, player) = CanSeePlayer(playerSeenThisFrame);
+
+        //Check if Enemy sees a player
+
+        if (playerSeen)
+        {
+            currentState = EnemyState.Chasing;
+            playerSeenThisFrame = true;
+        }
+        else
+        {
+            playerSeenThisFrame = false;
+            player = null;
+        }
+
+        if (currentState == EnemyState.Chasing)
+        {
+            if (playerSeenThisFrame && player != null)
+            {
+                agent.speed = sprintSpeed;  // Set speed to sprint when player is chased
+                ChooseNewDestination(player.transform.position);
+                if (timeUntilNextAttack <= 0 && Vector3.Distance(transform.position, player.transform.position) < attackRange)
+                {
+                    Debug.Log("Starting attack");
+
+                    if (canMoveWhileAttacking == false)
+                    {
+                        agent.SetDestination(transform.position);   //Stops the enemy to Attack
+                    }
+                    isAttacking = true;
+                    TargetsToHitAndAttack();
+                    timeUntilNextAttack = attackCoooldown;
+                    timeUntilStunOver = timeStunnedAfterAttack;
+                }
+            }
+            else
+            {
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                {
+                    agent.speed = walkingSpeed; // Set speed to walking speed when player is lost
+                    currentState = EnemyState.Idle;
+                    validNewPosition = false;
+                    timeUntilNextAction = Random.Range(0, 2);
+                }
+            }
+        }
+
+        if (currentState == EnemyState.Idle)
+        {
+            if (timeUntilNextAction <= 0)
+            {
+                currentState = EnemyState.Patrolling;
+            }
+        }
+
+        if (currentState == EnemyState.Patrolling)
+        {
+            if (!validNewPosition)
+            {
+                ChooseNewDestination();
+            }
+
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                currentState = EnemyState.Idle;
+                validNewPosition = false;
+                timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
+            }
+        }
+
+    }
     protected virtual void ChooseNewDestination(Vector3? Destination = null, float? CustomDistance = null, bool goFar = false)
     {
         float distance = CustomDistance ?? maxDistance;
