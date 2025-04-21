@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Stalker : EnemyBase
@@ -14,16 +15,29 @@ public class Stalker : EnemyBase
     }
 
     [SerializeField] protected EnemyState currentState = EnemyState.Idle;
+    [SerializeField] protected float stalkSpeed = 3f;
     [SerializeField] protected float _rage = 0;
     [SerializeField] protected float maxRage = 5;
     [SerializeField] protected int layerMaskSeenByPlayerCheck;
     [SerializeField] protected PlayerState lastSeenPlayer;
+    [SerializeField] protected bool recentlyLookedAt = false;
+    [SerializeField] protected bool lookedAtLastFrame = false;
+    [SerializeField] protected bool receneltyLookedAtResetThisFrame = false;
+    [SerializeField] protected bool killedTarget = false;
+    [SerializeField] protected float _timeRecentlyLookedAtReset;
 
     private float rage
     {
         get { return _rage; }
         set { _rage = Mathf.Clamp(value, 0f, 100f); }
     }
+
+    private float timeRecentlyLookedAtReset
+    {
+        get { return _timeRecentlyLookedAtReset; }
+        set { _timeRecentlyLookedAtReset = Mathf.Clamp(value, 0f, 3f); }
+    }
+
 
     protected override void Start()
     {
@@ -46,135 +60,111 @@ public class Stalker : EnemyBase
         timeUntilNextAction -= Time.deltaTime;
         timeUntilNextAttack -= Time.deltaTime;
         timeUntilStunOver -= Time.deltaTime;
+        timeRecentlyLookedAtReset -= Time.deltaTime;
 
-        if (isAttacking && canMoveWhileAttacking == false) return;  //checks if enemy is still attacking and cant move while attacking
-        if (timeUntilStunOver >= 0) return; //checks if it is able to act again after an attack
+        if (recentlyLookedAt && timeRecentlyLookedAtReset <= 0)
+        {
+            recentlyLookedAt = false;
+            receneltyLookedAtResetThisFrame = true;
+        }
+
+        if (lastSeenPlayer != null)
+        {
+            Vector3 direction = (lastSeenPlayer.transform.position - transform.position).normalized;
+            direction.y = 0f;
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
+            }
+        }
 
         var (playerSeen, player) = CanSeePlayer(playerSeenThisFrame);
         var (seenByPlayer, playerSeenBy) = IsSeenByPlayer();
 
-        if (seenByPlayer && timeUntilNextAction > 0)
-        {
-            currentState = EnemyState.Hiding;
-            validNewPosition = false;
-        }
-        else if(timeUntilNextAction > 0)
-        {
-            return;
-        }
-
         if (playerSeen)
         {
-
+            rage += 2.5f * Time.deltaTime;
             lastSeenPlayer = player;
-
             playerSeenThisFrame = true;
-            if (rage < 30)
+            if (currentState != EnemyState.Chasing && currentState != EnemyState.Hiding)
             {
                 currentState = EnemyState.Watching;
-            }
-            else if (rage > 30 && rage < 95)
-            {
-                currentState = EnemyState.Watching;
-            }
-            else if (rage > 95)
-            {
-                currentState = EnemyState.Chasing;
             }
         }
         else
         {
             playerSeenThisFrame = false;
-            player = null;
+        }
+        
+        // Resets the Stalker when he killed a player
+        if (killedTarget)
+        {
+            killedTarget = false;
+            rage = 0;
+            currentState = EnemyState.Hiding;
+            validNewPosition = false;
         }
 
+        // Handles Stalker beeing looked at
+        if (seenByPlayer)
+        {
+            if (!recentlyLookedAt)
+            {
+                recentlyLookedAt = true;
+                timeRecentlyLookedAtReset = float.MaxValue;
+            }
+            else if (recentlyLookedAt && lookedAtLastFrame)
+            {
+                recentlyLookedAt = true;
+                timeRecentlyLookedAtReset = float.MaxValue;
+                rage += 5 * Time.deltaTime;
+            }
+            //else if (recentlyLookedAt && currentState != EnemyState.Hiding)
+            //{
+            //    currentState = EnemyState.Chasing;
+            //}
+
+        }
+        else if (currentState != EnemyState.Watching && currentState != EnemyState.Stalking && currentState != EnemyState.Chasing)
+        {
+            rage -= 1 * Time.deltaTime;
+        }
+
+
+        // Decides Stalker behaviour
         if (currentState == EnemyState.Hiding)
         {
-            if (validNewPosition == false)
-            {
-                float distanceToRunAway = 120f;
-                ChooseNewDestination(null, distanceToRunAway, true);
-                if (validNewPosition == false)
-                {
-                    float valueReduction = 10f;
-                    while (validNewPosition == false)
-                    {
-                        distanceToRunAway -= valueReduction;
-                        ChooseNewDestination(null, distanceToRunAway, true);
-                    }
-                }
-            }
-
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            {
-                agent.speed = walkingSpeed; // Set speed to walking speed when player is lost
-                currentState = EnemyState.Idle;
-                validNewPosition = false;
-                timeUntilNextAction = Random.Range(0, 10);
-            }
+            currentState = EnemyState.Hiding;
         }
-
-        if (currentState == EnemyState.Watching)
+        else if (currentState == EnemyState.Chasing)
         {
-            if (playerSeen)
-            {
-                agent.SetDestination(transform.position);
-            }
-            else if (lastSeenPlayer != null)
-            {
-                agent.SetDestination(lastSeenPlayer.transform.position);
-            }
-
-            if (seenByPlayer)
-            {
-                rage += 10;
-                currentState = EnemyState.Hiding;
-                validNewPosition = false;
-            }
-            else
-            {
-                rage += 1 * Time.deltaTime;
-            }
-
+            currentState = EnemyState.Chasing;
         }
-
-        if (currentState == EnemyState.Stalking)
+        else if (currentState == EnemyState.Idle)
         {
-
+            currentState = EnemyState.Idle;
         }
-
-        if (currentState == EnemyState.Chasing)
+        else if (currentState == EnemyState.Patrolling)
         {
-            if (playerSeenThisFrame && player != null)
-            {
-                agent.speed = sprintSpeed;  // Set speed to sprint when player is chased
-                ChooseNewDestination(player.transform.position);
-                if (timeUntilNextAttack <= 0 && Vector3.Distance(transform.position, player.transform.position) < attackRange)
-                {
-                    Debug.Log("Starting attack");
-
-                    if (canMoveWhileAttacking == false)
-                    {
-                        agent.SetDestination(transform.position);   //Stops the enemy to Attack
-                    }
-                    isAttacking = true;
-                    TargetsToHitAndAttack();
-                    timeUntilNextAttack = attackCoooldown;
-                    timeUntilStunOver = timeStunnedAfterAttack;
-                }
-            }
-            else
-            {
-                if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                {
-                    agent.speed = walkingSpeed; // Set speed to walking speed when player is lost
-                    currentState = EnemyState.Idle;
-                    validNewPosition = false;
-                    timeUntilNextAction = Random.Range(0, 2);
-                }
-            }
+            currentState = EnemyState.Patrolling;
+        }
+        else if (rage < 30)
+        {
+            currentState = EnemyState.Watching;
+        }
+        else if (rage > 30 && rage < 90)
+        {
+            currentState = EnemyState.Stalking;
+        }
+        else if (rage > 90)
+        {
+            currentState = EnemyState.Chasing;
         }
 
+
+        // Behaviours
         if (currentState == EnemyState.Idle)
         {
             if (timeUntilNextAction <= 0)
@@ -197,6 +187,119 @@ public class Stalker : EnemyBase
                 timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
             }
         }
+
+        if (currentState == EnemyState.Hiding)
+        {
+
+            agent.speed = sprintSpeed;
+
+            if (validNewPosition == false)
+            {
+                float distanceToRunAway = 120f;
+                ChooseNewDestination(null, distanceToRunAway, true);
+                if (validNewPosition == false)
+                {
+                    float valueReduction = 10f;
+                    while (validNewPosition == false)
+                    {
+                        distanceToRunAway -= valueReduction;
+                        ChooseNewDestination(null, distanceToRunAway, true);
+                    }
+                }
+            }
+
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                currentState = EnemyState.Idle;
+                validNewPosition = false;
+                int patrolOrStalk = Random.Range(0, 10);
+
+                if (patrolOrStalk <= 7)
+                {
+                    timeUntilNextAction = Random.Range(0, 2);
+                    currentState = EnemyState.Idle;
+                }
+                else
+                {
+                    currentState = EnemyState.Watching;
+                }
+            }
+        }
+
+        if (currentState == EnemyState.Watching)
+        {
+            agent.speed = walkingSpeed;
+
+            if (playerSeen)
+            {
+                agent.SetDestination(transform.position);
+            }
+            else if (lastSeenPlayer != null)
+            {
+                agent.SetDestination(lastSeenPlayer.transform.position);
+            }
+
+            if (receneltyLookedAtResetThisFrame)
+            {
+                validNewPosition = false;
+                currentState = EnemyState.Hiding;
+            }
+        }
+
+        if (currentState == EnemyState.Stalking)
+        {
+            agent.speed = stalkSpeed;
+
+            if (seenByPlayer || recentlyLookedAt)
+            {
+                ChooseNewDestination(transform.position);
+            }
+            else
+            {
+                ChooseNewDestination(lastSeenPlayer.transform.position);
+            }
+
+            if (player != null && Vector3.Distance(transform.position, player.transform.position) < attackRange)
+            {
+                Debug.Log("Stalker Starting attack");
+                TargetsToHitAndAttack();
+            }
+            
+            if (receneltyLookedAtResetThisFrame)
+            {
+                validNewPosition = false;
+                currentState = EnemyState.Hiding;
+            }
+        }
+
+        if (currentState == EnemyState.Chasing)
+        {
+            agent.speed = sprintSpeed;
+
+            if (playerSeenThisFrame && player != null)
+            {
+                ChooseNewDestination(player.transform.position);
+
+                if (Vector3.Distance(transform.position, player.transform.position) < attackRange)
+                {
+                    Debug.Log("Stalker Starting attack");
+                    TargetsToHitAndAttack();
+                }
+            }
+            else
+            {
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                {
+                    agent.speed = walkingSpeed; // Set speed to walking speed when player is lost
+                    currentState = EnemyState.Idle;
+                    validNewPosition = false;
+                    timeUntilNextAction = Random.Range(0, 2);
+                }
+            }
+        }
+
+        receneltyLookedAtResetThisFrame = false;
+        lookedAtLastFrame = seenByPlayer;
 
     }
 
@@ -224,19 +327,31 @@ public class Stalker : EnemyBase
                 Vector3 origin = playerCamera.transform.position;
                 Vector3 direction = (transform.position - origin).normalized;
                 float distance = Vector3.Distance(origin, transform.position);
-
-                RaycastHit hit;
-                if (!Physics.Raycast(origin, direction, out hit, distance, layerMaskSeenByPlayerCheck, QueryTriggerInteraction.Ignore) || hit.transform == transform)
+                if (distance <= 10f)
                 {
-                    if (distance < closestDistance)
+                    RaycastHit hit;
+                    if (!Physics.Raycast(origin, direction, out hit, distance, layerMaskSeenByPlayerCheck, QueryTriggerInteraction.Ignore) || hit.transform == transform)
                     {
-                        closestSeeingPlayer = player;
-                        closestDistance = distance;
+                        if (distance < closestDistance)
+                        {
+                            closestSeeingPlayer = player;
+                            closestDistance = distance;
+                        }
                     }
                 }
             }
         }
 
         return (closestSeeingPlayer != null, closestSeeingPlayer);
+    }
+
+    protected override void Attack(List<PlayerState> Targets)
+    {
+        base.Attack(Targets);
+
+        if (Targets.Count > 0)
+        {
+            killedTarget = true;
+        }
     }
 }

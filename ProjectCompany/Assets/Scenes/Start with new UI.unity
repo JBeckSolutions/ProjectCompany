@@ -235,9 +235,9 @@ MonoBehaviour:
   maxSpawnInverval: 45
   Quota:
     m_InternalValue: 0
-  currentDay: 1
   playerDeaths:
     m_InternalValue: 0
+  currentDay: 1
   DungeonSize:
     m_InternalValue: 0
   minRooms: 50
@@ -379,7 +379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &438892633
 Light:
   m_ObjectHideFlags: 0
