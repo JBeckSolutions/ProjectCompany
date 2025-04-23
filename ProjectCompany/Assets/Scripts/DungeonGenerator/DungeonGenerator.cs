@@ -305,7 +305,6 @@ public class DungeonGenerator : NetworkBehaviour
         }
 
         PlayerSpawnManager.Singelton.TeleportLocalPlayer();
-        GameManager.Singelton.LvlStartingServerRpc();
 
     }
 

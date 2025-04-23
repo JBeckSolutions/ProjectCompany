@@ -425,7 +425,7 @@ MonoBehaviour:
   isAttacking: 0
   agent: {fileID: 3311286857594216485}
   currentState: 0
-  stalkSpeed: 2
+  stalkSpeed: 2.75
   _rage: 0
   maxRage: 5
   layerMaskSeenByPlayerCheck: 0

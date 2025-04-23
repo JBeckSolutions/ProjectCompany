@@ -175,6 +175,8 @@ public class Stalker : EnemyBase
 
         if (currentState == EnemyState.Patrolling)
         {
+            agent.speed = walkingSpeed;
+
             if (!validNewPosition)
             {
                 ChooseNewDestination();
@@ -347,11 +349,18 @@ public class Stalker : EnemyBase
 
     protected override void Attack(List<PlayerState> Targets)
     {
-        base.Attack(Targets);
+        foreach (var player in Targets)
+        {
+            Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
+            player.TakeDamageServerRpc(50);
+        }
 
         if (Targets.Count > 0)
         {
             killedTarget = true;
         }
+
+        isAttacking = false;
     }
 }
+

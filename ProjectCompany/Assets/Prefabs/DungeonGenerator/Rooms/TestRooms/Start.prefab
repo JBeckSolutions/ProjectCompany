@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   ItemList: []
+  quotaText: {fileID: 3993555056945712869}
   DropOffArea: {fileID: 8425676976003029762}
   ItemValue: 0
 --- !u!65 &8425676976003029762
@@ -550,6 +551,7 @@ Transform:
   - {fileID: 7795209661306417682}
   - {fileID: 2525521703337487144}
   - {fileID: 5907765859392419960}
+  - {fileID: 439624877747473759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9043085692926631689
@@ -904,3 +906,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2891355386622358413, guid: 721d6bed99677674f8c695d01e2ff1b1, type: 3}
   m_PrefabInstance: {fileID: 357389791234398780}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2173425650564160107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3620131421296484655}
+    m_Modifications:
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.466
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.072
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_text
+      value: Quota
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_fontSize
+      value: 21.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 72.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_lineSpacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290679339547040009, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: m_Name
+      value: Quota Screen Dungeon
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8180500229563064430, guid: e3a323f937de6464898ef3d821016778, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3a323f937de6464898ef3d821016778, type: 3}
+--- !u!4 &439624877747473759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
+  m_PrefabInstance: {fileID: 2173425650564160107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3993555056945712869 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
+  m_PrefabInstance: {fileID: 2173425650564160107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

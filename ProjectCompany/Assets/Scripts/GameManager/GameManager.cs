@@ -35,6 +35,7 @@ public class GameManager : NetworkBehaviour
     [SerializeField] private int maxRooms = 750;
     [SerializeField] private int QuotaForMaxSize = 10000;
     
+    
 
     private bool RoundRunning = false;
 

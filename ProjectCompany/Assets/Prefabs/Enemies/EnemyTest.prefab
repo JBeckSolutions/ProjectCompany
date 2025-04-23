@@ -280,8 +280,8 @@ MonoBehaviour:
   timeUntilNextAction: 0
   maxDistance: 10
   validNewPosition: 0
-  walkingSpeed: 3.5
-  sprintSpeed: 3.5
+  walkingSpeed: 2.5
+  sprintSpeed: 2.5
   playerList: []
   viewRadius: 10
   viewAngle: 150
