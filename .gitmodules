@@ -1,0 +1,3 @@
+[submodule "ProjectCompany/Assets/ProjectCompanySound"]
+	path = ProjectCompany/Assets/ProjectCompanySound
+	url = git://85.215.185.23:9418/ProjectCompanySound.git
