@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: e9348587f1a9774f9719bf586e5b602c
     GuidInternal: 
-    m_lastTime: -8584563561109219754
+    m_lastTime: -8584561931019890847
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8584563561109219754
+    m_lastTime: -8584561931019890847
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584563561109979406
+    m_lastTime: -8584561931020595476
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -344,7 +344,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Factory Tencent GME
     guid: 5183e1c4b59c6740984186b2b228b0d3
     GuidInternal: 
-    m_lastTime: -8584563561109979406
+    m_lastTime: -8584561931020585484
     List:
     - name: Main Audio Bus
       guid: 71e3912931c89548b6c258499524efda
@@ -390,7 +390,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 084717a941d77741be78aa107d3a6c80
     GuidInternal: 
-    m_lastTime: -8584563561109264876
+    m_lastTime: -8584561931019945800
     List: []
   - PhysicalPath: SoundBanks\Factory Tencent GME.wwu
     PathAndIcons:
@@ -403,7 +403,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Factory Tencent GME
     guid: 865bee1fbaf0a04e94162d30e5654ff0
     GuidInternal: 
-    m_lastTime: -8584563561109249809
+    m_lastTime: -8584561931019935829
     List:
     - name: Tencent_GME
       guid: ff17fdac29acd14cb8a2f70164a8a7d4
@@ -431,7 +431,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 4fb7d9a6a8acad42b7522799bb3a21fa
     GuidInternal: 
-    m_lastTime: -8584563561110019288
+    m_lastTime: -8584561931020715495
     List: []
   - PhysicalPath: Events\Factory Tencent GME.wwu
     PathAndIcons:
@@ -444,7 +444,7 @@ MonoBehaviour:
     ParentPath: Events\Factory Tencent GME
     guid: b1390e77527c2a44a4f7653ae6b0c847
     GuidInternal: 
-    m_lastTime: -8584563561110019288
+    m_lastTime: -8584561931020710452
     List:
     - name: Aliases
       guid: 788c0c92ef6d024fa81167ba8339d847
@@ -481,8 +481,8 @@ MonoBehaviour:
         guid: 834be251c11e6f45a07354c5ebef3d14
       Path: Events\Factory Tencent GME\Aliases\Play_gme_blend
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_GME_Receive
       guid: b9fd181e09834b479d8449b3160f1d07
       id: 1185674625
@@ -498,8 +498,8 @@ MonoBehaviour:
         guid: b9fd181e09834b479d8449b3160f1d07
       Path: Events\Factory Tencent GME\Play_GME_Receive
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_GME_Send
       guid: 7adc73897a7e844aad30b546cb50720b
       id: 2793175796
@@ -515,8 +515,8 @@ MonoBehaviour:
         guid: 7adc73897a7e844aad30b546cb50720b
       Path: Events\Factory Tencent GME\Play_GME_Send
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_GME_Send_Loop
       guid: e663a3e608b02e4e94cf1aa3b670656d
       id: 511699757
@@ -532,8 +532,8 @@ MonoBehaviour:
         guid: e663a3e608b02e4e94cf1aa3b670656d
       Path: Events\Factory Tencent GME\Play_GME_Send_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Loop
       guid: da6497c2fd06a143ac62ed16f82e46c9
       id: 4266239556
@@ -549,8 +549,8 @@ MonoBehaviour:
         guid: da6497c2fd06a143ac62ed16f82e46c9
       Path: Events\Factory Tencent GME\Play_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_original
       guid: d72748db9d8e124dbd747986e6333199
       id: 1724457055
@@ -569,8 +569,8 @@ MonoBehaviour:
         guid: d72748db9d8e124dbd747986e6333199
       Path: Events\Factory Tencent GME\Aliases\Play_original
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Short
       guid: 7278c8dea37cdf4f99a997f4ad73a5f1
       id: 3094646336
@@ -586,8 +586,8 @@ MonoBehaviour:
         guid: 7278c8dea37cdf4f99a997f4ad73a5f1
       Path: Events\Factory Tencent GME\Play_Short
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.75
+      minDuration: 0.75
     - name: Play_Shotgun
       guid: f4b5cc927ead2f4cb269da58d36a80d8
       id: 992244
@@ -606,8 +606,8 @@ MonoBehaviour:
         guid: f4b5cc927ead2f4cb269da58d36a80d8
       Path: Events\Factory Tencent GME\Aliases\Play_Shotgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_gme_blend
       guid: b6f59672f0cd2840a040a96e4089b61a
       id: 3854968841
@@ -626,8 +626,8 @@ MonoBehaviour:
         guid: b6f59672f0cd2840a040a96e4089b61a
       Path: Events\Factory Tencent GME\Aliases\Stop_gme_blend
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_GME_Receive
       guid: 7f9f163778a9b042bdaeb768cefce580
       id: 4154133439
@@ -643,8 +643,8 @@ MonoBehaviour:
         guid: 7f9f163778a9b042bdaeb768cefce580
       Path: Events\Factory Tencent GME\Stop_GME_Receive
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_GME_Send
       guid: 88cc267825b7394594162f53e7723708
       id: 2839222858
@@ -660,8 +660,8 @@ MonoBehaviour:
         guid: 88cc267825b7394594162f53e7723708
       Path: Events\Factory Tencent GME\Stop_GME_Send
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_GME_Send_Loop
       guid: 971ca605f5e0804b9fa6ae4e99f9db68
       id: 3949320891
@@ -677,8 +677,8 @@ MonoBehaviour:
         guid: 971ca605f5e0804b9fa6ae4e99f9db68
       Path: Events\Factory Tencent GME\Stop_GME_Send_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Loop
       guid: 5df3e6dbbd10504f87010b8a9901cd27
       id: 1640874226
@@ -694,8 +694,8 @@ MonoBehaviour:
         guid: 5df3e6dbbd10504f87010b8a9901cd27
       Path: Events\Factory Tencent GME\Stop_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_original
       guid: ad9b8e71db6a0e4b83f7781a5fb30689
       id: 1301038397
@@ -714,8 +714,8 @@ MonoBehaviour:
         guid: ad9b8e71db6a0e4b83f7781a5fb30689
       Path: Events\Factory Tencent GME\Aliases\Stop_original
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Short
       guid: cce448dfe730d3478bb6f13734fcb53e
       id: 2181745102
@@ -731,8 +731,8 @@ MonoBehaviour:
         guid: cce448dfe730d3478bb6f13734fcb53e
       Path: Events\Factory Tencent GME\Stop_Short
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Shotgun
       guid: f75c850dccef9b40b7c8986e793c15a3
       id: 89948534
@@ -751,8 +751,8 @@ MonoBehaviour:
         guid: f75c850dccef9b40b7c8986e793c15a3
       Path: Events\Factory Tencent GME\Aliases\Stop_Shotgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -765,7 +765,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584563561110009318
+    m_lastTime: -8584561931020700444
     List: []
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     PathAndIcons:
@@ -778,7 +778,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8584563561110009318
+    m_lastTime: -8584561931020690435
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -819,7 +819,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory Soundseed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8584563561109999346
+    m_lastTime: -8584561931020680468
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -973,7 +973,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: c0904058cc3ca147a37cbe331bfeb2b2
     GuidInternal: 
-    m_lastTime: -8584563561109239715
+    m_lastTime: -8584561931019915884
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -987,7 +987,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 24668d1c0506d84c9b9e418a40fac651
     GuidInternal: 
-    m_lastTime: -8584563561109229747
+    m_lastTime: -8584561931019910848
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1001,7 +1001,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: addbe6d80604e24f8b5bc7515685fec3
     GuidInternal: 
-    m_lastTime: -8584563561109229747
+    m_lastTime: -8584561931019900851
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
