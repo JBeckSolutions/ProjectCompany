@@ -72,3 +72,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Wwise Soundbanks Directory excluded because they are symlinked from Wwise Project
+/[Aa]ssets/[Ss]treaming[Aa]ssets/[Aa]udio/[Gg]enerated[Ss]ound[Bb]anks/*
+
+
+
