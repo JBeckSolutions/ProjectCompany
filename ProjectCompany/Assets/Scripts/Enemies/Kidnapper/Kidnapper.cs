@@ -3,7 +3,7 @@ using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
-public class Kidnapper : EnemyBase
+public class Kidnapper : EnemyBaseLegacy
 {
     [SerializeField] List<PlayerState> playersGettingCarried;
     [SerializeField] private Transform carryPosition;

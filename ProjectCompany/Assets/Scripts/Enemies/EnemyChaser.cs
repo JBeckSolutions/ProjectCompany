@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyChaser : EnemyBase
+public class EnemyChaser : EnemyBaseLegacy
 {
     [Header("Stops when in sight.")]
     //[SerializeField] private float speedMultiplier = 0.0f; // Multiplier to increase chase speed

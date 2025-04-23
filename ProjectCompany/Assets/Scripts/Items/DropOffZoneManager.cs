@@ -3,6 +3,7 @@ using Unity.Netcode;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DropOffAreaManager : NetworkBehaviour
 {
@@ -10,11 +11,13 @@ public class DropOffAreaManager : NetworkBehaviour
 
     public List<Item> ItemList;
 
+    [SerializeField] private TMP_Text quotaText;
     [SerializeField] private Collider DropOffArea;
     public int ItemValue = 0;
     private void Start()
     {
         GameManager.Singelton.DropOffAreaManager = this;
+        quotaText.text = new string(ItemValue.ToString() + "/" + GameManager.Singelton.Quota.Value.ToString());
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -37,6 +40,8 @@ public class DropOffAreaManager : NetworkBehaviour
         {
             ItemValue += item.itemValue;
         }
+
+        quotaText.text = new string(ItemValue.ToString() + "/" + GameManager.Singelton.Quota.Value.ToString());
     }
 
     private void OnTriggerExit(Collider other)

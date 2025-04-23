@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyJumper :EnemyBase
+public class EnemyJumper :EnemyBaseLegacy
 {
     [Header("Faster when in sight")]
     //[SerializeField] private float speedMultiplier = 2.0f; // Multiplier to increase chase speed

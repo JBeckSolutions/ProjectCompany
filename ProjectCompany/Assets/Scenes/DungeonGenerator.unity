@@ -161,8 +161,9 @@ MonoBehaviour:
   - {fileID: 2156017288405549669, guid: 0feeba41a541b2e4f9777d1e646ffbe3, type: 3}
   - {fileID: 9134976987606893072, guid: eda3696d9ad150442800fd8927e1050c, type: 3}
   enemyPrefabs:
-  - {fileID: 8924282795677139858, guid: 2ffed25f58727034a88f99b61fb95d05, type: 3}
+  - {fileID: 8924282795677139858, guid: c531c1a0b19b5084aa4ee30b680dff41, type: 3}
   - {fileID: 2092756375646722572, guid: 40ab83d7cada60b4ab0a76c7bed584fe, type: 3}
+  - {fileID: 8924282795677139858, guid: 2ffed25f58727034a88f99b61fb95d05, type: 3}
   generatedItemsParent: {fileID: 7841871041383228874, guid: 86f130f5f76670f4e9a13afd7e7e9215, type: 3}
   generatedEnemiesParent: {fileID: 7841871041383228874, guid: 7053a261f6c37a7428a44e38f5b5c89e, type: 3}
   maxRooms: 300
@@ -173,6 +174,7 @@ MonoBehaviour:
   seed: 0
   placedRooms: []
   placedEnemies: []
+  placedItems: []
   availableItemSpawns: []
   availableEnemySpawns: []
   enemyParent: {fileID: 0}

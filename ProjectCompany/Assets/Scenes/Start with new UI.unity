@@ -235,9 +235,9 @@ MonoBehaviour:
   maxSpawnInverval: 45
   Quota:
     m_InternalValue: 0
-  currentDay: 1
   playerDeaths:
     m_InternalValue: 0
+  currentDay: 1
   DungeonSize:
     m_InternalValue: 0
   minRooms: 50
@@ -379,7 +379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &438892633
 Light:
   m_ObjectHideFlags: 0
@@ -735,28 +735,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623012359472401807, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1335792369
-      objectReference: {fileID: 0}
-    - target: {fileID: 3623012359472401807, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 2381583113
+      value: 914303213
       objectReference: {fileID: 0}
     - target: {fileID: 5359837369693908529, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 3622735438
+      value: 3013561688
       objectReference: {fileID: 0}
-    - target: {fileID: 5359837369693908529, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+    - target: {fileID: 5690074968249222354, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 1136164542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690074968249222354, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 2381583113
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127277902637435485, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
-      propertyPath: shouldTriggerSpawn
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7924860359247852407, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
 --- !u!1 &1260479489
 GameObject:
