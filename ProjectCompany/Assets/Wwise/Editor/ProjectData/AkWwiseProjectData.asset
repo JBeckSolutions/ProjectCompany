@@ -479,7 +479,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_UI
     guid: ac79309561351547a997a124cf7737ab
     GuidInternal: 
-    m_lastTime: -8584560269167618645
+    m_lastTime: -8584560150822299310
     List:
     - name: MainMenu_UI_SFX
       guid: cd9b4a020afc37499d8b1b05b0745875
@@ -959,7 +959,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
     guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
     GuidInternal: 
-    m_lastTime: -8584560232623841209
+    m_lastTime: -8584560146431497259
     List:
     - name: MainMenu_UI_Button_Click_JoinGame
       guid: b6e0942138567b48b5ca6df77dd70b85
@@ -982,8 +982,8 @@ MonoBehaviour:
         guid: b6e0942138567b48b5ca6df77dd70b85
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_JoinGame
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: MainMenu_UI_Button_Click_NewGame
       guid: 1b6d9ec72c59744ca26cc73a997ee0ff
       id: 1823813971
@@ -1005,8 +1005,8 @@ MonoBehaviour:
         guid: 1b6d9ec72c59744ca26cc73a997ee0ff
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_NewGame
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: MainMenu_UI_Button_Click_QuitGame
       guid: 45129e2105dceb4c9fad8a201ffa0c04
       id: 386571594
@@ -1028,8 +1028,8 @@ MonoBehaviour:
         guid: 45129e2105dceb4c9fad8a201ffa0c04
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_QuitGame
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: MainMenu_UI_Button_Click_Settings
       guid: eae5aa9ab6c072418b3ae978575ec802
       id: 3539013154
@@ -1051,8 +1051,8 @@ MonoBehaviour:
         guid: eae5aa9ab6c072418b3ae978575ec802
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Settings
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
   - PhysicalPath: Events\MainMenu_UI_Button_Hover.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1070,7 +1070,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
     guid: 1f6d0cc600c3c348a82a2036ab784d9e
     GuidInternal: 
-    m_lastTime: -8584560227712376923
+    m_lastTime: -8584560150822550107
     List:
     - name: MainMenu_Button_Hover_JoinGame
       guid: bebd04d2264d7745b5a78b0ea09870a4
@@ -1093,8 +1093,8 @@ MonoBehaviour:
         guid: bebd04d2264d7745b5a78b0ea09870a4
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_JoinGame
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: MainMenu_Button_Hover_NewGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
       id: 13766132
@@ -1116,8 +1116,8 @@ MonoBehaviour:
         guid: e56b0e634155b246aeb8c7a38f7c8038
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_NewGame
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: MainMenu_Button_Hover_QuitGame
       guid: 9bb4097e4352ab4abedefb6eed76a8b7
       id: 2515304575
@@ -1139,8 +1139,8 @@ MonoBehaviour:
         guid: 9bb4097e4352ab4abedefb6eed76a8b7
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_QuitGame
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
     - name: MainMenu_Button_Hover_Settings
       guid: 74b4c5107be0f5479b1bd01d1519ead6
       id: 2281368103
@@ -1162,8 +1162,8 @@ MonoBehaviour:
         guid: 74b4c5107be0f5479b1bd01d1519ead6
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_Settings
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4
+      minDuration: 4
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1414,7 +1414,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584560822000905509
     List: []
-  ExpandedFileSystemItemIds: 02000000160000001a0000001e0000001f0000002a0000002e0000002f00000031000000
+  ExpandedFileSystemItemIds: 0200000016000000170000001a0000001b0000001e0000001f000000210000002a0000002e0000002f000000310000004e000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
