@@ -419,6 +419,85 @@ MonoBehaviour:
         ObjectType: 7
         guid: ff17fdac29acd14cb8a2f70164a8a7d4
       Path: SoundBanks\Factory Tencent GME\Tencent_GME
+  - PhysicalPath: SoundBanks\MainMenu.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5cb50de92668ac4c91b9a6cf590a2b99
+    ParentPath: SoundBanks\MainMenu
+    guid: 5cb50de92668ac4c91b9a6cf590a2b99
+    GuidInternal: 
+    m_lastTime: -8584560269167628614
+    List: []
+  - PhysicalPath: SoundBanks\MainMenu_Music.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5cb50de92668ac4c91b9a6cf590a2b99
+    - ElementName: MainMenu_Music
+      ObjectType: 12
+      guid: 1962c911a3a469489c56c2940ed7567d
+    ParentPath: SoundBanks\MainMenu\MainMenu_Music
+    guid: 1962c911a3a469489c56c2940ed7567d
+    GuidInternal: 
+    m_lastTime: -8584560269167628614
+    List:
+    - name: MainMenu_Music_SoundBank
+      guid: 6fef1e6795b8d349ae7c1e98f22055f2
+      id: 2846546401
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5cb50de92668ac4c91b9a6cf590a2b99
+      - ElementName: MainMenu_Music
+        ObjectType: 12
+        guid: 1962c911a3a469489c56c2940ed7567d
+      - ElementName: MainMenu_Music_SoundBank
+        ObjectType: 7
+        guid: 6fef1e6795b8d349ae7c1e98f22055f2
+      Path: SoundBanks\MainMenu\MainMenu_Music\MainMenu_Music_SoundBank
+  - PhysicalPath: SoundBanks\MainMenu_UI.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5cb50de92668ac4c91b9a6cf590a2b99
+    - ElementName: MainMenu_UI
+      ObjectType: 12
+      guid: ac79309561351547a997a124cf7737ab
+    ParentPath: SoundBanks\MainMenu\MainMenu_UI
+    guid: ac79309561351547a997a124cf7737ab
+    GuidInternal: 
+    m_lastTime: -8584560269167618645
+    List:
+    - name: MainMenu_UI_SFX
+      guid: cd9b4a020afc37499d8b1b05b0745875
+      id: 1428380080
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5cb50de92668ac4c91b9a6cf590a2b99
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: ac79309561351547a997a124cf7737ab
+      - ElementName: MainMenu_UI_SFX
+        ObjectType: 7
+        guid: cd9b4a020afc37499d8b1b05b0745875
+      Path: SoundBanks\MainMenu\MainMenu_UI\MainMenu_UI_SFX
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -1004,8 +1083,8 @@ MonoBehaviour:
     m_lastTime: -8584560822000905509
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
