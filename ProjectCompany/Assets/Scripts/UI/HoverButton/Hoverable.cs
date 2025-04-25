@@ -7,10 +7,7 @@ public class Hoverable : PointerManipulator
 
     public Hoverable(Action hoverHandler)
     {
-        if (hoverHandler != null)
-        {
-            hovered += hoverHandler;
-        }
+        hovered += hoverHandler;
     }
 
     protected override void RegisterCallbacksOnTarget()
