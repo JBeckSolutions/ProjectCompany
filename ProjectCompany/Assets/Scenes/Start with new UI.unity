@@ -330,6 +330,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bced61112f8df64c838c5dd2415b8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainMenu_UI_Button_Click_NewGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ea8a753dbe3c44e43bd5fa30ad9aab34, type: 2}
+  MainMenu_UI_Button_Click_JoinGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: eb9b1d7f92533fe4abfb1de6dd55181d, type: 2}
+  MainMenu_UI_Button_Click_Settings:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9fb0a001755cbf34cba4c02ab4f8018d, type: 2}
+  MainMenu_UI_Button_Click_QuitGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 97f0cc1a23d6ffc4682aac34395fa0d3, type: 2}
+  MainMenu_UI_Button_Hover_NewGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aa3f276506c58b6458d99133193caf5a, type: 2}
+  MainMenu_UI_Button_Hover_JoinGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 134c169d05d3db541864b380dc01693d, type: 2}
+  MainMenu_UI_Button_Hover_Settings:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 71a49ce32d5858846b6ad44997e7e22f, type: 2}
+  MainMenu_UI_Button_Hover_QuitGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 634d74773f36d454ead50b38f34eb12d, type: 2}
 --- !u!114 &350756166
 MonoBehaviour:
   m_ObjectHideFlags: 0

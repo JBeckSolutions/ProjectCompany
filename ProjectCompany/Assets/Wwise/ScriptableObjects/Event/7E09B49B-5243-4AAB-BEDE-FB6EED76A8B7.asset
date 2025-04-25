@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
   m_Name: 7E09B49B-5243-4AAB-BEDE-FB6EED76A8B7
   m_EditorClassIdentifier: 
-  objectName: MainMenu_Button_Hover_Quit
-  id: 2880873917
+  objectName: MainMenu_Button_Hover_QuitGame
+  id: 2515304575
   guid: 7E09B49B-5243-4AAB-BEDE-FB6EED76A8B7
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

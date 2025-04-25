@@ -832,6 +832,338 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\MainMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    ParentPath: Events\MainMenu
+    guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    GuidInternal: 
+    m_lastTime: -8584560232623866195
+    List: []
+  - PhysicalPath: Events\MainMenu_MainTrack.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    - ElementName: MainMenu_Music
+      ObjectType: 12
+      guid: ef8791ebca21fc4dba09520cde9eb11e
+    - ElementName: MainMenu_MainTrack
+      ObjectType: 12
+      guid: 2c50c089824be74abcee2f7ff5b95a77
+    ParentPath: Events\MainMenu\MainMenu_Music\MainMenu_MainTrack
+    guid: 2c50c089824be74abcee2f7ff5b95a77
+    GuidInternal: 
+    m_lastTime: -8584560232623856222
+    List:
+    - name: MainMenu_Loading_FromSplashScreen
+      guid: e7d9a48f8c73d94db028aa61a6c8ae53
+      id: 3893434228
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_Music
+        ObjectType: 12
+        guid: ef8791ebca21fc4dba09520cde9eb11e
+      - ElementName: MainMenu_MainTrack
+        ObjectType: 12
+        guid: 2c50c089824be74abcee2f7ff5b95a77
+      - ElementName: MainMenu_Loading_FromSplashScreen
+        ObjectType: 3
+        guid: e7d9a48f8c73d94db028aa61a6c8ae53
+      Path: Events\MainMenu\MainMenu_Music\MainMenu_MainTrack\MainMenu_Loading_FromSplashScreen
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_Transition
+      guid: f5850ad6c32f4d4a9ae31dd8df55a0de
+      id: 575977795
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_Music
+        ObjectType: 12
+        guid: ef8791ebca21fc4dba09520cde9eb11e
+      - ElementName: MainMenu_MainTrack
+        ObjectType: 12
+        guid: 2c50c089824be74abcee2f7ff5b95a77
+      - ElementName: MainMenu_Transition
+        ObjectType: 3
+        guid: f5850ad6c32f4d4a9ae31dd8df55a0de
+      Path: Events\MainMenu\MainMenu_Music\MainMenu_MainTrack\MainMenu_Transition
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\MainMenu_Music.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    - ElementName: MainMenu_Music
+      ObjectType: 12
+      guid: ef8791ebca21fc4dba09520cde9eb11e
+    ParentPath: Events\MainMenu\MainMenu_Music
+    guid: ef8791ebca21fc4dba09520cde9eb11e
+    GuidInternal: 
+    m_lastTime: -8584560232623856222
+    List: []
+  - PhysicalPath: Events\MainMenu_UI.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    - ElementName: MainMenu_UI
+      ObjectType: 12
+      guid: 490e958d4d8d154399f775367caf9b34
+    ParentPath: Events\MainMenu\MainMenu_UI
+    guid: 490e958d4d8d154399f775367caf9b34
+    GuidInternal: 
+    m_lastTime: -8584560232623846244
+    List: []
+  - PhysicalPath: Events\MainMenu_UI_Button_Click.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    - ElementName: MainMenu_UI
+      ObjectType: 12
+      guid: 490e958d4d8d154399f775367caf9b34
+    - ElementName: MainMenu_UI_Button_Click
+      ObjectType: 12
+      guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+    ParentPath: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
+    guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+    GuidInternal: 
+    m_lastTime: -8584560232623841209
+    List:
+    - name: MainMenu_UI_Button_Click_JoinGame
+      guid: b6e0942138567b48b5ca6df77dd70b85
+      id: 3225697891
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+      - ElementName: MainMenu_UI_Button_Click_JoinGame
+        ObjectType: 3
+        guid: b6e0942138567b48b5ca6df77dd70b85
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_JoinGame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_UI_Button_Click_NewGame
+      guid: 1b6d9ec72c59744ca26cc73a997ee0ff
+      id: 1823813971
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+      - ElementName: MainMenu_UI_Button_Click_NewGame
+        ObjectType: 3
+        guid: 1b6d9ec72c59744ca26cc73a997ee0ff
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_NewGame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_UI_Button_Click_QuitGame
+      guid: 45129e2105dceb4c9fad8a201ffa0c04
+      id: 386571594
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+      - ElementName: MainMenu_UI_Button_Click_QuitGame
+        ObjectType: 3
+        guid: 45129e2105dceb4c9fad8a201ffa0c04
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_QuitGame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_UI_Button_Click_Settings
+      guid: eae5aa9ab6c072418b3ae978575ec802
+      id: 3539013154
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+      - ElementName: MainMenu_UI_Button_Click_Settings
+        ObjectType: 3
+        guid: eae5aa9ab6c072418b3ae978575ec802
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Settings
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\MainMenu_UI_Button_Hover.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+    - ElementName: MainMenu_UI
+      ObjectType: 12
+      guid: 490e958d4d8d154399f775367caf9b34
+    - ElementName: MainMenu_UI_Button_Hover
+      ObjectType: 12
+      guid: 1f6d0cc600c3c348a82a2036ab784d9e
+    ParentPath: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
+    guid: 1f6d0cc600c3c348a82a2036ab784d9e
+    GuidInternal: 
+    m_lastTime: -8584560227712376923
+    List:
+    - name: MainMenu_Button_Hover_JoinGame
+      guid: bebd04d2264d7745b5a78b0ea09870a4
+      id: 3560645790
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_Button_Hover_JoinGame
+        ObjectType: 3
+        guid: bebd04d2264d7745b5a78b0ea09870a4
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_JoinGame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_Button_Hover_NewGame
+      guid: e56b0e634155b246aeb8c7a38f7c8038
+      id: 13766132
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_Button_Hover_NewGame
+        ObjectType: 3
+        guid: e56b0e634155b246aeb8c7a38f7c8038
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_NewGame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_Button_Hover_QuitGame
+      guid: 9bb4097e4352ab4abedefb6eed76a8b7
+      id: 2515304575
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_Button_Hover_QuitGame
+        ObjectType: 3
+        guid: 9bb4097e4352ab4abedefb6eed76a8b7
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_QuitGame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MainMenu_Button_Hover_Settings
+      guid: 74b4c5107be0f5479b1bd01d1519ead6
+      id: 2281368103
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_Button_Hover_Settings
+        ObjectType: 3
+        guid: 74b4c5107be0f5479b1bd01d1519ead6
+      Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_Settings
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1082,9 +1414,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584560822000905509
     List: []
-  ExpandedFileSystemItemIds: 1a0000001e0000001f00000021000000
+  ExpandedFileSystemItemIds: 02000000160000001a0000001e0000001f0000002a0000002e0000002f00000031000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
-  AutoSyncSelection: 0
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 1
   CurrentPluginConfig: 

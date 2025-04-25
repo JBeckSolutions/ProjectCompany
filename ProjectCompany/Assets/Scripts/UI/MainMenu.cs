@@ -15,12 +15,10 @@ public class MainMenu : MonoBehaviour
     public AK.Wwise.Event MainMenu_UI_Button_Click_QuitGame;
     
     [Header("Wwise MainMenu Button Hover")]
-    public AK.Wwise.Event MainMenu_UI_Button_Hover_NewGame; //to be added after HoverButton is implemented 
-    public AK.Wwise.Event MainMenu_UI_Button_Hover_JoinGame; //to be added after HoverButton is implemented 
-    public AK.Wwise.Event MainMenu_UI_Button_Hover_Settings; //to be added after HoverButton is implemented 
-    public AK.Wwise.Event MainMenu_UI_Button_Hover_QuitGame; //to be added after HoverButton is implemented 
-    
-    
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_NewGame; //to be added after HoverButton is implemented
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_JoinGame; //to be added after HoverButton is implemented
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_Settings; //to be added after HoverButton is implemented
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_QuitGame; //to be added after HoverButton is implemented
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
