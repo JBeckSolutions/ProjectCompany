@@ -9,10 +9,10 @@ public class Item : NetworkBehaviour
     public string itemName = "Item";
     public int itemValue = 10;
     public Texture2D InventoryImage;
+    public int ItemWeight = 1;
 
     [SerializeField] private GameObject model;
     [SerializeField] private Collider itemCollider;
-    [SerializeField] private int ItemWeight = 1;
 
     [ServerRpc(RequireOwnership = false)]
     public virtual void PickUpServerRpc(NetworkObjectReference PlayerReference) //Server picks the item up for the client

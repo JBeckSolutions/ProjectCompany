@@ -77,16 +77,18 @@ public class PlayerController : NetworkBehaviour
     {
         Vector3 forward = playerCamera.transform.forward;
         Vector3 right = playerCamera.transform.right;
-        Vector2 _moveInput = moveInput; //Helper variable so moveInput doesnt multiply infinitly
+        Vector2 _moveInput = moveInput; //Helper variable so moveInput doesnt multiply infinitely
 
         timeUntilStaminaRefresh -= Time.deltaTime;
+
+        float weightMultiplier = 1f - (playerInventory.PlayerWeight * 0.1f);
 
         if (sprinting && currentStamina > 0)
         {
             timeUntilStaminaRefresh = MaxTimeUntilStaminaRefresh;
             currentStamina -= Time.deltaTime;
             currentStamina = Mathf.Max(currentStamina, 0);
-            _moveInput *= sprintSpeed;
+            _moveInput *= sprintSpeed * weightMultiplier;
         }
         else
         {
@@ -96,7 +98,7 @@ public class PlayerController : NetworkBehaviour
                 currentStamina = Mathf.Min(currentStamina, stamina);
             }
 
-            _moveInput *= movementSpeed;
+            _moveInput *= movementSpeed * weightMultiplier;
         }
 
         animator.SetFloat("Speed", _moveInput.magnitude); //Set animation for client
@@ -141,7 +143,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.started)
+        if (characterController.isGrounded && context.started && playerInventory.PlayerWeight < 4)
         {
             yAxisVelocity = 0;
             yAxisVelocity += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
@@ -176,6 +178,23 @@ public class PlayerController : NetworkBehaviour
         }
     }
     #region InventorySlotControls
+
+    public void OnPreviousInventorySlot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(null, -1);
+        }
+    }
+
+    public void OnNextInventorySlot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(null, 1);
+        }
+    }
+
     public void OnInventorySlotOne(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -227,6 +246,5 @@ public class PlayerController : NetworkBehaviour
             }
         }
     }
-    
 
 }

@@ -679,6 +679,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0186fdaf-a063-4526-98e2-dfa14d7294e8
     m_ActionName: 'Player/DropItem[/Keyboard/g]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 783465290482955409}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPreviousInventorySlot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a3a932cb-f99f-483d-9103-31ff10b6c053
+    m_ActionName: 'Player/PreviousInventorySlot[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 783465290482955409}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnNextInventorySlot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 94304d6c-72bd-4da1-9bc0-50dc900ca356
+    m_ActionName: 'Player/NextInventorySlot[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -697,8 +729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  movementSpeed: 2.5
-  sprintSpeed: 5
+  movementSpeed: 4
+  sprintSpeed: 6
   jumpHeight: 1
   gravityValue: -9.81
   sensitivity: 0.1
@@ -758,9 +790,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f3fe71710512f489d57d0979808373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerWeight: 0
   inventoryItems: []
   InventorySpace: 7
-  ActiveInvetorySlot: 0
+  ActiveInventorySlot: 0
   playerHand: {fileID: 5401785166968592877}
   dropLocation: {fileID: 6205219328851093515}
 --- !u!114 &-3665451260559732005
