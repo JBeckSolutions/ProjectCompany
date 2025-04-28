@@ -6,11 +6,13 @@ using UnityEngine.UIElements;
 
 public class PlayerInventoryManager : MonoBehaviour
 {
+    public int PlayerWeight = 0;
+
     [SerializeField] private Item[] inventoryItems;
     //[SerializeField] private RawImage[] inventroyImages;
     //[SerializeField] private RawImage[] activeInventroySlot;
     [SerializeField] private int InventorySpace = 7;
-    [SerializeField] private int ActiveInvetorySlot = 0;
+    [SerializeField] private int ActiveInventorySlot = 0;
     
     public Transform playerHand;
     [SerializeField] private Transform dropLocation;
@@ -78,48 +80,126 @@ public class PlayerInventoryManager : MonoBehaviour
     }
     public void AddItem(Item ItemToAdd)
     {
-        if (inventoryItems[ActiveInvetorySlot] == null)
+        if (inventoryItems[ActiveInventorySlot] == null)
         {
             if (ItemToAdd.PickupAble.Value == false) return;
+
+            bool canBePickedUp = true;
+
+            for (int i = 1; i <= ItemToAdd.ItemWeight - 1; i++)
+            {
+                if (inventoryItems[ActiveInventorySlot + i] != null)
+                {
+                    canBePickedUp = false;
+                }
+            }
+
+            if (!canBePickedUp)
+            {
+                return;
+            }
+
             ItemToAdd.PickUpServerRpc(this.GetComponent<NetworkObject>());
-            inventoryItems[ActiveInvetorySlot] = ItemToAdd;
-            slots[ActiveInvetorySlot].style.backgroundImage = ItemToAdd.InventoryImage;
+
+            for (int i = 0; i < ItemToAdd.ItemWeight; i++)
+            {
+                inventoryItems[ActiveInventorySlot + i] = ItemToAdd;
+                slots[ActiveInventorySlot + i].style.backgroundImage = ItemToAdd.InventoryImage;
+            }
+
+            PlayerWeight += ItemToAdd.ItemWeight;
         }
     }
     public void DropItem()
     {
-        if (inventoryItems[ActiveInvetorySlot] != null)
+        if (inventoryItems[ActiveInventorySlot] != null)
         {
-            inventoryItems[ActiveInvetorySlot].DropServerRpc(dropLocation.position);
-            inventoryItems[ActiveInvetorySlot] = null;
-            slots[ActiveInvetorySlot].style.backgroundImage = defaultImage;
+            inventoryItems[ActiveInventorySlot].DropServerRpc(dropLocation.position);
+
+            GameObject itemToRemove = inventoryItems[ActiveInventorySlot].gameObject;
+
+            PlayerWeight -= inventoryItems[ActiveInventorySlot].ItemWeight;
+
+            for (int i = 0; i < inventoryItems.Length; i++)
+            {
+                if (inventoryItems[i] != null && inventoryItems[i].gameObject == itemToRemove)
+                {
+                    inventoryItems[i] = null;
+                    slots[i].style.backgroundImage = defaultImage;
+                }
+            }
         }
     }
-    public void ChangeActiveInventorySlot(int NewActiveInventorySlot)
+    public void ChangeActiveInventorySlot(int? NewActiveInventorySlot = null, int? NextOrPreviousSlot = null)
     {
-        if (inventoryItems[ActiveInvetorySlot] != null) //Set item Model to be invisible if Player is holding something at the moment
+        if (inventoryItems[ActiveInventorySlot] != null) //Set item Model to be invisible
         {
-            inventoryItems[ActiveInvetorySlot].ToggleVisibilityServerRpc(false);
+            inventoryItems[ActiveInventorySlot].ToggleVisibilityServerRpc(false);
         }
 
-        ChangeBorderColor(slots[ActiveInvetorySlot], false);
+        ChangeBorderColor(slots[ActiveInventorySlot], false);
 
-        ActiveInvetorySlot = NewActiveInventorySlot;   //Change active inventroy Slot
+        int foundInventorySlot = ActiveInventorySlot;
 
-        ChangeBorderColor(slots[ActiveInvetorySlot], true);
-
-        if (ActiveInvetorySlot < 0)     //Check if slot is valid
+        if (NewActiveInventorySlot == null && NextOrPreviousSlot != null)
         {
-            ActiveInvetorySlot = 0;
+            int direction = NextOrPreviousSlot.Value; // +1 or -1
+            int slotToCheck = ActiveInventorySlot;
+            bool foundDifferentItem = false;
+
+            do
+            {
+                slotToCheck += direction;
+
+                // Wrap around
+                if (slotToCheck >= InventorySpace)
+                {
+                    slotToCheck = 0;
+                }
+                else if (slotToCheck < 0)
+                {
+                    slotToCheck = InventorySpace - 1;
+                }
+
+
+                if (slotToCheck == ActiveInventorySlot)
+                {
+                    // Failsave
+                    break;
+                }
+
+                if (inventoryItems[slotToCheck] == null)
+                {
+                    foundDifferentItem = true;
+                    foundInventorySlot = slotToCheck;
+                }
+                else if (inventoryItems[slotToCheck] != inventoryItems[ActiveInventorySlot])
+                {
+                    for (int i = 0; i < inventoryItems.Length; i++)
+                    {
+                        if (inventoryItems[i] == inventoryItems[slotToCheck])
+                        {
+                            foundDifferentItem = true;
+                            foundInventorySlot = i;
+                            break;
+                        }
+                    }
+                }
+
+            } while (!foundDifferentItem);
         }
-        else if (ActiveInvetorySlot > InventorySpace - 1)
+        else if (NewActiveInventorySlot != null)
         {
-            ActiveInvetorySlot = InventorySpace - 1;
+            foundInventorySlot = NewActiveInventorySlot.Value;
         }
 
-        if (inventoryItems[ActiveInvetorySlot] != null) //Set item model to be visible if player is now holding something
+        ActiveInventorySlot = foundInventorySlot;
+
+        ChangeBorderColor(slots[ActiveInventorySlot], true);
+
+        if (inventoryItems[ActiveInventorySlot] != null) //Set item model to be visible if player is now holding something
         {
-            inventoryItems[ActiveInvetorySlot].ToggleVisibilityServerRpc(true);
+            inventoryItems[ActiveInventorySlot].ToggleVisibilityServerRpc(true);
         }
         
     }
