@@ -1,5 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/InventorySlots.uss?fileID=7433441132597879392&amp;guid=3a4345df12442bd4782cbd9bfd0039a4&amp;type=3#InventorySlots" />
+    <ui:VisualElement name="HeadsUpDisplay" style="flex-grow: 1;">
+        <ui:ProgressBar value="100" title="Stamina" name="StaminaBar" class="progressBar" style="width: 306px;" />
+    </ui:VisualElement>
     <ui:VisualElement name="Inventory" style="flex-grow: 1; align-content: stretch; justify-content: flex-end; align-items: stretch; align-self: center;">
         <ui:GroupBox style="align-items: center; justify-content: space-between; align-self: center; align-content: flex-end; flex-direction: row;">
             <ui:GroupBox>
