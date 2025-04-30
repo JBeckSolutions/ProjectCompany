@@ -95,7 +95,7 @@ public class GameManager : NetworkBehaviour
     [ServerRpc]
     public void LvlStartingServerRpc()
     {
-        Debug.Log("Starting Enemy spawning Corotine");
+        //Debug.Log("Starting Enemy spawning Corotine");
         RoundRunning = true;
         StartCoroutine(LvlRunning());
         
@@ -125,14 +125,14 @@ public class GameManager : NetworkBehaviour
 
             float spawnInterval = Mathf.Lerp(maxSpawnInverval, minSpawnInterval, curveValue);
 
-            Debug.Log("Time untile next enemy: " + spawnInterval);
+            //Debug.Log("Time untile next enemy: " + spawnInterval);
 
             yield return new WaitForSeconds(spawnInterval);
 
             MapGenerator.SpawnEnemyServerRpc();
         }
 
-        Debug.Log("Stopping enemy spawn Coroutine");
+        //Debug.Log("Stopping enemy spawn Coroutine");
     }
 
 }
