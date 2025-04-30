@@ -23,6 +23,7 @@ public class PlayerSpawnManager : NetworkBehaviour
     private void Start()
     {
         NetworkManager.Singleton.OnServerStarted += ServerStart;
+        ulong test = this.OwnerClientId;
     }
     public void ServerStart()
     {
@@ -49,7 +50,7 @@ public class PlayerSpawnManager : NetworkBehaviour
 
         // Instantiate the player prefab at the chosen spawn point
         NetworkObject player = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation).GetComponent<NetworkObject>();
-
+        player.name = "Player " + clientId;
         // Ensure the player prefab is correctly networked across clients
         player.SpawnAsPlayerObject(clientId);
         SpawnPlayerClientRpc(clientId, spawnPoint.position);

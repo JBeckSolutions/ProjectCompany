@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerPrefab: {fileID: 4515320656422679868, guid: 579479e990282524c8d8f200a05379fd, type: 3}
+  playerPrefab: {fileID: 4515320656422679868, guid: a94bab59139467843a47c70fe419b1f4, type: 3}
   SpawnPoints: []
 --- !u!1 &350756164
 GameObject:
