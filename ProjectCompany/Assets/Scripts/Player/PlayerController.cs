@@ -20,6 +20,7 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private GameObject playerCamera;
 
     [SerializeField] private PlayerInventoryManager playerInventory;
+    [SerializeField] private bool jumpedThisFrame = false;
 
     [Header("Stamina")]
     [SerializeField] private float stamina = 5f;
@@ -113,9 +114,17 @@ public class PlayerController : NetworkBehaviour
 
             _moveInput *= movementSpeed * weightMultiplier;
         }
+        
+        //Set animation for client
+        animator.SetFloat("Speed", _moveInput.magnitude);
+        if (jumpedThisFrame)
+        {
+            animator.SetTrigger("JumpTrigger");
+        }
 
-        animator.SetFloat("Speed", _moveInput.magnitude); //Set animation for client
-        HandleAnimationServerRpc(_moveInput.magnitude, false);   //Set animation for everyone else
+        //Set animation for everyone else
+        HandleAnimationServerRpc(_moveInput.magnitude, jumpedThisFrame);
+        jumpedThisFrame = false;
 
         Vector3 moveDirection = (forward.normalized * _moveInput.y) + (right.normalized * _moveInput.x);
         yAxisVelocity += gravityValue * Time.deltaTime;
@@ -127,16 +136,20 @@ public class PlayerController : NetworkBehaviour
         }
     }
     [ServerRpc]
-    private void HandleAnimationServerRpc(float speed, bool isJumping)
+    private void HandleAnimationServerRpc(float speed, bool jumpedThisFrame)
     {
-        HandleAnimationClientRpc(speed, isJumping);
+        HandleAnimationClientRpc(speed, jumpedThisFrame);
     }
     [ClientRpc]
-    private void HandleAnimationClientRpc(float speed, bool isJumping)
+    private void HandleAnimationClientRpc(float speed, bool jumpedThisFrame)
     {
         if (IsOwner) return;
         animator.SetFloat("Speed", speed);
-        animator.SetBool("isJumping", isJumping);
+
+        if (jumpedThisFrame)
+        {
+            animator.SetTrigger("JumpTrigger");
+        }
     }
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -160,6 +173,7 @@ public class PlayerController : NetworkBehaviour
         {
             yAxisVelocity = 0;
             yAxisVelocity += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+            jumpedThisFrame = true;
         }
     }
     public void OnLook(InputAction.CallbackContext context)
