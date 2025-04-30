@@ -37,7 +37,7 @@ public class GameManager : NetworkBehaviour
     
     
 
-    private bool RoundRunning = false;
+    [SerializeField] private bool RoundRunning = false;
 
     private void Awake()
     {
@@ -95,8 +95,10 @@ public class GameManager : NetworkBehaviour
     [ServerRpc]
     public void LvlStartingServerRpc()
     {
-        StartCoroutine(LvlRunning());
+        //Debug.Log("Starting Enemy spawning Corotine");
         RoundRunning = true;
+        StartCoroutine(LvlRunning());
+        
     }
 
     public void SetQuotaAndDungeonSize()
@@ -123,10 +125,14 @@ public class GameManager : NetworkBehaviour
 
             float spawnInterval = Mathf.Lerp(maxSpawnInverval, minSpawnInterval, curveValue);
 
+            //Debug.Log("Time untile next enemy: " + spawnInterval);
+
             yield return new WaitForSeconds(spawnInterval);
 
             MapGenerator.SpawnEnemyServerRpc();
         }
+
+        //Debug.Log("Stopping enemy spawn Coroutine");
     }
 
 }
