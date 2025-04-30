@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/ButtonDesign.uss?fileID=7433441132597879392&amp;guid=8a884a76a122d89458f339ff26fd4545&amp;type=3#ButtonDesign" />
     <Style src="project://database/Assets/UI/UIDoc.uss?fileID=7433441132597879392&amp;guid=5c9388dea13422f4fa0339ee811f3f3d&amp;type=3#UIDoc" />
-    <ui:VisualElement name="MainMenu" style="flex-grow: 1; justify-content: center; align-self: stretch; align-content: center; align-items: center; background-image: url(&quot;project://database/Assets/UI/Assets/BackgroundImageMenu.png?fileID=2800000&amp;guid=1ece89dca2ae4e54299a41769b1761f8&amp;type=3#BackgroundImageMenu&quot;); width: 828px;">
+    <ui:VisualElement name="MainMenu" style="flex-grow: 1; justify-content: center; align-self: stretch; align-content: flex-start; align-items: center; background-image: url(&quot;project://database/Assets/UI/Assets/BackgroundImageMenu.png?fileID=2800000&amp;guid=1ece89dca2ae4e54299a41769b1761f8&amp;type=3#BackgroundImageMenu&quot;); width: 828px;">
         <ui:GroupBox style="align-self: center;">
             <ui:Button text="New Game" name="NewGameButton" class="button" style="background-position-x: center 0; background-repeat: no-repeat no-repeat;" />
             <ui:Button text="Join" name="JoinButton" class="button" />
@@ -10,8 +10,8 @@
         </ui:GroupBox>
     </ui:VisualElement>
     <ui:VisualElement name="Options" style="flex-grow: 1; -unity-text-align: upper-center; justify-content: center; align-self: stretch; white-space: normal; background-image: url(&quot;project://database/Assets/UI/Assets/BackgroundImageMenu.png?fileID=2800000&amp;guid=1ece89dca2ae4e54299a41769b1761f8&amp;type=3#BackgroundImageMenu&quot;); width: 824px;">
-        <ui:VisualElement style="flex-grow: 1; align-self: center; align-items: stretch; justify-content: space-around;">
-            <ui:DropdownField label="Auflösung" name="QualityDD" choices="High,Perfomance,Low" class="button" style="align-items: auto; justify-content: center; font-size: 16px; -unity-text-align: middle-center; white-space: nowrap;" />
+        <ui:VisualElement style="align-items: center; justify-content: space-around; font-size: 16px; -unity-text-align: middle-center; white-space: nowrap; align-self: center; align-content: center;">
+            <ui:DropdownField label="Auflösung" name="QualityDD" choices="High,Perfomance,Low" class="button" />
             <ui:SliderInt label="Audio" value="42" high-value="100" name="AudioSlider" class="button" />
             <ui:SliderInt label="Helligkeit" value="42" high-value="100" name="BrightnessSlider" class="button" />
             <ui:Button text="Back" name="BackButton" class="button" />
