@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350756167}
   - component: {fileID: 350756166}
-  - component: {fileID: 350756165}
+  - component: {fileID: 350756168}
   m_Layer: 5
   m_Name: MainMenuUI
   m_TagString: Untagged
@@ -316,18 +316,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &350756165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350756164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bced61112f8df64c838c5dd2415b8f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &350756166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +331,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a9bc13fca7e0c0e4d86169ba93fab865, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 2faf2bffcdebaaf41846938402805bd2, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -362,6 +350,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &350756168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350756164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6186ac3f6070c004093f17227d8d2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &438892632
 GameObject:
   m_ObjectHideFlags: 0

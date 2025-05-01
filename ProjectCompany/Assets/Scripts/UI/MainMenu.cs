@@ -25,14 +25,22 @@ public class MainMenu : MonoBehaviour
             FindFirstObjectByType<Interface>().EnableInventory();
         };
         var settingsButton = root.Q<Button>("SettingsButton");
-        settingsButton.clicked += () => {
-
+        settingsButton.clicked += () =>
+        {
+            menuRoot.style.display = DisplayStyle.None;
+            FindFirstObjectByType<Settings>().OpenSetting();
         };
         var quitButton = root.Q<Button>("QuitButton");
         quitButton.clicked += () => {
             Application.Quit();
         };
 
+    }
+
+    public void OpenMainMenu()
+    {
+        menuRoot.SetEnabled(true);
+        menuRoot.style.display = DisplayStyle.Flex;
     }
 
     // Update is called once per frame

@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 using Unity.Netcode;
 using UnityEngine.Jobs;
 using UnityEngine.Animations;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -31,12 +33,15 @@ public class PlayerController : NetworkBehaviour
     private Vector2 lookInput;
     private float xRotation = 0;
 
+    private ProgressBar staminaBar;
+
     private bool sprinting = false;
 
     public override void OnNetworkSpawn()
     {
 
         currentStamina = stamina;
+
 
         if (!IsOwner)
         {
@@ -50,12 +55,20 @@ public class PlayerController : NetworkBehaviour
             Cursor.visible = false;
             transform.Find("Model").gameObject.SetActive(false);
         }
+
+        var root = GameObject.Find("Interface").GetComponent<UIDocument>().rootVisualElement;
+
+        staminaBar = root.Q<ProgressBar>("StaminaBar");
+
+        staminaBar.lowValue = 0;
+        staminaBar.highValue = stamina;
     }
     private void Update()
     {
         if (!IsOwner) return;
         HandleLook();
         HandleMovementAndAnimation();
+        staminaBar.value = currentStamina;
 
     }
    
