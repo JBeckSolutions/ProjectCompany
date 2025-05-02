@@ -9,12 +9,4 @@
             <HoverButton name="QuitButton" select-word-by-double-click="true" select-line-by-triple-click="true" display-tooltip-when-elided="true" text="Quit" class="button" />
         </ui:GroupBox>
     </ui:VisualElement>
-    <ui:VisualElement name="Options" style="flex-grow: 1; -unity-text-align: upper-center; justify-content: center; align-self: stretch; white-space: normal; background-image: url(&quot;project://database/Assets/UI/Assets/BackgroundImageMenu.png?fileID=2800000&amp;guid=1ece89dca2ae4e54299a41769b1761f8&amp;type=3#BackgroundImageMenu&quot;); width: 824px;">
-        <ui:VisualElement style="align-items: center; justify-content: space-around; font-size: 16px; -unity-text-align: middle-center; white-space: nowrap; align-self: center; align-content: center;">
-            <ui:DropdownField label="Auflösung" name="QualityDD" choices="High,Perfomance,Low" class="button" />
-            <ui:SliderInt label="Audio" value="42" high-value="100" name="AudioSlider" class="button" />
-            <ui:SliderInt label="Helligkeit" value="42" high-value="100" name="BrightnessSlider" class="button" />
-            <ui:Button text="Back" name="BackButton" class="button" />
-        </ui:VisualElement>
-    </ui:VisualElement>
 </ui:UXML>

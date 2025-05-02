@@ -4,7 +4,14 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-    private VisualElement menuRoot;
+    private VisualElement ui_MainMenuRoot;
+    private VisualElement mainMenuRootQuery;
+    
+    [Header("UI References")]
+    public Interface ui_Interface;
+    public SettingsMenu ui_SettingsMenu;
+    
+    
 
     //Wwise Events from Inspector
     [Header("Wwise MainMenu Button Click")]
@@ -22,39 +29,39 @@ public class MainMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
-
-        menuRoot = root.Q<VisualElement>("MainMenu");
-        var newGameHoverButton = root.Q<HoverButton>("NewGameButton");
+        ui_MainMenuRoot = GetComponent<UIDocument>().rootVisualElement;
+        mainMenuRootQuery = ui_MainMenuRoot.Q<VisualElement>("MainMenu");
+        
+        var newGameHoverButton = mainMenuRootQuery.Q<HoverButton>("NewGameButton");
         newGameHoverButton.clicked += () =>
         {
             MainMenu_UI_Button_Click_NewGame.Post(gameObject);
             NetworkManager.Singleton.StartHost();
-            menuRoot.style.display = DisplayStyle.None;
-            FindFirstObjectByType<Interface>().EnableInventory();
+            this.Close();
+            ui_Interface.Open();
         };
         newGameHoverButton.hovered += () => { MainMenu_UI_Button_Hover_NewGame.Post(gameObject); };
 
-        var joinButton = root.Q<HoverButton>("JoinButton");
+        var joinButton = mainMenuRootQuery.Q<HoverButton>("JoinButton");
         joinButton.clicked += () =>
         {
             MainMenu_UI_Button_Click_JoinGame.Post(gameObject);
-            NetworkManager.Singleton.StartClient();
-            menuRoot.style.display = DisplayStyle.None;
-            FindFirstObjectByType<Interface>().EnableInventory();
+            NetworkManager.Singleton.StartClient(); //maybe transition to a loading screen here
+            this.Close();
+            ui_Interface.Open();
         };
         joinButton.hovered += () => { MainMenu_UI_Button_Hover_JoinGame.Post(gameObject); };
 
-        var settingsButton = root.Q<HoverButton>("SettingsButton");
+        var settingsButton = mainMenuRootQuery.Q<HoverButton>("SettingsButton");
         settingsButton.clicked += () =>
         {
             MainMenu_UI_Button_Click_Settings.Post(gameObject);
-            menuRoot.style.display = DisplayStyle.None;
-            FindFirstObjectByType<Settings>().OpenSetting();
+            this.Close();
+            ui_SettingsMenu.Open();
         };
         settingsButton.hovered += () => { MainMenu_UI_Button_Hover_Settings.Post(gameObject); };
 
-        var quitButton = root.Q<HoverButton>("QuitButton");
+        var quitButton = mainMenuRootQuery.Q<HoverButton>("QuitButton");
         quitButton.clicked += () =>
         {
             MainMenu_UI_Button_Click_QuitGame.Post(gameObject);
@@ -63,15 +70,22 @@ public class MainMenu : MonoBehaviour
         quitButton.hovered += () => { MainMenu_UI_Button_Hover_QuitGame.Post(gameObject); };
     }
 
-    public void OpenMainMenu()
+    public void Open()
     {
-        menuRoot.SetEnabled(true);
-        menuRoot.style.display = DisplayStyle.Flex;
+        ui_MainMenuRoot.SetEnabled(true);
+        mainMenuRootQuery.SetEnabled(true);
+        
+        ui_MainMenuRoot.style.display = DisplayStyle.Flex;
+        mainMenuRootQuery.style.display = DisplayStyle.Flex;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Close()
     {
+        ui_MainMenuRoot.SetEnabled(false);
+        mainMenuRootQuery.SetEnabled(false);
+        
+        ui_MainMenuRoot.style.display = DisplayStyle.None;
+        mainMenuRootQuery.style.display = DisplayStyle.None;
         
     }
 }

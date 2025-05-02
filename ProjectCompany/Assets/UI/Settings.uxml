@@ -1,11 +1,13 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/ButtonDesign.uss?fileID=7433441132597879392&amp;guid=8a884a76a122d89458f339ff26fd4545&amp;type=3#ButtonDesign" />
-    <engine:VisualElement style="flex-grow: 1; height: 57px;" />
-    <engine:VisualElement name="Options" style="flex-grow: 1; -unity-text-align: upper-center; justify-content: center; align-self: center;">
-        <engine:DropdownField label="Auflösung" name="QualityDD" choices="High,Perfomance,Low" class="button" style="align-items: auto; justify-content: center; font-size: 16px;" />
-        <engine:SliderInt label="Audio" value="42" high-value="100" name="AudioSlider" class="button" />
-        <engine:SliderInt label="Helligkeit" value="42" high-value="100" name="BrightnessSlider" class="button" />
-        <engine:Button text="Back" name="BackButton" class="button" />
+    <engine:VisualElement style="flex-grow: 1;">
+        <engine:VisualElement style="flex-grow: 1; height: 57px;" />
+        <engine:VisualElement name="Options" style="flex-grow: 1; -unity-text-align: upper-center; justify-content: center; align-self: center;">
+            <engine:DropdownField label="Auflösung" name="QualityDD" choices="High,Perfomance,Low" class="button" style="align-items: auto; justify-content: center; font-size: 16px;" />
+            <engine:SliderInt label="Audio" value="42" high-value="100" name="AudioSlider" class="button" />
+            <engine:SliderInt label="Helligkeit" value="42" high-value="100" name="BrightnessSlider" class="button" />
+            <engine:Button text="Back" name="BackButton" class="button" />
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; height: 70px;" />
     </engine:VisualElement>
-    <engine:VisualElement style="flex-grow: 1; height: 70px;" />
 </engine:UXML>
