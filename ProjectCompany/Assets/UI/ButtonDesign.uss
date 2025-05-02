@@ -1,6 +1,6 @@
 .button {
     -unity-font-style: bold;
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(103, 8, 8);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

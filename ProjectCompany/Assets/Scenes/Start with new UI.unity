@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerPrefab: {fileID: 4515320656422679868, guid: 579479e990282524c8d8f200a05379fd, type: 3}
+  playerPrefab: {fileID: 4515320656422679868, guid: a94bab59139467843a47c70fe419b1f4, type: 3}
   SpawnPoints: []
 --- !u!1 &350756164
 GameObject:
@@ -308,9 +308,8 @@ GameObject:
   m_Component:
   - component: {fileID: 350756167}
   - component: {fileID: 350756166}
-  - component: {fileID: 350756165}
-  - component: {fileID: 350756169}
   - component: {fileID: 350756168}
+  - component: {fileID: 350756169}
   - component: {fileID: 350756173}
   - component: {fileID: 350756172}
   m_Layer: 5
@@ -379,7 +378,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a9bc13fca7e0c0e4d86169ba93fab865, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 2faf2bffcdebaaf41846938402805bd2, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -395,8 +394,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1294341367}
+  m_Children: [{fileID: 1294341367}]
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &350756168

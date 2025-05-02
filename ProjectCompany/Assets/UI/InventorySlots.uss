@@ -36,3 +36,7 @@
     font-size: 18px;
     -unity-font-style: bold;
 }
+
+.progressBar {
+    background-color: rgba(55, 55, 55, 0);
+}

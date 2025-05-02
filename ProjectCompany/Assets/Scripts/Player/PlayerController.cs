@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 using Unity.Netcode;
 using UnityEngine.Jobs;
 using UnityEngine.Animations;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -18,6 +20,7 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private GameObject playerCamera;
 
     [SerializeField] private PlayerInventoryManager playerInventory;
+    [SerializeField] private bool jumpedThisFrame = false;
 
     [Header("Stamina")]
     [SerializeField] private float stamina = 5f;
@@ -30,12 +33,15 @@ public class PlayerController : NetworkBehaviour
     private Vector2 lookInput;
     private float xRotation = 0;
 
+    private ProgressBar staminaBar;
+
     private bool sprinting = false;
 
     public override void OnNetworkSpawn()
     {
 
         currentStamina = stamina;
+
 
         if (!IsOwner)
         {
@@ -49,12 +55,20 @@ public class PlayerController : NetworkBehaviour
             Cursor.visible = false;
             transform.Find("Model").gameObject.SetActive(false);
         }
+
+        var root = GameObject.Find("Interface").GetComponent<UIDocument>().rootVisualElement;
+
+        staminaBar = root.Q<ProgressBar>("StaminaBar");
+
+        staminaBar.lowValue = 0;
+        staminaBar.highValue = stamina;
     }
     private void Update()
     {
         if (!IsOwner) return;
         HandleLook();
         HandleMovementAndAnimation();
+        staminaBar.value = currentStamina;
 
     }
    
@@ -77,16 +91,18 @@ public class PlayerController : NetworkBehaviour
     {
         Vector3 forward = playerCamera.transform.forward;
         Vector3 right = playerCamera.transform.right;
-        Vector2 _moveInput = moveInput; //Helper variable so moveInput doesnt multiply infinitly
+        Vector2 _moveInput = moveInput; //Helper variable so moveInput doesnt multiply infinitely
 
         timeUntilStaminaRefresh -= Time.deltaTime;
+
+        float weightMultiplier = 1f - (playerInventory.PlayerWeight * 0.1f);
 
         if (sprinting && currentStamina > 0)
         {
             timeUntilStaminaRefresh = MaxTimeUntilStaminaRefresh;
             currentStamina -= Time.deltaTime;
             currentStamina = Mathf.Max(currentStamina, 0);
-            _moveInput *= sprintSpeed;
+            _moveInput *= sprintSpeed * weightMultiplier;
         }
         else
         {
@@ -96,11 +112,19 @@ public class PlayerController : NetworkBehaviour
                 currentStamina = Mathf.Min(currentStamina, stamina);
             }
 
-            _moveInput *= movementSpeed;
+            _moveInput *= movementSpeed * weightMultiplier;
+        }
+        
+        //Set animation for client
+        animator.SetFloat("Speed", _moveInput.magnitude);
+        if (jumpedThisFrame)
+        {
+            animator.SetTrigger("JumpTrigger");
         }
 
-        animator.SetFloat("Speed", _moveInput.magnitude); //Set animation for client
-        HandleAnimationServerRpc(_moveInput.magnitude, false);   //Set animation for everyone else
+        //Set animation for everyone else
+        HandleAnimationServerRpc(_moveInput.magnitude, jumpedThisFrame);
+        jumpedThisFrame = false;
 
         Vector3 moveDirection = (forward.normalized * _moveInput.y) + (right.normalized * _moveInput.x);
         yAxisVelocity += gravityValue * Time.deltaTime;
@@ -112,16 +136,20 @@ public class PlayerController : NetworkBehaviour
         }
     }
     [ServerRpc]
-    private void HandleAnimationServerRpc(float speed, bool isJumping)
+    private void HandleAnimationServerRpc(float speed, bool jumpedThisFrame)
     {
-        HandleAnimationClientRpc(speed, isJumping);
+        HandleAnimationClientRpc(speed, jumpedThisFrame);
     }
     [ClientRpc]
-    private void HandleAnimationClientRpc(float speed, bool isJumping)
+    private void HandleAnimationClientRpc(float speed, bool jumpedThisFrame)
     {
         if (IsOwner) return;
         animator.SetFloat("Speed", speed);
-        animator.SetBool("isJumping", isJumping);
+
+        if (jumpedThisFrame)
+        {
+            animator.SetTrigger("JumpTrigger");
+        }
     }
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -141,10 +169,11 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.started)
+        if (characterController.isGrounded && context.started && playerInventory.PlayerWeight < 4)
         {
             yAxisVelocity = 0;
             yAxisVelocity += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+            jumpedThisFrame = true;
         }
     }
     public void OnLook(InputAction.CallbackContext context)
@@ -176,6 +205,23 @@ public class PlayerController : NetworkBehaviour
         }
     }
     #region InventorySlotControls
+
+    public void OnPreviousInventorySlot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(null, -1);
+        }
+    }
+
+    public void OnNextInventorySlot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory.ChangeActiveInventorySlot(null, 1);
+        }
+    }
+
     public void OnInventorySlotOne(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -227,6 +273,5 @@ public class PlayerController : NetworkBehaviour
             }
         }
     }
-    
 
 }

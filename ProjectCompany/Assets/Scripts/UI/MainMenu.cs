@@ -46,7 +46,12 @@ public class MainMenu : MonoBehaviour
         joinButton.hovered += () => { MainMenu_UI_Button_Hover_JoinGame.Post(gameObject); };
 
         var settingsButton = root.Q<HoverButton>("SettingsButton");
-        settingsButton.clicked += () => { MainMenu_UI_Button_Click_Settings.Post(gameObject); };
+        settingsButton.clicked += () =>
+        {
+            MainMenu_UI_Button_Click_Settings.Post(gameObject);
+            menuRoot.style.display = DisplayStyle.None;
+            FindFirstObjectByType<Settings>().OpenSetting();
+        };
         settingsButton.hovered += () => { MainMenu_UI_Button_Hover_Settings.Post(gameObject); };
 
         var quitButton = root.Q<HoverButton>("QuitButton");
@@ -58,8 +63,15 @@ public class MainMenu : MonoBehaviour
         quitButton.hovered += () => { MainMenu_UI_Button_Hover_QuitGame.Post(gameObject); };
     }
 
+    public void OpenMainMenu()
+    {
+        menuRoot.SetEnabled(true);
+        menuRoot.style.display = DisplayStyle.Flex;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        
     }
 }
