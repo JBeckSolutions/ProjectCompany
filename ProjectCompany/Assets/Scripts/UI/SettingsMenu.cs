@@ -35,7 +35,7 @@ public class SettingsMenu : MonoBehaviour
         qualityDD = ui_document.Q<DropdownField>("QualityDD");
         audioSlider = ui_document.Q<Slider>("AudioSlider");
         brightnessSlider = ui_document.Q<Slider>("BrightnessSlider");
-        backButton = ui_document.Q<Button>("BackButton");
+        backButton = ui_document.Q<HoverButton>("BackButton");
 
         // Register value change callbacks
         qualityDD.RegisterValueChangedCallback(evt =>
@@ -58,7 +58,6 @@ public class SettingsMenu : MonoBehaviour
         {
             this.Close();
             ui_mainMenu.Open();
-            FindFirstObjectByType<MainMenu>().Open();
         };
 
     }
