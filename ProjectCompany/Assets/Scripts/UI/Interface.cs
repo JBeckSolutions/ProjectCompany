@@ -11,23 +11,24 @@ public class Interface : MonoBehaviour
         var root = GetComponent<UIDocument>().rootVisualElement;
         inventoryRoot = root.Q<VisualElement>("Inventory");
         headsUpRoot = root.Q<VisualElement>("HeadsUpDisplay");
-        inventoryRoot.SetEnabled(false);
-        headsUpRoot.SetEnabled(false);
-        inventoryRoot.style.display = DisplayStyle.None;
-        headsUpRoot.style.display = DisplayStyle.None;
+        this.Close();
     }
 
-    public void EnableInventory()
+    public void Open()
     {
         inventoryRoot.SetEnabled(true);
-        inventoryRoot.style.display = DisplayStyle.Flex;
         headsUpRoot.SetEnabled(true);
+        
+        inventoryRoot.style.display = DisplayStyle.Flex;
         headsUpRoot.style.display = DisplayStyle.Flex;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Close()
     {
+        inventoryRoot.SetEnabled(false);
+        headsUpRoot.SetEnabled(false);
         
+        inventoryRoot.style.display = DisplayStyle.None;
+        headsUpRoot.style.display = DisplayStyle.None;
     }
 }

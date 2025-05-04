@@ -1,0 +1,3 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Assets/BackgroundImageMenu.png?fileID=2800000&amp;guid=1ece89dca2ae4e54299a41769b1761f8&amp;type=3#BackgroundImageMenu&quot;); background-position-x: center 50%; background-position-y: center 50%; height: 407px; width: 767px; background-size: 100% 100%;" />
+</engine:UXML>
