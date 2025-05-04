@@ -1,28 +1,29 @@
-using System;
-using UnityEngine.UIElements;
-
-public class Hoverable : PointerManipulator
+namespace UI.HoverButton
 {
-    public event Action hovered;
-
-    public Hoverable(Action hoverHandler)
+    using System;
+    using UnityEngine.UIElements;
+    public class Hoverable : PointerManipulator
     {
-        hovered += hoverHandler;
-    }
+        public event Action hovered;
 
-    protected override void RegisterCallbacksOnTarget()
-    {
-        target.RegisterCallback<MouseEnterEvent>(OnMouseEnter);
-    }
+        public Hoverable(Action hoverHandler)
+        {
+            hovered += hoverHandler;
+        }
 
-    protected override void UnregisterCallbacksFromTarget()
-    {
-        target.UnregisterCallback<MouseEnterEvent>(OnMouseEnter);
-    }
+        protected override void RegisterCallbacksOnTarget()
+        {
+            target.RegisterCallback<MouseEnterEvent>(OnMouseEnter);
+        }
 
-    private void OnMouseEnter(MouseEnterEvent evt)
-    {
-        hovered?.Invoke();
+        protected override void UnregisterCallbacksFromTarget()
+        {
+            target.UnregisterCallback<MouseEnterEvent>(OnMouseEnter);
+        }
+
+        private void OnMouseEnter(MouseEnterEvent evt)
+        {
+            hovered?.Invoke();
+        }
     }
 }
-

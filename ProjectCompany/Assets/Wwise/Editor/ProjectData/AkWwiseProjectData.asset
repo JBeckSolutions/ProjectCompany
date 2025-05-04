@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584555958273602040
+    m_lastTime: -8584552157542266167
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -333,6 +333,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: c6b9f92af16ee946b5f2e30c9e602c74
       Path: Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus
+    - name: New Audio Bus
+      guid: ed5ffec8e164a642a7e1178982da3022
+      id: 2255513057
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9435b3018e932844810423795d8ed08f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: New Audio Bus
+        ObjectType: 2
+        guid: ed5ffec8e164a642a7e1178982da3022
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\New Audio Bus
   - PhysicalPath: Master-Mixer Hierarchy\Factory Tencent GME.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -430,7 +447,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584556723118649096
+    m_lastTime: -8584552157540125451
     List: []
   - PhysicalPath: SoundBanks\MainMenu_Music.wwu
     PathAndIcons:
@@ -446,7 +463,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_Music
     guid: 1962c911a3a469489c56c2940ed7567d
     GuidInternal: 
-    m_lastTime: -8584556723118594015
+    m_lastTime: -8584552157540035414
     List:
     - name: MainMenu_Music_SoundBank
       guid: 6fef1e6795b8d349ae7c1e98f22055f2
@@ -479,7 +496,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_UI
     guid: ac79309561351547a997a124cf7737ab
     GuidInternal: 
-    m_lastTime: -8584556723118509138
+    m_lastTime: -8584552157540020155
     List:
     - name: MainMenu_UI_SFX
       guid: cd9b4a020afc37499d8b1b05b0745875
@@ -837,13 +854,16 @@ MonoBehaviour:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
     - ElementName: MainMenu
       ObjectType: 12
       guid: 5c1619ee69a64f4e98431f3fdb00b0c1
-    ParentPath: Events\MainMenu
+    ParentPath: Events\Menus\MainMenu
     guid: 5c1619ee69a64f4e98431f3fdb00b0c1
     GuidInternal: 
-    m_lastTime: -8584556723123257080
+    m_lastTime: -8584552157543037313
     List: []
   - PhysicalPath: Events\MainMenu_MainTrack.wwu
     PathAndIcons:
@@ -862,7 +882,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_Music\MainMenu_MainTrack
     guid: 2c50c089824be74abcee2f7ff5b95a77
     GuidInternal: 
-    m_lastTime: -8584556723123202023
+    m_lastTime: -8584552157543022143
     List:
     - name: MainMenu_Loading_FromSplashScreen
       guid: e7d9a48f8c73d94db028aa61a6c8ae53
@@ -924,7 +944,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_Music
     guid: ef8791ebca21fc4dba09520cde9eb11e
     GuidInternal: 
-    m_lastTime: -8584556723123152165
+    m_lastTime: -8584552157543012032
     List: []
   - PhysicalPath: Events\MainMenu_UI.wwu
     PathAndIcons:
@@ -940,7 +960,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_UI
     guid: 490e958d4d8d154399f775367caf9b34
     GuidInternal: 
-    m_lastTime: -8584556723123087255
+    m_lastTime: -8584552157543002036
     List: []
   - PhysicalPath: Events\MainMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -959,7 +979,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
     guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
     GuidInternal: 
-    m_lastTime: -8584556723122992036
+    m_lastTime: -8584552157543002036
     List:
     - name: MainMenu_UI_Button_Click_JoinGame
       guid: b6e0942138567b48b5ca6df77dd70b85
@@ -1005,8 +1025,8 @@ MonoBehaviour:
         guid: 1b6d9ec72c59744ca26cc73a997ee0ff
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_NewGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 2
+      minDuration: 2
     - name: MainMenu_UI_Button_Click_QuitGame
       guid: 45129e2105dceb4c9fad8a201ffa0c04
       id: 386571594
@@ -1070,7 +1090,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
     guid: 1f6d0cc600c3c348a82a2036ab784d9e
     GuidInternal: 
-    m_lastTime: -8584556723122927174
+    m_lastTime: -8584552157542992065
     List:
     - name: MainMenu_Button_Hover_JoinGame
       guid: bebd04d2264d7745b5a78b0ea09870a4
@@ -1093,8 +1113,8 @@ MonoBehaviour:
         guid: bebd04d2264d7745b5a78b0ea09870a4
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_JoinGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
     - name: MainMenu_Button_Hover_NewGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
       id: 13766132
@@ -1116,8 +1136,8 @@ MonoBehaviour:
         guid: e56b0e634155b246aeb8c7a38f7c8038
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_NewGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
     - name: MainMenu_Button_Hover_QuitGame
       guid: 9bb4097e4352ab4abedefb6eed76a8b7
       id: 2515304575
@@ -1139,8 +1159,8 @@ MonoBehaviour:
         guid: 9bb4097e4352ab4abedefb6eed76a8b7
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_QuitGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
     - name: MainMenu_Button_Hover_Settings
       guid: 74b4c5107be0f5479b1bd01d1519ead6
       id: 2281368103
@@ -1162,8 +1182,121 @@ MonoBehaviour:
         guid: 74b4c5107be0f5479b1bd01d1519ead6
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_Settings
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
+  - PhysicalPath: Events\Menus.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    ParentPath: Events\Menus
+    guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    GuidInternal: 
+    m_lastTime: -8584552157542992065
+    List: []
+  - PhysicalPath: Events\SettingsMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: SettingsMenu
+      ObjectType: 12
+      guid: 7bae450d68529c4fb21ab10ff0466f32
+    ParentPath: Events\Menus\SettingsMenu
+    guid: 7bae450d68529c4fb21ab10ff0466f32
+    GuidInternal: 
+    m_lastTime: -8584552157542982088
+    List: []
+  - PhysicalPath: Events\SettingsMenu_UI_Button_Click.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: SettingsMenu
+      ObjectType: 12
+      guid: 7bae450d68529c4fb21ab10ff0466f32
+    - ElementName: SettingsMenu_UI_Button_Click
+      ObjectType: 12
+      guid: c90d0c42dba9a24bab2aadeef65f090c
+    ParentPath: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Click
+    guid: c90d0c42dba9a24bab2aadeef65f090c
+    GuidInternal: 
+    m_lastTime: -8584552157542982088
+    List:
+    - name: SettingsMenu_UI_Button_Click_Back
+      guid: a4c16849478e5a4680d1b5a5303deb96
+      id: 2141875432
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: SettingsMenu
+        ObjectType: 12
+        guid: 7bae450d68529c4fb21ab10ff0466f32
+      - ElementName: SettingsMenu_UI_Button_Click
+        ObjectType: 12
+        guid: c90d0c42dba9a24bab2aadeef65f090c
+      - ElementName: SettingsMenu_UI_Button_Click_Back
+        ObjectType: 3
+        guid: a4c16849478e5a4680d1b5a5303deb96
+      Path: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Click\SettingsMenu_UI_Button_Click_Back
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\SettingsMenu_UI_Button_Hover.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: SettingsMenu
+      ObjectType: 12
+      guid: 7bae450d68529c4fb21ab10ff0466f32
+    - ElementName: SettingsMenu_UI_Button_Hover
+      ObjectType: 12
+      guid: 1d44dbbec4111147b429ca4b58500e55
+    ParentPath: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Hover
+    guid: 1d44dbbec4111147b429ca4b58500e55
+    GuidInternal: 
+    m_lastTime: -8584552157542972116
+    List:
+    - name: SettingsMenu_UI_Button_Hover_Back
+      guid: e7d4aa431e0d4c44ad7d179d7697c98d
+      id: 1394514690
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: SettingsMenu
+        ObjectType: 12
+        guid: 7bae450d68529c4fb21ab10ff0466f32
+      - ElementName: SettingsMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1d44dbbec4111147b429ca4b58500e55
+      - ElementName: SettingsMenu_UI_Button_Hover_Back
+        ObjectType: 3
+        guid: e7d4aa431e0d4c44ad7d179d7697c98d
+      Path: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Hover\SettingsMenu_UI_Button_Hover_Back
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1176,8 +1309,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584555958540701638
-    List: []
+    m_lastTime: -8584552157542967081
+    List:
+    - name: Master_Volume
+      guid: 2b3d69338de44446820be47ae3949c52
+      id: 4179668880
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Master_Volume
+        ObjectType: 13
+        guid: 2b3d69338de44446820be47ae3949c52
+      Path: Game Parameters\Default Work Unit\Master_Volume
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     PathAndIcons:
     - ElementName: Game Parameters
@@ -1414,7 +1561,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273071684
     List: []
-  ExpandedFileSystemItemIds: 0200000016000000170000001a0000001b0000001e0000001f000000210000002a0000002e0000002f000000310000004e000000
+  ExpandedFileSystemItemIds: 0200000016000000170000001a0000001b0000001e0000001f0000002100000027000000280000002a0000002e0000002f000000310000004e000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1

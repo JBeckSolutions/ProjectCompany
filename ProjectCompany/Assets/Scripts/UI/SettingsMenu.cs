@@ -1,8 +1,8 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
-using Button = UnityEngine.UIElements.Button;
+using UI.HoverButton;
+
+
 using Slider = UnityEngine.UIElements.Slider;
 
 public class SettingsMenu : MonoBehaviour
@@ -11,25 +11,32 @@ public class SettingsMenu : MonoBehaviour
     //Visual Elements
     private VisualElement ui_document;
     private VisualElement settingsRoot;
+    private VisualElement backGroundElement;
     
     //UI Elements
     private DropdownField qualityDD;
     private Slider audioSlider;
     private Slider brightnessSlider;
-    private Button backButton;
+    private HoverButton backButton;
     
     [Header("Ui References")]
     public MainMenu ui_mainMenu;
+    
+    [Header("Wwise SettingsMenu Button Click")]
+    public AK.Wwise.Event SettingsMenu_UI_Button_Click_Back;
 
+    [Header("Wwise SettingsMenu Button Hover")]
+    public AK.Wwise.Event SettingsMenu_UI_Button_Hover_Back;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ui_document = GetComponent<UIDocument>().rootVisualElement;
-        settingsRoot = ui_document.Q<VisualElement>("Options");
-        ui_document.style.backgroundColor = Color.black;
-        this.Close();
+        backGroundElement = ui_document.Q<VisualElement>("Background");
+        settingsRoot = backGroundElement.Q<VisualElement>("Options");
         
-        if (DebugMode) Debug.Log("settingsRoot: " + settingsRoot);
+        
+        this.Close();
         
         //UI Elements
         qualityDD = ui_document.Q<DropdownField>("QualityDD");
@@ -56,9 +63,17 @@ public class SettingsMenu : MonoBehaviour
         // Register button click event
         backButton.clicked += () =>
         {
+            if (DebugMode) Debug.Log("Back button clicked");
+            SettingsMenu_UI_Button_Click_Back.Post(this.gameObject);
             this.Close();
             ui_mainMenu.Open();
         };
+        backButton.hovered += () =>
+        {
+            if (DebugMode) Debug.Log("Back button hovered");
+            SettingsMenu_UI_Button_Hover_Back.Post(this.gameObject);
+        };
+        
 
     }
 

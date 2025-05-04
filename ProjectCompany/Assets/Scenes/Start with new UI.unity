@@ -119,6 +119,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &101660812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101660813}
+  m_Layer: 0
+  m_Name: Main Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101660813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101660812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 350756167}
+  - {fileID: 1626551270}
+  m_Father: {fileID: 737501026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &258090511
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,40 +366,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bced61112f8df64c838c5dd2415b8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   ui_Interface: {fileID: 1400160656}
   ui_SettingsMenu: {fileID: 1626551271}
   MainMenu_UI_Button_Click_NewGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ea8a753dbe3c44e43bd5fa30ad9aab34, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Click_JoinGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: eb9b1d7f92533fe4abfb1de6dd55181d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Click_Settings:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9fb0a001755cbf34cba4c02ab4f8018d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Click_QuitGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 97f0cc1a23d6ffc4682aac34395fa0d3, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_NewGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: aa3f276506c58b6458d99133193caf5a, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_JoinGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 134c169d05d3db541864b380dc01693d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_Settings:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 71a49ce32d5858846b6ad44997e7e22f, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_QuitGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 634d74773f36d454ead50b38f34eb12d, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &350756166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +416,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a9bc13fca7e0c0e4d86169ba93fab865, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 2faf2bffcdebaaf41846938402805bd2, type: 3}
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -400,7 +434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1294341367}
-  m_Father: {fileID: 737501026}
+  m_Father: {fileID: 101660813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &350756168
 MonoBehaviour:
@@ -761,8 +795,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1626551270}
-  - {fileID: 350756167}
+  - {fileID: 101660813}
   - {fileID: 1400160658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1204,12 +1237,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626551269}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 737501026}
+  m_Father: {fileID: 101660813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1626551271
 MonoBehaviour:
@@ -1223,8 +1256,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b36c5197fdc9342ab31cb9738a6b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugMode: 0
+  DebugMode: 1
   ui_mainMenu: {fileID: 350756165}
+  SettingsMenu_UI_Button_Click_Back:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fa9c2e9f3c7d5f249ad5b567022945f3, type: 2}
+  SettingsMenu_UI_Button_Hover_Back:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 18fdd31cd04d2f0478273309e71c1f1d, type: 2}
 --- !u!114 &1626551272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,7 +1281,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a9bc13fca7e0c0e4d86169ba93fab865, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 87b19e0c140110949ac21cef2c4a38a4, type: 3}
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
