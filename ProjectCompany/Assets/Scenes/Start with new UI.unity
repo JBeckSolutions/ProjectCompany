@@ -372,35 +372,35 @@ MonoBehaviour:
   MainMenu_UI_Button_Click_NewGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ea8a753dbe3c44e43bd5fa30ad9aab34, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Click_JoinGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: eb9b1d7f92533fe4abfb1de6dd55181d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Click_Settings:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9fb0a001755cbf34cba4c02ab4f8018d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Click_QuitGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 97f0cc1a23d6ffc4682aac34395fa0d3, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_NewGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: aa3f276506c58b6458d99133193caf5a, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_JoinGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 134c169d05d3db541864b380dc01693d, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_Settings:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 71a49ce32d5858846b6ad44997e7e22f, type: 2}
+    WwiseObjectReference: {fileID: 0}
   MainMenu_UI_Button_Hover_QuitGame:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 634d74773f36d454ead50b38f34eb12d, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &350756166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,6 +1258,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMode: 0
   ui_mainMenu: {fileID: 350756165}
+  SettingsMenu_UI_Button_Click_Back:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SettingsMenu_UI_Button_Hover_Back:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &1626551272
 MonoBehaviour:
   m_ObjectHideFlags: 0

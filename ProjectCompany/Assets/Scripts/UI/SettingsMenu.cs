@@ -22,6 +22,12 @@ public class SettingsMenu : MonoBehaviour
     [Header("Ui References")]
     public MainMenu ui_mainMenu;
     
+    [Header("Wwise SettingsMenu Button Click")]
+    public AK.Wwise.Event SettingsMenu_UI_Button_Click_Back;
+
+    [Header("Wwise SettingsMenu Button Hover")]
+    public AK.Wwise.Event SettingsMenu_UI_Button_Hover_Back;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,8 +37,6 @@ public class SettingsMenu : MonoBehaviour
         
         
         this.Close();
-        
-        if (DebugMode) Debug.Log("settingsRoot: " + settingsRoot);
         
         //UI Elements
         qualityDD = ui_document.Q<DropdownField>("QualityDD");
@@ -60,14 +64,14 @@ public class SettingsMenu : MonoBehaviour
         backButton.clicked += () =>
         {
             if (DebugMode) Debug.Log("Back button clicked");
-            
+            SettingsMenu_UI_Button_Click_Back.Post(this.gameObject);
             this.Close();
             ui_mainMenu.Open();
         };
         backButton.hovered += () =>
         {
             if (DebugMode) Debug.Log("Back button hovered");
-            
+            SettingsMenu_UI_Button_Hover_Back.Post(this.gameObject);
         };
         
 

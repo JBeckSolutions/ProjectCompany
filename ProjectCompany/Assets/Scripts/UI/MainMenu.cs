@@ -39,7 +39,7 @@ public class MainMenu : MonoBehaviour
         newGameHoverButton.clicked += () =>
         {
             if (DebugMode) Debug.Log("NewGameButton clicked");
-            MainMenu_UI_Button_Click_NewGame.Post(gameObject);
+            MainMenu_UI_Button_Click_NewGame.Post(this.gameObject);
             NetworkManager.Singleton.StartHost();
             this.Close();
             ui_Interface.Open();
@@ -47,14 +47,14 @@ public class MainMenu : MonoBehaviour
         newGameHoverButton.hovered += () =>
         {
             if (DebugMode) Debug.Log("NewGameButton hovered");
-            MainMenu_UI_Button_Hover_NewGame.Post(gameObject);
+            MainMenu_UI_Button_Hover_NewGame.Post(this.gameObject);
         };
 
         var joinButton = mainMenuRootQuery.Q<HoverButton>("JoinButton");
         joinButton.clicked += () =>
         {
             if (DebugMode) Debug.Log("JoinButton clicked");
-            MainMenu_UI_Button_Click_JoinGame.Post(gameObject);
+            MainMenu_UI_Button_Click_JoinGame.Post(this.gameObject);
             NetworkManager.Singleton.StartClient(); //maybe transition to a loading screen here
             this.Close();
             ui_Interface.Open();
@@ -62,34 +62,34 @@ public class MainMenu : MonoBehaviour
         joinButton.hovered += () =>
         {
             if (DebugMode) Debug.Log("JoinButton hovered");
-            MainMenu_UI_Button_Hover_JoinGame.Post(gameObject);
+            MainMenu_UI_Button_Hover_JoinGame.Post(this.gameObject);
         };
 
         var settingsButton = mainMenuRootQuery.Q<HoverButton>("SettingsButton");
         settingsButton.clicked += () =>
         {
             if (DebugMode) Debug.Log("SettingsButton clicked");
-            MainMenu_UI_Button_Click_Settings.Post(gameObject);
+            MainMenu_UI_Button_Click_Settings.Post(this.gameObject);
             this.Close();
             ui_SettingsMenu.Open();
         };
         settingsButton.hovered += () =>
         {
             if (DebugMode) Debug.Log("SettingsButton hovered");
-            MainMenu_UI_Button_Hover_Settings.Post(gameObject);
+            MainMenu_UI_Button_Hover_Settings.Post(this.gameObject);
         };
 
         var quitButton = mainMenuRootQuery.Q<HoverButton>("QuitButton");
         quitButton.clicked += () =>
         {
             if (DebugMode) Debug.Log("QuitButton clicked");
-            MainMenu_UI_Button_Click_QuitGame.Post(gameObject);
+            MainMenu_UI_Button_Click_QuitGame.Post(this.gameObject);
             Application.Quit();
         };
         quitButton.hovered += () =>
         {
             if (DebugMode) Debug.Log("QuitButton hovered");
-            MainMenu_UI_Button_Hover_QuitGame.Post(gameObject);
+            MainMenu_UI_Button_Hover_QuitGame.Post(this.gameObject);
         };
     }
 
