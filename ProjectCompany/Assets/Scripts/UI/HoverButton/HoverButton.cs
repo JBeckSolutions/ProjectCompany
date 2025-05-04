@@ -1,32 +1,34 @@
-using System;
-using UnityEngine.UIElements;
-
-public class HoverButton : Button
+namespace UI.HoverButton
 {
-    
-    public new class UxmlFactory : UxmlFactory<HoverButton, UxmlTraits> { } //deprecated and will be removed in a future version but since we will never upgrade the Unity version we dont care
-    
-    
-    public new event Action clicked; // Weiterleitung des clicked-Events
-    public event Action hovered;
-    private Hoverable hoverable;
-
-    public HoverButton() : base()
+    using System;
+    using UnityEngine.UIElements;
+    public class HoverButton : Button
     {
-        hoverable = new Hoverable(() => OnHover());
-        this.AddManipulator(hoverable);
+    
+        public new class UxmlFactory : UxmlFactory<HoverButton, UxmlTraits> { } //deprecated and will be removed in a future version but since we will never upgrade the Unity version we dont care
+    
+    
+        public new event Action clicked; // Weiterleitung des clicked-Events
+        public event Action hovered;
+        private Hoverable hoverable;
 
-        base.clicked += this.OnClick;
-    }
+        public HoverButton() : base()
+        {
+            hoverable = new Hoverable(() => OnHover());
+            this.AddManipulator(hoverable);
+
+            base.clicked += this.OnClick;
+        }
     
 
-    private void OnClick()
-    {
-        clicked?.Invoke();
-    }
+        private void OnClick()
+        {
+            clicked?.Invoke();
+        }
 
-    private void OnHover()
-    {
-        hovered?.Invoke();
+        private void OnHover()
+        {
+            hovered?.Invoke();
+        }
     }
 }

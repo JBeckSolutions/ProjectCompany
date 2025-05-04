@@ -1,9 +1,8 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
-using Button = UnityEngine.UIElements.Button;
-using Image = UnityEngine.UI.Image;
+using UI.HoverButton;
+
+
 using Slider = UnityEngine.UIElements.Slider;
 
 public class SettingsMenu : MonoBehaviour
@@ -12,12 +11,13 @@ public class SettingsMenu : MonoBehaviour
     //Visual Elements
     private VisualElement ui_document;
     private VisualElement settingsRoot;
+    private VisualElement backGroundElement;
     
     //UI Elements
     private DropdownField qualityDD;
     private Slider audioSlider;
     private Slider brightnessSlider;
-    private Button backButton;
+    private HoverButton backButton;
     
     [Header("Ui References")]
     public MainMenu ui_mainMenu;
@@ -26,7 +26,8 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         ui_document = GetComponent<UIDocument>().rootVisualElement;
-        settingsRoot = ui_document.Q<VisualElement>("Options");
+        backGroundElement = ui_document.Q<VisualElement>("Background");
+        settingsRoot = backGroundElement.Q<VisualElement>("Options");
         
         
         this.Close();
@@ -58,9 +59,17 @@ public class SettingsMenu : MonoBehaviour
         // Register button click event
         backButton.clicked += () =>
         {
+            if (DebugMode) Debug.Log("Back button clicked");
+            
             this.Close();
             ui_mainMenu.Open();
         };
+        backButton.hovered += () =>
+        {
+            if (DebugMode) Debug.Log("Back button hovered");
+            
+        };
+        
 
     }
 
