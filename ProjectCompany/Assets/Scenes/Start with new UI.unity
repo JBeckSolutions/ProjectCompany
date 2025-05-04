@@ -1256,16 +1256,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b36c5197fdc9342ab31cb9738a6b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugMode: 0
+  DebugMode: 1
   ui_mainMenu: {fileID: 350756165}
   SettingsMenu_UI_Button_Click_Back:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: fa9c2e9f3c7d5f249ad5b567022945f3, type: 2}
   SettingsMenu_UI_Button_Hover_Back:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 18fdd31cd04d2f0478273309e71c1f1d, type: 2}
 --- !u!114 &1626551272
 MonoBehaviour:
   m_ObjectHideFlags: 0
