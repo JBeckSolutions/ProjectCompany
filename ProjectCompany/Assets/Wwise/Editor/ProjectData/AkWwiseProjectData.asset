@@ -1005,8 +1005,8 @@ MonoBehaviour:
         guid: 1b6d9ec72c59744ca26cc73a997ee0ff
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_NewGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 2
+      minDuration: 2
     - name: MainMenu_UI_Button_Click_QuitGame
       guid: 45129e2105dceb4c9fad8a201ffa0c04
       id: 386571594
@@ -1093,8 +1093,8 @@ MonoBehaviour:
         guid: bebd04d2264d7745b5a78b0ea09870a4
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_JoinGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
     - name: MainMenu_Button_Hover_NewGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
       id: 13766132
@@ -1116,8 +1116,8 @@ MonoBehaviour:
         guid: e56b0e634155b246aeb8c7a38f7c8038
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_NewGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
     - name: MainMenu_Button_Hover_QuitGame
       guid: 9bb4097e4352ab4abedefb6eed76a8b7
       id: 2515304575
@@ -1139,8 +1139,8 @@ MonoBehaviour:
         guid: 9bb4097e4352ab4abedefb6eed76a8b7
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_QuitGame
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
     - name: MainMenu_Button_Hover_Settings
       guid: 74b4c5107be0f5479b1bd01d1519ead6
       id: 2281368103
@@ -1162,8 +1162,8 @@ MonoBehaviour:
         guid: 74b4c5107be0f5479b1bd01d1519ead6
       Path: Events\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_Settings
       maxAttenuation: 0
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 1.2
+      minDuration: 1.2
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

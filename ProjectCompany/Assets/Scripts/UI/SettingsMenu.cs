@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
+using Image = UnityEngine.UI.Image;
 using Slider = UnityEngine.UIElements.Slider;
 
 public class SettingsMenu : MonoBehaviour
@@ -20,13 +21,14 @@ public class SettingsMenu : MonoBehaviour
     
     [Header("Ui References")]
     public MainMenu ui_mainMenu;
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ui_document = GetComponent<UIDocument>().rootVisualElement;
         settingsRoot = ui_document.Q<VisualElement>("Options");
-        ui_document.style.backgroundColor = Color.black;
+        
+        
         this.Close();
         
         if (DebugMode) Debug.Log("settingsRoot: " + settingsRoot);

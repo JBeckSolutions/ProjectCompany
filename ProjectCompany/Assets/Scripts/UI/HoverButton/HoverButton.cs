@@ -3,9 +3,9 @@ using UnityEngine.UIElements;
 
 public class HoverButton : Button
 {
-    public new class UxmlFactory : UxmlFactory<HoverButton, UxmlTraits>
-    {
-    }
+    
+    public new class UxmlFactory : UxmlFactory<HoverButton, UxmlTraits> { } //deprecated and will be removed in a future version but since we will never upgrade the Unity version we dont care
+    
     
     public new event Action clicked; // Weiterleitung des clicked-Events
     public event Action hovered;
