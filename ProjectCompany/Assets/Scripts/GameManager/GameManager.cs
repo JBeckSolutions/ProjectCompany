@@ -212,6 +212,21 @@ public class GameManager : NetworkBehaviour
             }
         }
     }
+    [ClientRpc]
+    private void RemovePlayerStateClientRpc(ulong clientId)
+    {
+        if (!IsServer)
+        {
+            for (int i = 0; i < PlayerStates.Count; i++)
+            {
+                if (PlayerStates[i].OwnerClientId == clientId)
+                {
+                    PlayerStates.RemoveAt(i);
+                    return;
+                }
+            }
+        }
+    }
 
     private IEnumerator SpawnDeadPlayer(ulong clientId)
     {
