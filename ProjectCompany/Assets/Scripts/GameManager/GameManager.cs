@@ -59,8 +59,8 @@ public class GameManager : NetworkBehaviour
         if (IsServer)
         {
             SetQuotaAndDungeonSize();
-            DontDestroyOnLoad(this);
         }
+        DontDestroyOnLoad(this);
     }
 
     private void Update()
