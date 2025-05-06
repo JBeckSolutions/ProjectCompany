@@ -739,6 +739,8 @@ MonoBehaviour:
     m_InternalValue: 100
   PlayerAlive:
     m_InternalValue: 1
+  playerCamera: {fileID: 3680675649726996254}
+  model: {fileID: 7511646305492866254}
 --- !u!1 &7511646305492866254
 GameObject:
   m_ObjectHideFlags: 0

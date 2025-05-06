@@ -1,14 +1,27 @@
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerState : NetworkBehaviour
 {
     //public NetworkVariable<bool> PlayerReadyState = new NetworkVariable<bool>(false);
     public NetworkVariable<int> PlayerHealth = new NetworkVariable<int>(100);
     public NetworkVariable<bool> PlayerAlive = new NetworkVariable<bool>(true);
+    public GameObject playerCamera;
+    public GameObject model;
     public override void OnNetworkSpawn()
     {
         GameManager.Singelton.PlayerStates.Add(this);
+        if (!IsOwner)
+        {
+            playerCamera.SetActive(false);
+        }
+        if (IsOwner)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            model.SetActive(false);
+        }
     }
     [ServerRpc(RequireOwnership = false)]
     public void TakeDamageServerRpc(int Amount)
@@ -19,6 +32,7 @@ public class PlayerState : NetworkBehaviour
             Debug.Log("Player " + OwnerClientId + " died");
             GameManager.Singelton.playerDeaths.Value += 1;
             PlayerAlive.Value = false;
+            GameManager.Singelton.OnPlayerDeathServerRpc(this.OwnerClientId);
         }
     }
 
