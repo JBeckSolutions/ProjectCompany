@@ -21,6 +21,7 @@ public class PlayerDead : NetworkBehaviour
     }
     void Update()
     {
+        if (!IsOwner) return;
         if (watchingIndex >= alivePlayers.Count && alivePlayers[watchingIndex] == null)
         {
             ChangePlayerToWatch(0);
