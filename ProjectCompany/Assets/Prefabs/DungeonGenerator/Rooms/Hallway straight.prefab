@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 3205204956681851670}
   - component: {fileID: 215808811574473099}
   - component: {fileID: 3025607640116302070}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hallway straight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

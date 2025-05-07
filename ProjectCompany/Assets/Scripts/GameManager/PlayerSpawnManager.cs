@@ -1,11 +1,13 @@
 using UnityEngine;
 using Unity.Netcode;
+using System.Collections.Generic;
 using UnityEditor.PackageManager;
 using Unity.Netcode.Components;
+using System.Collections;
 
 public class PlayerSpawnManager : NetworkBehaviour
 {
-    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private List<GameObject> playerPrefabs;
     public Transform[] SpawnPoints;
     public static PlayerSpawnManager Singelton = null;
     private void Awake()
@@ -41,19 +43,45 @@ public class PlayerSpawnManager : NetworkBehaviour
         
     }
 
+    public override void OnNetworkSpawn()
+    {
+        if (!IsServer) return;
+        Debug.Log("Spawning players...");
+        StartCoroutine(SpawnAllConnectedPlayers());
+    }
+
+    private IEnumerator SpawnAllConnectedPlayers()
+    {
+        yield return new WaitForSeconds(1);
+
+        foreach (var player in NetworkManager.Singleton.ConnectedClientsIds)
+        {
+            SpawnPlayerServerRpc(player);
+        }
+    }
+
     [ServerRpc]
-    private void SpawnPlayerServerRpc(ulong clientId)
+    public void SpawnPlayerServerRpc(ulong clientId, int prefab = 0)
     {
         // Get spawn index based on clientId (modulo to ensure we stay within spawn points array)
         int spawnIndex = (int)(clientId % (ulong)SpawnPoints.Length);
         Transform spawnPoint = SpawnPoints[spawnIndex];
 
         // Instantiate the player prefab at the chosen spawn point
-        NetworkObject player = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation).GetComponent<NetworkObject>();
+        NetworkObject player = Instantiate(playerPrefabs[prefab], spawnPoint.position, spawnPoint.rotation).GetComponent<NetworkObject>();
         player.name = "Player " + clientId;
-        // Ensure the player prefab is correctly networked across clients
+
+        if (prefab == 1)
+        {
+            player.GetComponent<PlayerState>().PlayerAlive.Value = false;
+        }
+
         player.SpawnAsPlayerObject(clientId);
-        SpawnPlayerClientRpc(clientId, spawnPoint.position);
+
+        if (prefab == 0)
+        {
+            SpawnPlayerClientRpc(clientId, spawnPoint.position);
+        }
     }
     [ClientRpc]
     private void SpawnPlayerClientRpc(ulong clientid, Vector3 position)

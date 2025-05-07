@@ -18,8 +18,8 @@ public class Stalker : EnemyBase
     [SerializeField] protected float stalkSpeed = 3f;
     [SerializeField] protected float _rage = 0;
     [SerializeField] protected float maxRage = 5;
-    [SerializeField] protected int layerMaskSeenByPlayerCheck;
     [SerializeField] protected PlayerState lastSeenPlayer;
+    [SerializeField] protected LayerMask layerMaskSeenByPlayerCheck;
     [SerializeField] protected bool recentlyLookedAt = false;
     [SerializeField] protected bool lookedAtLastFrame = false;
     [SerializeField] protected bool receneltyLookedAtResetThisFrame = false;
@@ -43,12 +43,12 @@ public class Stalker : EnemyBase
     {
         base.Start();
 
-        int playerLayer = LayerMask.NameToLayer("Player");
-        int groundLayer = LayerMask.NameToLayer("Ground");
+        int enemyLayer = LayerMask.NameToLayer("Player");
         int itemLayer = LayerMask.NameToLayer("Item");
+        int propLayer = LayerMask.NameToLayer("Prop");
+        int roomLayer = LayerMask.NameToLayer("Room");
 
-        layerMaskSeenByPlayerCheck = ~((1 << playerLayer) | (1 << groundLayer) | (1 << itemLayer));
-
+        layerMaskSeenByPlayerCheck = ~((1 << enemyLayer) | (1 << itemLayer) | (1 << propLayer) | (1 << roomLayer));
         agent.updateRotation = false;
     }
 
@@ -313,12 +313,13 @@ public class Stalker : EnemyBase
         foreach (var player in playerList)
         {
             if (player == null) continue;
+            if (player.PlayerAlive.Value == false) continue;
 
             Camera playerCamera = player.transform.Find("Camera").GetComponent<Camera>();
 
             if (playerCamera == null) continue;
 
-            Vector3 viewportPoint = playerCamera.WorldToViewportPoint(transform.position);
+            Vector3 viewportPoint = playerCamera.WorldToViewportPoint(enemyHead.position); 
 
             bool inFront = viewportPoint.z > 0f;
             bool inHorizontalView = viewportPoint.x >= 0f && viewportPoint.x <= 1f;
@@ -326,18 +327,22 @@ public class Stalker : EnemyBase
 
             if (inFront && inHorizontalView && inVerticalView)
             {
-                Vector3 origin = playerCamera.transform.position;
-                Vector3 direction = (transform.position - origin).normalized;
-                float distance = Vector3.Distance(origin, transform.position);
+                Vector3 origin = player.transform.position;
+                Vector3 direction = (transform.position - origin).normalized; 
+                float distance = Vector3.Distance(origin, transform.position); 
                 if (distance <= 10f)
                 {
                     RaycastHit hit;
-                    if (!Physics.Raycast(origin, direction, out hit, distance, layerMaskSeenByPlayerCheck, QueryTriggerInteraction.Ignore) || hit.transform == transform)
+                    if (Physics.Raycast(origin, direction, out hit, Mathf.Infinity, layerMaskSeenByPlayerCheck))
                     {
-                        if (distance < closestDistance)
+                        if (hit.transform == this || hit.transform.IsChildOf(this.transform))
                         {
-                            closestSeeingPlayer = player;
-                            closestDistance = distance;
+                            // Stalker is seen
+                            if (distance < closestDistance)
+                            {
+                                closestSeeingPlayer = player;
+                                closestDistance = distance;
+                            }
                         }
                     }
                 }
@@ -347,12 +352,13 @@ public class Stalker : EnemyBase
         return (closestSeeingPlayer != null, closestSeeingPlayer);
     }
 
+
     protected override void Attack(List<PlayerState> Targets)
     {
         foreach (var player in Targets)
         {
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
-            player.TakeDamageServerRpc(50);
+            player.TakeDamageServerRpc(attackDamage);
         }
 
         if (Targets.Count > 0)
