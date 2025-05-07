@@ -70,8 +70,14 @@ public class PlayerSpawnManager : NetworkBehaviour
         // Instantiate the player prefab at the chosen spawn point
         NetworkObject player = Instantiate(playerPrefabs[prefab], spawnPoint.position, spawnPoint.rotation).GetComponent<NetworkObject>();
         player.name = "Player " + clientId;
-        // Ensure the player prefab is correctly networked across clients
+
+        if (prefab == 1)
+        {
+            player.GetComponent<PlayerState>().PlayerAlive.Value = false;
+        }
+
         player.SpawnAsPlayerObject(clientId);
+
         if (prefab == 0)
         {
             SpawnPlayerClientRpc(clientId, spawnPoint.position);
