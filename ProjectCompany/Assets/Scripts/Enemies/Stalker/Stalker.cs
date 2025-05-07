@@ -18,7 +18,6 @@ public class Stalker : EnemyBase
     [SerializeField] protected float stalkSpeed = 3f;
     [SerializeField] protected float _rage = 0;
     [SerializeField] protected float maxRage = 5;
-    [SerializeField] protected int layerMaskSeenByPlayerCheck;
     [SerializeField] protected PlayerState lastSeenPlayer;
     [SerializeField] protected bool recentlyLookedAt = false;
     [SerializeField] protected bool lookedAtLastFrame = false;
@@ -41,14 +40,6 @@ public class Stalker : EnemyBase
 
     protected override void Start()
     {
-        base.Start();
-
-        int playerLayer = LayerMask.NameToLayer("Player");
-        int groundLayer = LayerMask.NameToLayer("Ground");
-        int itemLayer = LayerMask.NameToLayer("Item");
-
-        layerMaskSeenByPlayerCheck = ~((1 << playerLayer) | (1 << groundLayer) | (1 << itemLayer));
-
         agent.updateRotation = false;
     }
 
@@ -318,7 +309,7 @@ public class Stalker : EnemyBase
 
             if (playerCamera == null) continue;
 
-            Vector3 viewportPoint = playerCamera.WorldToViewportPoint(transform.position);
+            Vector3 viewportPoint = playerCamera.WorldToViewportPoint(enemyHead.position); 
 
             bool inFront = viewportPoint.z > 0f;
             bool inHorizontalView = viewportPoint.x >= 0f && viewportPoint.x <= 1f;
@@ -327,12 +318,12 @@ public class Stalker : EnemyBase
             if (inFront && inHorizontalView && inVerticalView)
             {
                 Vector3 origin = playerCamera.transform.position;
-                Vector3 direction = (transform.position - origin).normalized;
-                float distance = Vector3.Distance(origin, transform.position);
+                Vector3 direction = (enemyHead.position - origin).normalized; 
+                float distance = Vector3.Distance(origin, enemyHead.position); 
                 if (distance <= 10f)
                 {
                     RaycastHit hit;
-                    if (!Physics.Raycast(origin, direction, out hit, distance, layerMaskSeenByPlayerCheck, QueryTriggerInteraction.Ignore) || hit.transform == transform)
+                    if (!Physics.Raycast(origin, direction, out hit, distance, layerMask, QueryTriggerInteraction.Ignore))
                     {
                         if (distance < closestDistance)
                         {
@@ -347,12 +338,13 @@ public class Stalker : EnemyBase
         return (closestSeeingPlayer != null, closestSeeingPlayer);
     }
 
+
     protected override void Attack(List<PlayerState> Targets)
     {
         foreach (var player in Targets)
         {
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
-            player.TakeDamageServerRpc(50);
+            player.TakeDamageServerRpc(attackDamage);
         }
 
         if (Targets.Count > 0)

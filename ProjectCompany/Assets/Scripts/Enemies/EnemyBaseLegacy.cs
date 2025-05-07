@@ -26,6 +26,7 @@ public class EnemyBaseLegacy : NetworkBehaviour
 
     [Header("Detection")]
     [SerializeField] protected List<PlayerState> playerList;      //List of all players in the game
+    [SerializeField] protected Transform enemyHead;
     [SerializeField] protected float viewRadius = 10f;
     [UnityEngine.Range(0, 360)]
     [SerializeField] protected float viewAngle = 90f;
@@ -48,8 +49,9 @@ public class EnemyBaseLegacy : NetworkBehaviour
         int enemyLayer = LayerMask.NameToLayer("Enemy");
         int groundLayer = LayerMask.NameToLayer("Ground");
         int itemLayer = LayerMask.NameToLayer("Item");
+        int playerLayer = LayerMask.NameToLayer("Player");
 
-        layerMask = ~((1 << enemyLayer) | (1 << groundLayer) | (1 << itemLayer));
+        layerMask = ~((1 << enemyLayer) | (1 << groundLayer) | (1 << itemLayer) | (1 << playerLayer));
     }
 
     public override void OnNetworkSpawn()
@@ -193,16 +195,18 @@ public class EnemyBaseLegacy : NetworkBehaviour
         foreach (var player in playerList)
         {
             if (player == null) continue;
+            if (player.PlayerAlive.Value == false) continue;
 
-            Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
-            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+            // Access the camera's position and forward direction
+            Vector3 dirToPlayer = (player.playerCamera.transform.position - enemyHead.position).normalized;
+            float distanceToPlayer = Vector3.Distance(enemyHead.position, player.playerCamera.transform.position);
 
             if (distanceToPlayer < viewRadius)
             {
-                if (PlayerSpotted || Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
+                if (PlayerSpotted || Vector3.Angle(enemyHead.forward, dirToPlayer) < viewAngle / 2)
                 {
                     RaycastHit hit;
-                    if (!Physics.Raycast(transform.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
+                    if (!Physics.Raycast(enemyHead.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
                     {
                         if (closestSeenPlayerDistance > distanceToPlayer)
                         {
@@ -212,7 +216,7 @@ public class EnemyBaseLegacy : NetworkBehaviour
                     }
                     else
                     {
-                        //Debug.Log("Ray hit: " + hit.collider.name);
+                        Debug.Log("Ray hit: " + hit.collider.name);
                     }
                 }
             }

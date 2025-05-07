@@ -1,25 +1,59 @@
 using Unity.Netcode;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerDead : NetworkBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private int watchingIndex = 0;
+    private List<PlayerState> alivePlayers;
 
-    // Update is called once per frame
+    public override void OnNetworkSpawn()
+    {
+        alivePlayers = new List<PlayerState>();
+
+        foreach (var player in GameManager.Singelton.PlayerStates)
+        {
+            if (player.PlayerAlive.Value == true)
+            {
+                alivePlayers.Add(player);
+            }
+        }
+    }
     void Update()
     {
-        for (int i = 0; i < GameManager.Singelton.PlayerStates.Count; i++)
+        if (alivePlayers[watchingIndex] == null)
         {
-            if (GameManager.Singelton.PlayerStates[i].PlayerAlive.Value == true)
+            ChangePlayerToWatch(0);
+        }
+        else
+        {
+            alivePlayers[watchingIndex].model.SetActive(false);
+            this.transform.position = alivePlayers[watchingIndex].playerCamera.transform.position;
+            this.transform.rotation = alivePlayers[watchingIndex].playerCamera.transform.rotation;
+        }
+    }
+
+    public void ChangePlayerToWatch(int direction)
+    {
+        alivePlayers = new List<PlayerState>();
+
+        foreach (var player in GameManager.Singelton.PlayerStates)
+        {
+            if (player.PlayerAlive.Value == true)
             {
-                GameManager.Singelton.PlayerStates[i].model.SetActive(false);
-                this.transform.position = GameManager.Singelton.PlayerStates[i].playerCamera.transform.position;
-                this.transform.rotation = GameManager.Singelton.PlayerStates[i].playerCamera.transform.rotation;
+                alivePlayers.Add(player);
             }
+        }
+
+        watchingIndex += direction;
+
+        if (watchingIndex < 0)
+        {
+            watchingIndex = alivePlayers.Count - 1;
+        }
+        if (watchingIndex >= alivePlayers.Count)
+        {
+            watchingIndex = 0;
         }
     }
 }

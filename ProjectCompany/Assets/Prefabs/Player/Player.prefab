@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5637948643663622685}
   - component: {fileID: 3370114522192555097}
   - component: {fileID: 897409425141561305}
+  - component: {fileID: 2973354102503787530}
   m_Layer: 3
   m_Name: Camera
   m_TagString: Untagged
@@ -263,6 +264,18 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &2973354102503787530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680675649726996254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b8425e1ef9b3d4a873a47eb67606b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4515320656422679868
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +649,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 94304d6c-72bd-4da1-9bc0-50dc900ca356
     m_ActionName: 'Player/NextInventorySlot[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 09446eaf-7a75-4296-b83a-d12b969d42da
+    m_ActionName: 'PlayerDead/NextPlayer[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9258818b-776a-4285-8280-4fc580e2f341
+    m_ActionName: 'PlayerDead/PreviousPlayer[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -688,7 +709,7 @@ MonoBehaviour:
   SyncPositionX: 1
   SyncPositionY: 1
   SyncPositionZ: 1
-  SyncRotAngleX: 0
+  SyncRotAngleX: 1
   SyncRotAngleY: 1
   SyncRotAngleZ: 0
   SyncScaleX: 0
@@ -739,7 +760,7 @@ MonoBehaviour:
     m_InternalValue: 100
   PlayerAlive:
     m_InternalValue: 1
-  playerCamera: {fileID: 3680675649726996254}
+  playerCamera: {fileID: 5637948643663622685}
   model: {fileID: 7511646305492866254}
 --- !u!1 &7511646305492866254
 GameObject:

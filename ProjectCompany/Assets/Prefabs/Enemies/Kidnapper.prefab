@@ -153,6 +153,7 @@ Transform:
   - {fileID: 161055660354528107}
   - {fileID: 5873222496690283998}
   - {fileID: 2915541750265762179}
+  - {fileID: 5327067605131328794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &7261558707528667269
@@ -215,7 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  currentState: 0
   MaxTimeUntilNextAction: 2
   timeUntilNextAction: 0
   maxDistance: 10
@@ -223,6 +223,7 @@ MonoBehaviour:
   walkingSpeed: 3.5
   sprintSpeed: 15
   playerList: []
+  enemyHead: {fileID: 5327067605131328794}
   viewRadius: 10
   viewAngle: 90
   playerSeenThisFrame: 0
@@ -232,14 +233,47 @@ MonoBehaviour:
   timeUntilNextAttack: 0
   timeStunnedAfterAttack: 1
   timeUntilStunOver: 0
+  attackDamage: 0
   hitbox: {fileID: 6231316687300449369}
   canMoveWhileAttacking: 1
   isAttacking: 0
   agent: {fileID: 7261558707528667269}
+  currentState: 0
   playersGettingCarried: []
   carryPosition: {fileID: 161055660354528107}
   dropPosition: {fileID: 5873222496690283998}
   attackChance: 1
+--- !u!1 &2701045133241366830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5327067605131328794}
+  m_Layer: 0
+  m_Name: EnemyHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5327067605131328794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701045133241366830}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1973763053567662710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3379733120521424498
 GameObject:
   m_ObjectHideFlags: 0

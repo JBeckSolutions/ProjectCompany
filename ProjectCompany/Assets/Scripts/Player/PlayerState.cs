@@ -7,14 +7,14 @@ public class PlayerState : NetworkBehaviour
     //public NetworkVariable<bool> PlayerReadyState = new NetworkVariable<bool>(false);
     public NetworkVariable<int> PlayerHealth = new NetworkVariable<int>(100);
     public NetworkVariable<bool> PlayerAlive = new NetworkVariable<bool>(true);
-    public GameObject playerCamera;
+    public Camera playerCamera;
     public GameObject model;
     public override void OnNetworkSpawn()
     {
         GameManager.Singelton.PlayerStates.Add(this);
         if (!IsOwner)
         {
-            playerCamera.SetActive(false);
+            playerCamera.enabled = false;
         }
         if (IsOwner)
         {

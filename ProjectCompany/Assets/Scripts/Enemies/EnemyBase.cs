@@ -18,6 +18,7 @@ public class EnemyBase : NetworkBehaviour
 
     [Header("Detection")]
     [SerializeField] protected List<PlayerState> playerList;      //List of all players in the game
+    [SerializeField] protected Transform enemyHead;              //Head location for vision checks
     [SerializeField] protected float viewRadius = 10f;
     [UnityEngine.Range(0, 360)]
     [SerializeField] protected float viewAngle = 90f;
@@ -29,6 +30,7 @@ public class EnemyBase : NetworkBehaviour
     [SerializeField] protected float timeUntilNextAttack; //Time until the next Attack can happen
     [SerializeField] protected float timeStunnedAfterAttack = 1f; //Time how long the enemy cant move after an attack
     [SerializeField] protected float timeUntilStunOver;           //Counts down until the enemy can move again
+    [SerializeField] protected int attackDamage = 40;          //How much damage the attack does to the player
     [SerializeField] protected AbilityHitbox hitbox;           //Script that is used by the Attack to check what is being hit
     [SerializeField] protected bool canMoveWhileAttacking = false;    //Can the enemy Move while attacking? (might be unneeded)
     [SerializeField] protected bool isAttacking = false; //Is the attack finished? (might be unneeded)
@@ -40,8 +42,9 @@ public class EnemyBase : NetworkBehaviour
         int enemyLayer = LayerMask.NameToLayer("Enemy");
         int groundLayer = LayerMask.NameToLayer("Ground");
         int itemLayer = LayerMask.NameToLayer("Item");
+        int playerLayer = LayerMask.NameToLayer("Player");
 
-        layerMask = ~((1 << enemyLayer) | (1 << groundLayer) | (1 << itemLayer));
+        layerMask = ~((1 << enemyLayer) | (1 << groundLayer) | (1 << itemLayer) | (1 << playerLayer));
     }
 
     public override void OnNetworkSpawn()
@@ -102,16 +105,18 @@ public class EnemyBase : NetworkBehaviour
         foreach (var player in playerList)
         {
             if (player == null) continue;
+            if (player.PlayerAlive.Value == false) continue;
 
-            Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
-            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+            // Access the camera's position and forward direction
+            Vector3 dirToPlayer = (player.playerCamera.transform.position - enemyHead.position).normalized;
+            float distanceToPlayer = Vector3.Distance(enemyHead.position, player.playerCamera.transform.position);
 
             if (distanceToPlayer < viewRadius)
             {
-                if (PlayerSpotted || Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
+                if (PlayerSpotted || Vector3.Angle(enemyHead.forward, dirToPlayer) < viewAngle / 2)
                 {
                     RaycastHit hit;
-                    if (!Physics.Raycast(transform.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
+                    if (!Physics.Raycast(enemyHead.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
                     {
                         if (closestSeenPlayerDistance > distanceToPlayer)
                         {
@@ -121,7 +126,7 @@ public class EnemyBase : NetworkBehaviour
                     }
                     else
                     {
-                        //Debug.Log("Ray hit: " + hit.collider.name);
+                        Debug.Log("Ray hit: " + hit.collider.name);
                     }
                 }
             }
@@ -142,8 +147,9 @@ public class EnemyBase : NetworkBehaviour
     {
         foreach (var player in Targets)
         {
+            if (player.PlayerAlive.Value == false) continue;
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
-            player.TakeDamageServerRpc(40);
+            player.TakeDamageServerRpc(attackDamage);
         }
 
         isAttacking = false;
