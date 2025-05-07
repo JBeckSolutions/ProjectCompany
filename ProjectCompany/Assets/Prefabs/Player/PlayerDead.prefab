@@ -499,3 +499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c991704b14acb48b9e0492e9f3d038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  playerInput: {fileID: 8779288922774620885}
+  playerDeadLogic: {fileID: 7346716429209889270}
