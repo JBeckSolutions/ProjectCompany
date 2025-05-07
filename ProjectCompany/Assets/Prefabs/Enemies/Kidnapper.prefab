@@ -424,6 +424,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3483580733777598486, guid: 397a8d33af88c8c419dfa4dbb5c5e0b9, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483580733777598486, guid: 397a8d33af88c8c419dfa4dbb5c5e0b9, type: 3}
       propertyPath: scalingMode
       value: 1
       objectReference: {fileID: 0}
