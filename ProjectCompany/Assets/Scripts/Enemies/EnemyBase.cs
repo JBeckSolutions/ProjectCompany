@@ -4,6 +4,7 @@ using Unity.Netcode;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 
 public class EnemyBase : NetworkBehaviour
 {
@@ -40,11 +41,12 @@ public class EnemyBase : NetworkBehaviour
     protected virtual void Start()
     {
         int enemyLayer = LayerMask.NameToLayer("Enemy");
-        int groundLayer = LayerMask.NameToLayer("Ground");
+        //int groundLayer = LayerMask.NameToLayer("Ground");
         int itemLayer = LayerMask.NameToLayer("Item");
-        int playerLayer = LayerMask.NameToLayer("Player");
+        //int playerLayer = LayerMask.NameToLayer("Player");
+        int propLayer = LayerMask.NameToLayer("Prop");
 
-        layerMask = ~((1 << enemyLayer) | (1 << groundLayer) | (1 << itemLayer) | (1 << playerLayer));
+        layerMask = ~((1 << enemyLayer) | (1 << itemLayer) | (1 << propLayer));
     }
 
     public override void OnNetworkSpawn()
@@ -57,6 +59,18 @@ public class EnemyBase : NetworkBehaviour
         float distance = CustomDistance ?? maxDistance;
 
         Vector3 nextDestination = Destination ?? (Random.insideUnitSphere * distance + transform.position);
+
+        if (Destination != null)
+        {
+            bool isPointOnNavMesh = NavMesh.SamplePosition(nextDestination, out NavMeshHit hit, 1f, NavMesh.AllAreas);
+            if (!isPointOnNavMesh)
+            {
+                agent.SetDestination(hit.position);
+                validNewPosition = true;
+                return;
+            }
+        }
+
         if (goFar == false)
         {
             if (NavMesh.SamplePosition(nextDestination, out NavMeshHit hit, distance, NavMesh.AllAreas))
@@ -116,17 +130,16 @@ public class EnemyBase : NetworkBehaviour
                 if (PlayerSpotted || Vector3.Angle(enemyHead.forward, dirToPlayer) < viewAngle / 2)
                 {
                     RaycastHit hit;
-                    if (!Physics.Raycast(enemyHead.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
+                    if (Physics.Raycast(enemyHead.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
                     {
-                        if (closestSeenPlayerDistance > distanceToPlayer)
+                        if (hit.collider.gameObject == player.gameObject || hit.collider.transform.IsChildOf(player.transform))
                         {
-                            closestSeenPlayer = player;
-                            closestSeenPlayerDistance = distanceToPlayer;
+                            if (closestSeenPlayerDistance > distanceToPlayer)
+                            {
+                                closestSeenPlayer = player;
+                                closestSeenPlayerDistance = distanceToPlayer;
+                            }
                         }
-                    }
-                    else
-                    {
-                        Debug.Log("Ray hit: " + hit.collider.name);
                     }
                 }
             }

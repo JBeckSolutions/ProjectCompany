@@ -101,6 +101,15 @@ public class GameManager : NetworkBehaviour
                     playerObj.Despawn(true);
             }
         }
+        //Despawn all enemies
+        foreach (var obj in FindObjectsByType<NetworkObject>(FindObjectsSortMode.None))
+        {
+            if (obj.CompareTag("Enemy") && obj.IsSpawned)
+            {
+                obj.Despawn(true); // true = destroy the GameObject
+            }
+        }
+
 
         PlayerStates = new List<PlayerState>();
 

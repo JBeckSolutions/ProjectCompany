@@ -323,12 +323,16 @@ public class Stalker : EnemyBase
                 if (distance <= 10f)
                 {
                     RaycastHit hit;
-                    if (!Physics.Raycast(origin, direction, out hit, distance, layerMask, QueryTriggerInteraction.Ignore))
+                    if (Physics.Raycast(origin, direction, out hit, distance, layerMask, QueryTriggerInteraction.Ignore))
                     {
-                        if (distance < closestDistance)
+                        if (hit.transform == this || hit.transform.IsChildOf(this.transform))
                         {
-                            closestSeeingPlayer = player;
-                            closestDistance = distance;
+                            // Stalker is seen
+                            if (distance < closestDistance)
+                            {
+                                closestSeeingPlayer = player;
+                                closestDistance = distance;
+                            }
                         }
                     }
                 }

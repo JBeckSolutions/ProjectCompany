@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3817069241552185703}
   - component: {fileID: 6972042717733928170}
   - component: {fileID: 1567234656766087301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,6 +310,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 11dc3f4459d60a649ab3efd1a4920dd8, type: 3}
       propertyPath: m_Name
       value: broken metallshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11dc3f4459d60a649ab3efd1a4920dd8, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402531989863382535, guid: 11dc3f4459d60a649ab3efd1a4920dd8, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
