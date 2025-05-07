@@ -210,6 +210,9 @@ public class GameManager : NetworkBehaviour
         }
         for (int i = 0; i < PlayerStates.Count; i++)
         {
+
+            RemovePlayerStateClientRpc(clientId);
+
             if (PlayerStates[i].OwnerClientId == clientId)
             {
                 PlayerStates[i].GetComponent<NetworkObject>().Despawn(true);
