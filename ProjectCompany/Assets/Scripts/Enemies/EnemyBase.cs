@@ -123,7 +123,7 @@ public class EnemyBase : NetworkBehaviour
                     if (Physics.Raycast(enemyHead.position, dirToPlayer, out hit, Mathf.Infinity, layerMask))
                     {
 
-                        Debug.Log("Hit " + hit.transform.gameObject.name);
+                        //Debug.Log("Hit " + hit.transform.gameObject.name);
 
 
                         if (hit.collider.gameObject == player.gameObject || hit.collider.transform.IsChildOf(player.transform))

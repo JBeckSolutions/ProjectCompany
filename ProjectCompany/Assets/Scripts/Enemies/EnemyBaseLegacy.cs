@@ -209,7 +209,7 @@ public class EnemyBaseLegacy : NetworkBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(enemyHead.position, dirToPlayer, out hit, distanceToPlayer, layerMask))
                 {
-                    Debug.Log("Hit " + hit.transform.gameObject.name);
+                    //Debug.Log("Hit " + hit.transform.gameObject.name);
 
                     if (hit.collider.gameObject == player.gameObject || hit.collider.transform.IsChildOf(player.transform))
                     {
