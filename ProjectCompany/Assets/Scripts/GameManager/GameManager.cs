@@ -104,7 +104,7 @@ public class GameManager : NetworkBehaviour
         //Despawn all enemies
         foreach (var obj in FindObjectsByType<NetworkObject>(FindObjectsSortMode.None))
         {
-            if (obj.CompareTag("Enemy") && obj.IsSpawned)
+            if (obj.gameObject.layer == LayerMask.NameToLayer("Enemy") && obj.IsSpawned)
             {
                 obj.Despawn(true); // true = destroy the GameObject
             }

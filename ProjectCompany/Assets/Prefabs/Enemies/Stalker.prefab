@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 962917814682591888}
   - component: {fileID: 8038749414688208739}
   - component: {fileID: 1840762221281657280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 8924282795677139858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.36, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -462,8 +462,10 @@ MonoBehaviour:
   stalkSpeed: 2.75
   _rage: 0
   maxRage: 5
-  layerMaskSeenByPlayerCheck: 0
   lastSeenPlayer: {fileID: 0}
+  layerMaskIsSeenCheck:
+    serializedVersion: 2
+    m_Bits: 0
   recentlyLookedAt: 0
   lookedAtLastFrame: 0
   receneltyLookedAtResetThisFrame: 0

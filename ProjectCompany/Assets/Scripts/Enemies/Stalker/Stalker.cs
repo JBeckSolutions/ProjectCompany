@@ -19,6 +19,7 @@ public class Stalker : EnemyBase
     [SerializeField] protected float _rage = 0;
     [SerializeField] protected float maxRage = 5;
     [SerializeField] protected PlayerState lastSeenPlayer;
+    [SerializeField] protected LayerMask layerMaskSeenByPlayerCheck;
     [SerializeField] protected bool recentlyLookedAt = false;
     [SerializeField] protected bool lookedAtLastFrame = false;
     [SerializeField] protected bool receneltyLookedAtResetThisFrame = false;
@@ -40,6 +41,14 @@ public class Stalker : EnemyBase
 
     protected override void Start()
     {
+        base.Start();
+
+        int enemyLayer = LayerMask.NameToLayer("Player");
+        int itemLayer = LayerMask.NameToLayer("Item");
+        int propLayer = LayerMask.NameToLayer("Prop");
+        int roomLayer = LayerMask.NameToLayer("Room");
+
+        layerMaskSeenByPlayerCheck = ~((1 << enemyLayer) | (1 << itemLayer) | (1 << propLayer) | (1 << roomLayer));
         agent.updateRotation = false;
     }
 
@@ -304,6 +313,7 @@ public class Stalker : EnemyBase
         foreach (var player in playerList)
         {
             if (player == null) continue;
+            if (player.PlayerAlive.Value == false) continue;
 
             Camera playerCamera = player.transform.Find("Camera").GetComponent<Camera>();
 
@@ -317,13 +327,13 @@ public class Stalker : EnemyBase
 
             if (inFront && inHorizontalView && inVerticalView)
             {
-                Vector3 origin = playerCamera.transform.position;
-                Vector3 direction = (enemyHead.position - origin).normalized; 
-                float distance = Vector3.Distance(origin, enemyHead.position); 
+                Vector3 origin = player.transform.position;
+                Vector3 direction = (transform.position - origin).normalized; 
+                float distance = Vector3.Distance(origin, transform.position); 
                 if (distance <= 10f)
                 {
                     RaycastHit hit;
-                    if (Physics.Raycast(origin, direction, out hit, distance, layerMask, QueryTriggerInteraction.Ignore))
+                    if (Physics.Raycast(origin, direction, out hit, Mathf.Infinity, layerMaskSeenByPlayerCheck))
                     {
                         if (hit.transform == this || hit.transform.IsChildOf(this.transform))
                         {

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 161055660354528107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CarryPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2915541750265762179}
   - component: {fileID: 8161979891834621475}
   - component: {fileID: 3238058811244694530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 7261558707528667269}
   - component: {fileID: 8575612715920893352}
   - component: {fileID: 735181987727191524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kidnapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5327067605131328794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 6008910213651831806}
   - component: {fileID: 2654292602573358393}
   - component: {fileID: 6231316687300449369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5873222496690283998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DropPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
