@@ -313,7 +313,11 @@ public class DungeonGenerator : NetworkBehaviour
     {
         Random random = new Random();
 
+        //Debug.Log("Server enemy spawn Rpc called");
+
         if (enemyPrefabs.Count == 0 || availableEnemySpawns.Count == 0) return;
+
+        //Debug.Log("Spawning Enemy");
 
         GameObject enemyPrefab = enemyPrefabs[random.Next(0, enemyPrefabs.Count)];
         Transform spawnPoint = availableEnemySpawns[random.Next(0, availableEnemySpawns.Count)];

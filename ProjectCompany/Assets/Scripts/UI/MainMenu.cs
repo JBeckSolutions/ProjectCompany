@@ -1,51 +1,114 @@
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UI.HoverButton;
 
 public class MainMenu : MonoBehaviour
 {
-    private VisualElement menuRoot;
+    private VisualElement ui_MainMenuRoot;
+    private VisualElement mainMenuRootQuery;
+    
+    public bool DebugMode = false;
+    
+    [Header("UI References")]
+    public Interface ui_Interface;
+    public SettingsMenu ui_SettingsMenu;
+    
+    
+
+    //Wwise Events from Inspector
+    [Header("Wwise MainMenu Button Click")]
+    public AK.Wwise.Event MainMenu_UI_Button_Click_NewGame;
+    public AK.Wwise.Event MainMenu_UI_Button_Click_JoinGame;
+    public AK.Wwise.Event MainMenu_UI_Button_Click_Settings;
+    public AK.Wwise.Event MainMenu_UI_Button_Click_QuitGame;
+
+    [Header("Wwise MainMenu Button Hover")]
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_NewGame;
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_JoinGame;
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_Settings;
+    public AK.Wwise.Event MainMenu_UI_Button_Hover_QuitGame;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
-
-        menuRoot = root.Q<VisualElement>("MainMenu");
-
-        var newGameButton = root.Q<Button>("NewGameButton");
-        newGameButton.clicked += () => {
+        ui_MainMenuRoot = GetComponent<UIDocument>().rootVisualElement;
+        mainMenuRootQuery = ui_MainMenuRoot.Q<VisualElement>("Background");
+        
+        var newGameHoverButton = mainMenuRootQuery.Q<HoverButton>("NewGameButton");
+        newGameHoverButton.clicked += () =>
+        {
+            if (DebugMode) Debug.Log("NewGameButton clicked");
+            MainMenu_UI_Button_Click_NewGame.Post(this.gameObject);
             NetworkManager.Singleton.StartHost();
-            menuRoot.style.display = DisplayStyle.None;
-            FindFirstObjectByType<Interface>().EnableInventory();
+            this.Close();
+            ui_Interface.Open();
         };
-        var joinButton = root.Q<Button>("JoinButton");
-        joinButton.clicked += () => {
-            NetworkManager.Singleton.StartClient();
-            menuRoot.style.display = DisplayStyle.None;
-            FindFirstObjectByType<Interface>().EnableInventory();
+        newGameHoverButton.hovered += () =>
+        {
+            if (DebugMode) Debug.Log("NewGameButton hovered");
+            MainMenu_UI_Button_Hover_NewGame.Post(this.gameObject);
         };
-        var settingsButton = root.Q<Button>("SettingsButton");
+
+        var joinButton = mainMenuRootQuery.Q<HoverButton>("JoinButton");
+        joinButton.clicked += () =>
+        {
+            if (DebugMode) Debug.Log("JoinButton clicked");
+            MainMenu_UI_Button_Click_JoinGame.Post(this.gameObject);
+            NetworkManager.Singleton.StartClient(); //maybe transition to a loading screen here
+            this.Close();
+            ui_Interface.Open();
+        };
+        joinButton.hovered += () =>
+        {
+            if (DebugMode) Debug.Log("JoinButton hovered");
+            MainMenu_UI_Button_Hover_JoinGame.Post(this.gameObject);
+        };
+
+        var settingsButton = mainMenuRootQuery.Q<HoverButton>("SettingsButton");
         settingsButton.clicked += () =>
         {
-            menuRoot.style.display = DisplayStyle.None;
-            FindFirstObjectByType<Settings>().OpenSetting();
+            if (DebugMode) Debug.Log("SettingsButton clicked");
+            MainMenu_UI_Button_Click_Settings.Post(this.gameObject);
+            this.Close();
+            ui_SettingsMenu.Open();
         };
-        var quitButton = root.Q<Button>("QuitButton");
-        quitButton.clicked += () => {
+        settingsButton.hovered += () =>
+        {
+            if (DebugMode) Debug.Log("SettingsButton hovered");
+            MainMenu_UI_Button_Hover_Settings.Post(this.gameObject);
+        };
+
+        var quitButton = mainMenuRootQuery.Q<HoverButton>("QuitButton");
+        quitButton.clicked += () =>
+        {
+            if (DebugMode) Debug.Log("QuitButton clicked");
+            MainMenu_UI_Button_Click_QuitGame.Post(this.gameObject);
             Application.Quit();
         };
-
+        quitButton.hovered += () =>
+        {
+            if (DebugMode) Debug.Log("QuitButton hovered");
+            MainMenu_UI_Button_Hover_QuitGame.Post(this.gameObject);
+        };
     }
 
-    public void OpenMainMenu()
+    public void Open()
     {
-        menuRoot.SetEnabled(true);
-        menuRoot.style.display = DisplayStyle.Flex;
+        ui_MainMenuRoot.SetEnabled(true);
+        mainMenuRootQuery.SetEnabled(true);
+        
+        ui_MainMenuRoot.style.display = DisplayStyle.Flex;
+        mainMenuRootQuery.style.display = DisplayStyle.Flex;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Close()
     {
+        ui_MainMenuRoot.SetEnabled(false);
+        mainMenuRootQuery.SetEnabled(false);
+        
+        ui_MainMenuRoot.style.display = DisplayStyle.None;
+        mainMenuRootQuery.style.display = DisplayStyle.None;
         
     }
 }
