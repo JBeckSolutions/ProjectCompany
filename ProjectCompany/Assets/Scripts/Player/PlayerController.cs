@@ -18,6 +18,9 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private GameObject playerCamera;
+    [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject playerInterface;
+    [SerializeField] private GameObject deathUI;
 
     [SerializeField] private PlayerInventoryManager playerInventory;
     [SerializeField] private bool jumpedThisFrame = false;
@@ -34,6 +37,7 @@ public class PlayerController : NetworkBehaviour
     private float xRotation = 0;
 
     private ProgressBar staminaBar;
+
 
     private bool sprinting = false;
 
@@ -54,19 +58,36 @@ public class PlayerController : NetworkBehaviour
             Cursor.visible = false;
         }
 
-        var root = GameObject.Find("Interface").GetComponent<UIDocument>().rootVisualElement;
+        var root = GameObject.Find("UIManager").GetComponent<UIDocument>().rootVisualElement;
 
-        staminaBar = root.Q<ProgressBar>("StaminaBar");
+        UIManager.Instance.AssignUIDocuments(pauseUI, playerInterface, deathUI);
 
-        staminaBar.lowValue = 0;
-        staminaBar.highValue = stamina;
+        UIManager.Instance.ShowPlayerInterface();
+        if (playerInterface != null)
+        {
+            root = playerInterface.GetComponent<UIDocument>().rootVisualElement;
+            staminaBar = root.Q<ProgressBar>("StaminaBar");
+
+            if (staminaBar != null)
+            {
+                staminaBar.lowValue = 0;
+                staminaBar.highValue = stamina;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Player Interface is not assigned in the Inspector.");
+        }
     }
     private void Update()
     {
         if (!IsOwner) return;
         HandleLook();
         HandleMovementAndAnimation();
-        staminaBar.value = currentStamina;
+        if (staminaBar != null)
+        {
+            staminaBar.value = currentStamina;
+        }
 
     }
    

@@ -1,4 +1,5 @@
 using System;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -128,20 +129,6 @@ public class EnemyChaser : EnemyBase
         var timer = timeFrozen;
         timer -= Time.deltaTime;
 
-    }
-
-    protected void ChooseNewDestination()
-    {
-        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
-        randomDirection += transform.position;
-
-        if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, patrolRadius, NavMesh.AllAreas))
-        {
-            agent.SetDestination(hit.position);
-            validNewPosition = true;
-        }
-
-        timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
     }
     private bool IsSeenByPlayer()
     {

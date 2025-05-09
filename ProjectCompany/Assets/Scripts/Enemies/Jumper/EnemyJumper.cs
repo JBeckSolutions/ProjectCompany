@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -120,21 +121,7 @@ public class EnemyJumper :EnemyBase
     protected void Jumping()
     {
         agent.speed = speed * jumpMultiplier;
-
-    }
-
-    protected void ChooseNewDestination()
-    {
-        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
-        randomDirection += transform.position;
-
-        if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, patrolRadius, NavMesh.AllAreas))
-        {
-            agent.SetDestination(hit.position);
-            validNewPosition = true;
-        }
-
-        timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
+        ChooseNewDestination(null,75,true);
     }
     private bool IsSeenByPlayer()
     {
