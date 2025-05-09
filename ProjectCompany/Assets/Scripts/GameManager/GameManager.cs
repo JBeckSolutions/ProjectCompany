@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,6 +32,8 @@ public class GameManager : NetworkBehaviour
     [SerializeField] private int minRooms = 50;
     [SerializeField] private int maxRooms = 750;
     [SerializeField] private int QuotaForMaxSize = 10000;
+
+    private bool sceneLoaded = false;
     
     
 
@@ -50,7 +50,6 @@ public class GameManager : NetworkBehaviour
             Destroy(this);
             return;
         }
-        DontDestroyOnLoad(this);
     }
 
     public override void OnNetworkSpawn()
@@ -59,6 +58,7 @@ public class GameManager : NetworkBehaviour
         {
             SetQuotaAndDungeonSize();
         }
+        DontDestroyOnLoad(this);
     }
 
     private void Update()
@@ -77,10 +77,62 @@ public class GameManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void EndRoundServerRpc() //Ends a round
     {
+        StartCoroutine(endRound());
+    }
+    private IEnumerator endRound()
+    {
+        yield return new WaitForSeconds(1);
+
         RoundRunning = false;
-        ItemValueLastRound.Value = DropOffAreaManager.ItemValue;
+
+        // Store last item value
+        if (DropOffAreaManager != null)
+            ItemValueLastRound.Value = DropOffAreaManager.ItemValue;
+
         DropOffAreaManager = null;
-        NetworkManager.Singleton.SceneManager.LoadScene("Lobby", UnityEngine.SceneManagement.LoadSceneMode.Single);
+
+        // Despawn all players
+        foreach (var playerState in PlayerStates)
+        {
+            if (NetworkManager.Singleton.ConnectedClients.TryGetValue(playerState.OwnerClientId, out var client))
+            {
+                var playerObj = client.PlayerObject;
+                if (playerObj != null && playerObj.IsSpawned)
+                    playerObj.Despawn(true);
+            }
+        }
+        //Despawn all enemies
+        foreach (var obj in FindObjectsByType<NetworkObject>(FindObjectsSortMode.None))
+        {
+            if (obj.gameObject.layer == LayerMask.NameToLayer("Enemy") && obj.IsSpawned)
+            {
+                obj.Despawn(true); // true = destroy the GameObject
+            }
+        }
+
+
+        PlayerStates = new List<PlayerState>();
+
+        // Load the new scene
+        NetworkManager.Singleton.SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
+
+        // Wait for scene to finish loading
+        sceneLoaded = false;
+        NetworkManager.Singleton.SceneManager.OnLoadComplete += OnSceneLoaded;
+
+        // Wait until lobby is loaded
+        while (!sceneLoaded)
+            yield return null;
+
+        // Respawn players
+        foreach (var client in NetworkManager.Singleton.ConnectedClients)
+        {
+            PlayerSpawnManager.Singelton.SpawnPlayerServerRpc(client.Key);
+        }
+
+        NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoaded;
+
+        // Progress to next day or lose
         if (ItemValueLastRound.Value >= Quota.Value)
         {
             Debug.Log("You won!");
@@ -92,6 +144,16 @@ public class GameManager : NetworkBehaviour
             Debug.Log("Game over. You lost!");
         }
     }
+
+    void OnSceneLoaded(ulong clientId, string sceneName, LoadSceneMode mode)
+    {
+        if (sceneName == "Lobby")
+        {
+            sceneLoaded = true;
+        }
+    }
+
+
     [ServerRpc]
     public void LvlStartingServerRpc()
     {
@@ -129,10 +191,58 @@ public class GameManager : NetworkBehaviour
 
             yield return new WaitForSeconds(spawnInterval);
 
-            MapGenerator.SpawnEnemyServerRpc();
+            if (RoundRunning)
+            {
+                MapGenerator.SpawnEnemyServerRpc();
+            }
         }
 
         //Debug.Log("Stopping enemy spawn Coroutine");
+    }
+
+    [ServerRpc]
+    public void OnPlayerDeathServerRpc(ulong clientId)
+    {
+        if (playerDeaths.Value == PlayerStates.Count)
+        {
+            EndRoundServerRpc();
+            return;
+        }
+        for (int i = 0; i < PlayerStates.Count; i++)
+        {
+
+            RemovePlayerStateClientRpc(clientId);
+
+            if (PlayerStates[i].OwnerClientId == clientId)
+            {
+                PlayerStates[i].GetComponent<NetworkObject>().Despawn(true);
+                PlayerStates.RemoveAt(i);
+                StartCoroutine(SpawnDeadPlayer(clientId));
+                return;
+            }
+        }
+    }
+    [ClientRpc]
+    private void RemovePlayerStateClientRpc(ulong clientId)
+    {
+        if (!IsServer)
+        {
+            for (int i = 0; i < PlayerStates.Count; i++)
+            {
+                if (PlayerStates[i].OwnerClientId == clientId)
+                {
+                    PlayerStates.RemoveAt(i);
+                    return;
+                }
+            }
+        }
+    }
+
+    private IEnumerator SpawnDeadPlayer(ulong clientId)
+    {
+        yield return new WaitForSeconds(3);
+
+        PlayerSpawnManager.Singelton.SpawnPlayerServerRpc(clientId, 1);
     }
 
 }

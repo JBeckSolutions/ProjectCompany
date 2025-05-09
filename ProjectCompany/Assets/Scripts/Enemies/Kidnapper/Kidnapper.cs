@@ -3,13 +3,21 @@ using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
-public class Kidnapper : EnemyBaseLegacy
+public class Kidnapper : EnemyBase
 {
+    protected enum EnemyState
+    {
+        Idle,
+        Patrolling,
+        Chasing
+    }
+
+    [SerializeField] protected EnemyState currentState = EnemyState.Idle;
     [SerializeField] List<PlayerState> playersGettingCarried;
     [SerializeField] private Transform carryPosition;
     [SerializeField] private Transform dropPosition;
     [SerializeField] private float attackChance = 0.05f;
-    protected override void Update()
+    protected void Update()
     {
         if (!IsServer) return;
 

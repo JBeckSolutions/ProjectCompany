@@ -26,6 +26,7 @@ public class EnemyBaseLegacy : NetworkBehaviour
 
     [Header("Detection")]
     [SerializeField] protected List<PlayerState> playerList;      //List of all players in the game
+    [SerializeField] protected Transform enemyHead;
     [SerializeField] protected float viewRadius = 10f;
     [UnityEngine.Range(0, 360)]
     [SerializeField] protected float viewAngle = 90f;
@@ -46,10 +47,13 @@ public class EnemyBaseLegacy : NetworkBehaviour
     protected virtual void Start()
     {
         int enemyLayer = LayerMask.NameToLayer("Enemy");
-        int groundLayer = LayerMask.NameToLayer("Ground");
+        //int groundLayer = LayerMask.NameToLayer("Ground");
         int itemLayer = LayerMask.NameToLayer("Item");
+        //int playerLayer = LayerMask.NameToLayer("Player");
+        int propLayer = LayerMask.NameToLayer("Prop");
+        int roomLayer = LayerMask.NameToLayer("Room");
 
-        layerMask = ~((1 << enemyLayer) | (1 << groundLayer) | (1 << itemLayer));
+        layerMask = ~((1 << enemyLayer) | (1 << itemLayer) | (1 << propLayer) | (1 << roomLayer));
     }
 
     public override void OnNetworkSpawn()
@@ -145,9 +149,10 @@ public class EnemyBaseLegacy : NetworkBehaviour
         float distance = CustomDistance ?? maxDistance;
 
         Vector3 nextDestination = Destination ?? (Random.insideUnitSphere * distance + transform.position);
+
         if (goFar == false)
         {
-            if (NavMesh.SamplePosition(nextDestination, out NavMeshHit hit, distance, NavMesh.AllAreas))
+            if (NavMesh.SamplePosition(nextDestination, out NavMeshHit hit, 2f, NavMesh.AllAreas))
             {
                 agent.SetDestination(hit.position);
                 validNewPosition = true;
@@ -193,26 +198,26 @@ public class EnemyBaseLegacy : NetworkBehaviour
         foreach (var player in playerList)
         {
             if (player == null) continue;
+            if (player.PlayerAlive.Value == false) continue;
 
-            Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
-            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+            // Access the camera's position and forward direction
+            Vector3 dirToPlayer = (player.playerCamera.transform.position - enemyHead.position).normalized;
+            float distanceToPlayer = Vector3.Distance(enemyHead.position, player.playerCamera.transform.position);
 
             if (distanceToPlayer < viewRadius)
             {
-                if (PlayerSpotted || Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
+                RaycastHit hit;
+                if (Physics.Raycast(enemyHead.position, dirToPlayer, out hit, distanceToPlayer, layerMask))
                 {
-                    RaycastHit hit;
-                    if (!Physics.Raycast(transform.position, dirToPlayer, out hit, distanceToPlayer, layerMask, QueryTriggerInteraction.Ignore))
+                    //Debug.Log("Hit " + hit.transform.gameObject.name);
+
+                    if (hit.collider.gameObject == player.gameObject || hit.collider.transform.IsChildOf(player.transform))
                     {
                         if (closestSeenPlayerDistance > distanceToPlayer)
                         {
                             closestSeenPlayer = player;
                             closestSeenPlayerDistance = distanceToPlayer;
                         }
-                    }
-                    else
-                    {
-                        //Debug.Log("Ray hit: " + hit.collider.name);
                     }
                 }
             }
@@ -256,23 +261,23 @@ public class EnemyBaseLegacy : NetworkBehaviour
     {
         // Only visualize the view cone if the object is selected in the scene view
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, viewRadius);  // Draw the view radius (as a wire sphere)
+        Gizmos.DrawWireSphere(enemyHead.position, viewRadius);  // Draw the view radius from the enemy's head position
 
-        // Draw the view cone (using a frustum-like shape)
-        Vector3 leftBoundary = Quaternion.Euler(0, -viewAngle / 2, 0) * transform.forward * viewRadius;
-        Vector3 rightBoundary = Quaternion.Euler(0, viewAngle / 2, 0) * transform.forward * viewRadius;
+        // Draw the view cone (using a frustum-like shape) from the enemy's head
+        Vector3 leftBoundary = Quaternion.Euler(0, -viewAngle / 2, 0) * enemyHead.forward * viewRadius;
+        Vector3 rightBoundary = Quaternion.Euler(0, viewAngle / 2, 0) * enemyHead.forward * viewRadius;
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + leftBoundary); // Left boundary
-        Gizmos.DrawLine(transform.position, transform.position + rightBoundary); // Right boundary
+        Gizmos.DrawLine(enemyHead.position, enemyHead.position + leftBoundary); // Left boundary
+        Gizmos.DrawLine(enemyHead.position, enemyHead.position + rightBoundary); // Right boundary
 
         // Optionally, you can draw the view cone arc as lines
         int segments = 10;
         for (int i = 0; i <= segments; i++)
         {
             float angle = Mathf.Lerp(-viewAngle / 2, viewAngle / 2, i / (float)segments);
-            Vector3 direction = Quaternion.Euler(0, angle, 0) * transform.forward * viewRadius;
-            Gizmos.DrawLine(transform.position, transform.position + direction);
+            Vector3 direction = Quaternion.Euler(0, angle, 0) * enemyHead.forward * viewRadius;
+            Gizmos.DrawLine(enemyHead.position, enemyHead.position + direction);
         }
     }
 }

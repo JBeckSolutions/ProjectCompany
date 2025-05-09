@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2938225459448505966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5688378673538224710}
+  m_Layer: 6
+  m_Name: EnemyHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5688378673538224710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938225459448505966}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5205433254387301306}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6869919165966908977
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +152,7 @@ GameObject:
   - component: {fileID: 962917814682591888}
   - component: {fileID: 8038749414688208739}
   - component: {fileID: 1840762221281657280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +244,7 @@ Transform:
   m_Children:
   - {fileID: 106190610312123529}
   - {fileID: 962917814682591888}
+  - {fileID: 5688378673538224710}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &3311286857594216485
@@ -283,6 +315,7 @@ MonoBehaviour:
   walkingSpeed: 2.5
   sprintSpeed: 2.5
   playerList: []
+  enemyHead: {fileID: 5688378673538224710}
   viewRadius: 10
   viewAngle: 150
   playerSeenThisFrame: 0

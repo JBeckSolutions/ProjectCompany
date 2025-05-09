@@ -419,6 +419,17 @@
                 },
                 {
                     "name": "",
+                    "id": "74dd2597-2b8e-430e-ab5b-b76476627c7b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4f4649ac-64a8-4a73-af11-b3faef356a4d",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -1040,6 +1051,54 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "PlayerDead",
+            "id": "4ee37a8b-c59a-4cc9-8616-6170b783f134",
+            "actions": [
+                {
+                    "name": "NextPlayer",
+                    "type": "Button",
+                    "id": "09446eaf-7a75-4296-b83a-d12b969d42da",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousPlayer",
+                    "type": "Button",
+                    "id": "9258818b-776a-4285-8280-4fc580e2f341",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d0f37814-9958-4c34-8258-425e3b8bd6b0",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextPlayer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c02ef7b-d3d7-4cc4-99bc-c532dbef3c9f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousPlayer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

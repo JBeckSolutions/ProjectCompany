@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4929227014411464920}
   - component: {fileID: 20275322837803704}
   - component: {fileID: 2781544626136111186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,6 +174,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9fb4ef414dd2da746893c490d836537c, type: 3}
       propertyPath: m_Name
       value: metalldesk
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fb4ef414dd2da746893c490d836537c, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
