@@ -4,4 +4,5 @@ using UnityEngine;
 public class InventoryUi : MonoBehaviour
 {
     public List<InventoryTile> InventoryTiles;
+    public RectTransform StaminaBar;
 }

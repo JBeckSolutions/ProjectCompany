@@ -48,10 +48,13 @@ public class PlayerInventoryManager : MonoBehaviour
 
             ItemToAdd.PickUpServerRpc(this.GetComponent<NetworkObject>());
 
-            for (int i = 0; i < ItemToAdd.ItemWeight; i++)
+            inventoryItems[ActiveInventorySlot] = ItemToAdd;
+            inventoryUi.InventoryTiles[ActiveInventorySlot].SetItemImage(ItemToAdd.InventoryImage);
+
+            for (int i = 1; i < ItemToAdd.ItemWeight; i++)
             {
                 inventoryItems[ActiveInventorySlot + i] = ItemToAdd;
-                inventoryUi.InventoryTiles[ActiveInventorySlot + i].SetItemImage(ItemToAdd.InventoryImage);
+                inventoryUi.InventoryTiles[ActiveInventorySlot + i].SetItemImage(ItemToAdd.InventoryImage, new Color(1,1,1,0.5f));
             }
 
             PlayerWeight += ItemToAdd.ItemWeight;

@@ -63,6 +63,15 @@ public class PlayerSpawnManager : NetworkBehaviour
     [ServerRpc]
     public void SpawnPlayerServerRpc(ulong clientId, int prefab = 0)
     {
+        StartCoroutine(SpawnPlayers(clientId, prefab));
+    }
+    private IEnumerator SpawnPlayers(ulong clientId, int prefab = 0)
+    {
+        while (SpawnPoints.Length == 0)
+        {
+            yield return null;
+        }
+
         // Get spawn index based on clientId (modulo to ensure we stay within spawn points array)
         int spawnIndex = (int)(clientId % (ulong)SpawnPoints.Length);
         Transform spawnPoint = SpawnPoints[spawnIndex];
@@ -77,12 +86,22 @@ public class PlayerSpawnManager : NetworkBehaviour
         }
 
         player.SpawnAsPlayerObject(clientId);
+        SetPlayerNameClientRpc(clientId, player.GetComponent<NetworkObject>().NetworkObjectId);
 
         if (prefab == 0)
         {
             SpawnPlayerClientRpc(clientId, spawnPoint.position);
         }
     }
+    [ClientRpc]
+    private void SetPlayerNameClientRpc(ulong clientId, ulong objectId)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(objectId, out var netObj))
+        {
+            GameObject player = netObj.gameObject;
+            player.name = "Player " + clientId;
+        }
+    }   
     [ClientRpc]
     private void SpawnPlayerClientRpc(ulong clientid, Vector3 position)
     {

@@ -15,15 +15,7 @@ public class PlayerDead : NetworkBehaviour
     {
         if (IsOwner)
         {
-            alivePlayers = new List<PlayerState>();
-
-            foreach (var player in GameManager.Singelton.PlayerStates)
-            {
-                if (player.PlayerAlive.Value == true)
-                {
-                    alivePlayers.Add(player);
-                }
-            }
+            ChangePlayerToWatch(0);
         }
 
         if (!IsOwner)

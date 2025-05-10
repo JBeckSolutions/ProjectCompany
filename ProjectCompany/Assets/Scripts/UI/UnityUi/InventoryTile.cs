@@ -12,9 +12,10 @@ public class InventoryTile : MonoBehaviour
         ItemImage.color = new Color(1, 1, 1, 0);
     }
 
-    public void SetItemImage(Sprite imageToSet)
+    public void SetItemImage(Sprite imageToSet, Color? color = null)
     {
+        Color colorToSet = color ?? new Color(1, 1, 1, 1);
         ItemImage.sprite = imageToSet;
-        ItemImage.color = new Color(1, 1, 1, 1);
+        ItemImage.color = colorToSet;
     }
 }
