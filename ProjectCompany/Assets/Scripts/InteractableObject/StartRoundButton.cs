@@ -6,8 +6,13 @@ public class StartRoundButton : InteractableObject
     //Starts a round when the button is pressed
     public override void Use()
     {
-        GameManager.Singelton.StartRoundServerRpc();
-        this.enabled = false;
+        if (!IsServer) return;
+
+        if (interactable.Value)
+        {
+            GameManager.Singelton.StartRoundServerRpc();
+            interactable.Value = false;
+        }
     }
     
     

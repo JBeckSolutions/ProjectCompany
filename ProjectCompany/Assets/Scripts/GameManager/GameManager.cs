@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : NetworkBehaviour
@@ -14,6 +15,7 @@ public class GameManager : NetworkBehaviour
     public NetworkVariable<int> ItemValueLastRound = new NetworkVariable<int>(0);
     public List<PlayerState> PlayerStates;
 
+    [SerializeField] GameUi gameUi;
     [SerializeField] float maxRoundTimer = 900f;
     [SerializeField] float currentTimeInLvl;
 
@@ -81,7 +83,6 @@ public class GameManager : NetworkBehaviour
     }
     private IEnumerator endRound()
     {
-        yield return new WaitForSeconds(1);
 
         RoundRunning = false;
 
@@ -124,6 +125,8 @@ public class GameManager : NetworkBehaviour
         while (!sceneLoaded)
             yield return null;
 
+        yield return new WaitForSeconds(2);
+
         // Respawn players
         foreach (var client in NetworkManager.Singleton.ConnectedClients)
         {
@@ -132,6 +135,7 @@ public class GameManager : NetworkBehaviour
 
         NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoaded;
 
+        yield return new WaitForSeconds(2);
         // Progress to next day or lose
         if (ItemValueLastRound.Value >= Quota.Value)
         {
@@ -141,7 +145,7 @@ public class GameManager : NetworkBehaviour
         }
         else
         {
-            Debug.Log("Game over. You lost!");
+            LoseGameClientRpc();
         }
     }
 
@@ -152,7 +156,25 @@ public class GameManager : NetworkBehaviour
             sceneLoaded = true;
         }
     }
+    [ClientRpc]
+    private void WinGameClientRpc()
+    {
+        GameObject localPlayer = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
+        localPlayer.GetComponent<PlayerInput>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameUi.OpenMenu("GameWonMenu");
+    }
 
+    [ClientRpc]
+    private void LoseGameClientRpc()
+    {
+        GameObject localPlayer = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
+        localPlayer.GetComponent<PlayerInput>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameUi.OpenMenu("GameLostMenu");
+    }
 
     [ServerRpc]
     public void LvlStartingServerRpc()
