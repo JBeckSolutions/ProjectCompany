@@ -1,22 +1,34 @@
 using Unity.Netcode;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerDead : NetworkBehaviour
 {
     private int watchingIndex = 0;
     private List<PlayerState> alivePlayers;
+    [SerializeField] private TMP_Text playerWatchText;
+    [SerializeField] private GameObject deadPlayerUi;
 
     public override void OnNetworkSpawn()
     {
-        alivePlayers = new List<PlayerState>();
-
-        foreach (var player in GameManager.Singelton.PlayerStates)
+        if (IsOwner)
         {
-            if (player.PlayerAlive.Value == true)
+            alivePlayers = new List<PlayerState>();
+
+            foreach (var player in GameManager.Singelton.PlayerStates)
             {
-                alivePlayers.Add(player);
+                if (player.PlayerAlive.Value == true)
+                {
+                    alivePlayers.Add(player);
+                }
             }
+        }
+
+        if (!IsOwner)
+        {
+            deadPlayerUi.SetActive(false);
         }
     }
     void Update()
@@ -56,5 +68,8 @@ public class PlayerDead : NetworkBehaviour
         {
             watchingIndex = 0;
         }
+
+        playerWatchText.text = ("Watching: " + alivePlayers[watchingIndex].name);
+        
     }
 }

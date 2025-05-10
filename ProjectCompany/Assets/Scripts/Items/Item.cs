@@ -8,7 +8,7 @@ public class Item : NetworkBehaviour
     public NetworkVariable<bool> PickupAble = new NetworkVariable<bool>(true);
     public string itemName = "Item";
     public int itemValue = 10;
-    public Texture2D InventoryImage;
+    public Sprite InventoryImage;
     public int ItemWeight = 1;
 
     [SerializeField] private GameObject model;
