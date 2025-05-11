@@ -7,39 +7,37 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : NetworkBehaviour
 {
-    //Manages the state of the game
-
+    [Header("Game State Management")]
     public static GameManager Singelton;
     public DropOffAreaManager DropOffAreaManager;
     public DungeonGenerator MapGenerator;
     public NetworkVariable<int> ItemValueLastRound = new NetworkVariable<int>(0);
     public List<PlayerState> PlayerStates;
 
-    [SerializeField] GameUi gameUi;
-    [SerializeField] float maxRoundTimer = 900f;
-    [SerializeField] float currentTimeInLvl;
+    [Header("Game UI & Timing")]
+    [SerializeField] private GameUi gameUi;
+    [SerializeField] private float maxRoundTimer = 900f;
+    [SerializeField] private float currentTimeInLvl;
 
-    [Header("EnemySpawning")]
+    [Header("Enemy Spawning")]
     [SerializeField] private AnimationCurve spawnRateOverTime;
     [SerializeField] private float minSpawnInterval = 10f;
     [SerializeField] private float maxSpawnInverval = 45f;
 
-    [Header("ItemSpawning")]
+    [Header("Item Spawning")]
     public NetworkVariable<int> Quota = new NetworkVariable<int>(0);
     public NetworkVariable<int> playerDeaths = new NetworkVariable<int>(0);
     [SerializeField] private int currentDay = 1;
 
-    [Header("Dungeon Size")]
+    [Header("Dungeon Size Configuration")]
     public NetworkVariable<int> DungeonSize = new NetworkVariable<int>(0);
     [SerializeField] private int minRooms = 50;
     [SerializeField] private int maxRooms = 750;
     [SerializeField] private int QuotaForMaxSize = 10000;
 
+    [Header("Scene & Round Management")]
+    private bool RoundRunning = false;
     private bool sceneLoaded = false;
-    
-    
-
-    [SerializeField] private bool RoundRunning = false;
 
     private void Awake()
     {

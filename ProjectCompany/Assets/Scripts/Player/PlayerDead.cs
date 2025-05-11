@@ -8,6 +8,7 @@ public class PlayerDead : NetworkBehaviour
 {
     private int watchingIndex = 0;
     private List<PlayerState> alivePlayers = new List<PlayerState>();
+
     [SerializeField] private TMP_Text playerWatchText;
     [SerializeField] private GameObject deadPlayerUi;
 

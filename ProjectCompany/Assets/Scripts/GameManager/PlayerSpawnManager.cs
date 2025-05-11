@@ -7,9 +7,10 @@ using System.Collections;
 
 public class PlayerSpawnManager : NetworkBehaviour
 {
-    [SerializeField] private List<GameObject> playerPrefabs;
+    public static PlayerSpawnManager Singelton;
     public Transform[] SpawnPoints;
-    public static PlayerSpawnManager Singelton = null;
+
+    [SerializeField] private List<GameObject> playerPrefabs;
     private void Awake()
     {
         if (Singelton == null)
@@ -22,27 +23,6 @@ public class PlayerSpawnManager : NetworkBehaviour
             return;
         }
     }
-    private void Start()
-    {
-        NetworkManager.Singleton.OnServerStarted += ServerStart;
-        ulong test = this.OwnerClientId;
-    }
-    public void ServerStart()
-    {
-        if (NetworkManager.Singleton.IsServer)
-        {
-            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
-        }
-    }
-
-    private void OnClientConnected(ulong clientId)
-    {
-        
-        Debug.Log("Client connected: " + clientId);
-        SpawnPlayerServerRpc(clientId);
-        
-    }
-
     public override void OnNetworkSpawn()
     {
         if (!IsServer) return;

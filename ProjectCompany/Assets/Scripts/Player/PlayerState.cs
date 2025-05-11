@@ -5,12 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerState : NetworkBehaviour
 {
+    [Header("Player Health Settings")]
     public NetworkVariable<int> PlayerHealth = new NetworkVariable<int>(100);
     public NetworkVariable<bool> PlayerAlive = new NetworkVariable<bool>(true);
+
+    [Header("UI Components")]
     [SerializeField] private GameObject PlayerUi;
+    [SerializeField] private TMP_Text healthText;
+
+    [Header("Player Components")]
     public Camera playerCamera;
     public GameObject model;
-    [SerializeField] private TMP_Text healthText;
     public override void OnNetworkSpawn()
     {
         GameManager.Singelton.PlayerStates.Add(this);

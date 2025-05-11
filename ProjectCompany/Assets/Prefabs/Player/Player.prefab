@@ -1232,23 +1232,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   controllsEnabled: 1
-  movementSpeed: 4
-  sprintSpeed: 6
-  jumpHeight: 1
-  gravityValue: -9.81
   sensitivity: 0.1
   characterController: {fileID: 2229995964777371166}
   animator: {fileID: 7572251632389190878}
   playerCamera: {fileID: 3680675649726996254}
   playerInventory: {fileID: 3887017362229013079}
-  jumpedThisFrame: 0
+  inventoryUi: {fileID: 4827252211306937142}
+  interactableUi: {fileID: 6545387779772766648}
+  gameUi: {fileID: 0}
   stamina: 5
   currentStamina: 0
   MaxTimeUntilStaminaRefresh: 3
   timeUntilStaminaRefresh: 0
-  inventoryUi: {fileID: 4827252211306937142}
-  interactablUi: {fileID: 6545387779772766648}
-  gameUi: {fileID: 0}
+  jumpedThisFrame: 0
 --- !u!114 &-2735287924375658040
 MonoBehaviour:
   m_ObjectHideFlags: 0

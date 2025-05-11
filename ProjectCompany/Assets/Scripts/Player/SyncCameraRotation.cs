@@ -3,15 +3,14 @@ using UnityEngine;
 
 public class SyncCameraRotation : NetworkBehaviour
 {
+    [SerializeField] private float smoothSpeed = 10f;
+
     private NetworkVariable<float> cameraXRotation = new(
         0f,
         NetworkVariableReadPermission.Everyone,
         NetworkVariableWritePermission.Owner
     );
-
     private float smoothedXRotation;
-
-    [SerializeField] private float smoothSpeed = 10f;
 
     private void Update()
     {

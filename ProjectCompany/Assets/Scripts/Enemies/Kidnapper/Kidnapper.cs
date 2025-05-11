@@ -11,12 +11,17 @@ public class Kidnapper : EnemyBase
         Patrolling,
         Chasing
     }
+    [Header("State Management")]
+    protected EnemyState currentState = EnemyState.Idle;    // Current state of the enemy
 
-    [SerializeField] protected EnemyState currentState = EnemyState.Idle;
-    [SerializeField] List<PlayerState> playersGettingCarried;
-    [SerializeField] private Transform carryPosition;
-    [SerializeField] private Transform dropPosition;
-    [SerializeField] private float attackChance = 0.05f;
+    [Header("Carry Positions")]
+    [SerializeField] private Transform carryPosition;    // Position where players will be carried
+    [SerializeField] private Transform dropPosition;     // Position where players will be dropped
+
+    [Header("Attack")]
+    [SerializeField] private float attackChance = 0.05f;  // Chance for the enemy to attack
+    protected List<PlayerState> playersGettingCarried;    // List of players currently being carried
+
     protected void Update()
     {
         if (!IsServer) return;
@@ -103,7 +108,7 @@ public class Kidnapper : EnemyBase
             {
                 currentState = EnemyState.Idle;
                 validNewPosition = false;
-                timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
+                timeUntilNextAction = Random.Range(0, maxTimeUntilNextAction);
             }
         }
 
@@ -135,7 +140,7 @@ public class Kidnapper : EnemyBase
         }
         updatePlayerPositionsServerRpc(dropPosition.position);
         EnablePlayerControlsServerRpc();
-        timeUntilNextAttack = attackCoooldown;
+        timeUntilNextAttack = attackCooldown;
 
 
     }

@@ -6,17 +6,23 @@ using UnityEngine.UIElements;
 
 public class PlayerInventoryManager : MonoBehaviour
 {
+    [Header("Player Inventory Settings")]
     public int PlayerWeight = 0;
 
-    [SerializeField] private Item[] inventoryItems;
+    [Header("Inventory Items")]
+    private Item[] inventoryItems;
 
-    [SerializeField] private int InventorySpace = 7;
-    [SerializeField] private int ActiveInventorySlot = 0;
-    
+    [Header("Inventory Configuration")]
+    private int InventorySpace = 7;
+    private int ActiveInventorySlot = 0;
+
+    [Header("Inventory Interaction")]
     public Transform playerHand;
 
+    [Header("Item Drop Settings")]
     [SerializeField] private Transform dropLocation;
 
+    [Header("UI Components")]
     [SerializeField] private InventoryUi inventoryUi;
 
 

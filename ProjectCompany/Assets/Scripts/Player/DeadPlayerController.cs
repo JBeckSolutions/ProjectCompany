@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 
 public class DeadPlayerController : NetworkBehaviour
 {
+    public bool controllsEnabled = true;
+
     [SerializeField] PlayerInput playerInput;
     [SerializeField] PlayerDead playerDeadLogic;
     [SerializeField] private GameUi gameUi;
-    public bool controllsEnabled = true;
     public override void OnNetworkSpawn()
     {
         if (!IsOwner)

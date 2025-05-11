@@ -9,37 +9,40 @@ using static UnityEditor.Progress;
 
 public class PlayerController : NetworkBehaviour
 {
+    [Header("Player Control Settings")]
     public bool controllsEnabled = true;
-    [SerializeField] private float movementSpeed = 4f;
-    [SerializeField] private float sprintSpeed = 6f;
-    [SerializeField] private float jumpHeight = 1f;
-    [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float sensitivity = 0.2f;
+    private float movementSpeed = 4f;
+    private float sprintSpeed = 6f;
+    private float jumpHeight = 1f;
+    private float gravityValue = -9.81f;
 
+    [Header("Player Components")]
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Animator animator;
-
     [SerializeField] private GameObject playerCamera;
 
+    [Header("Inventory and UI")]
     [SerializeField] private PlayerInventoryManager playerInventory;
-    [SerializeField] private bool jumpedThisFrame = false;
+    [SerializeField] private InventoryUi inventoryUi;
+    [SerializeField] private InteractableUi interactableUi;
+    private GameUi gameUi;
 
     [Header("Stamina")]
     [SerializeField] private float stamina = 5f;
-    [SerializeField] private float currentStamina = 0;
-    [SerializeField] private float MaxTimeUntilStaminaRefresh = 3;
-    [SerializeField] private float timeUntilStaminaRefresh = 0;
+    private float currentStamina = 0;
+    private float MaxTimeUntilStaminaRefresh = 3;
+    private float timeUntilStaminaRefresh = 0;
 
+    [Header("Movement and Look Input")]
     private Vector2 moveInput;
     private float yAxisVelocity;
     private Vector2 lookInput;
     private float xRotation = 0;
 
-    [SerializeField] private InventoryUi inventoryUi;
-    [SerializeField] private InteractableUi interactablUi;
-    [SerializeField] private GameUi gameUi;
-
+    [Header("Movement State")]
     private bool sprinting = false;
+    private bool jumpedThisFrame = false;
 
     public override void OnNetworkSpawn()
     {
@@ -65,10 +68,10 @@ public class PlayerController : NetworkBehaviour
 
 
         //Handle Interactable Ui
-        interactablUi.InteractSquare.SetActive(false);
-        interactablUi.Value.text = "";
-        interactablUi.Weight.text = "";
-        interactablUi.Name.text = "";
+        interactableUi.InteractSquare.SetActive(false);
+        interactableUi.Value.text = "";
+        interactableUi.Weight.text = "";
+        interactableUi.Name.text = "";
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
         Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(screenCenter);
         Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
@@ -76,15 +79,15 @@ public class PlayerController : NetworkBehaviour
         {
             if (hitinfo.collider.GetComponent<Item>() is Item item && item.PickupAble.Value == true)
             {
-                interactablUi.InteractSquare.SetActive(true);
-                interactablUi.Value.text = "Value: " + item.itemValue;
-                interactablUi.Weight.text = "Weight: " + item.ItemWeight;
-                interactablUi.Name.text = item.itemName;
+                interactableUi.InteractSquare.SetActive(true);
+                interactableUi.Value.text = "Value: " + item.itemValue;
+                interactableUi.Weight.text = "Weight: " + item.ItemWeight;
+                interactableUi.Name.text = item.itemName;
             }
             if (hitinfo.collider.GetComponent<InteractableObject>() is InteractableObject interactableObject)
             {
-                interactablUi.InteractSquare.SetActive(true);
-                interactablUi.Name.text = interactableObject.ObjectName;
+                interactableUi.InteractSquare.SetActive(true);
+                interactableUi.Name.text = interactableObject.ObjectName;
 
             }
         }

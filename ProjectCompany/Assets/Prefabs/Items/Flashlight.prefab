@@ -402,7 +402,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   PickupAble:
     m_InternalValue: 1
-  itemName: Item
+  itemName: Flashlight
   itemValue: 20
   InventoryImage: {fileID: 0}
   ItemWeight: 1
