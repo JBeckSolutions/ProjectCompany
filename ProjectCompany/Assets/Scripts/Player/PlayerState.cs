@@ -1,15 +1,16 @@
+using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerState : NetworkBehaviour
 {
-    //public NetworkVariable<bool> PlayerReadyState = new NetworkVariable<bool>(false);
     public NetworkVariable<int> PlayerHealth = new NetworkVariable<int>(100);
     public NetworkVariable<bool> PlayerAlive = new NetworkVariable<bool>(true);
-    public GameObject PlayerUi;
+    [SerializeField] private GameObject PlayerUi;
     public Camera playerCamera;
     public GameObject model;
+    [SerializeField] private TMP_Text healthText;
     public override void OnNetworkSpawn()
     {
         GameManager.Singelton.PlayerStates.Add(this);
@@ -29,12 +30,21 @@ public class PlayerState : NetworkBehaviour
     public void TakeDamageServerRpc(int Amount)
     {
         PlayerHealth.Value -= Amount;
+        TakeDamageClientRpc();
         if (PlayerHealth.Value <= 0 && PlayerAlive.Value)
         {
             Debug.Log("Player " + OwnerClientId + " died");
             GameManager.Singelton.playerDeaths.Value += 1;
             PlayerAlive.Value = false;
             GameManager.Singelton.OnPlayerDeathServerRpc(this.OwnerClientId);
+        }
+    }
+    [ClientRpc]
+    public void TakeDamageClientRpc()
+    {
+        if (IsOwner)
+        {
+            healthText.text = "HP: " + PlayerHealth.Value;
         }
     }
 

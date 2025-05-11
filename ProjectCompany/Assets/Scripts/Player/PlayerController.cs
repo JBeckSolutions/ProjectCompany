@@ -74,7 +74,7 @@ public class PlayerController : NetworkBehaviour
         Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
         if (Physics.Raycast(ray, out RaycastHit hitinfo, 5f))
         {
-            if (hitinfo.collider.GetComponent<Item>() is Item item)
+            if (hitinfo.collider.GetComponent<Item>() is Item item && item.PickupAble.Value == true)
             {
                 interactablUi.InteractSquare.SetActive(true);
                 interactablUi.Value.text = "Value: " + item.itemValue;

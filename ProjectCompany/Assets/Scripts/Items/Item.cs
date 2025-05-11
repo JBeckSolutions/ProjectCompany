@@ -40,6 +40,7 @@ public class Item : NetworkBehaviour
     [ClientRpc]
     private void SyncLocalPositionToClientsClientRpc(Vector3 localHandPosition) //Syncs the position to the clients
     {
+        this.itemCollider.enabled = false;
         this.transform.localPosition = localHandPosition;
         this.transform.localRotation = Quaternion.identity;
     }
@@ -70,6 +71,7 @@ public class Item : NetworkBehaviour
             this.transform.SetParent(null);
         }
         this.transform.position = position;
+        this.itemCollider.enabled = true;
     }
     [ServerRpc]
     public void ToggleVisibilityServerRpc(bool state)   //Server send all clients the message to run the ToggleVisibilityClientRpc function
