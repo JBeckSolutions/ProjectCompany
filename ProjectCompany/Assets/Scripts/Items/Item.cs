@@ -33,16 +33,16 @@ public class Item : NetworkBehaviour
 
             this.transform.localPosition = localHandPosition;
             this.transform.localRotation = Quaternion.identity;
-
+            this.gameObject.tag = "PickedUp";
             SyncLocalPositionToClientsClientRpc(localHandPosition);
         }
     }
     [ClientRpc]
     private void SyncLocalPositionToClientsClientRpc(Vector3 localHandPosition) //Syncs the position to the clients
     {
-        this.itemCollider.enabled = false;
         this.transform.localPosition = localHandPosition;
         this.transform.localRotation = Quaternion.identity;
+        this.gameObject.tag = "PickedUp";
     }
     [ServerRpc]
     public virtual void DropServerRpc(Vector3 position) //Server drops the item at the specefied position and sets the item parent to null
@@ -57,6 +57,8 @@ public class Item : NetworkBehaviour
             this.transform.SetParent(null);
         }
         this.transform.position = position;
+        this.gameObject.tag = "Untagged";
+
         DropClientRpc(position);
     }
     [ClientRpc]
@@ -71,7 +73,7 @@ public class Item : NetworkBehaviour
             this.transform.SetParent(null);
         }
         this.transform.position = position;
-        this.itemCollider.enabled = true;
+        this.gameObject.tag = "Untagged";
     }
     [ServerRpc]
     public void ToggleVisibilityServerRpc(bool state)   //Server send all clients the message to run the ToggleVisibilityClientRpc function
@@ -82,6 +84,5 @@ public class Item : NetworkBehaviour
     private void ToggleVisibilityClientRpc(bool state)  //Toggles visibility on all clients
     {
         model.SetActive(state);
-        itemCollider.enabled = state;
     }
 }

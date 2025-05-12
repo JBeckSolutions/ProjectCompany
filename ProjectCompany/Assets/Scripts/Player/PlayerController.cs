@@ -67,28 +67,40 @@ public class PlayerController : NetworkBehaviour
         HandleMovementAndAnimation();
 
 
-        //Handle Interactable Ui
+        // Handle Interactable UI
         interactableUi.InteractSquare.SetActive(false);
         interactableUi.Value.text = "";
         interactableUi.Weight.text = "";
         interactableUi.Name.text = "";
+
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
         Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(screenCenter);
         Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
-        if (Physics.Raycast(ray, out RaycastHit hitinfo, 5f))
+
+        // Perform RaycastAll and filter results
+        RaycastHit[] hits = Physics.RaycastAll(ray, 5f);
+        foreach (RaycastHit hit in hits)
         {
-            if (hitinfo.collider.GetComponent<Item>() is Item item && item.PickupAble.Value == true)
+            GameObject hitObject = hit.collider.gameObject;
+
+            // Skip items tagged as "PickedUp"
+            if (hitObject.CompareTag("PickedUp"))
+                continue;
+
+            if (hitObject.TryGetComponent<Item>(out Item item) && item.PickupAble.Value)
             {
                 interactableUi.InteractSquare.SetActive(true);
                 interactableUi.Value.text = "Value: " + item.itemValue;
                 interactableUi.Weight.text = "Weight: " + item.ItemWeight;
                 interactableUi.Name.text = item.itemName;
+                break;
             }
-            if (hitinfo.collider.GetComponent<InteractableObject>() is InteractableObject interactableObject)
+
+            if (hitObject.TryGetComponent<InteractableObject>(out InteractableObject interactableObject))
             {
                 interactableUi.InteractSquare.SetActive(true);
                 interactableUi.Name.text = interactableObject.ObjectName;
-
+                break;
             }
         }
     }

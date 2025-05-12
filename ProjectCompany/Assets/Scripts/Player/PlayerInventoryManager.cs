@@ -86,6 +86,14 @@ public class PlayerInventoryManager : MonoBehaviour
             }
         }
     }
+    public void DropAllItems()
+    {
+        for (int i = 0; i < inventoryItems.Length; i++)
+        {
+            ActiveInventorySlot = i;
+            DropItem();
+        }
+    }
     public void ChangeActiveInventorySlot(int? NewActiveInventorySlot = null, int? NextOrPreviousSlot = null)
     {
         if (inventoryItems[ActiveInventorySlot] != null) //Set item Model to be invisible
