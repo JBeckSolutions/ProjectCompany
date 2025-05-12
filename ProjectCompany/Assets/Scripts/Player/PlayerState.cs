@@ -1,12 +1,19 @@
+using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerState : NetworkBehaviour
 {
-    //public NetworkVariable<bool> PlayerReadyState = new NetworkVariable<bool>(false);
+    [Header("Player Health Settings")]
     public NetworkVariable<int> PlayerHealth = new NetworkVariable<int>(100);
     public NetworkVariable<bool> PlayerAlive = new NetworkVariable<bool>(true);
+
+    [Header("UI Components")]
+    [SerializeField] private GameObject PlayerUi;
+    [SerializeField] private TMP_Text healthText;
+
+    [Header("Player Components")]
     public Camera playerCamera;
     public GameObject model;
     public override void OnNetworkSpawn()
@@ -15,6 +22,7 @@ public class PlayerState : NetworkBehaviour
         if (!IsOwner)
         {
             playerCamera.enabled = false;
+            PlayerUi.SetActive(false);
         }
         if (IsOwner)
         {
@@ -27,12 +35,21 @@ public class PlayerState : NetworkBehaviour
     public void TakeDamageServerRpc(int Amount)
     {
         PlayerHealth.Value -= Amount;
+        TakeDamageClientRpc();
         if (PlayerHealth.Value <= 0 && PlayerAlive.Value)
         {
             Debug.Log("Player " + OwnerClientId + " died");
             GameManager.Singelton.playerDeaths.Value += 1;
             PlayerAlive.Value = false;
             GameManager.Singelton.OnPlayerDeathServerRpc(this.OwnerClientId);
+        }
+    }
+    [ClientRpc]
+    public void TakeDamageClientRpc()
+    {
+        if (IsOwner)
+        {
+            healthText.text = "HP: " + PlayerHealth.Value;
         }
     }
 

@@ -134,7 +134,7 @@ public class EnemyJumper :EnemyBase
             validNewPosition = true;
         }
 
-        timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
+        timeUntilNextAction = Random.Range(0, maxTimeUntilNextAction);
     }
     private bool IsSeenByPlayer()
     {

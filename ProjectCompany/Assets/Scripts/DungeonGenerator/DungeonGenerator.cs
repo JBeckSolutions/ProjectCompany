@@ -31,25 +31,26 @@ public class DungeonGenerator : NetworkBehaviour
     [SerializeField] private GameObject generatedItemsParent;   // Parent of all items that will be generated
     [SerializeField] private GameObject generatedEnemiesParent; // Parent of all enemies that will be generated
 
-    [Header("Generation Options")]
-    [SerializeField] private int maxRooms;      // How many rooms can spawn
-    [SerializeField] private int maxItemCount;  // How many items can spawn
-    [SerializeField] private int maxEnemyCount; // How many enemies can spawn
+    [Header("Generation Settings")]
+    [Tooltip("How many enemies spawn from the beginning")]
+    [SerializeField] private int maxEnemyCount;
+
+    [Tooltip("Chance (0-100) for a door to spawn when loops occur.")]
     [UnityEngine.Range(0f, 100f)]
-    [SerializeField] private float doorSpawnChanceForLoops = 50f; // Chance out of 100 to spawn a door
+    [SerializeField] private float doorSpawnChanceForLoops = 50f;
 
-    [Header("Seed")]
-    [SerializeField] private bool useRandomSeed = true; // Toggles if a random seed should be used
-    [SerializeField] private int seed = 0;              // Seed value for generation
+    [Header("Seed settings")]
+    [SerializeField] private bool useRandomSeed = true;
+    [SerializeField] private int seed = 0;             
 
-    [Header("Generated objects")]
+    [Header("Runtime Data")]
     [SerializeField] private List<Room> placedRooms = new List<Room>();                         // List of all rooms that were placed down
-    [SerializeField] private List<GameObject> placedEnemies = new List<GameObject>();           // List of all enemies that were spawned
     [SerializeField] private List<Item> placedItems = new List<Item>();
     [SerializeField] private List<Connection> availableConnections = new List<Connection>();    // List of all room connections that are placed down and avaliable (not used)
     [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();       // List of all possible item spawns that are placed down and avaliable (not used)
     [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();      // List of all possible enemy spawns that are placed down and avaliable (not used)
-    [SerializeField] private GameObject enemyParent;
+    
+    private GameObject enemyParent;
 
     public override void OnNetworkSpawn()
     {

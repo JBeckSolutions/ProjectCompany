@@ -1070,6 +1070,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Open Menu",
+                    "type": "Button",
+                    "id": "5b06433e-201e-415d-9754-553ef2c24d37",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "PreviousPlayer",
                     "type": "Button",
                     "id": "9258818b-776a-4285-8280-4fc580e2f341",
@@ -1088,6 +1097,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "NextPlayer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d40487df-ed9f-4923-bedb-0c94cd6903c3",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -257,3 +257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  ObjectName: Start Round (Only the host can start)
+  interactable:
+    m_InternalValue: 0

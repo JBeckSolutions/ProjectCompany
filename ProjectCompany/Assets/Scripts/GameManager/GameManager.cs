@@ -2,42 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : NetworkBehaviour
 {
-    //Manages the state of the game
-
+    [Header("Game State Management")]
     public static GameManager Singelton;
     public DropOffAreaManager DropOffAreaManager;
     public DungeonGenerator MapGenerator;
     public NetworkVariable<int> ItemValueLastRound = new NetworkVariable<int>(0);
     public List<PlayerState> PlayerStates;
 
-    [SerializeField] float maxRoundTimer = 900f;
-    [SerializeField] float currentTimeInLvl;
+    [Header("Game UI & Timing")]
+    [SerializeField] private GameUi gameUi;
+    [SerializeField] private float maxRoundTimer = 900f;
+    [SerializeField] private float currentTimeInLvl;
 
-    [Header("EnemySpawning")]
+    [Header("Enemy Spawning")]
     [SerializeField] private AnimationCurve spawnRateOverTime;
     [SerializeField] private float minSpawnInterval = 10f;
     [SerializeField] private float maxSpawnInverval = 45f;
 
-    [Header("ItemSpawning")]
+    [Header("Item Spawning")]
     public NetworkVariable<int> Quota = new NetworkVariable<int>(0);
     public NetworkVariable<int> playerDeaths = new NetworkVariable<int>(0);
     [SerializeField] private int currentDay = 1;
 
-    [Header("Dungeon Size")]
+    [Header("Dungeon Size Configuration")]
     public NetworkVariable<int> DungeonSize = new NetworkVariable<int>(0);
     [SerializeField] private int minRooms = 50;
     [SerializeField] private int maxRooms = 750;
     [SerializeField] private int QuotaForMaxSize = 10000;
 
+    [Header("Scene & Round Management")]
+    private bool RoundRunning = false;
     private bool sceneLoaded = false;
-    
-    
-
-    [SerializeField] private bool RoundRunning = false;
 
     private void Awake()
     {
@@ -81,7 +81,6 @@ public class GameManager : NetworkBehaviour
     }
     private IEnumerator endRound()
     {
-        yield return new WaitForSeconds(1);
 
         RoundRunning = false;
 
@@ -124,6 +123,8 @@ public class GameManager : NetworkBehaviour
         while (!sceneLoaded)
             yield return null;
 
+        yield return new WaitForSeconds(2);
+
         // Respawn players
         foreach (var client in NetworkManager.Singleton.ConnectedClients)
         {
@@ -132,6 +133,7 @@ public class GameManager : NetworkBehaviour
 
         NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnSceneLoaded;
 
+        yield return new WaitForSeconds(2);
         // Progress to next day or lose
         if (ItemValueLastRound.Value >= Quota.Value)
         {
@@ -141,7 +143,7 @@ public class GameManager : NetworkBehaviour
         }
         else
         {
-            Debug.Log("Game over. You lost!");
+            LoseGameClientRpc();
         }
     }
 
@@ -152,7 +154,25 @@ public class GameManager : NetworkBehaviour
             sceneLoaded = true;
         }
     }
+    [ClientRpc]
+    private void WinGameClientRpc()
+    {
+        GameObject localPlayer = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
+        localPlayer.GetComponent<PlayerInput>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameUi.OpenMenu("GameWonMenu");
+    }
 
+    [ClientRpc]
+    private void LoseGameClientRpc()
+    {
+        GameObject localPlayer = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
+        localPlayer.GetComponent<PlayerInput>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameUi.OpenMenu("GameLostMenu");
+    }
 
     [ServerRpc]
     public void LvlStartingServerRpc()

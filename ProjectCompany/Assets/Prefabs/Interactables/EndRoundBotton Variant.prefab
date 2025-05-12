@@ -87,3 +87,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  ObjectName: End Round
+  interactable:
+    m_InternalValue: 0

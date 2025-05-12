@@ -1,19 +1,18 @@
-using NUnit.Framework;
 using Unity.Netcode;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class DropOffAreaManager : NetworkBehaviour
 {
     //Tracks Items that are put inside the DropOffArea Collider
 
     public List<Item> ItemList;
+    public int ItemValue = 0;
 
     [SerializeField] private TMP_Text quotaText;
     [SerializeField] private Collider DropOffArea;
-    public int ItemValue = 0;
     private void Start()
     {
         GameManager.Singelton.DropOffAreaManager = this;

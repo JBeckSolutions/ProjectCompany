@@ -5,44 +5,50 @@ using UnityEngine.Jobs;
 using UnityEngine.Animations;
 using UnityEngine.UIElements;
 using Cursor = UnityEngine.Cursor;
+using static UnityEditor.Progress;
 
 public class PlayerController : NetworkBehaviour
 {
-    [SerializeField] private float movementSpeed = 4f;
-    [SerializeField] private float sprintSpeed = 6f;
-    [SerializeField] private float jumpHeight = 1f;
-    [SerializeField] private float gravityValue = -9.81f;
+    [Header("Player Control Settings")]
+    public bool controllsEnabled = true;
     [SerializeField] private float sensitivity = 0.2f;
+    private float movementSpeed = 4f;
+    private float sprintSpeed = 6f;
+    private float jumpHeight = 1f;
+    private float gravityValue = -9.81f;
 
+    [Header("Player Components")]
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Animator animator;
-
     [SerializeField] private GameObject playerCamera;
 
+    [Header("Inventory and UI")]
     [SerializeField] private PlayerInventoryManager playerInventory;
-    [SerializeField] private bool jumpedThisFrame = false;
+    [SerializeField] private InventoryUi inventoryUi;
+    [SerializeField] private InteractableUi interactableUi;
+    private GameUi gameUi;
 
     [Header("Stamina")]
     [SerializeField] private float stamina = 5f;
-    [SerializeField] private float currentStamina = 0;
-    [SerializeField] private float MaxTimeUntilStaminaRefresh = 3;
-    [SerializeField] private float timeUntilStaminaRefresh = 0;
+    private float currentStamina = 0;
+    private float MaxTimeUntilStaminaRefresh = 3;
+    private float timeUntilStaminaRefresh = 0;
 
+    [Header("Movement and Look Input")]
     private Vector2 moveInput;
     private float yAxisVelocity;
     private Vector2 lookInput;
     private float xRotation = 0;
 
-    private ProgressBar staminaBar;
-
+    [Header("Movement State")]
     private bool sprinting = false;
+    private bool jumpedThisFrame = false;
 
     public override void OnNetworkSpawn()
     {
 
         currentStamina = stamina;
-
-
+        gameUi = GameObject.Find("CanvasGameUi").GetComponent<GameUi>();
         if (!IsOwner)
         {
             gameObject.GetComponent<PlayerInput>().enabled = false;
@@ -53,21 +59,50 @@ public class PlayerController : NetworkBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-
-        var root = GameObject.Find("Interface").GetComponent<UIDocument>().rootVisualElement;
-
-        staminaBar = root.Q<ProgressBar>("StaminaBar");
-
-        staminaBar.lowValue = 0;
-        staminaBar.highValue = stamina;
     }
     private void Update()
     {
         if (!IsOwner) return;
         HandleLook();
         HandleMovementAndAnimation();
-        staminaBar.value = currentStamina;
 
+
+        // Handle Interactable UI
+        interactableUi.InteractSquare.SetActive(false);
+        interactableUi.Value.text = "";
+        interactableUi.Weight.text = "";
+        interactableUi.Name.text = "";
+
+        Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+        Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(screenCenter);
+        Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
+
+        // Perform RaycastAll and filter results
+        RaycastHit[] hits = Physics.RaycastAll(ray, 5f);
+        foreach (RaycastHit hit in hits)
+        {
+            GameObject hitObject = hit.collider.gameObject;
+
+            // Skip items tagged as "PickedUp"
+            if (hitObject.CompareTag("PickedUp"))
+                continue;
+
+            if (hitObject.TryGetComponent<Item>(out Item item) && item.PickupAble.Value)
+            {
+                interactableUi.InteractSquare.SetActive(true);
+                interactableUi.Value.text = "Value: " + item.itemValue;
+                interactableUi.Weight.text = "Weight: " + item.ItemWeight;
+                interactableUi.Name.text = item.itemName;
+                break;
+            }
+
+            if (hitObject.TryGetComponent<InteractableObject>(out InteractableObject interactableObject))
+            {
+                interactableUi.InteractSquare.SetActive(true);
+                interactableUi.Name.text = interactableObject.ObjectName;
+                break;
+            }
+        }
     }
    
     //Handles Rotation based on the input of the player
@@ -112,7 +147,9 @@ public class PlayerController : NetworkBehaviour
 
             _moveInput *= movementSpeed * weightMultiplier;
         }
-        
+
+        inventoryUi.StaminaBar.localScale = new Vector3(Mathf.Clamp(currentStamina / stamina, 0, 1), 1, 1);
+
         //Set animation for client
         animator.SetFloat("Speed", _moveInput.magnitude);
         if (jumpedThisFrame)
@@ -151,10 +188,16 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnMove(InputAction.CallbackContext context)
     {
-            moveInput = context.ReadValue<Vector2>().normalized;
+        if (!controllsEnabled)
+        {
+            moveInput = new Vector2(0, 0);
+            return;
+        }
+        moveInput = context.ReadValue<Vector2>().normalized;
     }
     public void OnSprint(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (characterController.isGrounded && context.started)
         {
             sprinting = true;
@@ -167,6 +210,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (characterController.isGrounded && context.started && playerInventory.PlayerWeight < 4)
         {
             yAxisVelocity = 0;
@@ -176,6 +220,11 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnLook(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled)
+        {
+            lookInput = new Vector2(0, 0);
+            return;
+        }
         lookInput = context.ReadValue<Vector2>();
         //Debug.Log(lookInput);
     }
@@ -187,16 +236,20 @@ public class PlayerController : NetworkBehaviour
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                gameUi.OpenMenu("PauseMenu");
+                controllsEnabled = false;
             }
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-            }
+                gameUi.CloseAllMenus();
+                controllsEnabled = true;            }
         }
     }
     public void OnDrop(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.DropItem();
@@ -206,6 +259,7 @@ public class PlayerController : NetworkBehaviour
 
     public void OnPreviousInventorySlot(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.ChangeActiveInventorySlot(null, -1);
@@ -214,6 +268,7 @@ public class PlayerController : NetworkBehaviour
 
     public void OnNextInventorySlot(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.ChangeActiveInventorySlot(null, 1);
@@ -222,6 +277,7 @@ public class PlayerController : NetworkBehaviour
 
     public void OnInventorySlotOne(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.ChangeActiveInventorySlot(0);
@@ -229,6 +285,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnInventorySlotTwo(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.ChangeActiveInventorySlot(1);
@@ -236,6 +293,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnInventorySlotThree(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.ChangeActiveInventorySlot(2);
@@ -243,6 +301,7 @@ public class PlayerController : NetworkBehaviour
     }
     public void OnInventorySlotFour(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         if (context.started)
         {
             playerInventory.ChangeActiveInventorySlot(3);
@@ -251,6 +310,7 @@ public class PlayerController : NetworkBehaviour
     #endregion
     public void OnInteract(InputAction.CallbackContext context)
     {
+        if (!controllsEnabled) return;
         //Debug.Log("Interact");
         if (context.started)
         {

@@ -8,35 +8,41 @@ using Unity.VisualScripting;
 
 public class EnemyBase : NetworkBehaviour
 {
-    [SerializeField] protected float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
-    [SerializeField] protected float timeUntilNextAction;                 //How long the enemy will stay in the Idle State
-    [SerializeField] protected float maxDistance = 10f;                   //Maximum distance it can move with one Patrol
-    [SerializeField] protected bool validNewPosition = false;             //Tracks if the Enemy has a valid path to move towards to when in the patrolling state
+    [Header("Idle State")]
+    [SerializeField] protected float maxTimeUntilNextAction = 2f;           // Max time the enemy can stay in the idle state
+    [SerializeField] protected float maxDistance = 10f;                     // Maximum distance the enemy can move with one patrol
 
     [Header("Movement")]
-    [SerializeField] protected float walkingSpeed = 3.5f;    //Speed when the enemy is walking
-    [SerializeField] protected float sprintSpeed = 3.5f;     //Speed when the enemy is sprinting
+    [SerializeField] protected float walkingSpeed = 3.5f;                   // Speed when the enemy is walking
+    [SerializeField] protected float sprintSpeed = 3.5f;                    // Speed when the enemy is sprinting
+    [SerializeField] protected NavMeshAgent agent;                          // NavMeshAgent for movement control
 
     [Header("Detection")]
-    [SerializeField] protected List<PlayerState> playerList;      //List of all players in the game
-    [SerializeField] protected Transform enemyHead;              //Head location for vision checks
-    [SerializeField] protected float viewRadius = 10f;
+    [SerializeField] protected Transform enemyHead;                         // Head location for vision checks
+    [SerializeField] protected float viewRadius = 10f;                      // Detection radius for vision checks
     [UnityEngine.Range(0, 360)]
-    [SerializeField] protected float viewAngle = 90f;
-    [SerializeField] protected bool playerSeenThisFrame = false;
-    [SerializeField] protected int layerMask;                     //Layer Mask that will be ignored in the Raycast check so it doesnt collide with the "Enemy" Layer
-    [Header("Attack")]
-    [SerializeField] protected float attackRange = 2f;    //How far the player has to be for the attack to Start
-    [SerializeField] protected float attackCoooldown = 1; //Cooldown of the Attack
-    [SerializeField] protected float timeUntilNextAttack; //Time until the next Attack can happen
-    [SerializeField] protected float timeStunnedAfterAttack = 1f; //Time how long the enemy cant move after an attack
-    [SerializeField] protected float timeUntilStunOver;           //Counts down until the enemy can move again
-    [SerializeField] protected int attackDamage = 40;          //How much damage the attack does to the player
-    [SerializeField] protected AbilityHitbox hitbox;           //Script that is used by the Attack to check what is being hit
-    [SerializeField] protected bool canMoveWhileAttacking = false;    //Can the enemy Move while attacking? (might be unneeded)
-    [SerializeField] protected bool isAttacking = false; //Is the attack finished? (might be unneeded)
+    [SerializeField] protected float viewAngle = 90f;                       // Detection angle for vision checks
+    protected List<PlayerState> playerList;                                 // List of all players in the game
 
-    [SerializeField] protected NavMeshAgent agent;
+    [Header("Attack")]
+    [SerializeField] protected AbilityHitbox hitbox;                        // Script used by the attack to check what is being hit
+    [SerializeField] protected float attackRange = 2f;                      // How far the player has to be for the attack to start
+    [SerializeField] protected int attackDamage = 40;                       // Amount of damage the attack deals to the player
+    [SerializeField] protected float attackCooldown = 1f;                   // How long the enemy cant attack after an attack
+    [SerializeField] protected float timeStunnedAfterAttack = 1f;           // How long the enemy is stunned after an attack
+    [SerializeField] protected bool canMoveWhileAttacking = false;          // Can the enemy move while attacking? (may be unneeded)
+
+    [Header("State Management")]
+    protected float timeUntilNextAction;                                    // Time until the enemy performs the next action (idle state)
+    protected bool validNewPosition = false;                                // If the enemy has a valid patrol position
+    protected bool playerSeenThisFrame = false;                             // If the enemy spotted a player this frame
+    protected bool isAttacking = false;                                     // If the enemy is currently attacking
+    protected int layerMask;                                                // Raycast filter to ignore certain layers
+    protected float timeUntilNextAttack;                                    // Time until the next attack
+    protected float timeUntilStunOver;                                      // Time until the stun is over
+
+
+
 
     protected virtual void Start()
     {

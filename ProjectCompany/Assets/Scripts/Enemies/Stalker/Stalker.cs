@@ -14,17 +14,28 @@ public class Stalker : EnemyBase
 
     }
 
-    [SerializeField] protected EnemyState currentState = EnemyState.Idle;
+    [Header("State Management")]
+    protected EnemyState currentState = EnemyState.Idle; // Tracks the enemy's state
+
+    [Header("Movement")]
+    [Tooltip("Speed when the enemy is stalking the player")]
     [SerializeField] protected float stalkSpeed = 3f;
-    [SerializeField] protected float _rage = 0;
-    [SerializeField] protected float maxRage = 5;
-    [SerializeField] protected PlayerState lastSeenPlayer;
-    [SerializeField] protected LayerMask layerMaskSeenByPlayerCheck;
-    [SerializeField] protected bool recentlyLookedAt = false;
-    [SerializeField] protected bool lookedAtLastFrame = false;
-    [SerializeField] protected bool receneltyLookedAtResetThisFrame = false;
-    [SerializeField] protected bool killedTarget = false;
-    [SerializeField] protected float _timeRecentlyLookedAtReset;
+
+    [Header("Rage")]
+    [SerializeField]protected float _rage = 0;  // Current rage of the enemy
+
+    [Header("Player Interaction")]
+    protected PlayerState lastSeenPlayer; // The last player the enemy saw
+    protected bool recentlyLookedAt = false; // If the enemy recently looked at the player
+
+    [Header("Targeting")]
+    protected bool killedTarget = false; // If the enemy has killed the target
+
+    [Header("Vision & Timers")]
+    protected LayerMask layerMaskSeenByPlayerCheck; // LayerMask for vision checks
+    protected bool lookedAtLastFrame = false; // If the enemy looked at the player last frame
+    protected bool receneltyLookedAtResetThisFrame = false; // If the "recently looked at" reset was done this frame
+    protected float _timeRecentlyLookedAtReset; // Timer for resetting "recently looked at"
 
     private float rage
     {
@@ -119,7 +130,7 @@ public class Stalker : EnemyBase
             {
                 recentlyLookedAt = true;
                 timeRecentlyLookedAtReset = float.MaxValue;
-                rage += 5 * Time.deltaTime;
+                rage += 7.5f * Time.deltaTime;
             }
             //else if (recentlyLookedAt && currentState != EnemyState.Hiding)
             //{
@@ -154,11 +165,11 @@ public class Stalker : EnemyBase
         {
             currentState = EnemyState.Watching;
         }
-        else if (rage > 30 && rage < 90)
+        else if (rage > 30 && rage < 95)
         {
             currentState = EnemyState.Stalking;
         }
-        else if (rage > 90)
+        else if (rage > 95)
         {
             currentState = EnemyState.Chasing;
         }
@@ -186,7 +197,7 @@ public class Stalker : EnemyBase
             {
                 currentState = EnemyState.Idle;
                 validNewPosition = false;
-                timeUntilNextAction = Random.Range(0, MaxTimeUntilNextAction);
+                timeUntilNextAction = Random.Range(0, maxTimeUntilNextAction);
             }
         }
 
