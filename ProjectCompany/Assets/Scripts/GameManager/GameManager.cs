@@ -154,6 +154,7 @@ public class GameManager : NetworkBehaviour
             sceneLoaded = true;
         }
     }
+
     [ClientRpc]
     private void WinGameClientRpc()
     {
@@ -161,6 +162,7 @@ public class GameManager : NetworkBehaviour
         localPlayer.GetComponent<PlayerInput>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        gameUi.CloseAllMenus();
         gameUi.OpenMenu("GameWonMenu");
     }
 
@@ -171,6 +173,7 @@ public class GameManager : NetworkBehaviour
         localPlayer.GetComponent<PlayerInput>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        gameUi.CloseAllMenus();
         gameUi.OpenMenu("GameLostMenu");
     }
 
@@ -230,12 +233,42 @@ public class GameManager : NetworkBehaviour
         }
         for (int i = 0; i < PlayerStates.Count; i++)
         {
-
-            RemovePlayerStateClientRpc(clientId);
-
             if (PlayerStates[i].OwnerClientId == clientId)
             {
-                PlayerStates[i].GetComponent<NetworkObject>().Despawn(true);
+                RemovePlayerStateClientRpc(clientId);
+
+                PlayerState player = PlayerStates[i];
+                PlayerInventoryManager inventoryManager = player.GetComponent<PlayerInventoryManager>();
+                Vector3 dropPosition = inventoryManager.dropLocation.position;
+                dropPosition.y = 0.2f;
+
+                DungeonGenerator generator = GameObject.Find("DungeonManager").GetComponent<DungeonGenerator>();
+                List<GameObject> itemPrefabs = generator.itemPrefabs;
+                Transform itemParent = generator.GeneratedItemsParentInScene;
+
+                foreach (var item in inventoryManager.serverInventoryItems)
+                {
+
+                    //Respawn copies of the items the player has in the inventory
+                    GameObject newItemPrefab = itemPrefabs.Find(p => p.GetComponent<Item>().itemName == item.itemName);
+                    if(newItemPrefab != null)
+                    {
+                        GameObject newItem = Instantiate(newItemPrefab, dropPosition, Quaternion.identity);
+                        newItem.GetComponent<NetworkObject>().Spawn(true);
+                        newItem.transform.SetParent(generator.GeneratedItemsParentInScene);
+                    }
+
+                    //Despawn the items the player has in the inventory
+                    NetworkObject itemToDespawn = item.GetComponent<NetworkObject>();
+                    if (itemToDespawn != null && itemToDespawn.IsSpawned)
+                    {
+                        itemToDespawn.Despawn();
+                    }
+
+                }
+
+                player.GetComponent<NetworkObject>().Despawn(true);
+
                 PlayerStates.RemoveAt(i);
                 StartCoroutine(SpawnDeadPlayer(clientId));
                 return;

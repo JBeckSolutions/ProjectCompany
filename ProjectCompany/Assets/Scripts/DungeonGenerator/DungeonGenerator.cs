@@ -26,7 +26,7 @@ public class DungeonGenerator : NetworkBehaviour
     [Header("Prefabs")]
     [SerializeField] private GameObject startingRoomPrefab; // Starting room of the dungeon
     [SerializeField] private List<GameObject> roomPrefabs;  // List of rooms that can be placed by the generation process
-    [SerializeField] private List<GameObject> itemPrefabs;  // List of items the generation process can spawn
+    public List<GameObject> itemPrefabs;                    // List of items the generation process can spawn
     [SerializeField] private List<GameObject> enemyPrefabs; // List of enemies the generation process can spawn
     [SerializeField] private GameObject generatedItemsParent;   // Parent of all items that will be generated
     [SerializeField] private GameObject generatedEnemiesParent; // Parent of all enemies that will be generated
@@ -41,14 +41,15 @@ public class DungeonGenerator : NetworkBehaviour
 
     [Header("Seed settings")]
     [SerializeField] private bool useRandomSeed = true;
-    [SerializeField] private int seed = 0;             
+    [SerializeField] private int seed = 0;
 
     [Header("Runtime Data")]
+    public Transform GeneratedItemsParentInScene;
     [SerializeField] private List<Room> placedRooms = new List<Room>();                         // List of all rooms that were placed down
     [SerializeField] private List<Item> placedItems = new List<Item>();
-    [SerializeField] private List<Connection> availableConnections = new List<Connection>();    // List of all room connections that are placed down and avaliable (not used)
-    [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();       // List of all possible item spawns that are placed down and avaliable (not used)
-    [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();      // List of all possible enemy spawns that are placed down and avaliable (not used)
+    [SerializeField] private List<Connection> availableConnections = new List<Connection>();    // List of all room connections that are placed down and avaliable
+    [SerializeField] private List<Transform> availableItemSpawns = new List<Transform>();       // List of all possible item spawns that are placed down and avaliable
+    [SerializeField] private List<Transform> availableEnemySpawns = new List<Transform>();      // List of all possible enemy spawns that are placed down and avaliable
     
     private GameObject enemyParent;
 
@@ -251,8 +252,8 @@ public class DungeonGenerator : NetworkBehaviour
             navMesh.BuildNavMesh();
 
             // Instantiate parent for items
-            GameObject generatedItemParent = Instantiate(this.generatedItemsParent, Vector3.zero, Quaternion.identity);
-            generatedItemParent.GetComponent<NetworkObject>().Spawn(true);
+            GeneratedItemsParentInScene = Instantiate(this.generatedItemsParent, Vector3.zero, Quaternion.identity).transform;
+            GeneratedItemsParentInScene.GetComponent<NetworkObject>().Spawn(true);
 
             // Spawn items
             int valueToGenerate = (int)(GameManager.Singelton.Quota.Value * 1.3 + Random.NextDouble() * (1.8 - 1.3));
@@ -268,7 +269,7 @@ public class DungeonGenerator : NetworkBehaviour
                 Quaternion Rotation = Quaternion.Euler(0f, randomRotation, 0f);
                 GameObject newItem = Instantiate(itemPrefabs[randomItem], availableItemSpawns[randomItemSpawnpoint].position, Rotation);
                 newItem.GetComponent<NetworkObject>().Spawn(true);
-                newItem.transform.SetParent(generatedItemParent.transform);
+                newItem.transform.SetParent(GeneratedItemsParentInScene);
                 availableItemSpawns.Remove(availableItemSpawns[randomItemSpawnpoint]);
                 itemsSpawned += 1;
 

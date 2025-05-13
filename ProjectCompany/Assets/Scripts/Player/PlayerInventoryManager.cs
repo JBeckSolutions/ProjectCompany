@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class PlayerInventoryManager : MonoBehaviour
+public class PlayerInventoryManager : NetworkBehaviour
 {
     [Header("Player Inventory Settings")]
     public int PlayerWeight = 0;
 
     [Header("Inventory Items")]
+    public List<Item> serverInventoryItems;
     private Item[] inventoryItems;
 
     [Header("Inventory Configuration")]
@@ -20,7 +21,7 @@ public class PlayerInventoryManager : MonoBehaviour
     public Transform playerHand;
 
     [Header("Item Drop Settings")]
-    [SerializeField] private Transform dropLocation;
+    public Transform dropLocation;
 
     [Header("UI Components")]
     [SerializeField] private InventoryUi inventoryUi;
@@ -53,6 +54,7 @@ public class PlayerInventoryManager : MonoBehaviour
             }
 
             ItemToAdd.PickUpServerRpc(this.GetComponent<NetworkObject>());
+            AddItemOnServerRpc(ItemToAdd.GetComponent<NetworkObject>());
 
             inventoryItems[ActiveInventorySlot] = ItemToAdd;
             inventoryUi.InventoryTiles[ActiveInventorySlot].SetItemImage(ItemToAdd.InventoryImage);
@@ -60,17 +62,30 @@ public class PlayerInventoryManager : MonoBehaviour
             for (int i = 1; i < ItemToAdd.ItemWeight; i++)
             {
                 inventoryItems[ActiveInventorySlot + i] = ItemToAdd;
-                inventoryUi.InventoryTiles[ActiveInventorySlot + i].SetItemImage(ItemToAdd.InventoryImage, new Color(1,1,1,0.5f));
+                inventoryUi.InventoryTiles[ActiveInventorySlot + i].SetItemImage(ItemToAdd.InventoryImage, new Color(1,1,1,0.3f));
             }
 
             PlayerWeight += ItemToAdd.ItemWeight;
+        }
+    }
+    [ServerRpc]
+    private void AddItemOnServerRpc(NetworkObjectReference ItemNetworkId)
+    {
+        Debug.Log("Adding item to server list");
+        if (ItemNetworkId.TryGet(out NetworkObject item))
+        {
+            serverInventoryItems.Add(item.gameObject.GetComponent<Item>());
         }
     }
     public void DropItem()
     {
         if (inventoryItems[ActiveInventorySlot] != null)
         {
-            inventoryItems[ActiveInventorySlot].DropServerRpc(dropLocation.position);
+            Vector3 dropPositon = dropLocation.position;
+            dropPositon.y = 0.2f;
+
+            inventoryItems[ActiveInventorySlot].DropServerRpc(dropPositon);
+            RemoveItemOnServerRpc(inventoryItems[ActiveInventorySlot].GetComponent<NetworkObject>());
 
             GameObject itemToRemove = inventoryItems[ActiveInventorySlot].gameObject;
 
@@ -84,6 +99,15 @@ public class PlayerInventoryManager : MonoBehaviour
                     inventoryUi.InventoryTiles[i].ResetItemImage();
                 }
             }
+        }
+    }
+    [ServerRpc]
+    private void RemoveItemOnServerRpc(NetworkObjectReference ItemNetworkId)
+    {
+        Debug.Log("Removing item from server list");
+        if (ItemNetworkId.TryGet(out NetworkObject item))
+        {
+            serverInventoryItems.Remove(item.gameObject.GetComponent<Item>());
         }
     }
     public void DropAllItems()

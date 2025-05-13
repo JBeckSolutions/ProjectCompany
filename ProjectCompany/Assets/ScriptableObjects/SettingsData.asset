@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268c42b98b766f04997a79a6ba1fecdc, type: 3}
   m_Name: SettingsData
   m_EditorClassIdentifier: 
+  volumeProfile: {fileID: 11400000, guid: deb1fff743bea7f4e996a9f504a88cf7, type: 2}
+  _volume: 100
+  _gamma: {x: 1, y: 1, z: 1, w: 0.042619705}
