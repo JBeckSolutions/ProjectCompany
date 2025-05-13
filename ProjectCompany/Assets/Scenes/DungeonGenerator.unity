@@ -209,12 +209,12 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   startingRoomPrefab: {fileID: 7718902646292200323, guid: 6417d70b4680c1f47aee6cc4f3ef8017, type: 3}
   roomPrefabs:
-  - {fileID: 111126949708525185, guid: d49d0d08db6e6c54fa0bb48105f40759, type: 3}
+  - {fileID: 111126949708525185, guid: dfe9071134c6d4c418b162ebae2ee1d3, type: 3}
   - {fileID: 6846202440844278822, guid: 1f0686de4637fb04793ebf46f83f5f7d, type: 3}
+  - {fileID: 111126949708525185, guid: aa3a59ff626a5ec42b37ff2555e11a75, type: 3}
   - {fileID: 1595446153090595809, guid: c00cf1dcca5b709489435e49cde390b5, type: 3}
   - {fileID: 1595446153090595809, guid: 258734cf2928f984a93bde2c9849afc3, type: 3}
-  - {fileID: 1595446153090595809, guid: 1ecd76d1f9d0c944c809fbabff42947c, type: 3}
-  - {fileID: 111126949708525185, guid: aa3a59ff626a5ec42b37ff2555e11a75, type: 3}
+  - {fileID: 1595446153090595809, guid: df4bb6fe002f57343bc968333fb54d12, type: 3}
   itemPrefabs:
   - {fileID: 2156017288405549669, guid: 0feeba41a541b2e4f9777d1e646ffbe3, type: 3}
   - {fileID: 9134976987606893072, guid: eda3696d9ad150442800fd8927e1050c, type: 3}
@@ -225,18 +225,14 @@ MonoBehaviour:
   - {fileID: 8924282795677139858, guid: 2ffed25f58727034a88f99b61fb95d05, type: 3}
   generatedItemsParent: {fileID: 7841871041383228874, guid: 86f130f5f76670f4e9a13afd7e7e9215, type: 3}
   generatedEnemiesParent: {fileID: 7841871041383228874, guid: 7053a261f6c37a7428a44e38f5b5c89e, type: 3}
-  maxRooms: 300
-  maxItemCount: 50
   maxEnemyCount: 1
   doorSpawnChanceForLoops: 100
   useRandomSeed: 1
   seed: 0
   placedRooms: []
-  placedEnemies: []
   placedItems: []
   availableItemSpawns: []
   availableEnemySpawns: []
-  enemyParent: {fileID: 0}
 --- !u!4 &649975217
 Transform:
   m_ObjectHideFlags: 0
