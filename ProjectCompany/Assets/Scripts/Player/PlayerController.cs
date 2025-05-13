@@ -46,12 +46,14 @@ public class PlayerController : NetworkBehaviour
         if (!IsOwner)
         {
             gameObject.GetComponent<PlayerInput>().enabled = false;
+            playerCamera.SetActive(false);
         }
 
         if (IsOwner)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            transform.Find("Model").gameObject.SetActive(false);
         }
 
         var root = GameObject.Find("Interface").GetComponent<UIDocument>().rootVisualElement;
