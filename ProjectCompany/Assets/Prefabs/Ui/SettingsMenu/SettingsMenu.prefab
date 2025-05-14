@@ -972,6 +972,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: d1c944e77f8105246b7d1642be43fd66, type: 2}
   volumeSlider: {fileID: 2181089791191974061}
+  Wwise_RTPC_MasterVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c0c9bef5373f10a4db8749dbaf55a3c2, type: 2}
 --- !u!1 &6619435875259657345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1029,7 @@ GameObject:
   - component: {fileID: 6009839047286911759}
   - component: {fileID: 8589453897067163802}
   - component: {fileID: 1703463343716578706}
+  - component: {fileID: 4173441062420951820}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1158,6 +1163,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 4173441062420951820}
+        m_TargetAssemblyTypeName: WwiseEventPost, Assembly-CSharp
+        m_MethodName: PostWwiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1703463343716578706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,6 +1187,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1dc1fda1e9a43a4eac5bd7569f2efc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WwiseEvent_MainMenu_UI_Button_Hover:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 18fdd31cd04d2f0478273309e71c1f1d, type: 2}
+--- !u!114 &4173441062420951820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7029479786958181221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327967c6f46dd6a4bb3cb260eae419c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fa9c2e9f3c7d5f249ad5b567022945f3, type: 2}
 --- !u!1 &7592486836206387136
 GameObject:
   m_ObjectHideFlags: 0
