@@ -534,7 +534,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_UI
     guid: ac79309561351547a997a124cf7737ab
     GuidInternal: 
-    m_lastTime: -8584543915514033937
+    m_lastTime: -8584543699922166360
     List:
     - name: MainMenu_UI_SFX
       guid: cd9b4a020afc37499d8b1b05b0745875
@@ -1074,6 +1074,152 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\HostGameMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: HostGameMenu
+      ObjectType: 12
+      guid: e67b40037dce2c40ab771ec8a2555064
+    ParentPath: Events\Menus\HostGameMenu
+    guid: e67b40037dce2c40ab771ec8a2555064
+    GuidInternal: 
+    m_lastTime: -8584543699925267321
+    List: []
+  - PhysicalPath: Events\HostGameMenu_UI_Button_Click.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: HostGameMenu
+      ObjectType: 12
+      guid: e67b40037dce2c40ab771ec8a2555064
+    - ElementName: HostGameMenu_UI_Button_Click
+      ObjectType: 12
+      guid: 68e1bfc7253aa54f8b65eaa966ff2329
+    ParentPath: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click
+    guid: 68e1bfc7253aa54f8b65eaa966ff2329
+    GuidInternal: 
+    m_lastTime: -8584543699925267321
+    List:
+    - name: HostGameMenu_UI_Button_Click_Back
+      guid: d457afc8943c794a9e774195f956d755
+      id: 69765757
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 68e1bfc7253aa54f8b65eaa966ff2329
+      - ElementName: HostGameMenu_UI_Button_Click_Back
+        ObjectType: 3
+        guid: d457afc8943c794a9e774195f956d755
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click\HostGameMenu_UI_Button_Click_Back
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: HostGameMenu_UI_Button_Click_StartGame
+      guid: 464d3c98457fc549b1620e92ceae2792
+      id: 3943796790
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 68e1bfc7253aa54f8b65eaa966ff2329
+      - ElementName: HostGameMenu_UI_Button_Click_StartGame
+        ObjectType: 3
+        guid: 464d3c98457fc549b1620e92ceae2792
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click\HostGameMenu_UI_Button_Click_StartGame
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+  - PhysicalPath: Events\HostGameMenu_UI_Button_Hover.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: HostGameMenu
+      ObjectType: 12
+      guid: e67b40037dce2c40ab771ec8a2555064
+    - ElementName: HostGameMenu_UI_Button_Hover
+      ObjectType: 12
+      guid: 24cc636edb658d4ca62a61d663344199
+    ParentPath: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover
+    guid: 24cc636edb658d4ca62a61d663344199
+    GuidInternal: 
+    m_lastTime: -8584543699925246739
+    List:
+    - name: HostGameMenu_UI_Button_Hover_Back
+      guid: 37f8964e16832c4a94bc36d8bcfcb171
+      id: 530535131
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 24cc636edb658d4ca62a61d663344199
+      - ElementName: HostGameMenu_UI_Button_Hover_Back
+        ObjectType: 3
+        guid: 37f8964e16832c4a94bc36d8bcfcb171
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover\HostGameMenu_UI_Button_Hover_Back
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: HostGameMenu_UI_Button_Hover_StartGame
+      guid: 82c8fd99878e65489309cfb9c86dd993
+      id: 103313448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 24cc636edb658d4ca62a61d663344199
+      - ElementName: HostGameMenu_UI_Button_Hover_StartGame
+        ObjectType: 3
+        guid: 82c8fd99878e65489309cfb9c86dd993
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover\HostGameMenu_UI_Button_Hover_StartGame
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1690,7 +1836,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584543744103779488
+    m_lastTime: -8584543699925221680
     List: []
   - PhysicalPath: Events\SettingsMenu.wwu
     PathAndIcons:
@@ -2126,7 +2272,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: c0904058cc3ca147a37cbe331bfeb2b2
     GuidInternal: 
-    m_lastTime: -8584543730966710672
+    m_lastTime: -8584543699922156368
     List:
     - name: CurrentScene
       guid: 09eb60e773c0144da3b876e7ee24a825
@@ -2143,9 +2289,9 @@ MonoBehaviour:
         guid: 09eb60e773c0144da3b876e7ee24a825
       Path: States\Default Work Unit\CurrentScene
       values:
-      - name: InGame
+      - name: HostGameMenu
         guid: 4dbae64b4ee86b4dac84fafc8f24abe8
-        id: 984691642
+        id: 1886836668
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2156,7 +2302,7 @@ MonoBehaviour:
         - ElementName: CurrentScene
           ObjectType: 9
           guid: 09eb60e773c0144da3b876e7ee24a825
-        - ElementName: InGame
+        - ElementName: HostGameMenu
           ObjectType: 8
           guid: 4dbae64b4ee86b4dac84fafc8f24abe8
       - name: MainMenu
@@ -2288,7 +2434,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 24668d1c0506d84c9b9e418a40fac651
     GuidInternal: 
-    m_lastTime: -8584555958273071684
+    m_lastTime: -8584543699922151335
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -2304,7 +2450,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273071684
     List: []
-  ExpandedFileSystemItemIds: 0200000006000000070000001a0000001b0000001c0000001f0000002000000021000000220000002500000027000000280000002a0000002e0000002f0000003000000031000000320000003300000034000000370000003a0000003b0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000005100000063000000640000006d0000006e0000006f00000070000000
+  ExpandedFileSystemItemIds: 0200000006000000070000001a0000001b0000001c0000001f000000200000002100000022000000240000002500000027000000280000002a0000002e0000002f0000003000000031000000320000003300000034000000370000003a0000003b0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000004f00000050000000510000005600000063000000640000006d0000006e0000006f00000070000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1

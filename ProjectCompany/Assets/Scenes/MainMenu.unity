@@ -379,6 +379,8 @@ GameObject:
   - component: {fileID: 70076244}
   - component: {fileID: 70076243}
   - component: {fileID: 70076242}
+  - component: {fileID: 70076247}
+  - component: {fileID: 70076246}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -421,7 +423,7 @@ MonoBehaviour:
   WwiseEvent_MainMenu_UI_Button_Hover:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f4f051acbfc28964590ec3ba7bd7f166, type: 2}
 --- !u!114 &70076243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +504,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 70076247}
+        m_TargetAssemblyTypeName: WwiseSetState, Assembly-CSharp
+        m_MethodName: SetState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 70076246}
+        m_TargetAssemblyTypeName: WwiseEventPost, Assembly-CSharp
+        m_MethodName: PostWwiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &70076244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,6 +566,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70076240}
   m_CullTransparentMesh: 1
+--- !u!114 &70076246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70076240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327967c6f46dd6a4bb3cb260eae419c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d5fe33d88ddae943bbbb0af5a40a7c4, type: 2}
+--- !u!114 &70076247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70076240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed46a44cd6688cf4181b952902614c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0e31cabdb7369e744add4692b63e8c3a, type: 2}
 --- !u!1 &70623804
 GameObject:
   m_ObjectHideFlags: 0
@@ -5956,6 +6016,8 @@ GameObject:
   - component: {fileID: 1560840611}
   - component: {fileID: 1560840614}
   - component: {fileID: 1560840615}
+  - component: {fileID: 1560840617}
+  - component: {fileID: 1560840616}
   m_Layer: 5
   m_Name: Start Game
   m_TagString: Untagged
@@ -6039,6 +6101,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1560840617}
+        m_TargetAssemblyTypeName: WwiseEventPost, Assembly-CSharp
+        m_MethodName: PostWwiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1560840616}
+        m_TargetAssemblyTypeName: WwiseSetState, Assembly-CSharp
+        m_MethodName: SetState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1560840612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6104,7 +6190,41 @@ MonoBehaviour:
   WwiseEvent_MainMenu_UI_Button_Hover:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 2aadd9d06a1589c489812d00eca66203, type: 2}
+--- !u!114 &1560840616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560840609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed46a44cd6688cf4181b952902614c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2318ea7ad158b444b76b5c4fc3a300b, type: 2}
+--- !u!114 &1560840617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560840609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327967c6f46dd6a4bb3cb260eae419c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 775743ea6fc71fe4cbfdb0d8dd5039a1, type: 2}
 --- !u!1 &1624934158
 GameObject:
   m_ObjectHideFlags: 0
