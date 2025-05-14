@@ -997,7 +997,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
     guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
     GuidInternal: 
-    m_lastTime: -8584551130671989924
+    m_lastTime: -8584543951534406652
     List:
     - name: MainMenu_UI_Button_Click_JoinGame
       guid: b6e0942138567b48b5ca6df77dd70b85
@@ -1103,6 +1103,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2
       minDuration: 2
+    - name: MainMenu_UI_Button_Click_Tutorial
+      guid: d37c18a5465e4c40be10df8795e89cb1
+      id: 2313975087
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+      - ElementName: MainMenu_UI_Button_Click_Tutorial
+        ObjectType: 3
+        guid: d37c18a5465e4c40be10df8795e89cb1
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Tutorial
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
   - PhysicalPath: Events\MainMenu_UI_Button_Hover.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1123,37 +1149,11 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
     guid: 1f6d0cc600c3c348a82a2036ab784d9e
     GuidInternal: 
-    m_lastTime: -8584551130671860905
+    m_lastTime: -8584543951534396683
     List:
-    - name: MainMenu_Button_Hover_JoinGame
-      guid: bebd04d2264d7745b5a78b0ea09870a4
-      id: 3560645790
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Menus
-        ObjectType: 12
-        guid: ea3e7bcc2a9f4848a83afaed02a844bc
-      - ElementName: MainMenu
-        ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
-      - ElementName: MainMenu_UI
-        ObjectType: 12
-        guid: 490e958d4d8d154399f775367caf9b34
-      - ElementName: MainMenu_UI_Button_Hover
-        ObjectType: 12
-        guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_JoinGame
-        ObjectType: 3
-        guid: bebd04d2264d7745b5a78b0ea09870a4
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_JoinGame
-      maxAttenuation: 0
-      maxDuration: 1.2
-      minDuration: 1.2
-    - name: MainMenu_Button_Hover_NewGame
+    - name: MainMenu_UI_Button_Hover_HostGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
-      id: 13766132
+      id: 4060264903
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1170,16 +1170,16 @@ MonoBehaviour:
       - ElementName: MainMenu_UI_Button_Hover
         ObjectType: 12
         guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_NewGame
+      - ElementName: MainMenu_UI_Button_Hover_HostGame
         ObjectType: 3
         guid: e56b0e634155b246aeb8c7a38f7c8038
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_NewGame
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_HostGame
       maxAttenuation: 0
-      maxDuration: 1.2
-      minDuration: 1.2
-    - name: MainMenu_Button_Hover_QuitGame
-      guid: 9bb4097e4352ab4abedefb6eed76a8b7
-      id: 2515304575
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: MainMenu_UI_Button_Hover_JoinGame
+      guid: bebd04d2264d7745b5a78b0ea09870a4
+      id: 1826603681
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1196,16 +1196,42 @@ MonoBehaviour:
       - ElementName: MainMenu_UI_Button_Hover
         ObjectType: 12
         guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_QuitGame
+      - ElementName: MainMenu_UI_Button_Hover_JoinGame
+        ObjectType: 3
+        guid: bebd04d2264d7745b5a78b0ea09870a4
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_JoinGame
+      maxAttenuation: 0
+      maxDuration: 1.2
+      minDuration: 1.2
+    - name: MainMenu_UI_Button_Hover_QuitGame
+      guid: 9bb4097e4352ab4abedefb6eed76a8b7
+      id: 115838932
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_UI_Button_Hover_QuitGame
         ObjectType: 3
         guid: 9bb4097e4352ab4abedefb6eed76a8b7
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_QuitGame
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_QuitGame
       maxAttenuation: 0
       maxDuration: 1.2
       minDuration: 1.2
-    - name: MainMenu_Button_Hover_Settings
+    - name: MainMenu_UI_Button_Hover_SettingsMenu
       guid: 74b4c5107be0f5479b1bd01d1519ead6
-      id: 2281368103
+      id: 4084181749
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1222,13 +1248,39 @@ MonoBehaviour:
       - ElementName: MainMenu_UI_Button_Hover
         ObjectType: 12
         guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_Settings
+      - ElementName: MainMenu_UI_Button_Hover_SettingsMenu
         ObjectType: 3
         guid: 74b4c5107be0f5479b1bd01d1519ead6
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_Settings
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_SettingsMenu
       maxAttenuation: 0
-      maxDuration: 1.2
-      minDuration: 1.2
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: MainMenu_UI_Button_Hover_Tutorial
+      guid: 6eeba5e5d86be74b90f8a5c497a1484a
+      id: 1287529973
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_UI_Button_Hover_Tutorial
+        ObjectType: 3
+        guid: 6eeba5e5d86be74b90f8a5c497a1484a
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_Tutorial
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
   - PhysicalPath: Events\Menus.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1606,7 +1658,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273071684
     List: []
-  ExpandedFileSystemItemIds: 0200000016000000170000001a0000001b0000001e0000001f0000002100000027000000280000002a0000002e0000002f000000310000004e000000
+  ExpandedFileSystemItemIds: 0200000016000000170000001a0000001b0000001c0000001d0000001e0000001f00000021000000220000002300000027000000280000002a0000002e0000002f000000300000003100000034000000370000004e000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
