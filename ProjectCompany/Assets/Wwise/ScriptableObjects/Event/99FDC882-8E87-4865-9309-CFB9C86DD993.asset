@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
-  m_Name: 630E6BE5-5541-46B2-AEB8-C7A38F7C8038
+  m_Name: 99FDC882-8E87-4865-9309-CFB9C86DD993
   m_EditorClassIdentifier: 
-  objectName: MainMenu_UI_Button_Hover_HostGame
-  id: 4060264903
-  guid: 630E6BE5-5541-46B2-AEB8-C7A38F7C8038
+  objectName: HostGameMenu_UI_Button_Hover_StartGame
+  id: 103313448
+  guid: 99FDC882-8E87-4865-9309-CFB9C86DD993
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

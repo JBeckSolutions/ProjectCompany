@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
   m_Name: 10C5B474-E07B-47F5-9B1B-D01D1519EAD6
   m_EditorClassIdentifier: 
-  objectName: MainMenu_Button_Hover_Settings
-  id: 2281368103
+  objectName: MainMenu_UI_Button_Hover_SettingsMenu
+  id: 4084181749
   guid: 10C5B474-E07B-47F5-9B1B-D01D1519EAD6
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

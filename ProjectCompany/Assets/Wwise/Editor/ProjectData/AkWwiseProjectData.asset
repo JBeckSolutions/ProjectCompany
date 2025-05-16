@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584551130666640431
+    m_lastTime: -8584543807042352859
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -333,23 +333,6 @@ MonoBehaviour:
         ObjectType: 2
         guid: c6b9f92af16ee946b5f2e30c9e602c74
       Path: Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus
-    - name: New Audio Bus
-      guid: ed5ffec8e164a642a7e1178982da3022
-      id: 2255513057
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 9435b3018e932844810423795d8ed08f
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-        guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: New Audio Bus
-        ObjectType: 2
-        guid: ed5ffec8e164a642a7e1178982da3022
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\New Audio Bus
   - PhysicalPath: Master-Mixer Hierarchy\Factory Tencent GME.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -409,6 +392,61 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273089099
     List: []
+  - PhysicalPath: SoundBanks\Entitys.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Entitys
+      ObjectType: 12
+      guid: 4ca19157b59a9e47b6a0c74b667e252f
+    ParentPath: SoundBanks\Entitys
+    guid: 4ca19157b59a9e47b6a0c74b667e252f
+    GuidInternal: 
+    m_lastTime: -8584543915514043980
+    List:
+    - name: Kidnapper
+      guid: d12c33c4ad0da248a057b950e2b782d3
+      id: 3829221857
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 12
+        guid: 4ca19157b59a9e47b6a0c74b667e252f
+      - ElementName: Kidnapper
+        ObjectType: 7
+        guid: d12c33c4ad0da248a057b950e2b782d3
+      Path: SoundBanks\Entitys\Kidnapper
+    - name: Octopode
+      guid: 2b72dca9936d964fb181ae7ab4378e03
+      id: 170740614
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 12
+        guid: 4ca19157b59a9e47b6a0c74b667e252f
+      - ElementName: Octopode
+        ObjectType: 7
+        guid: 2b72dca9936d964fb181ae7ab4378e03
+      Path: SoundBanks\Entitys\Octopode
+    - name: Stalker
+      guid: 77b197653afaeb43b7efdeda5cf2c599
+      id: 2944630615
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 12
+        guid: 4ca19157b59a9e47b6a0c74b667e252f
+      - ElementName: Stalker
+        ObjectType: 7
+        guid: 77b197653afaeb43b7efdeda5cf2c599
+      Path: SoundBanks\Entitys\Stalker
   - PhysicalPath: SoundBanks\Factory Tencent GME.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -463,7 +501,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_Music
     guid: 1962c911a3a469489c56c2940ed7567d
     GuidInternal: 
-    m_lastTime: -8584551130661130516
+    m_lastTime: -8584543887719236362
     List:
     - name: MainMenu_Music_SoundBank
       guid: 6fef1e6795b8d349ae7c1e98f22055f2
@@ -496,7 +534,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_UI
     guid: ac79309561351547a997a124cf7737ab
     GuidInternal: 
-    m_lastTime: -8584551130661120512
+    m_lastTime: -8584543699922166360
     List:
     - name: MainMenu_UI_SFX
       guid: cd9b4a020afc37499d8b1b05b0745875
@@ -515,6 +553,33 @@ MonoBehaviour:
         ObjectType: 7
         guid: cd9b4a020afc37499d8b1b05b0745875
       Path: SoundBanks\MainMenu\MainMenu_UI\MainMenu_UI_SFX
+  - PhysicalPath: SoundBanks\Maps.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Maps
+      ObjectType: 12
+      guid: d908d4c3023d6a43a8cc236aa11ee72e
+    ParentPath: SoundBanks\Maps
+    guid: d908d4c3023d6a43a8cc236aa11ee72e
+    GuidInternal: 
+    m_lastTime: -8584543807040828597
+    List:
+    - name: Laboratory
+      guid: da82bc53772c8948a37435d3ab98b885
+      id: 766371778
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 12
+        guid: d908d4c3023d6a43a8cc236aa11ee72e
+      - ElementName: Laboratory
+        ObjectType: 7
+        guid: da82bc53772c8948a37435d3ab98b885
+      Path: SoundBanks\Maps\Laboratory
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -528,6 +593,166 @@ MonoBehaviour:
     guid: 4fb7d9a6a8acad42b7522799bb3a21fa
     GuidInternal: 
     m_lastTime: -8584555958540721676
+    List: []
+  - PhysicalPath: Events\Entitys\Kidnapper.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Entitys
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Kidnapper
+      ObjectType: 12
+      guid: 59f94e8d805e4949a059e20acff299e3
+    ParentPath: Events\Entitys\Kidnapper
+    guid: 59f94e8d805e4949a059e20acff299e3
+    GuidInternal: 
+    m_lastTime: -8584543915514676030
+    List: []
+  - PhysicalPath: Events\Entitys\Octopode.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Entitys
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Octopode
+      ObjectType: 12
+      guid: c47b5c31ed996c459f2f2953e04a1de5
+    ParentPath: Events\Entitys\Octopode
+    guid: c47b5c31ed996c459f2f2953e04a1de5
+    GuidInternal: 
+    m_lastTime: -8584543909123311853
+    List:
+    - name: Drop
+      guid: 8591f89fc4286047a06ed5c0b11661f9
+      id: 1878686274
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: Drop
+        ObjectType: 3
+        guid: 8591f89fc4286047a06ed5c0b11661f9
+      Path: Events\Entitys\Octopode\Tentacles\Drop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: InternalCast_MiscMovements
+      guid: d278b045ee494d42936de50ce6943d08
+      id: 2200330180
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: InternalCast_MiscMovements
+        ObjectType: 3
+        guid: d278b045ee494d42936de50ce6943d08
+      Path: Events\Entitys\Octopode\Tentacles\InternalCast_MiscMovements
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Lift
+      guid: 61e5fd56ca84904a8fe908afc00cb6a3
+      id: 2137926
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: Lift
+        ObjectType: 3
+        guid: 61e5fd56ca84904a8fe908afc00cb6a3
+      Path: Events\Entitys\Octopode\Tentacles\Lift
+      maxAttenuation: 0
+      maxDuration: 1.1666666
+      minDuration: 1.1666666
+    - name: Step
+      guid: 05106773fa982b40bd56dca08678821a
+      id: 621108255
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: Step
+        ObjectType: 3
+        guid: 05106773fa982b40bd56dca08678821a
+      Path: Events\Entitys\Octopode\Tentacles\Step
+      maxAttenuation: 0
+      maxDuration: 1.1821667
+      minDuration: 0.5688958
+    - name: Tentacles
+      guid: 8ef2fda7e98ba445a259f903ff49508f
+      id: 1394947262
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      Path: Events\Entitys\Octopode\Tentacles
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Entitys\Stalker.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Entitys
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Stalker
+      ObjectType: 12
+      guid: b81cccb666476f448e7d68150e3517a8
+    ParentPath: Events\Entitys\Stalker
+    guid: b81cccb666476f448e7d68150e3517a8
+    GuidInternal: 
+    m_lastTime: -8584543915514666040
     List: []
   - PhysicalPath: Events\Factory Tencent GME.wwu
     PathAndIcons:
@@ -849,6 +1074,152 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\HostGameMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: HostGameMenu
+      ObjectType: 12
+      guid: e67b40037dce2c40ab771ec8a2555064
+    ParentPath: Events\Menus\HostGameMenu
+    guid: e67b40037dce2c40ab771ec8a2555064
+    GuidInternal: 
+    m_lastTime: -8584543699925267321
+    List: []
+  - PhysicalPath: Events\HostGameMenu_UI_Button_Click.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: HostGameMenu
+      ObjectType: 12
+      guid: e67b40037dce2c40ab771ec8a2555064
+    - ElementName: HostGameMenu_UI_Button_Click
+      ObjectType: 12
+      guid: 68e1bfc7253aa54f8b65eaa966ff2329
+    ParentPath: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click
+    guid: 68e1bfc7253aa54f8b65eaa966ff2329
+    GuidInternal: 
+    m_lastTime: -8584543699925267321
+    List:
+    - name: HostGameMenu_UI_Button_Click_Back
+      guid: d457afc8943c794a9e774195f956d755
+      id: 69765757
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 68e1bfc7253aa54f8b65eaa966ff2329
+      - ElementName: HostGameMenu_UI_Button_Click_Back
+        ObjectType: 3
+        guid: d457afc8943c794a9e774195f956d755
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click\HostGameMenu_UI_Button_Click_Back
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: HostGameMenu_UI_Button_Click_StartGame
+      guid: 464d3c98457fc549b1620e92ceae2792
+      id: 3943796790
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 68e1bfc7253aa54f8b65eaa966ff2329
+      - ElementName: HostGameMenu_UI_Button_Click_StartGame
+        ObjectType: 3
+        guid: 464d3c98457fc549b1620e92ceae2792
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click\HostGameMenu_UI_Button_Click_StartGame
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+  - PhysicalPath: Events\HostGameMenu_UI_Button_Hover.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: HostGameMenu
+      ObjectType: 12
+      guid: e67b40037dce2c40ab771ec8a2555064
+    - ElementName: HostGameMenu_UI_Button_Hover
+      ObjectType: 12
+      guid: 24cc636edb658d4ca62a61d663344199
+    ParentPath: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover
+    guid: 24cc636edb658d4ca62a61d663344199
+    GuidInternal: 
+    m_lastTime: -8584543699925246739
+    List:
+    - name: HostGameMenu_UI_Button_Hover_Back
+      guid: 37f8964e16832c4a94bc36d8bcfcb171
+      id: 530535131
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 24cc636edb658d4ca62a61d663344199
+      - ElementName: HostGameMenu_UI_Button_Hover_Back
+        ObjectType: 3
+        guid: 37f8964e16832c4a94bc36d8bcfcb171
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover\HostGameMenu_UI_Button_Hover_Back
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: HostGameMenu_UI_Button_Hover_StartGame
+      guid: 82c8fd99878e65489309cfb9c86dd993
+      id: 103313448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: HostGameMenu
+        ObjectType: 12
+        guid: e67b40037dce2c40ab771ec8a2555064
+      - ElementName: HostGameMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 24cc636edb658d4ca62a61d663344199
+      - ElementName: HostGameMenu_UI_Button_Hover_StartGame
+        ObjectType: 3
+        guid: 82c8fd99878e65489309cfb9c86dd993
+      Path: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover\HostGameMenu_UI_Button_Hover_StartGame
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -885,7 +1256,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack
     guid: 2c50c089824be74abcee2f7ff5b95a77
     GuidInternal: 
-    m_lastTime: -8584551130672351077
+    m_lastTime: -8584543723901448996
     List:
     - name: MainMenu_Loading_FromSplashScreen
       guid: e7d9a48f8c73d94db028aa61a6c8ae53
@@ -911,8 +1282,8 @@ MonoBehaviour:
         guid: e7d9a48f8c73d94db028aa61a6c8ae53
       Path: Events\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack\MainMenu_Loading_FromSplashScreen
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: MainMenu_Transition
       guid: f5850ad6c32f4d4a9ae31dd8df55a0de
       id: 575977795
@@ -937,8 +1308,8 @@ MonoBehaviour:
         guid: f5850ad6c32f4d4a9ae31dd8df55a0de
       Path: Events\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack\MainMenu_Transition
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\MainMenu_Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -997,7 +1368,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
     guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
     GuidInternal: 
-    m_lastTime: -8584551130671989924
+    m_lastTime: -8584543951534406652
     List:
     - name: MainMenu_UI_Button_Click_JoinGame
       guid: b6e0942138567b48b5ca6df77dd70b85
@@ -1103,6 +1474,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2
       minDuration: 2
+    - name: MainMenu_UI_Button_Click_Tutorial
+      guid: d37c18a5465e4c40be10df8795e89cb1
+      id: 2313975087
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
+      - ElementName: MainMenu_UI_Button_Click_Tutorial
+        ObjectType: 3
+        guid: d37c18a5465e4c40be10df8795e89cb1
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Tutorial
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
   - PhysicalPath: Events\MainMenu_UI_Button_Hover.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1123,37 +1520,11 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
     guid: 1f6d0cc600c3c348a82a2036ab784d9e
     GuidInternal: 
-    m_lastTime: -8584551130671860905
+    m_lastTime: -8584543951534396683
     List:
-    - name: MainMenu_Button_Hover_JoinGame
-      guid: bebd04d2264d7745b5a78b0ea09870a4
-      id: 3560645790
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Menus
-        ObjectType: 12
-        guid: ea3e7bcc2a9f4848a83afaed02a844bc
-      - ElementName: MainMenu
-        ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
-      - ElementName: MainMenu_UI
-        ObjectType: 12
-        guid: 490e958d4d8d154399f775367caf9b34
-      - ElementName: MainMenu_UI_Button_Hover
-        ObjectType: 12
-        guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_JoinGame
-        ObjectType: 3
-        guid: bebd04d2264d7745b5a78b0ea09870a4
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_JoinGame
-      maxAttenuation: 0
-      maxDuration: 1.2
-      minDuration: 1.2
-    - name: MainMenu_Button_Hover_NewGame
+    - name: MainMenu_UI_Button_Hover_HostGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
-      id: 13766132
+      id: 4060264903
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1170,16 +1541,16 @@ MonoBehaviour:
       - ElementName: MainMenu_UI_Button_Hover
         ObjectType: 12
         guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_NewGame
+      - ElementName: MainMenu_UI_Button_Hover_HostGame
         ObjectType: 3
         guid: e56b0e634155b246aeb8c7a38f7c8038
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_NewGame
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_HostGame
       maxAttenuation: 0
-      maxDuration: 1.2
-      minDuration: 1.2
-    - name: MainMenu_Button_Hover_QuitGame
-      guid: 9bb4097e4352ab4abedefb6eed76a8b7
-      id: 2515304575
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: MainMenu_UI_Button_Hover_JoinGame
+      guid: bebd04d2264d7745b5a78b0ea09870a4
+      id: 1826603681
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1196,16 +1567,42 @@ MonoBehaviour:
       - ElementName: MainMenu_UI_Button_Hover
         ObjectType: 12
         guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_QuitGame
+      - ElementName: MainMenu_UI_Button_Hover_JoinGame
+        ObjectType: 3
+        guid: bebd04d2264d7745b5a78b0ea09870a4
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_JoinGame
+      maxAttenuation: 0
+      maxDuration: 1.2
+      minDuration: 1.2
+    - name: MainMenu_UI_Button_Hover_QuitGame
+      guid: 9bb4097e4352ab4abedefb6eed76a8b7
+      id: 115838932
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_UI_Button_Hover_QuitGame
         ObjectType: 3
         guid: 9bb4097e4352ab4abedefb6eed76a8b7
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_QuitGame
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_QuitGame
       maxAttenuation: 0
       maxDuration: 1.2
       minDuration: 1.2
-    - name: MainMenu_Button_Hover_Settings
+    - name: MainMenu_UI_Button_Hover_SettingsMenu
       guid: 74b4c5107be0f5479b1bd01d1519ead6
-      id: 2281368103
+      id: 4084181749
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1222,13 +1619,212 @@ MonoBehaviour:
       - ElementName: MainMenu_UI_Button_Hover
         ObjectType: 12
         guid: 1f6d0cc600c3c348a82a2036ab784d9e
-      - ElementName: MainMenu_Button_Hover_Settings
+      - ElementName: MainMenu_UI_Button_Hover_SettingsMenu
         ObjectType: 3
         guid: 74b4c5107be0f5479b1bd01d1519ead6
-      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_Button_Hover_Settings
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_SettingsMenu
       maxAttenuation: 0
-      maxDuration: 1.2
-      minDuration: 1.2
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: MainMenu_UI_Button_Hover_Tutorial
+      guid: 6eeba5e5d86be74b90f8a5c497a1484a
+      id: 1287529973
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      - ElementName: MainMenu_UI
+        ObjectType: 12
+        guid: 490e958d4d8d154399f775367caf9b34
+      - ElementName: MainMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 1f6d0cc600c3c348a82a2036ab784d9e
+      - ElementName: MainMenu_UI_Button_Hover_Tutorial
+        ObjectType: 3
+        guid: 6eeba5e5d86be74b90f8a5c497a1484a
+      Path: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_Tutorial
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+  - PhysicalPath: Events\Maps\Laboratory.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Maps
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Laboratory
+      ObjectType: 12
+      guid: b612878506a6a94288464cd99ce6c5d4
+    ParentPath: Events\Maps\Laboratory
+    guid: b612878506a6a94288464cd99ce6c5d4
+    GuidInternal: 
+    m_lastTime: -8584543807043881999
+    List:
+    - name: Ambience_LightBulb_Idle
+      guid: 7e3ef4aab2200e4790fffcfe635b57a6
+      id: 167687086
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 5335b1197d2f6443bc9f093a92fba02d
+      - ElementName: Ambience_LightBulb_Idle
+        ObjectType: 3
+        guid: 7e3ef4aab2200e4790fffcfe635b57a6
+      Path: Events\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle
+      maxAttenuation: 0
+      maxDuration: 128
+      minDuration: 128
+    - name: Ambiences
+      guid: 5335b1197d2f6443bc9f093a92fba02d
+      id: 1017660616
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 5335b1197d2f6443bc9f093a92fba02d
+      Path: Events\Maps\Laboratory\Ambiences
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Atmo
+      guid: 547ad812cd2c604cbafa773e95c741ca
+      id: 3083130986
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Atmo
+        ObjectType: 4
+        guid: 547ad812cd2c604cbafa773e95c741ca
+      Path: Events\Maps\Laboratory\Atmo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Items
+      guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
+      id: 2151963051
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Items
+        ObjectType: 4
+        guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
+      Path: Events\Maps\Laboratory\Items
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Maps\Uranium.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Maps
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Laboratory
+      ObjectType: 12
+      guid: b612878506a6a94288464cd99ce6c5d4
+    - ElementName: Items
+      ObjectType: 4
+      guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
+    - ElementName: Uranium
+      ObjectType: 12
+      guid: a40b0b585065564ea6486a79039fd832
+    ParentPath: Events\Maps\Laboratory\Items\Uranium
+    guid: a40b0b585065564ea6486a79039fd832
+    GuidInternal: 
+    m_lastTime: -8584543807043881999
+    List:
+    - name: Ambience_Idle_World
+      guid: 5f91cd8d4aef584a8d862541bae28f64
+      id: 3361983675
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Items
+        ObjectType: 4
+        guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: a40b0b585065564ea6486a79039fd832
+      - ElementName: Ambience_Idle_World
+        ObjectType: 3
+        guid: 5f91cd8d4aef584a8d862541bae28f64
+      Path: Events\Maps\Laboratory\Items\Uranium\Ambience_Idle_World
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Uranium_Idle_Equipped
+      guid: 0c311bf00e567f48a987cf307d84ed07
+      id: 1821327543
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Items
+        ObjectType: 4
+        guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: a40b0b585065564ea6486a79039fd832
+      - ElementName: Uranium_Idle_Equipped
+        ObjectType: 3
+        guid: 0c311bf00e567f48a987cf307d84ed07
+      Path: Events\Maps\Laboratory\Items\Uranium\Uranium_Idle_Equipped
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Menus.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1240,7 +1836,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584551130671806715
+    m_lastTime: -8584543699925221680
     List: []
   - PhysicalPath: Events\SettingsMenu.wwu
     PathAndIcons:
@@ -1298,8 +1894,8 @@ MonoBehaviour:
         guid: a4c16849478e5a4680d1b5a5303deb96
       Path: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Click\SettingsMenu_UI_Button_Click_Back
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2
+      minDuration: 2
   - PhysicalPath: Events\SettingsMenu_UI_Button_Hover.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1317,7 +1913,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Hover
     guid: 1d44dbbec4111147b429ca4b58500e55
     GuidInternal: 
-    m_lastTime: -8584551130671660151
+    m_lastTime: -8584543744103764434
     List:
     - name: SettingsMenu_UI_Button_Hover_Back
       guid: e7d4aa431e0d4c44ad7d179d7697c98d
@@ -1340,8 +1936,108 @@ MonoBehaviour:
         guid: e7d4aa431e0d4c44ad7d179d7697c98d
       Path: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Hover\SettingsMenu_UI_Button_Hover_Back
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5
+      minDuration: 1.5
+  - PhysicalPath: Events\TutorialMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: TutorialMenu
+      ObjectType: 12
+      guid: d6103320d94d4640a766ac43104fdf22
+    ParentPath: Events\Menus\TutorialMenu
+    guid: d6103320d94d4640a766ac43104fdf22
+    GuidInternal: 
+    m_lastTime: -8584543744103764434
+    List: []
+  - PhysicalPath: Events\TutorialMenu_UI_Button_Click.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: TutorialMenu
+      ObjectType: 12
+      guid: d6103320d94d4640a766ac43104fdf22
+    - ElementName: TutorialMenu_UI_Button_Click
+      ObjectType: 12
+      guid: 3ec336f5d12b5441baf5d355129884d8
+    ParentPath: Events\Menus\TutorialMenu\TutorialMenu_UI_Button_Click
+    guid: 3ec336f5d12b5441baf5d355129884d8
+    GuidInternal: 
+    m_lastTime: -8584543744103723462
+    List:
+    - name: TutorialMenu_UI_Button_Click_Back
+      guid: e5a2002c3a92fc43b958fd6ab06373b6
+      id: 2036339467
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: TutorialMenu
+        ObjectType: 12
+        guid: d6103320d94d4640a766ac43104fdf22
+      - ElementName: TutorialMenu_UI_Button_Click
+        ObjectType: 12
+        guid: 3ec336f5d12b5441baf5d355129884d8
+      - ElementName: TutorialMenu_UI_Button_Click_Back
+        ObjectType: 3
+        guid: e5a2002c3a92fc43b958fd6ab06373b6
+      Path: Events\Menus\TutorialMenu\TutorialMenu_UI_Button_Click\TutorialMenu_UI_Button_Click_Back
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+  - PhysicalPath: Events\TutorialMenu_UI_Button_Hover.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Menus
+      ObjectType: 12
+      guid: ea3e7bcc2a9f4848a83afaed02a844bc
+    - ElementName: TutorialMenu
+      ObjectType: 12
+      guid: d6103320d94d4640a766ac43104fdf22
+    - ElementName: TutorialMenu_UI_Button_Hover
+      ObjectType: 12
+      guid: 5cf7d54e88211a4d9fcee06ed9e7bb63
+    ParentPath: Events\Menus\TutorialMenu\TutorialMenu_UI_Button_Hover
+    guid: 5cf7d54e88211a4d9fcee06ed9e7bb63
+    GuidInternal: 
+    m_lastTime: -8584543744103713487
+    List:
+    - name: TutorialMenu_UI_Button_Hover_Back
+      guid: 41b370d96aaa2848b22118a6933c5d4b
+      id: 2646522145
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Menus
+        ObjectType: 12
+        guid: ea3e7bcc2a9f4848a83afaed02a844bc
+      - ElementName: TutorialMenu
+        ObjectType: 12
+        guid: d6103320d94d4640a766ac43104fdf22
+      - ElementName: TutorialMenu_UI_Button_Hover
+        ObjectType: 12
+        guid: 5cf7d54e88211a4d9fcee06ed9e7bb63
+      - ElementName: TutorialMenu_UI_Button_Hover_Back
+        ObjectType: 3
+        guid: 41b370d96aaa2848b22118a6933c5d4b
+      Path: Events\Menus\TutorialMenu\TutorialMenu_UI_Button_Hover\TutorialMenu_UI_Button_Hover_Back
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1576,8 +2272,156 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: c0904058cc3ca147a37cbe331bfeb2b2
     GuidInternal: 
-    m_lastTime: -8584555958273071684
-    List: []
+    m_lastTime: -8584543699922156368
+    List:
+    - name: CurrentScene
+      guid: 09eb60e773c0144da3b876e7ee24a825
+      id: 2121736680
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c0904058cc3ca147a37cbe331bfeb2b2
+      - ElementName: CurrentScene
+        ObjectType: 9
+        guid: 09eb60e773c0144da3b876e7ee24a825
+      Path: States\Default Work Unit\CurrentScene
+      values:
+      - name: HostGameMenu
+        guid: 4dbae64b4ee86b4dac84fafc8f24abe8
+        id: 1886836668
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: CurrentScene
+          ObjectType: 9
+          guid: 09eb60e773c0144da3b876e7ee24a825
+        - ElementName: HostGameMenu
+          ObjectType: 8
+          guid: 4dbae64b4ee86b4dac84fafc8f24abe8
+      - name: MainMenu
+        guid: fc9b936c7c7f064cbe87edb16a797c9e
+        id: 3604647259
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: CurrentScene
+          ObjectType: 9
+          guid: 09eb60e773c0144da3b876e7ee24a825
+        - ElementName: MainMenu
+          ObjectType: 8
+          guid: fc9b936c7c7f064cbe87edb16a797c9e
+      - name: None
+        guid: 8cfa5038298ca94e8bb46d7148817728
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: CurrentScene
+          ObjectType: 9
+          guid: 09eb60e773c0144da3b876e7ee24a825
+        - ElementName: None
+          ObjectType: 8
+          guid: 8cfa5038298ca94e8bb46d7148817728
+      - name: SettingsMenu
+        guid: 8c0b02992905134b85ce67442a6418d7
+        id: 68007511
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: CurrentScene
+          ObjectType: 9
+          guid: 09eb60e773c0144da3b876e7ee24a825
+        - ElementName: SettingsMenu
+          ObjectType: 8
+          guid: 8c0b02992905134b85ce67442a6418d7
+      - name: Tutorial
+        guid: 92fabad1188c1d4aba2fff7da338d0f2
+        id: 3762955427
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: CurrentScene
+          ObjectType: 9
+          guid: 09eb60e773c0144da3b876e7ee24a825
+        - ElementName: Tutorial
+          ObjectType: 8
+          guid: 92fabad1188c1d4aba2fff7da338d0f2
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: SelectedMap
+      guid: e6efcc06a9c7344bb165989b0bdede2b
+      id: 810441784
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c0904058cc3ca147a37cbe331bfeb2b2
+      - ElementName: SelectedMap
+        ObjectType: 9
+        guid: e6efcc06a9c7344bb165989b0bdede2b
+      Path: States\Default Work Unit\SelectedMap
+      values:
+      - name: Laboratory
+        guid: 65c728b5d989a64290a7fff224b64e8b
+        id: 766371778
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: SelectedMap
+          ObjectType: 9
+          guid: e6efcc06a9c7344bb165989b0bdede2b
+        - ElementName: Laboratory
+          ObjectType: 8
+          guid: 65c728b5d989a64290a7fff224b64e8b
+      - name: None
+        guid: 079524dd99c2ea4f9573836c245aadfd
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: c0904058cc3ca147a37cbe331bfeb2b2
+        - ElementName: SelectedMap
+          ObjectType: 9
+          guid: e6efcc06a9c7344bb165989b0bdede2b
+        - ElementName: None
+          ObjectType: 8
+          guid: 079524dd99c2ea4f9573836c245aadfd
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1590,7 +2434,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 24668d1c0506d84c9b9e418a40fac651
     GuidInternal: 
-    m_lastTime: -8584555958273071684
+    m_lastTime: -8584543699922151335
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1606,7 +2450,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273071684
     List: []
-  ExpandedFileSystemItemIds: 0200000016000000170000001a0000001b0000001e0000001f0000002100000027000000280000002a0000002e0000002f000000310000004e000000
+  ExpandedFileSystemItemIds: 0200000006000000070000001a0000001b0000001c0000001f000000200000002100000022000000240000002500000027000000280000002a0000002e0000002f0000003000000031000000320000003300000034000000370000003a0000003b0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000004f00000050000000510000005600000063000000640000006d0000006e0000006f00000070000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1

@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
-  m_Name: 630E6BE5-5541-46B2-AEB8-C7A38F7C8038
+  m_Script: {fileID: 11500000, guid: 3a4b70c166b930d44a09c47ac3297bdd, type: 3}
+  m_Name: 06CCEFE6-C7A9-4B34-B165-989B0BDEDE2B
   m_EditorClassIdentifier: 
-  objectName: MainMenu_UI_Button_Hover_HostGame
-  id: 4060264903
-  guid: 630E6BE5-5541-46B2-AEB8-C7A38F7C8038
-  IsInUserDefinedSoundBank: 1
-  IsAutoBankLoaded: 0
+  objectName: SelectedMap
+  id: 810441784
+  guid: 06CCEFE6-C7A9-4B34-B165-989B0BDEDE2B

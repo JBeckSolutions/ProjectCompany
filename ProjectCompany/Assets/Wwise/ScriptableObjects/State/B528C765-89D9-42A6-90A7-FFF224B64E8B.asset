@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c352303987f9a7d4c9a29ecb4390e631, type: 3}
+  m_Name: B528C765-89D9-42A6-90A7-FFF224B64E8B
+  m_EditorClassIdentifier: 
+  objectName: Laboratory
+  id: 766371778
+  guid: B528C765-89D9-42A6-90A7-FFF224B64E8B
+  WwiseStateGroupReference: {fileID: 11400000, guid: 0d590227f4fc02947bbb42f3b1d741f5, type: 2}
