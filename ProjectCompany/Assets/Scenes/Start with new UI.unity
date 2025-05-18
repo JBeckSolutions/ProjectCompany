@@ -1824,7 +1824,6 @@ GameObject:
   - component: {fileID: 1406454478}
   - component: {fileID: 1406454480}
   - component: {fileID: 1406454479}
-  - component: {fileID: 1406454481}
   m_Layer: 0
   m_Name: Soundbanks_For_InitialLoad
   m_TagString: Untagged
@@ -1890,31 +1889,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c0eb1aa88ceef62438a60a44aec9031c, type: 2}
-  decodeBank: 0
-  overrideLoadSetting: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
---- !u!114 &1406454481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406454477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f338f9cd2cec9a4688861d3976f1055, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 212c474a65fd4d34498672727024ca25, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0

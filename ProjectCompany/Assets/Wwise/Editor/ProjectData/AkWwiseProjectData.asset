@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584543807042352859
+    m_lastTime: -8584541980518095301
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -403,7 +403,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Entitys
     guid: 4ca19157b59a9e47b6a0c74b667e252f
     GuidInternal: 
-    m_lastTime: -8584543915514043980
+    m_lastTime: -8584541980513739140
     List:
     - name: Kidnapper
       guid: d12c33c4ad0da248a057b950e2b782d3
@@ -485,22 +485,8 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584541896865259693
-    List:
-    - name: MainMenu_Ambiences
-      guid: adced9441b7f334ab86e4ecd8834bdbd
-      id: 2371512733
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MainMenu
-        ObjectType: 12
-        guid: 5cb50de92668ac4c91b9a6cf590a2b99
-      - ElementName: MainMenu_Ambiences
-        ObjectType: 7
-        guid: adced9441b7f334ab86e4ecd8834bdbd
-      Path: SoundBanks\MainMenu\MainMenu_Ambiences
+    m_lastTime: -8584550681815744774
+    List: []
   - PhysicalPath: SoundBanks\MainMenu_Music.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -515,7 +501,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_Music
     guid: 1962c911a3a469489c56c2940ed7567d
     GuidInternal: 
-    m_lastTime: -8584543887719236362
+    m_lastTime: -8584541980513739140
     List:
     - name: MainMenu_Music_SoundBank
       guid: 6fef1e6795b8d349ae7c1e98f22055f2
@@ -548,7 +534,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_UI
     guid: ac79309561351547a997a124cf7737ab
     GuidInternal: 
-    m_lastTime: -8584543699922166360
+    m_lastTime: -8584541980513723835
     List:
     - name: MainMenu_UI_SFX
       guid: cd9b4a020afc37499d8b1b05b0745875
@@ -578,7 +564,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Maps
     guid: d908d4c3023d6a43a8cc236aa11ee72e
     GuidInternal: 
-    m_lastTime: -8584543807040828597
+    m_lastTime: -8584541980513723835
     List:
     - name: Laboratory
       guid: da82bc53772c8948a37435d3ab98b885
@@ -622,7 +608,7 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Kidnapper
     guid: 59f94e8d805e4949a059e20acff299e3
     GuidInternal: 
-    m_lastTime: -8584543915514676030
+    m_lastTime: -8584541980522549151
     List: []
   - PhysicalPath: Events\Entitys\Octopode.wwu
     PathAndIcons:
@@ -638,7 +624,7 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584543909123311853
+    m_lastTime: -8584541980522533624
     List:
     - name: Drop
       guid: 8591f89fc4286047a06ed5c0b11661f9
@@ -766,7 +752,7 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584543915514666040
+    m_lastTime: -8584541980522533624
     List: []
   - PhysicalPath: Events\Factory Tencent GME.wwu
     PathAndIcons:
@@ -1102,7 +1088,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\HostGameMenu
     guid: e67b40037dce2c40ab771ec8a2555064
     GuidInternal: 
-    m_lastTime: -8584543699925267321
+    m_lastTime: -8584541980522533624
     List: []
   - PhysicalPath: Events\HostGameMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1121,7 +1107,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Click
     guid: 68e1bfc7253aa54f8b65eaa966ff2329
     GuidInternal: 
-    m_lastTime: -8584543699925267321
+    m_lastTime: -8584541980522533624
     List:
     - name: HostGameMenu_UI_Button_Click_Back
       guid: d457afc8943c794a9e774195f956d755
@@ -1186,7 +1172,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\HostGameMenu\HostGameMenu_UI_Button_Hover
     guid: 24cc636edb658d4ca62a61d663344199
     GuidInternal: 
-    m_lastTime: -8584543699925246739
+    m_lastTime: -8584541980522518380
     List:
     - name: HostGameMenu_UI_Button_Hover_Back
       guid: 37f8964e16832c4a94bc36d8bcfcb171
@@ -1248,7 +1234,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu
     guid: 5c1619ee69a64f4e98431f3fdb00b0c1
     GuidInternal: 
-    m_lastTime: -8584551130672396232
+    m_lastTime: -8584550681818159617
     List: []
   - PhysicalPath: Events\MainMenu_MainTrack.wwu
     PathAndIcons:
@@ -1270,7 +1256,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack
     guid: 2c50c089824be74abcee2f7ff5b95a77
     GuidInternal: 
-    m_lastTime: -8584543723901448996
+    m_lastTime: -8584541980522518380
     List:
     - name: MainMenu_Loading_FromSplashScreen
       guid: e7d9a48f8c73d94db028aa61a6c8ae53
@@ -1341,7 +1327,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_Music
     guid: ef8791ebca21fc4dba09520cde9eb11e
     GuidInternal: 
-    m_lastTime: -8584551130672301063
+    m_lastTime: -8584550681818042045
     List: []
   - PhysicalPath: Events\MainMenu_UI.wwu
     PathAndIcons:
@@ -1360,7 +1346,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI
     guid: 490e958d4d8d154399f775367caf9b34
     GuidInternal: 
-    m_lastTime: -8584551130672256014
+    m_lastTime: -8584550681817981027
     List: []
   - PhysicalPath: Events\MainMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1382,7 +1368,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
     guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
     GuidInternal: 
-    m_lastTime: -8584543951534406652
+    m_lastTime: -8584541980522505752
     List:
     - name: MainMenu_UI_Button_Click_JoinGame
       guid: b6e0942138567b48b5ca6df77dd70b85
@@ -1534,7 +1520,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
     guid: 1f6d0cc600c3c348a82a2036ab784d9e
     GuidInternal: 
-    m_lastTime: -8584543951534396683
+    m_lastTime: -8584541980522505752
     List:
     - name: MainMenu_UI_Button_Hover_HostGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
@@ -1680,7 +1666,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584541896869723085
+    m_lastTime: -8584541980522495673
     List:
     - name: Ambience_LightBulb_Idle
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -1702,9 +1688,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7e3ef4aab2200e4790fffcfe635b57a6
       Path: Events\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle
-      maxAttenuation: 4
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 0
+      maxDuration: 128
+      minDuration: 128
     - name: Ambiences
       guid: 5335b1197d2f6443bc9f093a92fba02d
       id: 1017660616
@@ -1785,7 +1771,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory\Items\Uranium
     guid: a40b0b585065564ea6486a79039fd832
     GuidInternal: 
-    m_lastTime: -8584543807043881999
+    m_lastTime: -8584541980522490618
     List:
     - name: Ambience_Idle_World
       guid: 5f91cd8d4aef584a8d862541bae28f64
@@ -1850,7 +1836,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584543699925221680
+    m_lastTime: -8584541980522490618
     List: []
   - PhysicalPath: Events\SettingsMenu.wwu
     PathAndIcons:
@@ -1866,7 +1852,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\SettingsMenu
     guid: 7bae450d68529c4fb21ab10ff0466f32
     GuidInternal: 
-    m_lastTime: -8584551130671746830
+    m_lastTime: -8584550681817889995
     List: []
   - PhysicalPath: Events\SettingsMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1885,7 +1871,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Click
     guid: c90d0c42dba9a24bab2aadeef65f090c
     GuidInternal: 
-    m_lastTime: -8584551130671706816
+    m_lastTime: -8584550681817828655
     List:
     - name: SettingsMenu_UI_Button_Click_Back
       guid: a4c16849478e5a4680d1b5a5303deb96
@@ -1927,7 +1913,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\SettingsMenu\SettingsMenu_UI_Button_Hover
     guid: 1d44dbbec4111147b429ca4b58500e55
     GuidInternal: 
-    m_lastTime: -8584543744103764434
+    m_lastTime: -8584541980522480616
     List:
     - name: SettingsMenu_UI_Button_Hover_Back
       guid: e7d4aa431e0d4c44ad7d179d7697c98d
@@ -1966,7 +1952,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\TutorialMenu
     guid: d6103320d94d4640a766ac43104fdf22
     GuidInternal: 
-    m_lastTime: -8584543744103764434
+    m_lastTime: -8584541980522480616
     List: []
   - PhysicalPath: Events\TutorialMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1985,7 +1971,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\TutorialMenu\TutorialMenu_UI_Button_Click
     guid: 3ec336f5d12b5441baf5d355129884d8
     GuidInternal: 
-    m_lastTime: -8584543744103723462
+    m_lastTime: -8584541980522475601
     List:
     - name: TutorialMenu_UI_Button_Click_Back
       guid: e5a2002c3a92fc43b958fd6ab06373b6
@@ -2027,7 +2013,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\TutorialMenu\TutorialMenu_UI_Button_Hover
     guid: 5cf7d54e88211a4d9fcee06ed9e7bb63
     GuidInternal: 
-    m_lastTime: -8584543744103713487
+    m_lastTime: -8584541980522475601
     List:
     - name: TutorialMenu_UI_Button_Hover_Back
       guid: 41b370d96aaa2848b22118a6933c5d4b
@@ -2064,7 +2050,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584551130670346620
+    m_lastTime: -8584550681817757269
     List:
     - name: Master_Volume
       guid: 2b3d69338de44446820be47ae3949c52
@@ -2286,7 +2272,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: c0904058cc3ca147a37cbe331bfeb2b2
     GuidInternal: 
-    m_lastTime: -8584543699922156368
+    m_lastTime: -8584541980513723835
     List:
     - name: CurrentScene
       guid: 09eb60e773c0144da3b876e7ee24a825
@@ -2448,7 +2434,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 24668d1c0506d84c9b9e418a40fac651
     GuidInternal: 
-    m_lastTime: -8584543699922151335
+    m_lastTime: -8584541980513708144
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -2464,7 +2450,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273071684
     List: []
-  ExpandedFileSystemItemIds: 0200000006000000070000001a0000001b0000001c0000001f000000200000002100000022000000240000002500000027000000280000002a0000002e0000002f0000003000000031000000320000003300000034000000370000003a0000003b0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000004f000000500000005100000056000000590000006100000063000000660000006d0000006e0000006f00000070000000
+  ExpandedFileSystemItemIds: 0200000006000000070000001a0000001b0000001c0000001f000000200000002100000022000000240000002500000027000000280000002a0000002e0000002f0000003000000031000000320000003300000034000000370000003a0000003b0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000004f00000050000000510000005600000063000000640000006d0000006e0000006f00000070000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1

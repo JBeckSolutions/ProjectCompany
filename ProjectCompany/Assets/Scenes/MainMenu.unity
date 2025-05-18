@@ -2673,7 +2673,6 @@ GameObject:
   - component: {fileID: 716023947}
   - component: {fileID: 716023951}
   - component: {fileID: 716023952}
-  - component: {fileID: 716023953}
   m_Layer: 0
   m_Name: SoundBankLoaderGlobal
   m_TagString: Respawn
@@ -2713,7 +2712,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 163c1ed8ce66a704ba0897e010ce0e83, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: e31c2c4de283e9c4a9af7a720f9fc38a, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -2738,31 +2737,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c0c9bef5373f10a4db8749dbaf55a3c2, type: 2}
   SettingsScriptableObject: {fileID: 11400000, guid: d1c944e77f8105246b7d1642be43fd66, type: 2}
---- !u!114 &716023953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716023946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f338f9cd2cec9a4688861d3976f1055, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e31c2c4de283e9c4a9af7a720f9fc38a, type: 2}
-  decodeBank: 0
-  overrideLoadSetting: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!1 &717989869
 GameObject:
   m_ObjectHideFlags: 0
