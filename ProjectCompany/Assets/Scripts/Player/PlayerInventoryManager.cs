@@ -99,6 +99,7 @@ public class PlayerInventoryManager : NetworkBehaviour
                     inventoryUi.InventoryTiles[i].ResetItemImage();
                 }
             }
+            //[WwiseCall]
         }
     }
     [ServerRpc]
@@ -191,4 +192,5 @@ public class PlayerInventoryManager : NetworkBehaviour
         }
         
     }
+    //[WwiseCall]
 }
