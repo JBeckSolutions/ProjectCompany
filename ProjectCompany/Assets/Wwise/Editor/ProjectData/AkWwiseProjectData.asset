@@ -485,7 +485,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584541896865259693
+    m_lastTime: -8584538588641023104
     List:
     - name: MainMenu_Ambiences
       guid: adced9441b7f334ab86e4ecd8834bdbd
@@ -1680,7 +1680,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584541896869723085
+    m_lastTime: -8584538588646050570
     List:
     - name: Ambience_LightBulb_Idle
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
