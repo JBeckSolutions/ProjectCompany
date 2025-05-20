@@ -1,12 +1,7 @@
-using AK.Wwise;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
-using UnityEngine.Jobs;
-using UnityEngine.Animations;
-using UnityEngine.UIElements;
 using Cursor = UnityEngine.Cursor;
-using static UnityEditor.Progress;
 
 public class PlayerController : NetworkBehaviour
 {
