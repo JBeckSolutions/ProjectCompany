@@ -638,7 +638,7 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584541980522533624
+    m_lastTime: -8584538655890555418
     List:
     - name: Drop
       guid: 8591f89fc4286047a06ed5c0b11661f9
@@ -706,9 +706,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 61e5fd56ca84904a8fe908afc00cb6a3
       Path: Events\Entitys\Octopode\Tentacles\Lift
-      maxAttenuation: 0
-      maxDuration: 1.1666666
-      minDuration: 1.1666666
+      maxAttenuation: 3
+      maxDuration: 0.20246129
+      minDuration: 0.2001845
     - name: Step
       guid: 05106773fa982b40bd56dca08678821a
       id: 621108255
@@ -730,8 +730,8 @@ MonoBehaviour:
         guid: 05106773fa982b40bd56dca08678821a
       Path: Events\Entitys\Octopode\Tentacles\Step
       maxAttenuation: 0
-      maxDuration: 1.1821667
-      minDuration: 0.5688958
+      maxDuration: 0
+      minDuration: 0
     - name: Tentacles
       guid: 8ef2fda7e98ba445a259f903ff49508f
       id: 1394947262
@@ -2064,7 +2064,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584550681817757269
+    m_lastTime: -8584538655890550377
     List:
     - name: Master_Volume
       guid: 2b3d69338de44446820be47ae3949c52
@@ -2080,6 +2080,54 @@ MonoBehaviour:
         ObjectType: 13
         guid: 2b3d69338de44446820be47ae3949c52
       Path: Game Parameters\Default Work Unit\Master_Volume
+    - name: Octopode
+      guid: 32e0f8b465153143a912278de517246c
+      id: 170740614
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Octopode
+        ObjectType: 4
+        guid: 32e0f8b465153143a912278de517246c
+      Path: Game Parameters\Default Work Unit\Octopode
+    - name: Octopode_Health
+      guid: 50304ca86f553a46903b7e35556ee2e6
+      id: 1966096891
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Octopode
+        ObjectType: 4
+        guid: 32e0f8b465153143a912278de517246c
+      - ElementName: Octopode_Health
+        ObjectType: 13
+        guid: 50304ca86f553a46903b7e35556ee2e6
+      Path: Game Parameters\Default Work Unit\Octopode\Octopode_Health
+    - name: Octopode_WalkSpeed
+      guid: 09f4333afe9aa540a0a77c80675b6b86
+      id: 436101287
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Octopode
+        ObjectType: 4
+        guid: 32e0f8b465153143a912278de517246c
+      - ElementName: Octopode_WalkSpeed
+        ObjectType: 13
+        guid: 09f4333afe9aa540a0a77c80675b6b86
+      Path: Game Parameters\Default Work Unit\Octopode\Octopode_WalkSpeed
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     PathAndIcons:
     - ElementName: Game Parameters
@@ -2464,7 +2512,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584555958273071684
     List: []
-  ExpandedFileSystemItemIds: 0200000006000000070000001a0000001b0000001c0000001f000000200000002100000022000000240000002500000027000000280000002a0000002e0000002f0000003000000031000000320000003300000034000000370000003a0000003b0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000004f00000050000000510000005600000063000000640000006d0000006e0000006f00000070000000
+  ExpandedFileSystemItemIds: 020000000400000006000000070000001a0000001b0000001c0000002100000022000000240000002500000027000000280000002a0000002e0000002f000000300000003100000032000000330000003400000037000000390000003a0000003c0000003e0000004300000044000000460000004700000048000000490000004e0000004f000000500000005100000056000000590000006300000064000000670000006d0000006e0000006f00000070000000830000008400000086000000
   ExpandedWaapiItemIds: 1a0000001e0000001f00000021000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
