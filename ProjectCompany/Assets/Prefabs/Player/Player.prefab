@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 4124190751470005382}
   - component: {fileID: 231551245310329465}
   - component: {fileID: 2696870382530268004}
+  - component: {fileID: 423457768961156558}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -788,6 +789,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &423457768961156558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021837703420771538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 2696870382530268004}
+  LiftPost: {fileID: 231551245310329465}
 --- !u!1 &4340206601733951232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1526,7 @@ GameObject:
   - component: {fileID: 1027723702891068935}
   - component: {fileID: 5937102113039046621}
   - component: {fileID: 9013707190285563213}
+  - component: {fileID: 1880859471165494303}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -1565,6 +1581,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &1880859471165494303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5482008700034200257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 9013707190285563213}
+  LiftPost: {fileID: 5937102113039046621}
 --- !u!1 &5848872459695096708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1606,7 @@ GameObject:
   - component: {fileID: 6514288166979341065}
   - component: {fileID: 6197244898854604033}
   - component: {fileID: 5757356996518673049}
+  - component: {fileID: 1708505855561604297}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -1630,6 +1661,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &1708505855561604297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5848872459695096708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 5757356996518673049}
+  LiftPost: {fileID: 6197244898854604033}
 --- !u!1 &5953531074910977055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1686,7 @@ GameObject:
   - component: {fileID: 909912737938791285}
   - component: {fileID: 6539857037714985872}
   - component: {fileID: 8626876748323951939}
+  - component: {fileID: 2854503304789067011}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -1695,6 +1741,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &2854503304789067011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953531074910977055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 8626876748323951939}
+  LiftPost: {fileID: 6539857037714985872}
 --- !u!1 &5975923661350794997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1766,7 @@ GameObject:
   - component: {fileID: 8879077042255077190}
   - component: {fileID: 63689367170594748}
   - component: {fileID: 7841021524437158269}
+  - component: {fileID: 9000565037109421648}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -1760,6 +1821,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &9000565037109421648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975923661350794997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 7841021524437158269}
+  LiftPost: {fileID: 63689367170594748}
 --- !u!1 &6070348879983188823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1846,7 @@ GameObject:
   - component: {fileID: 7096677017736114063}
   - component: {fileID: 8285616467331419500}
   - component: {fileID: 3001116001403937590}
+  - component: {fileID: 7892398624661730230}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -1825,6 +1901,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &7892398624661730230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6070348879983188823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 3001116001403937590}
+  LiftPost: {fileID: 8285616467331419500}
 --- !u!1 &6184509730133661263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +2001,7 @@ GameObject:
   - component: {fileID: 8307258966800792088}
   - component: {fileID: 3642444481134783120}
   - component: {fileID: 4426567186527746280}
+  - component: {fileID: 6707512694806853120}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -1965,6 +2056,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &6707512694806853120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6551233192443731955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 4426567186527746280}
+  LiftPost: {fileID: 3642444481134783120}
 --- !u!1 &7511646305492866254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2144,7 @@ GameObject:
   - component: {fileID: 5450643832064505351}
   - component: {fileID: 4679728239641501887}
   - component: {fileID: 5108480408027984328}
+  - component: {fileID: 2205038892606557456}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -2093,6 +2199,20 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7a3856fdd401f82428180ca3b9f20932, type: 2}
+--- !u!114 &2205038892606557456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8822731794993288853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6920ca242b3c7204f8030fb6f937f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepPost: {fileID: 5108480408027984328}
+  LiftPost: {fileID: 4679728239641501887}
 --- !u!1 &9093692434513133187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,14 +3676,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3230f57d3e0678249805ace80e0d7c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tentacle_1: {fileID: 63689367170594748}
-  Tentacle_2: {fileID: 3642444481134783120}
-  Tentacle_3: {fileID: 6539857037714985872}
-  Tentacle_4: {fileID: 6197244898854604033}
-  Tentacle_5: {fileID: 4679728239641501887}
-  Tentacle_6: {fileID: 8285616467331419500}
-  Tentacle_7: {fileID: 231551245310329465}
-  Tentacle_8: {fileID: 5937102113039046621}
+  Tentacle_1: {fileID: 9000565037109421648}
+  Tentacle_2: {fileID: 6707512694806853120}
+  Tentacle_3: {fileID: 2854503304789067011}
+  Tentacle_4: {fileID: 1708505855561604297}
+  Tentacle_5: {fileID: 2205038892606557456}
+  Tentacle_6: {fileID: 7892398624661730230}
+  Tentacle_7: {fileID: 423457768961156558}
+  Tentacle_8: {fileID: 1880859471165494303}
 --- !u!4 &7849559731499863450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1303484710467161645, guid: c9e4514d23d02ea40b2ff39b386951d9, type: 3}

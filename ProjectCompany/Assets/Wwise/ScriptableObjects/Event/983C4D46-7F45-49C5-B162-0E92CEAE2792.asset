@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
   m_Name: 983C4D46-7F45-49C5-B162-0E92CEAE2792
   m_EditorClassIdentifier: 
-  objectName: HostGameMenu_UI_Button_Click_StartGame
-  id: 3943796790
+  objectName: MainMenu_HostGameMenu_UI_Button_Click_StartGame
+  id: 3113977793
   guid: 983C4D46-7F45-49C5-B162-0E92CEAE2792
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

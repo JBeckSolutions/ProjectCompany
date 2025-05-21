@@ -3,22 +3,27 @@ using UnityEngine;
 
 public class Octopode_animation_SoundEvents : MonoBehaviour
 {
-    public WwiseEventPost Tentacle_1;
-    public WwiseEventPost Tentacle_2;
-    public WwiseEventPost Tentacle_3;
-    public WwiseEventPost Tentacle_4;
-    public WwiseEventPost Tentacle_5;
-    public WwiseEventPost Tentacle_6;
-    public WwiseEventPost Tentacle_7;
-    public WwiseEventPost Tentacle_8;
+    [Header("Tentacle Lift")]
+    public WwiseCallIndex Tentacle_1;
+    public WwiseCallIndex Tentacle_2;
+    public WwiseCallIndex Tentacle_3;
+    public WwiseCallIndex Tentacle_4;
+    public WwiseCallIndex Tentacle_5;
+    public WwiseCallIndex Tentacle_6;
+    public WwiseCallIndex Tentacle_7;
+    public WwiseCallIndex Tentacle_8;
     
     private short TentacleIndexLift = 0;
-    private short TentacleIndexStep = 0;
+    private WwiseCallIndex[] TentacleList;
     
-    private WwiseEventPost[] TentacleList;
+    private short TentacleIndexStep = 0;
+
+    
+    
+    
     public void Awake()
     {
-        TentacleList = new WwiseEventPost[8]
+        TentacleList = new WwiseCallIndex[8]
         {
             Tentacle_5,
             Tentacle_6,
@@ -36,7 +41,7 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
         TentacleIndexLift++;
         TentacleIndexLift %= 8;
         
-        TentacleList[TentacleIndexLift].PostWwiseEvent();
+        TentacleList[TentacleIndexLift].PostWwiseEvent("Lift");
     }
     
     public void WwisePostTentacleStep()
@@ -44,7 +49,7 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
         TentacleIndexStep++;
         TentacleIndexStep %= 8;
         
-        TentacleList[TentacleIndexStep].PostWwiseEvent();
+        TentacleList[TentacleIndexStep].PostWwiseEvent("Step");
     }
     
     
