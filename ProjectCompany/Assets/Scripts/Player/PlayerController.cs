@@ -39,7 +39,10 @@ public class PlayerController : NetworkBehaviour
     [Header("Movement State")]
     private bool sprinting = false;
     private bool jumpedThisFrame = false;
-
+    
+    public AK.Wwise.RTPC HealthRTPC;
+    public AK.Wwise.RTPC MovementSpeedRTPC;
+    
     public override void OnNetworkSpawn()
     {
 
@@ -202,6 +205,15 @@ public class PlayerController : NetworkBehaviour
         if (context.canceled)
         {
             sprinting = false;
+        }
+
+        if (sprinting)
+        {
+            MovementSpeedRTPC.SetGlobalValue(sprintSpeed);
+        }
+        else
+        {
+            MovementSpeedRTPC.SetGlobalValue(movementSpeed);
         }
     }
     public void OnJump(InputAction.CallbackContext context)

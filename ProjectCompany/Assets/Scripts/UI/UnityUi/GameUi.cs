@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
@@ -6,9 +6,13 @@ using UnityEngine;
 public class GameUi : MonoBehaviour
 {
     [SerializeField] List<GameObject> Menus;
-
+    
+    public AK.Wwise.Bank Bank_InGameMenuUI;
+    
     public void CloseAllMenus()
     {
+        Bank_InGameMenuUI.Unload();
+        
         foreach (var menu in Menus)
         {
             menu.SetActive(false);
@@ -17,6 +21,7 @@ public class GameUi : MonoBehaviour
 
     public void OpenMenu(string MenuToOpen)
     {
+        Bank_InGameMenuUI.Load();
         foreach (var menu in Menus)
         {
             if (MenuToOpen == menu.name)

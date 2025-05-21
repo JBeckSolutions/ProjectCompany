@@ -1,7 +1,6 @@
 using UnityEngine;
 using Unity.Netcode;
 using System.Collections.Generic;
-using Unity.Netcode.Components;
 using System.Collections;
 
 public class PlayerSpawnManager : NetworkBehaviour
