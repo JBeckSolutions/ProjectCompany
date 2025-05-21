@@ -220,7 +220,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1746910307}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2912,6 +2912,7 @@ GameObject:
   - component: {fileID: 790508303}
   - component: {fileID: 790508305}
   - component: {fileID: 790508306}
+  - component: {fileID: 790508307}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -3002,6 +3003,19 @@ MonoBehaviour:
   SceneToLoad: MainMenu
   ObjectsToDestroy: []
   parent: {fileID: 0}
+--- !u!114 &790508307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790508301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f7f965c6f8eb94dbf04e05369dd08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!1 &792808367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,7 +6054,6 @@ GameObject:
   - component: {fileID: 1560840613}
   - component: {fileID: 1560840612}
   - component: {fileID: 1560840611}
-  - component: {fileID: 1560840614}
   - component: {fileID: 1560840615}
   - component: {fileID: 1560840617}
   - component: {fileID: 1560840616}
@@ -6115,7 +6128,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1560840614}
+      - m_Target: {fileID: 790508307}
         m_TargetAssemblyTypeName: StartGameButton, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
@@ -6189,18 +6202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560840609}
   m_CullTransparentMesh: 1
---- !u!114 &1560840614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560840609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f7f965c6f8eb94dbf04e05369dd08c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1560840615
 MonoBehaviour:
   m_ObjectHideFlags: 0
