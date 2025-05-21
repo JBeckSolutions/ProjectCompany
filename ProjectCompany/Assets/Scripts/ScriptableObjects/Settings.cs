@@ -9,6 +9,7 @@ public class Settings : ScriptableObject
     [SerializeField] VolumeProfile volumeProfile;
 
     [SerializeField] private int _volume = 100;
+    [SerializeField] private float _mouseSensitivity = 0.1f;
     [SerializeField] private Vector4 _gamma = new Vector4 (1, 1, 1, 0);
     public int Volume
     {
@@ -17,6 +18,12 @@ public class Settings : ScriptableObject
         {
             _volume = Mathf.Clamp(value, 0, 100);
         }
+    }
+
+    public float MouseSensitivity
+    {
+        get => _mouseSensitivity;
+        set => _mouseSensitivity = value;
     }
 
     public float Gamma

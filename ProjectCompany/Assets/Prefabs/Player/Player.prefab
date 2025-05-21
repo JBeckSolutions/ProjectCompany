@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   controllsEnabled: 1
-  sensitivity: 0.1
+  settings: {fileID: 11400000, guid: d1c944e77f8105246b7d1642be43fd66, type: 2}
   characterController: {fileID: 2229995964777371166}
   animator: {fileID: 7572251632389190878}
   playerCamera: {fileID: 3680675649726996254}

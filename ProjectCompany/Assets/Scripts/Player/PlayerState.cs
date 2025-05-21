@@ -30,7 +30,6 @@ public class PlayerState : NetworkBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             GetComponentsInChildren<Renderer>().ToList().ForEach(r => r.enabled = false);
-            //model.SetActive(false); //Bad practice.
         }
     }
     [ServerRpc(RequireOwnership = false)]
