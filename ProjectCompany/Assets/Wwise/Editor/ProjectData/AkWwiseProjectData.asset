@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584538561588928277
+    m_lastTime: -8584537736880070361
     List:
     - name: Lobby
       guid: e1238a5e06203b4e90bd85904387ea43
@@ -350,51 +350,6 @@ MonoBehaviour:
         ObjectType: 2
         guid: c6b9f92af16ee946b5f2e30c9e602c74
       Path: Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus
-  - PhysicalPath: Master-Mixer Hierarchy\Factory Tencent GME.wwu
-    PathAndIcons:
-    - ElementName: Master-Mixer Hierarchy
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Factory Tencent GME
-      ObjectType: 12
-      guid: 5183e1c4b59c6740984186b2b228b0d3
-    ParentPath: Master-Mixer Hierarchy\Factory Tencent GME
-    guid: 5183e1c4b59c6740984186b2b228b0d3
-    GuidInternal: 
-    m_lastTime: -8584560822001644926
-    List:
-    - name: Main Audio Bus
-      guid: 71e3912931c89548b6c258499524efda
-      id: 2246998526
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: 5183e1c4b59c6740984186b2b228b0d3
-      - ElementName: Main Audio Bus
-        ObjectType: 2
-        guid: 71e3912931c89548b6c258499524efda
-      Path: Master-Mixer Hierarchy\Factory Tencent GME\Main Audio Bus
-    - name: Send Audio Bus
-      guid: f7a43c2ce3458a4e93360f6c503c5918
-      id: 2265867795
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: 5183e1c4b59c6740984186b2b228b0d3
-      - ElementName: Main Audio Bus
-        ObjectType: 2
-        guid: 71e3912931c89548b6c258499524efda
-      - ElementName: Send Audio Bus
-        ObjectType: 2
-        guid: f7a43c2ce3458a4e93360f6c503c5918
-      Path: Master-Mixer Hierarchy\Factory Tencent GME\Main Audio Bus\Send Audio
-        Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -420,7 +375,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Entitys
     guid: 4ca19157b59a9e47b6a0c74b667e252f
     GuidInternal: 
-    m_lastTime: -8584543915514043980
+    m_lastTime: -8584543680709641941
     List:
     - name: Kidnapper
       guid: d12c33c4ad0da248a057b950e2b782d3
@@ -464,33 +419,6 @@ MonoBehaviour:
         ObjectType: 7
         guid: 77b197653afaeb43b7efdeda5cf2c599
       Path: SoundBanks\Entitys\Stalker
-  - PhysicalPath: SoundBanks\Factory Tencent GME.wwu
-    PathAndIcons:
-    - ElementName: SoundBanks
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Factory Tencent GME
-      ObjectType: 12
-      guid: 865bee1fbaf0a04e94162d30e5654ff0
-    ParentPath: SoundBanks\Factory Tencent GME
-    guid: 865bee1fbaf0a04e94162d30e5654ff0
-    GuidInternal: 
-    m_lastTime: -8584560822000925452
-    List:
-    - name: Tencent_GME
-      guid: ff17fdac29acd14cb8a2f70164a8a7d4
-      id: 3683561152
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: 865bee1fbaf0a04e94162d30e5654ff0
-      - ElementName: Tencent_GME
-        ObjectType: 7
-        guid: ff17fdac29acd14cb8a2f70164a8a7d4
-      Path: SoundBanks\Factory Tencent GME\Tencent_GME
   - PhysicalPath: SoundBanks\InGameMenu.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -502,7 +430,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\InGameMenu
     guid: d1fd017dd0b1c04bacc840f6b4b85b00
     GuidInternal: 
-    m_lastTime: -8584537895574536588
+    m_lastTime: -8584537736863609013
     List:
     - name: InGameMenu_UI
       guid: 28f937af8af2884f9fb08bf08084b341
@@ -529,7 +457,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584541896865259693
+    m_lastTime: -8584539896999062537
     List:
     - name: MainMenu_Ambiences
       guid: adced9441b7f334ab86e4ecd8834bdbd
@@ -559,7 +487,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_Music
     guid: 1962c911a3a469489c56c2940ed7567d
     GuidInternal: 
-    m_lastTime: -8584543887719236362
+    m_lastTime: -8584543680709641941
     List:
     - name: MainMenu_Music_SoundBank
       guid: 6fef1e6795b8d349ae7c1e98f22055f2
@@ -592,7 +520,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu\MainMenu_UI
     guid: ac79309561351547a997a124cf7737ab
     GuidInternal: 
-    m_lastTime: -8584543699922166360
+    m_lastTime: -8584543680709631930
     List:
     - name: MainMenu_UI_SFX
       guid: cd9b4a020afc37499d8b1b05b0745875
@@ -622,7 +550,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Maps
     guid: d908d4c3023d6a43a8cc236aa11ee72e
     GuidInternal: 
-    m_lastTime: -8584543807040828597
+    m_lastTime: -8584543680709626904
     List:
     - name: Laboratory
       guid: da82bc53772c8948a37435d3ab98b885
@@ -666,7 +594,7 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Kidnapper
     guid: 59f94e8d805e4949a059e20acff299e3
     GuidInternal: 
-    m_lastTime: -8584543915514676030
+    m_lastTime: -8584543680718564418
     List: []
   - PhysicalPath: Events\Entitys\Octopode.wwu
     PathAndIcons:
@@ -682,7 +610,7 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584537845948781333
+    m_lastTime: -8584537736885828193
     List:
     - name: Drop
       guid: 8591f89fc4286047a06ed5c0b11661f9
@@ -704,7 +632,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8591f89fc4286047a06ed5c0b11661f9
       Path: Events\Entitys\Octopode\Tentacles\Drop
-      maxAttenuation: 0
+      maxAttenuation: 3
       maxDuration: 1.2168068
       minDuration: 0.58556575
     - name: Lift
@@ -750,7 +678,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 05106773fa982b40bd56dca08678821a
       Path: Events\Entitys\Octopode\Tentacles\Step
-      maxAttenuation: 0
+      maxAttenuation: 3
       maxDuration: 1.2168068
       minDuration: 0.58556575
     - name: Swap_InventorySlot
@@ -810,328 +738,8 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584543915514666040
+    m_lastTime: -8584543680718554234
     List: []
-  - PhysicalPath: Events\Factory Tencent GME.wwu
-    PathAndIcons:
-    - ElementName: Events
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Factory Tencent GME
-      ObjectType: 12
-      guid: b1390e77527c2a44a4f7653ae6b0c847
-    ParentPath: Events\Factory Tencent GME
-    guid: b1390e77527c2a44a4f7653ae6b0c847
-    GuidInternal: 
-    m_lastTime: -8584560822001754931
-    List:
-    - name: Aliases
-      guid: 788c0c92ef6d024fa81167ba8339d847
-      id: 2088098919
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      Path: Events\Factory Tencent GME\Aliases
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_gme_blend
-      guid: 834be251c11e6f45a07354c5ebef3d14
-      id: 1257006919
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      - ElementName: Play_gme_blend
-        ObjectType: 3
-        guid: 834be251c11e6f45a07354c5ebef3d14
-      Path: Events\Factory Tencent GME\Aliases\Play_gme_blend
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_GME_Receive
-      guid: b9fd181e09834b479d8449b3160f1d07
-      id: 1185674625
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Play_GME_Receive
-        ObjectType: 3
-        guid: b9fd181e09834b479d8449b3160f1d07
-      Path: Events\Factory Tencent GME\Play_GME_Receive
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_GME_Send
-      guid: 7adc73897a7e844aad30b546cb50720b
-      id: 2793175796
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Play_GME_Send
-        ObjectType: 3
-        guid: 7adc73897a7e844aad30b546cb50720b
-      Path: Events\Factory Tencent GME\Play_GME_Send
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_GME_Send_Loop
-      guid: e663a3e608b02e4e94cf1aa3b670656d
-      id: 511699757
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Play_GME_Send_Loop
-        ObjectType: 3
-        guid: e663a3e608b02e4e94cf1aa3b670656d
-      Path: Events\Factory Tencent GME\Play_GME_Send_Loop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Loop
-      guid: da6497c2fd06a143ac62ed16f82e46c9
-      id: 4266239556
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Play_Loop
-        ObjectType: 3
-        guid: da6497c2fd06a143ac62ed16f82e46c9
-      Path: Events\Factory Tencent GME\Play_Loop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_original
-      guid: d72748db9d8e124dbd747986e6333199
-      id: 1724457055
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      - ElementName: Play_original
-        ObjectType: 3
-        guid: d72748db9d8e124dbd747986e6333199
-      Path: Events\Factory Tencent GME\Aliases\Play_original
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Short
-      guid: 7278c8dea37cdf4f99a997f4ad73a5f1
-      id: 3094646336
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Play_Short
-        ObjectType: 3
-        guid: 7278c8dea37cdf4f99a997f4ad73a5f1
-      Path: Events\Factory Tencent GME\Play_Short
-      maxAttenuation: 0
-      maxDuration: 0.75
-      minDuration: 0.75
-    - name: Play_Shotgun
-      guid: f4b5cc927ead2f4cb269da58d36a80d8
-      id: 992244
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      - ElementName: Play_Shotgun
-        ObjectType: 3
-        guid: f4b5cc927ead2f4cb269da58d36a80d8
-      Path: Events\Factory Tencent GME\Aliases\Play_Shotgun
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_gme_blend
-      guid: b6f59672f0cd2840a040a96e4089b61a
-      id: 3854968841
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      - ElementName: Stop_gme_blend
-        ObjectType: 3
-        guid: b6f59672f0cd2840a040a96e4089b61a
-      Path: Events\Factory Tencent GME\Aliases\Stop_gme_blend
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_GME_Receive
-      guid: 7f9f163778a9b042bdaeb768cefce580
-      id: 4154133439
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Stop_GME_Receive
-        ObjectType: 3
-        guid: 7f9f163778a9b042bdaeb768cefce580
-      Path: Events\Factory Tencent GME\Stop_GME_Receive
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_GME_Send
-      guid: 88cc267825b7394594162f53e7723708
-      id: 2839222858
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Stop_GME_Send
-        ObjectType: 3
-        guid: 88cc267825b7394594162f53e7723708
-      Path: Events\Factory Tencent GME\Stop_GME_Send
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_GME_Send_Loop
-      guid: 971ca605f5e0804b9fa6ae4e99f9db68
-      id: 3949320891
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Stop_GME_Send_Loop
-        ObjectType: 3
-        guid: 971ca605f5e0804b9fa6ae4e99f9db68
-      Path: Events\Factory Tencent GME\Stop_GME_Send_Loop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Loop
-      guid: 5df3e6dbbd10504f87010b8a9901cd27
-      id: 1640874226
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Stop_Loop
-        ObjectType: 3
-        guid: 5df3e6dbbd10504f87010b8a9901cd27
-      Path: Events\Factory Tencent GME\Stop_Loop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_original
-      guid: ad9b8e71db6a0e4b83f7781a5fb30689
-      id: 1301038397
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      - ElementName: Stop_original
-        ObjectType: 3
-        guid: ad9b8e71db6a0e4b83f7781a5fb30689
-      Path: Events\Factory Tencent GME\Aliases\Stop_original
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Short
-      guid: cce448dfe730d3478bb6f13734fcb53e
-      id: 2181745102
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Stop_Short
-        ObjectType: 3
-        guid: cce448dfe730d3478bb6f13734fcb53e
-      Path: Events\Factory Tencent GME\Stop_Short
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stop_Shotgun
-      guid: f75c850dccef9b40b7c8986e793c15a3
-      id: 89948534
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Factory Tencent GME
-        ObjectType: 12
-        guid: b1390e77527c2a44a4f7653ae6b0c847
-      - ElementName: Aliases
-        ObjectType: 4
-        guid: 788c0c92ef6d024fa81167ba8339d847
-      - ElementName: Stop_Shotgun
-        ObjectType: 3
-        guid: f75c850dccef9b40b7c8986e793c15a3
-      Path: Events\Factory Tencent GME\Aliases\Stop_Shotgun
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   - PhysicalPath: Events\HostGameMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1149,7 +757,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\HostGameMenu
     guid: e67b40037dce2c40ab771ec8a2555064
     GuidInternal: 
-    m_lastTime: -8584537895576212941
+    m_lastTime: -8584537736885828193
     List: []
   - PhysicalPath: Events\InGameMenu.wwu
     PathAndIcons:
@@ -1165,7 +773,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu
     guid: 92f9b56e5b96b34d856fb1f39f2c6f53
     GuidInternal: 
-    m_lastTime: -8584537895576192080
+    m_lastTime: -8584537736885813172
     List: []
   - PhysicalPath: Events\InGameMenu_Main.wwu
     PathAndIcons:
@@ -1184,7 +792,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu\InGameMenu_Main
     guid: 0631f3e4a105994d9c50871a523d923b
     GuidInternal: 
-    m_lastTime: -8584537895576176894
+    m_lastTime: -8584537736885813172
     List: []
   - PhysicalPath: Events\InGameMenu_SettingsMenu.wwu
     PathAndIcons:
@@ -1203,7 +811,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu\InGameMenu_SettingsMenu
     guid: c000082174e53549857a68cddfdee256
     GuidInternal: 
-    m_lastTime: -8584537882204490269
+    m_lastTime: -8584537736885813172
     List: []
   - PhysicalPath: Events\InGameMenu_SettingsMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1225,7 +833,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu\InGameMenu_SettingsMenu\InGameMenu_SettingsMenu_UI_Button_Click
     guid: 0caaae1eed160d46b1ca48809e945746
     GuidInternal: 
-    m_lastTime: -8584537882204480210
+    m_lastTime: -8584537736885803111
     List:
     - name: InGameMenu_SettingsMenu_UI_Button_Click_Back
       guid: 5a05362f8ad07447a141f3b4d1a57330
@@ -1273,7 +881,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu\InGameMenu_SettingsMenu\InGameMenu_SettingsMenu_UI_Button_Hover
     guid: f23bf2c63d27994e97e7b915fc58eebc
     GuidInternal: 
-    m_lastTime: -8584537882204465142
+    m_lastTime: -8584537736885803111
     List:
     - name: InGameMenu_SettingsMenu_UI_Button_Hover_Back
       guid: 01b1ba0f80c90741aff3ebde79ee5012
@@ -1321,7 +929,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Click
     guid: a750e008362afc44bd9cd3b7b08a46fc
     GuidInternal: 
-    m_lastTime: -8584537895576166926
+    m_lastTime: -8584537736885803111
     List:
     - name: InGameMenu_UI_Button_Click_BackToMainMenu
       guid: 2e0723a1e1be8b4499fb231587907440
@@ -1447,7 +1055,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Hover
     guid: e4d45ac3f7dbe646bf47d39c7fd7d555
     GuidInternal: 
-    m_lastTime: -8584537895576156943
+    m_lastTime: -8584537736885788078
     List:
     - name: InGameMenu_UI_Button_Hover_BackToMainMenu
       guid: dd15dc02ffb25c44b860221a8849b827
@@ -1567,7 +1175,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu
     guid: 0b77971c3175f14790957bcdcdd639f3
     GuidInternal: 
-    m_lastTime: -8584537895576146978
+    m_lastTime: -8584537736885788078
     List: []
   - PhysicalPath: Events\MainMenu_HostGameMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1589,7 +1197,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\HostGameMenu\MainMenu_HostGameMenu_UI_Button_Click
     guid: 68e1bfc7253aa54f8b65eaa966ff2329
     GuidInternal: 
-    m_lastTime: -8584537895576141936
+    m_lastTime: -8584537736885777939
     List:
     - name: MainMenu_HostGameMenu_UI_Button_Click_Back
       guid: d457afc8943c794a9e774195f956d755
@@ -1663,7 +1271,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\HostGameMenu\MainMenu_HostGameMenu_UI_Button_Hover
     guid: 24cc636edb658d4ca62a61d663344199
     GuidInternal: 
-    m_lastTime: -8584537895576131939
+    m_lastTime: -8584537736885777939
     List:
     - name: HostGameMenu_UI_Button_Hover_Back
       guid: 37f8964e16832c4a94bc36d8bcfcb171
@@ -1727,7 +1335,7 @@ MonoBehaviour:
       guid: ea3e7bcc2a9f4848a83afaed02a844bc
     - ElementName: MainMenu
       ObjectType: 12
-      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      guid: 0b77971c3175f14790957bcdcdd639f3
     - ElementName: MainMenu_Music
       ObjectType: 12
       guid: ef8791ebca21fc4dba09520cde9eb11e
@@ -1737,7 +1345,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack
     guid: 2c50c089824be74abcee2f7ff5b95a77
     GuidInternal: 
-    m_lastTime: -8584543723901448996
+    m_lastTime: -8584543680718544064
     List:
     - name: MainMenu_Loading_FromSplashScreen
       guid: e7d9a48f8c73d94db028aa61a6c8ae53
@@ -1751,7 +1359,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_Music
         ObjectType: 12
         guid: ef8791ebca21fc4dba09520cde9eb11e
@@ -1777,7 +1385,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_Music
         ObjectType: 12
         guid: ef8791ebca21fc4dba09520cde9eb11e
@@ -1808,7 +1416,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_Music
     guid: ef8791ebca21fc4dba09520cde9eb11e
     GuidInternal: 
-    m_lastTime: -8584537895576111991
+    m_lastTime: -8584537736885777939
     List: []
   - PhysicalPath: Events\MainMenu_SettingsMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -1830,7 +1438,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\SettingsMenu\MainMenu_SettingsMenu_UI_Button_Click
     guid: c90d0c42dba9a24bab2aadeef65f090c
     GuidInternal: 
-    m_lastTime: -8584537895576091791
+    m_lastTime: -8584537736885767939
     List:
     - name: MainMenu_SettingsMenu_UI_Button_Click_Back
       guid: a4c16849478e5a4680d1b5a5303deb96
@@ -1878,7 +1486,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\SettingsMenu\MainMenu_SettingsMenu_UI_Button_Hover
     guid: 1d44dbbec4111147b429ca4b58500e55
     GuidInternal: 
-    m_lastTime: -8584537895576081595
+    m_lastTime: -8584537736885767939
     List:
     - name: MainMenu_SettingsMenu_UI_Button_Hover_Back
       guid: e7d4aa431e0d4c44ad7d179d7697c98d
@@ -1926,7 +1534,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\TutorialMenu\MainMenu_TutorialMenu_UI_Button_Click
     guid: 3ec336f5d12b5441baf5d355129884d8
     GuidInternal: 
-    m_lastTime: -8584537895576071614
+    m_lastTime: -8584537736885757933
     List:
     - name: MainMenu_TutorialMenu_UI_Button_Click_Back
       guid: e5a2002c3a92fc43b958fd6ab06373b6
@@ -1974,7 +1582,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\TutorialMenu\MainMenu_TutorialMenu_UI_Button_Hover
     guid: 5cf7d54e88211a4d9fcee06ed9e7bb63
     GuidInternal: 
-    m_lastTime: -8584537895576061636
+    m_lastTime: -8584537736885757933
     List:
     - name: MainMenu_TutorialMenu_UI_Button_Hover_Back
       guid: 41b370d96aaa2848b22118a6933c5d4b
@@ -2019,7 +1627,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI
     guid: 490e958d4d8d154399f775367caf9b34
     GuidInternal: 
-    m_lastTime: -8584537895576051665
+    m_lastTime: -8584537736885757933
     List: []
   - PhysicalPath: Events\MainMenu_UI_Button_Click.wwu
     PathAndIcons:
@@ -2031,7 +1639,7 @@ MonoBehaviour:
       guid: ea3e7bcc2a9f4848a83afaed02a844bc
     - ElementName: MainMenu
       ObjectType: 12
-      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      guid: 0b77971c3175f14790957bcdcdd639f3
     - ElementName: MainMenu_UI
       ObjectType: 12
       guid: 490e958d4d8d154399f775367caf9b34
@@ -2041,7 +1649,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click
     guid: 0d279dc91ebd1249b6ffbd31c2d36bcf
     GuidInternal: 
-    m_lastTime: -8584543951534406652
+    m_lastTime: -8584543680718452250
     List:
     - name: MainMenu_UI_Button_Click_JoinGame
       guid: b6e0942138567b48b5ca6df77dd70b85
@@ -2055,7 +1663,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2081,7 +1689,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2107,7 +1715,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2133,7 +1741,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2159,7 +1767,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2183,7 +1791,7 @@ MonoBehaviour:
       guid: ea3e7bcc2a9f4848a83afaed02a844bc
     - ElementName: MainMenu
       ObjectType: 12
-      guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+      guid: 0b77971c3175f14790957bcdcdd639f3
     - ElementName: MainMenu_UI
       ObjectType: 12
       guid: 490e958d4d8d154399f775367caf9b34
@@ -2193,7 +1801,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover
     guid: 1f6d0cc600c3c348a82a2036ab784d9e
     GuidInternal: 
-    m_lastTime: -8584543951534396683
+    m_lastTime: -8584543680718442035
     List:
     - name: MainMenu_UI_Button_Hover_HostGame
       guid: e56b0e634155b246aeb8c7a38f7c8038
@@ -2207,7 +1815,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2233,7 +1841,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2259,7 +1867,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2285,7 +1893,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2311,7 +1919,7 @@ MonoBehaviour:
         guid: ea3e7bcc2a9f4848a83afaed02a844bc
       - ElementName: MainMenu
         ObjectType: 12
-        guid: 5c1619ee69a64f4e98431f3fdb00b0c1
+        guid: 0b77971c3175f14790957bcdcdd639f3
       - ElementName: MainMenu_UI
         ObjectType: 12
         guid: 490e958d4d8d154399f775367caf9b34
@@ -2339,7 +1947,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584541896869723085
+    m_lastTime: -8584539897001508687
     List:
     - name: Ambience_LightBulb_Idle
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -2444,7 +2052,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory\Items\Uranium
     guid: a40b0b585065564ea6486a79039fd832
     GuidInternal: 
-    m_lastTime: -8584543807043881999
+    m_lastTime: -8584543680718442035
     List:
     - name: Ambience_Idle_World
       guid: 5f91cd8d4aef584a8d862541bae28f64
@@ -2509,7 +2117,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584537895576046627
+    m_lastTime: -8584537736885454580
     List: []
   - PhysicalPath: Events\SettingsMenu.wwu
     PathAndIcons:
@@ -2528,7 +2136,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\SettingsMenu
     guid: 7bae450d68529c4fb21ab10ff0466f32
     GuidInternal: 
-    m_lastTime: -8584537895576035551
+    m_lastTime: -8584537736885434575
     List: []
   - PhysicalPath: Events\TutorialMenu.wwu
     PathAndIcons:
@@ -2547,7 +2155,7 @@ MonoBehaviour:
     ParentPath: Events\Menus\MainMenu\TutorialMenu
     guid: d6103320d94d4640a766ac43104fdf22
     GuidInternal: 
-    m_lastTime: -8584537895576015606
+    m_lastTime: -8584537736885434575
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
@@ -2561,7 +2169,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584538561588948358
+    m_lastTime: -8584537736885359153
     List:
     - name: Master_Volume
       guid: 2b3d69338de44446820be47ae3949c52
@@ -2831,7 +2439,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: c0904058cc3ca147a37cbe331bfeb2b2
     GuidInternal: 
-    m_lastTime: -8584543699922156368
+    m_lastTime: -8584543680709626904
     List:
     - name: CurrentScene
       guid: 09eb60e773c0144da3b876e7ee24a825
@@ -2993,7 +2601,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 24668d1c0506d84c9b9e418a40fac651
     GuidInternal: 
-    m_lastTime: -8584543699922151335
+    m_lastTime: -8584543680709616726
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu

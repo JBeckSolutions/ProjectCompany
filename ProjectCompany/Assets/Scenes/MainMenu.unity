@@ -2913,6 +2913,7 @@ GameObject:
   - component: {fileID: 790508305}
   - component: {fileID: 790508306}
   - component: {fileID: 790508307}
+  - component: {fileID: 790508308}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -3016,6 +3017,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &790508308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790508301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed795d57941a45498f829bff79a2a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: d1c944e77f8105246b7d1642be43fd66, type: 2}
 --- !u!1 &792808367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6721,27 +6735,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1799973210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7029479786958181221, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-  m_PrefabInstance: {fileID: 7398128121793912054}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1799973216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799973210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327967c6f46dd6a4bb3cb260eae419c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WwiseEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa9c2e9f3c7d5f249ad5b567022945f3, type: 2}
 --- !u!1 &1812588140
 GameObject:
   m_ObjectHideFlags: 0
@@ -11753,10 +11746,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684004603}
     m_Modifications:
-    - target: {fileID: 1703463343716578706, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: WwiseEvent_MainMenu_UI_Button_Hover.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 18fdd31cd04d2f0478273309e71c1f1d, type: 2}
     - target: {fileID: 5453918324565454205, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11841,53 +11830,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 8178212856143778511, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: Wwise_RTPC_MasterVolume.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: c0c9bef5373f10a4db8749dbaf55a3c2, type: 2}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1886980515}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1799973216}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PostWwiseEvent
-      objectReference: {fileID: 0}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: WwiseEventPost, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8589453897067163802, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7029479786958181221, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1799973216}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90145b2fa669dac418e8cf661f963126, type: 3}
 --- !u!1 &7415204916084184504
 GameObject:

@@ -140,6 +140,7 @@ public class GameManager : NetworkBehaviour
             Debug.Log("You won!");
             currentDay += 1;
             SetQuotaAndDungeonSize();
+            WinGameClientRpc();
         }
         else
         {

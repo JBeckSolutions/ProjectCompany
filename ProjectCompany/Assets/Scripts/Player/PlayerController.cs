@@ -7,11 +7,18 @@ public class PlayerController : NetworkBehaviour
 {
     [Header("Player Control Settings")]
     public bool controllsEnabled = true;
-    [SerializeField] private float sensitivity = 0.2f;
+    [SerializeField] private Settings settings;
+    //[SerializeField] private float sensitivity = 0.2f;
     private float movementSpeed = 4f;
     private float sprintSpeed = 6f;
     private float jumpHeight = 1f;
     private float gravityValue = -9.81f;
+
+    private float sensitivity
+    {
+        get => settings.MouseSensitivity;
+    }
+
 
     [Header("Player Components")]
     [SerializeField] private CharacterController characterController;
