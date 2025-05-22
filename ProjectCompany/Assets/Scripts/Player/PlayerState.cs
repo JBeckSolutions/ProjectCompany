@@ -24,7 +24,10 @@ public class PlayerState : NetworkBehaviour
         if (!IsOwner)
         {
             playerCamera.enabled = false;
-            listener.enabled = false;
+            if (listener!= null)
+            {
+                listener.enabled = false;
+            }
             PlayerUi.SetActive(false);
         }
         if (IsOwner)
