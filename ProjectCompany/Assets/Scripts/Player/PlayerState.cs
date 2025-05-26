@@ -16,6 +16,7 @@ public class PlayerState : NetworkBehaviour
 
     [Header("Player Components")]
     public Camera playerCamera;
+    public AkAudioListener listener;
     public GameObject model;
     public override void OnNetworkSpawn()
     {
@@ -23,7 +24,10 @@ public class PlayerState : NetworkBehaviour
         if (!IsOwner)
         {
             playerCamera.enabled = false;
-            playerCamera.GetComponent<AkAudioListener>().enabled = false;
+            if (listener!= null)
+            {
+                listener.enabled = false;
+            }
             PlayerUi.SetActive(false);
         }
         if (IsOwner)

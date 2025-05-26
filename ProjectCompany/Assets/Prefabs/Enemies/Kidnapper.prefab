@@ -265,7 +265,7 @@ MonoBehaviour:
   hitbox: {fileID: 6231316687300449369}
   attackRange: 1
   attackDamage: 0
-  attackCooldown: 1
+  attackCooldown: 60
   timeStunnedAfterAttack: 1
   canMoveWhileAttacking: 1
   carryPosition: {fileID: 161055660354528107}

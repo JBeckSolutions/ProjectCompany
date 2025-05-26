@@ -1355,6 +1355,7 @@ MonoBehaviour:
   PlayerUi: {fileID: 2857357895367690299}
   healthText: {fileID: 1626749863869484761}
   playerCamera: {fileID: 5637948643663622685}
+  listener: {fileID: 7986579520481637618}
   model: {fileID: 7511646305492866254}
 --- !u!136 &8387086731053458592
 CapsuleCollider:
