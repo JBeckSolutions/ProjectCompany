@@ -52,5 +52,4 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
         TentacleList[TentacleIndexStep].PostWwiseEvent("Step");
     }
     
-    
 }

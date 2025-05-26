@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
-  m_Name: 56FDE561-84CA-4A90-8FE9-08AFC00CB6A3
+  m_Name: B5932B55-44A7-40D1-8D66-FF521F22E248
   m_EditorClassIdentifier: 
-  objectName: Octopode_Tentacle_Lift
-  id: 1002430261
-  guid: 56FDE561-84CA-4A90-8FE9-08AFC00CB6A3
+  objectName: Octopode_Land
+  id: 3267649742
+  guid: B5932B55-44A7-40D1-8D66-FF521F22E248
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

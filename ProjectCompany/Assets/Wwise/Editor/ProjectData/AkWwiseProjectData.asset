@@ -610,11 +610,11 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584537722619745360
+    m_lastTime: -8584534024391562928
     List:
-    - name: Drop
-      guid: 8591f89fc4286047a06ed5c0b11661f9
-      id: 1878686274
+    - name: Octopode_Land
+      guid: 552b93b5a744d1408d66ff521f22e248
+      id: 3267649742
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -628,62 +628,16 @@ MonoBehaviour:
       - ElementName: Tentacles
         ObjectType: 4
         guid: 8ef2fda7e98ba445a259f903ff49508f
-      - ElementName: Drop
+      - ElementName: Octopode_Land
         ObjectType: 3
-        guid: 8591f89fc4286047a06ed5c0b11661f9
-      Path: Events\Entitys\Octopode\Tentacles\Drop
-      maxAttenuation: 3
-      maxDuration: 1.2168068
-      minDuration: 0.58556575
-    - name: Lift
-      guid: 61e5fd56ca84904a8fe908afc00cb6a3
-      id: 2137926
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Entitys
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Octopode
-        ObjectType: 12
-        guid: c47b5c31ed996c459f2f2953e04a1de5
-      - ElementName: Tentacles
-        ObjectType: 4
-        guid: 8ef2fda7e98ba445a259f903ff49508f
-      - ElementName: Lift
-        ObjectType: 3
-        guid: 61e5fd56ca84904a8fe908afc00cb6a3
-      Path: Events\Entitys\Octopode\Tentacles\Lift
-      maxAttenuation: 3
-      maxDuration: 0.20246129
-      minDuration: 0.2001845
-    - name: Step
-      guid: 05106773fa982b40bd56dca08678821a
-      id: 621108255
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Entitys
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Octopode
-        ObjectType: 12
-        guid: c47b5c31ed996c459f2f2953e04a1de5
-      - ElementName: Tentacles
-        ObjectType: 4
-        guid: 8ef2fda7e98ba445a259f903ff49508f
-      - ElementName: Step
-        ObjectType: 3
-        guid: 05106773fa982b40bd56dca08678821a
-      Path: Events\Entitys\Octopode\Tentacles\Step
-      maxAttenuation: 3
-      maxDuration: 1.2168068
-      minDuration: 0.58556575
-    - name: Swap_InventorySlot
+        guid: 552b93b5a744d1408d66ff521f22e248
+      Path: Events\Entitys\Octopode\Tentacles\Octopode_Land
+      maxAttenuation: 10
+      maxDuration: 0.83148
+      minDuration: 0.4642898
+    - name: Octopode_Swap_InventorySlot
       guid: 4f8fb17978e6d94b8ff1ca58859ef38e
-      id: 1872381089
+      id: 3672519433
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -697,13 +651,82 @@ MonoBehaviour:
       - ElementName: Tentacles
         ObjectType: 4
         guid: 8ef2fda7e98ba445a259f903ff49508f
-      - ElementName: Swap_InventorySlot
+      - ElementName: Octopode_Swap_InventorySlot
         ObjectType: 3
         guid: 4f8fb17978e6d94b8ff1ca58859ef38e
-      Path: Events\Entitys\Octopode\Tentacles\Swap_InventorySlot
+      Path: Events\Entitys\Octopode\Tentacles\Octopode_Swap_InventorySlot
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Octopode_Tentacle_Drop
+      guid: 8591f89fc4286047a06ed5c0b11661f9
+      id: 2041774849
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: Octopode_Tentacle_Drop
+        ObjectType: 3
+        guid: 8591f89fc4286047a06ed5c0b11661f9
+      Path: Events\Entitys\Octopode\Tentacles\Octopode_Tentacle_Drop
+      maxAttenuation: 10
+      maxDuration: 0.83148
+      minDuration: 0.4642898
+    - name: Octopode_Tentacle_Lift
+      guid: 61e5fd56ca84904a8fe908afc00cb6a3
+      id: 1002430261
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: Octopode_Tentacle_Lift
+        ObjectType: 3
+        guid: 61e5fd56ca84904a8fe908afc00cb6a3
+      Path: Events\Entitys\Octopode\Tentacles\Octopode_Tentacle_Lift
+      maxAttenuation: 10
+      maxDuration: 0.20246129
+      minDuration: 0.2001845
+    - name: Octopode_TentacleStep
+      guid: 05106773fa982b40bd56dca08678821a
+      id: 1234234613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Tentacles
+        ObjectType: 4
+        guid: 8ef2fda7e98ba445a259f903ff49508f
+      - ElementName: Octopode_TentacleStep
+        ObjectType: 3
+        guid: 05106773fa982b40bd56dca08678821a
+      Path: Events\Entitys\Octopode\Tentacles\Octopode_TentacleStep
+      maxAttenuation: 10
+      maxDuration: 1.1821667
+      minDuration: 0.5688958
     - name: Tentacles
       guid: 8ef2fda7e98ba445a259f903ff49508f
       id: 1394947262
@@ -2617,7 +2640,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278424395
     List: []
-  ExpandedFileSystemItemIds: 020000001f00000022000000230000002500000027000000290000002c0000002d0000002e0000006b00000073000000
+  ExpandedFileSystemItemIds: 020000000400000006000000070000001f00000022000000230000002500000027000000290000002c0000002d0000002e0000006b00000073000000
   ExpandedWaapiItemIds: 020000001f000000270000002c0000002d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
