@@ -2,7 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 [CreateAssetMenu(fileName = "SettingsData", menuName = "Settings")]
 public class Settings : ScriptableObject
 {

@@ -3,7 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.Rendering.VirtualTexturing;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class AbilityHitbox : MonoBehaviour
 {
     [SerializeField] private Collider hitbox;   //Referent to the Collider used for the attack

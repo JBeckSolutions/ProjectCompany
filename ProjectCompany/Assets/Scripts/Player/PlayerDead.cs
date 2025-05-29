@@ -2,8 +2,9 @@ using Unity.Netcode;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.UI;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class PlayerDead : NetworkBehaviour
 {
     private int watchingIndex = 0;

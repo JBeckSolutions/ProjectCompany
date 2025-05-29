@@ -2,7 +2,9 @@ using UnityEngine;
 using Unity.Netcode;
 using System.Collections.Generic;
 using System.Collections;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class PlayerSpawnManager : NetworkBehaviour
 {
     public static PlayerSpawnManager Singelton;

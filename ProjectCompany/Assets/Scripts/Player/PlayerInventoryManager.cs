@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class PlayerInventoryManager : NetworkBehaviour
 {
     [Header("Player Inventory Settings")]

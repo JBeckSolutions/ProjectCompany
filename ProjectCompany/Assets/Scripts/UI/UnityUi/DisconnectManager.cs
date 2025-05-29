@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class DisconnectManager : NetworkBehaviour
 {
     public override void OnNetworkSpawn()

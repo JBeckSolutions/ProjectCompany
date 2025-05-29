@@ -4,7 +4,9 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class GameManager : NetworkBehaviour
 {
     [Header("Game State Management")]

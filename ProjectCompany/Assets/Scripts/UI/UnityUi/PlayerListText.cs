@@ -3,7 +3,9 @@ using TMPro;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class PlayerListText : NetworkBehaviour
 {
     [SerializeField] private TMP_Text textUi;

@@ -3,7 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using System.Collections;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class DropOffAreaManager : NetworkBehaviour
 {
     //Tracks Items that are put inside the DropOffArea Collider

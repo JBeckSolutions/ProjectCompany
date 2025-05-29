@@ -1,8 +1,8 @@
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class Item : NetworkBehaviour
 {
     public NetworkVariable<bool> PickupAble = new NetworkVariable<bool>(true);

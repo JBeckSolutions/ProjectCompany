@@ -2,7 +2,9 @@ using System.Collections;
 using TMPro;
 using Unity.Netcode;
 using UnityEngine;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class QuotaScreenLobby : NetworkBehaviour
 {
     [SerializeField] private TMP_Text quotaText;

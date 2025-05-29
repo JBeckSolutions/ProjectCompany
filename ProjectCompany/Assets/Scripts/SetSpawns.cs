@@ -1,9 +1,7 @@
-using NUnit.Framework;
 using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using Unity.Netcode;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class SetSpawns : MonoBehaviour
 {
     [SerializeField] private Transform[] spawnPoints;

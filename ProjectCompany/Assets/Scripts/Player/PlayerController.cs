@@ -2,7 +2,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
 using Cursor = UnityEngine.Cursor;
-
+/// <summary>
+/// The Main code of this script was written by: Beck Jonas
+/// Sound related things were written by: Köhler Dennis
+/// </summary>
 public class PlayerController : NetworkBehaviour
 {
     [Header("Player Control Settings")]

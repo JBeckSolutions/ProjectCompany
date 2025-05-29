@@ -1,15 +1,13 @@
-using NUnit.Framework;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.AI.Navigation;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.SocialPlatforms;
 using Random = System.Random;   // Uses the c# Random class since the one from unity is not deterministic across multiple frames
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class DungeonGenerator : NetworkBehaviour
 {
     private struct Connection   // Struct to store the connection location and the priority of their door pieces
