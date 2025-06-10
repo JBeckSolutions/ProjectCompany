@@ -1,11 +1,10 @@
 using UnityEngine;
-using NUnit.Framework;
 using Unity.Netcode;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
-using Unity.VisualScripting;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class EnemyBase : NetworkBehaviour
 {
     [Header("Idle State")]

@@ -2,7 +2,9 @@ using System.Net.Sockets;
 using System.Net;
 using UnityEngine;
 using TMPro;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class GetIp : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI Text;

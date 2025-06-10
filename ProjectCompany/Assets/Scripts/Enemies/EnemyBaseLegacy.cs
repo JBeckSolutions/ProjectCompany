@@ -4,7 +4,9 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class EnemyBaseLegacy : NetworkBehaviour
 {
     protected enum EnemyState

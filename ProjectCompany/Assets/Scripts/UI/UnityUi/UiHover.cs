@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+/// <summary>
+/// The code of the this script was written by: Beck Jonas
+/// </summary>
 public class UiHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public AK.Wwise.Event WwiseEvent_MainMenu_UI_Button_Hover;
