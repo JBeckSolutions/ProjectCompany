@@ -303,8 +303,65 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584537722618921531
+    m_lastTime: -8584514294069149262
     List:
+    - name: Hallway
+      guid: 6ceb4210a0155048b139a8543c596c9a
+      id: 2198133169
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9435b3018e932844810423795d8ed08f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Laboratory
+        ObjectType: 2
+        guid: 6e29dc655e4f1b4c86d32e17f997785d
+      - ElementName: Hallway
+        ObjectType: 1
+        guid: 6ceb4210a0155048b139a8543c596c9a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Laboratory\Hallway
+    - name: Hallway_TSection
+      guid: 743719960d88ba49a3b1a962e150b4c4
+      id: 155036941
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9435b3018e932844810423795d8ed08f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Laboratory
+        ObjectType: 2
+        guid: 6e29dc655e4f1b4c86d32e17f997785d
+      - ElementName: Hallway_TSection
+        ObjectType: 1
+        guid: 743719960d88ba49a3b1a962e150b4c4
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Laboratory\Hallway_TSection
+    - name: Laboratory
+      guid: 6e29dc655e4f1b4c86d32e17f997785d
+      id: 766371778
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9435b3018e932844810423795d8ed08f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Laboratory
+        ObjectType: 2
+        guid: 6e29dc655e4f1b4c86d32e17f997785d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Laboratory
     - name: Lobby
       guid: e1238a5e06203b4e90bd85904387ea43
       id: 290285391
@@ -350,6 +407,46 @@ MonoBehaviour:
         ObjectType: 2
         guid: c6b9f92af16ee946b5f2e30c9e602c74
       Path: Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus
+    - name: Room_Office
+      guid: 6efccea0255bf243974161535d057e0d
+      id: 537292363
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9435b3018e932844810423795d8ed08f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Laboratory
+        ObjectType: 2
+        guid: 6e29dc655e4f1b4c86d32e17f997785d
+      - ElementName: Room_Office
+        ObjectType: 1
+        guid: 6efccea0255bf243974161535d057e0d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Laboratory\Room_Office
+    - name: Room_Storage
+      guid: ce08cc3d0e3d8845bf347309be21db48
+      id: 203080930
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9435b3018e932844810423795d8ed08f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Laboratory
+        ObjectType: 2
+        guid: 6e29dc655e4f1b4c86d32e17f997785d
+      - ElementName: Room_Storage
+        ObjectType: 1
+        guid: ce08cc3d0e3d8845bf347309be21db48
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Laboratory\Room_Storage
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -375,7 +472,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Entitys
     guid: 4ca19157b59a9e47b6a0c74b667e252f
     GuidInternal: 
-    m_lastTime: -8584541980513739140
+    m_lastTime: -8584515106273280951
     List:
     - name: Kidnapper
       guid: d12c33c4ad0da248a057b950e2b782d3
@@ -405,6 +502,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 2b72dca9936d964fb181ae7ab4378e03
       Path: SoundBanks\Entitys\Octopode
+    - name: Robot
+      guid: 6be0e950b4c34449b9b2ac511351c17b
+      id: 1930240631
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 12
+        guid: 4ca19157b59a9e47b6a0c74b667e252f
+      - ElementName: Robot
+        ObjectType: 7
+        guid: 6be0e950b4c34449b9b2ac511351c17b
+      Path: SoundBanks\Entitys\Robot
     - name: Stalker
       guid: 77b197653afaeb43b7efdeda5cf2c599
       id: 2944630615
@@ -550,7 +661,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Maps
     guid: d908d4c3023d6a43a8cc236aa11ee72e
     GuidInternal: 
-    m_lastTime: -8584541980513723835
+    m_lastTime: -8584520256433701232
     List:
     - name: Laboratory
       guid: da82bc53772c8948a37435d3ab98b885
@@ -566,6 +677,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: da82bc53772c8948a37435d3ab98b885
       Path: SoundBanks\Maps\Laboratory
+    - name: Lobby
+      guid: fe40187edd989844bff0b462f0c93016
+      id: 290285391
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 12
+        guid: d908d4c3023d6a43a8cc236aa11ee72e
+      - ElementName: Lobby
+        ObjectType: 7
+        guid: fe40187edd989844bff0b462f0c93016
+      Path: SoundBanks\Maps\Lobby
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -594,8 +719,68 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Kidnapper
     guid: 59f94e8d805e4949a059e20acff299e3
     GuidInternal: 
-    m_lastTime: -8584541980522549151
-    List: []
+    m_lastTime: -8584520214004638974
+    List:
+    - name: Kidnapper_DropOff
+      guid: 8d2c1ceb6016654ba90976578863a560
+      id: 337924562
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Kidnapper
+        ObjectType: 12
+        guid: 59f94e8d805e4949a059e20acff299e3
+      - ElementName: Kidnapper_DropOff
+        ObjectType: 3
+        guid: 8d2c1ceb6016654ba90976578863a560
+      Path: Events\Entitys\Kidnapper\Kidnapper_DropOff
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Kidnapper_Grab
+      guid: 02c16fda898850469d59fb3957dd10e5
+      id: 234386066
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Kidnapper
+        ObjectType: 12
+        guid: 59f94e8d805e4949a059e20acff299e3
+      - ElementName: Kidnapper_Grab
+        ObjectType: 3
+        guid: 02c16fda898850469d59fb3957dd10e5
+      Path: Events\Entitys\Kidnapper\Kidnapper_Grab
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Kidnapper_Hover
+      guid: f0ce4839e0038642aad9bf2b80f2a26d
+      id: 1604226898
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Kidnapper
+        ObjectType: 12
+        guid: 59f94e8d805e4949a059e20acff299e3
+      - ElementName: Kidnapper_Hover
+        ObjectType: 3
+        guid: f0ce4839e0038642aad9bf2b80f2a26d
+      Path: Events\Entitys\Kidnapper\Kidnapper_Hover
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Entitys\Octopode.wwu
     PathAndIcons:
     - ElementName: Events
@@ -747,6 +932,142 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events\Entitys\Robot.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Entitys
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Robot
+      ObjectType: 12
+      guid: 4c02fea6a4b7104c9e686eb299b83c43
+    ParentPath: Events\Entitys\Robot
+    guid: 4c02fea6a4b7104c9e686eb299b83c43
+    GuidInternal: 
+    m_lastTime: -8584514294075824993
+    List:
+    - name: Robot_Attack
+      guid: 2e5835a7ba06444ca98cf386ef74e70d
+      id: 3647587358
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Attack
+        ObjectType: 3
+        guid: 2e5835a7ba06444ca98cf386ef74e70d
+      Path: Events\Entitys\Robot\Robot_Attack
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Killed_Player
+      guid: 1be4d659d6ba4f49ac3d84a46a53d409
+      id: 2161314627
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Killed_Player
+        ObjectType: 3
+        guid: 1be4d659d6ba4f49ac3d84a46a53d409
+      Path: Events\Entitys\Robot\Robot_Killed_Player
+      maxAttenuation: 20
+      maxDuration: 2
+      minDuration: 2
+    - name: Robot_Move_Start
+      guid: 2f3151920c169049b4aec586f9cc4baa
+      id: 1323506928
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Move_Start
+        ObjectType: 3
+        guid: 2f3151920c169049b4aec586f9cc4baa
+      Path: Events\Entitys\Robot\Robot_Move_Start
+      maxAttenuation: 20
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Move_Stop
+      guid: cc88b8e787617247bb8e98af80f3d911
+      id: 3313846876
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Move_Stop
+        ObjectType: 3
+        guid: cc88b8e787617247bb8e98af80f3d911
+      Path: Events\Entitys\Robot\Robot_Move_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Player_LockedOn
+      guid: 5365f739b6ea6946afc1e358832a93aa
+      id: 1202760109
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Player_LockedOn
+        ObjectType: 3
+        guid: 5365f739b6ea6946afc1e358832a93aa
+      Path: Events\Entitys\Robot\Robot_Player_LockedOn
+      maxAttenuation: 20
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Player_Lost
+      guid: f6f7d45221f32a428aa178ef60f06ee8
+      id: 2967608042
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Player_Lost
+        ObjectType: 3
+        guid: f6f7d45221f32a428aa178ef60f06ee8
+      Path: Events\Entitys\Robot\Robot_Player_Lost
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Entitys\Stalker.wwu
     PathAndIcons:
     - ElementName: Events
@@ -761,8 +1082,88 @@ MonoBehaviour:
     ParentPath: Events\Entitys\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584541980522533624
-    List: []
+    m_lastTime: -8584515106301171658
+    List:
+    - name: Stalker_Idle
+      guid: eecba46e6b0874428091f7f57f1e83e9
+      id: 975243704
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_Idle
+        ObjectType: 3
+        guid: eecba46e6b0874428091f7f57f1e83e9
+      Path: Events\Entitys\Stalker\Stalker_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stalker_Killed_Player
+      guid: 0581edc6de44ca4ea32a1945b65ea68b
+      id: 1275891363
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_Killed_Player
+        ObjectType: 3
+        guid: 0581edc6de44ca4ea32a1945b65ea68b
+      Path: Events\Entitys\Stalker\Stalker_Killed_Player
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stalker_LockedOn
+      guid: 1aa7713aac304c43a33168b9ee618d1c
+      id: 4025238979
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_LockedOn
+        ObjectType: 3
+        guid: 1aa7713aac304c43a33168b9ee618d1c
+      Path: Events\Entitys\Stalker\Stalker_LockedOn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stalker_Move
+      guid: ba8525c61122d249bbf85273b1eb6ee3
+      id: 2345019145
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entitys
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_Move
+        ObjectType: 3
+        guid: ba8525c61122d249bbf85273b1eb6ee3
+      Path: Events\Entitys\Stalker\Stalker_Move
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\HostGameMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1970,7 +2371,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584538588646050570
+    m_lastTime: -8584514231190616140
     List:
     - name: Ambience_LightBulb_Idle
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -2055,6 +2456,160 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Laboratory_Hallway
+      guid: d652f52ea2e5704ca722021c1b7338ed
+      id: 2922746229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Rooms
+        ObjectType: 4
+        guid: eb4f0e4aaed5de4e9558e96d7e940e82
+      - ElementName: Laboratory_Hallway
+        ObjectType: 3
+        guid: d652f52ea2e5704ca722021c1b7338ed
+      Path: Events\Maps\Laboratory\Rooms\Laboratory_Hallway
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Laboratory_Office
+      guid: 59e023d6dce42e4f8a7aeb4d77c98fbf
+      id: 1252818853
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Rooms
+        ObjectType: 4
+        guid: eb4f0e4aaed5de4e9558e96d7e940e82
+      - ElementName: Laboratory_Office
+        ObjectType: 3
+        guid: 59e023d6dce42e4f8a7aeb4d77c98fbf
+      Path: Events\Maps\Laboratory\Rooms\Laboratory_Office
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Laboratory_Storage
+      guid: 6e61c8ee1295144fa33085190fe04bf7
+      id: 1199550744
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Rooms
+        ObjectType: 4
+        guid: eb4f0e4aaed5de4e9558e96d7e940e82
+      - ElementName: Laboratory_Storage
+        ObjectType: 3
+        guid: 6e61c8ee1295144fa33085190fe04bf7
+      Path: Events\Maps\Laboratory\Rooms\Laboratory_Storage
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rooms
+      guid: eb4f0e4aaed5de4e9558e96d7e940e82
+      id: 1359360203
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Rooms
+        ObjectType: 4
+        guid: eb4f0e4aaed5de4e9558e96d7e940e82
+      Path: Events\Maps\Laboratory\Rooms
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Maps\Standard Interactables\InteractableButtons.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Maps
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Standard Interactables
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: InteractableButtons
+      ObjectType: 12
+      guid: a7fa57dad7fe734d93295f132b22a54b
+    ParentPath: Events\Maps\Standard Interactables\InteractableButtons
+    guid: a7fa57dad7fe734d93295f132b22a54b
+    GuidInternal: 
+    m_lastTime: -8584520256436094878
+    List:
+    - name: Lobby_Button_GenerateDungeon
+      guid: 2984ddbd23a10742847f48bb5083fc57
+      id: 4111103010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Standard Interactables
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InteractableButtons
+        ObjectType: 12
+        guid: a7fa57dad7fe734d93295f132b22a54b
+      - ElementName: Lobby_Button_GenerateDungeon
+        ObjectType: 3
+        guid: 2984ddbd23a10742847f48bb5083fc57
+      Path: Events\Maps\Standard Interactables\InteractableButtons\Lobby_Button_GenerateDungeon
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Map_Button_Finish
+      guid: c9f538620ae6a04db243671953682367
+      id: 3144856458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Standard Interactables
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InteractableButtons
+        ObjectType: 12
+        guid: a7fa57dad7fe734d93295f132b22a54b
+      - ElementName: Map_Button_Finish
+        ObjectType: 3
+        guid: c9f538620ae6a04db243671953682367
+      Path: Events\Maps\Standard Interactables\InteractableButtons\Map_Button_Finish
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Maps\Uranium.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2129,6 +2684,71 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\Maps\Win Conditions\Score Area.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Maps
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Win Conditions
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Score Area
+      ObjectType: 12
+      guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
+    ParentPath: Events\Maps\Win Conditions\Score Area
+    guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
+    GuidInternal: 
+    m_lastTime: -8584520256436084758
+    List:
+    - name: ScoreArea_Score_Decreased
+      guid: 70c66c32487faf49a8e0387d6a07d269
+      id: 121923024
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Win Conditions
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Score Area
+        ObjectType: 12
+        guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
+      - ElementName: ScoreArea_Score_Decreased
+        ObjectType: 3
+        guid: 70c66c32487faf49a8e0387d6a07d269
+      Path: Events\Maps\Win Conditions\Score Area\ScoreArea_Score_Decreased
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ScoreArea_Score_Increased
+      guid: 7b4102d35ef3604ab2cdb93176bcedee
+      id: 810989404
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Win Conditions
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Score Area
+        ObjectType: 12
+        guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
+      - ElementName: ScoreArea_Score_Increased
+        ObjectType: 3
+        guid: 7b4102d35ef3604ab2cdb93176bcedee
+      Path: Events\Maps\Win Conditions\Score Area\ScoreArea_Score_Increased
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Menus.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2142,6 +2762,334 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584537722619653903
     List: []
+  - PhysicalPath: Events\Props\Flashlight.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Props
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Flashlight
+      ObjectType: 12
+      guid: f9e48c148e615f4ca620c5f8484d0594
+    ParentPath: Events\Props\Flashlight
+    guid: f9e48c148e615f4ca620c5f8484d0594
+    GuidInternal: 
+    m_lastTime: -8584514294075804990
+    List:
+    - name: Flashlight_Drop
+      guid: 3e1a95f789dc1d418ea7068843dd18ca
+      id: 1153302829
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Flashlight
+        ObjectType: 12
+        guid: f9e48c148e615f4ca620c5f8484d0594
+      - ElementName: Flashlight_Drop
+        ObjectType: 3
+        guid: 3e1a95f789dc1d418ea7068843dd18ca
+      Path: Events\Props\Flashlight\Flashlight_Drop
+      maxAttenuation: 10.5
+      maxDuration: 0.53743666
+      minDuration: 0.4651711
+    - name: Flashlight_Idle
+      guid: 9853f36447d177419224d9546b504a59
+      id: 1721397820
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Flashlight
+        ObjectType: 12
+        guid: f9e48c148e615f4ca620c5f8484d0594
+      - ElementName: Flashlight_Idle
+        ObjectType: 3
+        guid: 9853f36447d177419224d9546b504a59
+      Path: Events\Props\Flashlight\Flashlight_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Flashlight_Off
+      guid: 5b5bed38a54a4041b0044be37410ecd0
+      id: 1126494853
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Flashlight
+        ObjectType: 12
+        guid: f9e48c148e615f4ca620c5f8484d0594
+      - ElementName: Flashlight_Off
+        ObjectType: 3
+        guid: 5b5bed38a54a4041b0044be37410ecd0
+      Path: Events\Props\Flashlight\Flashlight_Off
+      maxAttenuation: 10.5
+      maxDuration: 0.35265166
+      minDuration: 0.3092718
+    - name: Flashlight_On
+      guid: c50e0555d64d624cbf29f69ab354b992
+      id: 2033671033
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Flashlight
+        ObjectType: 12
+        guid: f9e48c148e615f4ca620c5f8484d0594
+      - ElementName: Flashlight_On
+        ObjectType: 3
+        guid: c50e0555d64d624cbf29f69ab354b992
+      Path: Events\Props\Flashlight\Flashlight_On
+      maxAttenuation: 10.5
+      maxDuration: 0.93632585
+      minDuration: 0.9146359
+    - name: Flashlight_Pickup
+      guid: 6661bc2efa377c40bc53d0b404fc8584
+      id: 3293791586
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Flashlight
+        ObjectType: 12
+        guid: f9e48c148e615f4ca620c5f8484d0594
+      - ElementName: Flashlight_Pickup
+        ObjectType: 3
+        guid: 6661bc2efa377c40bc53d0b404fc8584
+      Path: Events\Props\Flashlight\Flashlight_Pickup
+      maxAttenuation: 10.5
+      maxDuration: 0.50420314
+      minDuration: 0.50420314
+  - PhysicalPath: Events\Props\TestCube.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Props
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: TestCube
+      ObjectType: 12
+      guid: fbfcae56cd13a74595ef88c61f4b4483
+    ParentPath: Events\Props\TestCube
+    guid: fbfcae56cd13a74595ef88c61f4b4483
+    GuidInternal: 
+    m_lastTime: -8584515064167807161
+    List:
+    - name: TestCube_Drop
+      guid: a354e644d056924e89dd59cbf126fa45
+      id: 745428686
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: TestCube
+        ObjectType: 12
+        guid: fbfcae56cd13a74595ef88c61f4b4483
+      - ElementName: TestCube_Drop
+        ObjectType: 3
+        guid: a354e644d056924e89dd59cbf126fa45
+      Path: Events\Props\TestCube\TestCube_Drop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: TestCube_EmptyCall
+      guid: 1f10061be0b4d9419d22ea068ec31b65
+      id: 886084000
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: TestCube
+        ObjectType: 12
+        guid: fbfcae56cd13a74595ef88c61f4b4483
+      - ElementName: TestCube_EmptyCall
+        ObjectType: 3
+        guid: 1f10061be0b4d9419d22ea068ec31b65
+      Path: Events\Props\TestCube\TestCube_EmptyCall
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: TestCube_Pickup
+      guid: 4c1a5a0cad0b0348a0a1e2f53f2241e4
+      id: 2398437945
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: TestCube
+        ObjectType: 12
+        guid: fbfcae56cd13a74595ef88c61f4b4483
+      - ElementName: TestCube_Pickup
+        ObjectType: 3
+        guid: 4c1a5a0cad0b0348a0a1e2f53f2241e4
+      Path: Events\Props\TestCube\TestCube_Pickup
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Props\Uranium.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Props
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Uranium
+      ObjectType: 12
+      guid: 72fa25fb59b8814ba58708700f241843
+    ParentPath: Events\Props\Uranium
+    guid: 72fa25fb59b8814ba58708700f241843
+    GuidInternal: 
+    m_lastTime: -8584515065844032958
+    List:
+    - name: Uranium_Drop
+      guid: 897e25edc0ed494c869c9553fe2b013f
+      id: 2487599656
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: 72fa25fb59b8814ba58708700f241843
+      - ElementName: Uranium_Drop
+        ObjectType: 3
+        guid: 897e25edc0ed494c869c9553fe2b013f
+      Path: Events\Props\Uranium\Uranium_Drop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Uranium_Idle
+      guid: 8b7d7194833e8e41b706f7f52a981787
+      id: 3642641725
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: 72fa25fb59b8814ba58708700f241843
+      - ElementName: Uranium_Idle
+        ObjectType: 3
+        guid: 8b7d7194833e8e41b706f7f52a981787
+      Path: Events\Props\Uranium\Uranium_Idle
+      maxAttenuation: 16.5
+      maxDuration: 0
+      minDuration: 0
+    - name: Uranium_IdleStop
+      guid: 2c5c6ab4a5940d4fa1ddf0edaf538c61
+      id: 1719140997
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: 72fa25fb59b8814ba58708700f241843
+      - ElementName: Uranium_IdleStop
+        ObjectType: 3
+        guid: 2c5c6ab4a5940d4fa1ddf0edaf538c61
+      Path: Events\Props\Uranium\Uranium_IdleStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Uranium_Mute
+      guid: 53806b06203508439d7483e057cb9742
+      id: 2571317824
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: 72fa25fb59b8814ba58708700f241843
+      - ElementName: Uranium_Mute
+        ObjectType: 3
+        guid: 53806b06203508439d7483e057cb9742
+      Path: Events\Props\Uranium\Uranium_Mute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Uranium_Pickup
+      guid: 6ae1d6a2e2c8114aa23c7c96b89653c4
+      id: 3332062019
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: 72fa25fb59b8814ba58708700f241843
+      - ElementName: Uranium_Pickup
+        ObjectType: 3
+        guid: 6ae1d6a2e2c8114aa23c7c96b89653c4
+      Path: Events\Props\Uranium\Uranium_Pickup
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Uranium_Unmute
+      guid: 1cae4182c964fd49974c30ed6acf31f3
+      id: 2325375469
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Props
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Uranium
+        ObjectType: 12
+        guid: 72fa25fb59b8814ba58708700f241843
+      - ElementName: Uranium_Unmute
+        ObjectType: 3
+        guid: 1cae4182c964fd49974c30ed6acf31f3
+      Path: Events\Props\Uranium\Uranium_Unmute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\SettingsMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2640,7 +3588,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278424395
     List: []
-  ExpandedFileSystemItemIds: 020000000400000006000000070000001f00000022000000230000002500000027000000290000002c0000002d0000002e0000006b00000073000000
+  ExpandedFileSystemItemIds: 0200000004000000050000000600000007000000090000000a000000100000001f00000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005f0000006000000062000000630000006700000068000000690000006a0000006b0000007300000081000000830000008a000000930000009400000095000000960000009700000098000000990000009a0000009b0000009e000000a0000000a1000000
   ExpandedWaapiItemIds: 020000001f000000270000002c0000002d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

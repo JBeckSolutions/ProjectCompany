@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1f503e3c4db6d44481a13c43a285829, type: 3}
       propertyPath: m_Name
-      value: Roboter
+      value: RoboterPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1f503e3c4db6d44481a13c43a285829, type: 3}
       propertyPath: m_Layer

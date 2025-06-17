@@ -15,7 +15,8 @@ public class EnemyBaseLegacy : NetworkBehaviour
         Patrolling,
         Chasing
     }
-
+    
+    [Header("Enemy Settings")]
     [SerializeField] protected EnemyState currentState = EnemyState.Idle;
     [SerializeField] protected float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
     [SerializeField] protected float timeUntilNextAction;                 //How long the enemy will stay in the Idle State

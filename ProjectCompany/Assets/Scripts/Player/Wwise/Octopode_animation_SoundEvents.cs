@@ -17,9 +17,6 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
     private WwiseCallIndex[] TentacleList;
     
     private short TentacleIndexStep = 0;
-
-    
-    
     
     public void Awake()
     {

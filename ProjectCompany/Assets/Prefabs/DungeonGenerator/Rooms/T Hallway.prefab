@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 3205204956681851670}
   - component: {fileID: 215808811574473099}
   - component: {fileID: 3025607640116302070}
+  - component: {fileID: 2909152777063006435}
   m_Layer: 11
   m_Name: T Hallway
   m_TagString: Untagged
@@ -268,6 +269,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.310903, y: 4.5, z: 24.419994}
   m_Center: {x: 5.1554513, y: 2, z: 5.0099964}
+--- !u!114 &2909152777063006435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595446153090595809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553895f289888c94db90fadeb13a636f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  priority: 0
+  reverbAuxBus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 56e7c8cb20b39e84da3bad55b5b7e311, type: 2}
+  reverbLevel: 1
+  transmissionLoss: 1
+  roomToneEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f240e14fc5e8efd48ba9c2d09af238d4, type: 2}
+  roomToneAuxSend: 0
 --- !u!1 &1940537615467901690
 GameObject:
   m_ObjectHideFlags: 0

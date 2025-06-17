@@ -10,6 +10,7 @@ public class Item : NetworkBehaviour
     public int itemValue = 10;
     public Sprite InventoryImage;
     public int ItemWeight = 1;
+    public Wwise_Item_Behaviour Wwise_Item_Behaviour; //This is the Wwise Item Behaviour script that handles the sound effects for the item
 
     [SerializeField] private GameObject model;
     [SerializeField] private Collider itemCollider;
@@ -24,9 +25,10 @@ public class Item : NetworkBehaviour
             {
                 this.GetComponent<NetworkObject>().ChangeOwnership(Player.OwnerClientId);
             }
-
+            
             PickupAble.Value = false;
             this.transform.SetParent(Player.transform);
+            
 
             Vector3 handWorldPosition = Player.transform.GetComponent<PlayerInventoryManager>().playerHand.position;
             Vector3 localHandPosition = Player.transform.InverseTransformPoint(handWorldPosition);
@@ -34,6 +36,7 @@ public class Item : NetworkBehaviour
             this.transform.localPosition = localHandPosition;
             this.transform.localRotation = Quaternion.identity;
             this.gameObject.tag = "PickedUp";
+            Wwise_Item_Behaviour.PlayItemPickupSound();
             SyncLocalPositionToClientsClientRpc(localHandPosition);
         }
     }
@@ -58,7 +61,7 @@ public class Item : NetworkBehaviour
         }
         this.transform.position = position;
         this.gameObject.tag = "Untagged";
-
+        Wwise_Item_Behaviour.PlayItemDropSound();
         DropClientRpc(position);
     }
     [ClientRpc]
@@ -84,5 +87,9 @@ public class Item : NetworkBehaviour
     private void ToggleVisibilityClientRpc(bool state)  //Toggles visibility on all clients
     {
         model.SetActive(state);
+        if (state)
+            Wwise_Item_Behaviour.UnmuteItemIdleSound();
+        else
+            Wwise_Item_Behaviour.MuteItemIdleSound();
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1853359841480502009}
   - component: {fileID: 2581703094558261761}
   - component: {fileID: 2419261493490942965}
+  - component: {fileID: 5893791050219656627}
   m_Layer: 11
   m_Name: Room Office
   m_TagString: Untagged
@@ -96,6 +97,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.6580105, y: 4.5, z: 14.6280155}
   m_Center: {x: -0.0048589706, y: 2, z: -0.058918953}
+--- !u!114 &5893791050219656627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111126949708525185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553895f289888c94db90fadeb13a636f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  priority: 0
+  reverbAuxBus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4d37f1c9431b03447a71dbbc26bf70e7, type: 2}
+  reverbLevel: 1
+  transmissionLoss: 1
+  roomToneEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8a46b1c69f418a64e95907c5e4faec1b, type: 2}
+  roomToneAuxSend: 0
 --- !u!1 &390518738183491300
 GameObject:
   m_ObjectHideFlags: 0
