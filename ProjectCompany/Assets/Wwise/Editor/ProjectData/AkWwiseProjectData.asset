@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584514294069149262
+    m_lastTime: -8584514168459941885
     List:
     - name: Hallway
       guid: 6ceb4210a0155048b139a8543c596c9a
@@ -461,18 +461,18 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278454981
     List: []
-  - PhysicalPath: SoundBanks\Entitys.wwu
+  - PhysicalPath: SoundBanks\Entities.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Entitys
+    - ElementName: Entities
       ObjectType: 12
       guid: 4ca19157b59a9e47b6a0c74b667e252f
-    ParentPath: SoundBanks\Entitys
+    ParentPath: SoundBanks\Entities
     guid: 4ca19157b59a9e47b6a0c74b667e252f
     GuidInternal: 
-    m_lastTime: -8584515106273280951
+    m_lastTime: -8584513289890673221
     List:
     - name: Kidnapper
       guid: d12c33c4ad0da248a057b950e2b782d3
@@ -481,13 +481,13 @@ MonoBehaviour:
       - ElementName: SoundBanks
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 12
         guid: 4ca19157b59a9e47b6a0c74b667e252f
       - ElementName: Kidnapper
         ObjectType: 7
         guid: d12c33c4ad0da248a057b950e2b782d3
-      Path: SoundBanks\Entitys\Kidnapper
+      Path: SoundBanks\Entities\Kidnapper
     - name: Octopode
       guid: 2b72dca9936d964fb181ae7ab4378e03
       id: 170740614
@@ -495,13 +495,13 @@ MonoBehaviour:
       - ElementName: SoundBanks
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 12
         guid: 4ca19157b59a9e47b6a0c74b667e252f
       - ElementName: Octopode
         ObjectType: 7
         guid: 2b72dca9936d964fb181ae7ab4378e03
-      Path: SoundBanks\Entitys\Octopode
+      Path: SoundBanks\Entities\Octopode
     - name: Robot
       guid: 6be0e950b4c34449b9b2ac511351c17b
       id: 1930240631
@@ -509,13 +509,13 @@ MonoBehaviour:
       - ElementName: SoundBanks
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 12
         guid: 4ca19157b59a9e47b6a0c74b667e252f
       - ElementName: Robot
         ObjectType: 7
         guid: 6be0e950b4c34449b9b2ac511351c17b
-      Path: SoundBanks\Entitys\Robot
+      Path: SoundBanks\Entities\Robot
     - name: Stalker
       guid: 77b197653afaeb43b7efdeda5cf2c599
       id: 2944630615
@@ -523,13 +523,13 @@ MonoBehaviour:
       - ElementName: SoundBanks
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 12
         guid: 4ca19157b59a9e47b6a0c74b667e252f
       - ElementName: Stalker
         ObjectType: 7
         guid: 77b197653afaeb43b7efdeda5cf2c599
-      Path: SoundBanks\Entitys\Stalker
+      Path: SoundBanks\Entities\Stalker
   - PhysicalPath: SoundBanks\InGameMenu.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -705,98 +705,198 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558279178902
     List: []
-  - PhysicalPath: Events\Entitys\Kidnapper.wwu
+  - PhysicalPath: Events\Entities\Kidnapper.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Entitys
+    - ElementName: Entities
       ObjectType: 5
       guid: 00000000000000000000000000000000
     - ElementName: Kidnapper
       ObjectType: 12
       guid: 59f94e8d805e4949a059e20acff299e3
-    ParentPath: Events\Entitys\Kidnapper
+    ParentPath: Events\Entities\Kidnapper
     guid: 59f94e8d805e4949a059e20acff299e3
     GuidInternal: 
-    m_lastTime: -8584520214004638974
+    m_lastTime: -8584513289903055914
     List:
-    - name: Kidnapper_DropOff
+    - name: Kidnapper_DropOff_Player
       guid: 8d2c1ceb6016654ba90976578863a560
-      id: 337924562
+      id: 2479678270
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Kidnapper
         ObjectType: 12
         guid: 59f94e8d805e4949a059e20acff299e3
-      - ElementName: Kidnapper_DropOff
+      - ElementName: Kidnapper_DropOff_Player
         ObjectType: 3
         guid: 8d2c1ceb6016654ba90976578863a560
-      Path: Events\Entitys\Kidnapper\Kidnapper_DropOff
+      Path: Events\Entities\Kidnapper\Kidnapper_DropOff_Player
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Kidnapper_Grab
+    - name: Kidnapper_Grab_Player
       guid: 02c16fda898850469d59fb3957dd10e5
-      id: 234386066
+      id: 3267015934
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Kidnapper
         ObjectType: 12
         guid: 59f94e8d805e4949a059e20acff299e3
-      - ElementName: Kidnapper_Grab
+      - ElementName: Kidnapper_Grab_Player
         ObjectType: 3
         guid: 02c16fda898850469d59fb3957dd10e5
-      Path: Events\Entitys\Kidnapper\Kidnapper_Grab
+      Path: Events\Entities\Kidnapper\Kidnapper_Grab_Player
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Kidnapper_Hover
+    - name: Kidnapper_Idle
       guid: f0ce4839e0038642aad9bf2b80f2a26d
-      id: 1604226898
+      id: 1028771866
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Kidnapper
         ObjectType: 12
         guid: 59f94e8d805e4949a059e20acff299e3
-      - ElementName: Kidnapper_Hover
+      - ElementName: Kidnapper_Idle
         ObjectType: 3
         guid: f0ce4839e0038642aad9bf2b80f2a26d
-      Path: Events\Entitys\Kidnapper\Kidnapper_Hover
+      Path: Events\Entities\Kidnapper\Kidnapper_Idle
+      maxAttenuation: 14
+      maxDuration: 0
+      minDuration: 0
+    - name: Kidnapper_IdleMute
+      guid: 3c4aa86f593029458bd1d94af69302e6
+      id: 3437208085
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Kidnapper
+        ObjectType: 12
+        guid: 59f94e8d805e4949a059e20acff299e3
+      - ElementName: Kidnapper_IdleMute
+        ObjectType: 3
+        guid: 3c4aa86f593029458bd1d94af69302e6
+      Path: Events\Entities\Kidnapper\Kidnapper_IdleMute
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events\Entitys\Octopode.wwu
+    - name: Kidnapper_IdleUnmute
+      guid: f7cc83ff31a884449b9f19a0074e9d28
+      id: 1675306836
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Kidnapper
+        ObjectType: 12
+        guid: 59f94e8d805e4949a059e20acff299e3
+      - ElementName: Kidnapper_IdleUnmute
+        ObjectType: 3
+        guid: f7cc83ff31a884449b9f19a0074e9d28
+      Path: Events\Entities\Kidnapper\Kidnapper_IdleUnmute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Entities\Octopode.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Entitys
+    - ElementName: Entities
       ObjectType: 5
       guid: 00000000000000000000000000000000
     - ElementName: Octopode
       ObjectType: 12
       guid: c47b5c31ed996c459f2f2953e04a1de5
-    ParentPath: Events\Entitys\Octopode
+    ParentPath: Events\Entities\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584534024391562928
+    m_lastTime: -8584512620391432523
     List:
+    - name: Octopode_Idle
+      guid: ab9b5e3666409c4ba56cf17e1763c376
+      id: 761251815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Octopode_Idle
+        ObjectType: 3
+        guid: ab9b5e3666409c4ba56cf17e1763c376
+      Path: Events\Entities\Octopode\Octopode_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Octopode_Idle_Mute
+      guid: 436bbbbdc1c3e540a0ab647c5ea93ec0
+      id: 1894918901
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Octopode_Idle_Mute
+        ObjectType: 3
+        guid: 436bbbbdc1c3e540a0ab647c5ea93ec0
+      Path: Events\Entities\Octopode\Octopode_Idle_Mute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Octopode_Idle_UnMute
+      guid: 25f0dd3dae0786439d5cd5a08de44c56
+      id: 2523899444
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Octopode
+        ObjectType: 12
+        guid: c47b5c31ed996c459f2f2953e04a1de5
+      - ElementName: Octopode_Idle_UnMute
+        ObjectType: 3
+        guid: 25f0dd3dae0786439d5cd5a08de44c56
+      Path: Events\Entities\Octopode\Octopode_Idle_UnMute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Octopode_Land
       guid: 552b93b5a744d1408d66ff521f22e248
       id: 3267649742
@@ -804,7 +904,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Octopode
@@ -816,7 +916,7 @@ MonoBehaviour:
       - ElementName: Octopode_Land
         ObjectType: 3
         guid: 552b93b5a744d1408d66ff521f22e248
-      Path: Events\Entitys\Octopode\Tentacles\Octopode_Land
+      Path: Events\Entities\Octopode\Tentacles\Octopode_Land
       maxAttenuation: 10
       maxDuration: 0.83148
       minDuration: 0.4642898
@@ -827,7 +927,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Octopode
@@ -839,10 +939,10 @@ MonoBehaviour:
       - ElementName: Octopode_Swap_InventorySlot
         ObjectType: 3
         guid: 4f8fb17978e6d94b8ff1ca58859ef38e
-      Path: Events\Entitys\Octopode\Tentacles\Octopode_Swap_InventorySlot
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      Path: Events\Entities\Octopode\Tentacles\Octopode_Swap_InventorySlot
+      maxAttenuation: 10
+      maxDuration: 1.7780654
+      minDuration: 0.9472197
     - name: Octopode_Tentacle_Drop
       guid: 8591f89fc4286047a06ed5c0b11661f9
       id: 2041774849
@@ -850,7 +950,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Octopode
@@ -862,10 +962,10 @@ MonoBehaviour:
       - ElementName: Octopode_Tentacle_Drop
         ObjectType: 3
         guid: 8591f89fc4286047a06ed5c0b11661f9
-      Path: Events\Entitys\Octopode\Tentacles\Octopode_Tentacle_Drop
+      Path: Events\Entities\Octopode\Tentacles\Octopode_Tentacle_Drop
       maxAttenuation: 10
-      maxDuration: 0.83148
-      minDuration: 0.4642898
+      maxDuration: 0.9067354
+      minDuration: 0.42575565
     - name: Octopode_Tentacle_Lift
       guid: 61e5fd56ca84904a8fe908afc00cb6a3
       id: 1002430261
@@ -873,7 +973,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Octopode
@@ -885,10 +985,10 @@ MonoBehaviour:
       - ElementName: Octopode_Tentacle_Lift
         ObjectType: 3
         guid: 61e5fd56ca84904a8fe908afc00cb6a3
-      Path: Events\Entitys\Octopode\Tentacles\Octopode_Tentacle_Lift
+      Path: Events\Entities\Octopode\Tentacles\Octopode_Tentacle_Lift
       maxAttenuation: 10
-      maxDuration: 0.20246129
-      minDuration: 0.2001845
+      maxDuration: 0.21762024
+      minDuration: 0.18624008
     - name: Octopode_TentacleStep
       guid: 05106773fa982b40bd56dca08678821a
       id: 1234234613
@@ -896,7 +996,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Octopode
@@ -908,10 +1008,10 @@ MonoBehaviour:
       - ElementName: Octopode_TentacleStep
         ObjectType: 3
         guid: 05106773fa982b40bd56dca08678821a
-      Path: Events\Entitys\Octopode\Tentacles\Octopode_TentacleStep
+      Path: Events\Entities\Octopode\Tentacles\Octopode_TentacleStep
       maxAttenuation: 10
-      maxDuration: 1.1821667
-      minDuration: 0.5688958
+      maxDuration: 0.9036266
+      minDuration: 0.4412692
     - name: Tentacles
       guid: 8ef2fda7e98ba445a259f903ff49508f
       id: 1394947262
@@ -919,7 +1019,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Octopode
@@ -928,25 +1028,25 @@ MonoBehaviour:
       - ElementName: Tentacles
         ObjectType: 4
         guid: 8ef2fda7e98ba445a259f903ff49508f
-      Path: Events\Entitys\Octopode\Tentacles
+      Path: Events\Entities\Octopode\Tentacles
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-  - PhysicalPath: Events\Entitys\Robot.wwu
+  - PhysicalPath: Events\Entities\Robot.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Entitys
+    - ElementName: Entities
       ObjectType: 5
       guid: 00000000000000000000000000000000
     - ElementName: Robot
       ObjectType: 12
       guid: 4c02fea6a4b7104c9e686eb299b83c43
-    ParentPath: Events\Entitys\Robot
+    ParentPath: Events\Entities\Robot
     guid: 4c02fea6a4b7104c9e686eb299b83c43
     GuidInternal: 
-    m_lastTime: -8584514294075824993
+    m_lastTime: -8584512727028035636
     List:
     - name: Robot_Attack
       guid: 2e5835a7ba06444ca98cf386ef74e70d
@@ -955,7 +1055,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Robot
@@ -964,7 +1064,67 @@ MonoBehaviour:
       - ElementName: Robot_Attack
         ObjectType: 3
         guid: 2e5835a7ba06444ca98cf386ef74e70d
-      Path: Events\Entitys\Robot\Robot_Attack
+      Path: Events\Entities\Robot\Robot_Attack
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Idle
+      guid: c33b2a0a84a59b4cabe29c6b92c0bf9e
+      id: 130701592
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Idle
+        ObjectType: 3
+        guid: c33b2a0a84a59b4cabe29c6b92c0bf9e
+      Path: Events\Entities\Robot\Robot_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Idle_Mute
+      guid: b7cad82785e7dd4c9f6d70c4980d77a7
+      id: 1219741868
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Idle_Mute
+        ObjectType: 3
+        guid: b7cad82785e7dd4c9f6d70c4980d77a7
+      Path: Events\Entities\Robot\Robot_Idle_Mute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Robot_Idle_UnMute
+      guid: 6df7676ebb538449b9a7c375c5d31393
+      id: 1305655497
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Robot
+        ObjectType: 12
+        guid: 4c02fea6a4b7104c9e686eb299b83c43
+      - ElementName: Robot_Idle_UnMute
+        ObjectType: 3
+        guid: 6df7676ebb538449b9a7c375c5d31393
+      Path: Events\Entities\Robot\Robot_Idle_UnMute
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -975,7 +1135,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Robot
@@ -984,7 +1144,7 @@ MonoBehaviour:
       - ElementName: Robot_Killed_Player
         ObjectType: 3
         guid: 1be4d659d6ba4f49ac3d84a46a53d409
-      Path: Events\Entitys\Robot\Robot_Killed_Player
+      Path: Events\Entities\Robot\Robot_Killed_Player
       maxAttenuation: 20
       maxDuration: 2
       minDuration: 2
@@ -995,7 +1155,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Robot
@@ -1004,7 +1164,7 @@ MonoBehaviour:
       - ElementName: Robot_Move_Start
         ObjectType: 3
         guid: 2f3151920c169049b4aec586f9cc4baa
-      Path: Events\Entitys\Robot\Robot_Move_Start
+      Path: Events\Entities\Robot\Robot_Move_Start
       maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
@@ -1015,7 +1175,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Robot
@@ -1024,7 +1184,7 @@ MonoBehaviour:
       - ElementName: Robot_Move_Stop
         ObjectType: 3
         guid: cc88b8e787617247bb8e98af80f3d911
-      Path: Events\Entitys\Robot\Robot_Move_Stop
+      Path: Events\Entities\Robot\Robot_Move_Stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1035,7 +1195,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Robot
@@ -1044,7 +1204,7 @@ MonoBehaviour:
       - ElementName: Robot_Player_LockedOn
         ObjectType: 3
         guid: 5365f739b6ea6946afc1e358832a93aa
-      Path: Events\Entitys\Robot\Robot_Player_LockedOn
+      Path: Events\Entities\Robot\Robot_Player_LockedOn
       maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
@@ -1055,7 +1215,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Robot
@@ -1064,26 +1224,46 @@ MonoBehaviour:
       - ElementName: Robot_Player_Lost
         ObjectType: 3
         guid: f6f7d45221f32a428aa178ef60f06ee8
-      Path: Events\Entitys\Robot\Robot_Player_Lost
+      Path: Events\Entities\Robot\Robot_Player_Lost
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events\Entitys\Stalker.wwu
+  - PhysicalPath: Events\Entities\Stalker.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Entitys
+    - ElementName: Entities
       ObjectType: 5
       guid: 00000000000000000000000000000000
     - ElementName: Stalker
       ObjectType: 12
       guid: b81cccb666476f448e7d68150e3517a8
-    ParentPath: Events\Entitys\Stalker
+    ParentPath: Events\Entities\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584515106301171658
+    m_lastTime: -8584512450916482811
     List:
+    - name: Stalker_Attack
+      guid: ee7c9c8052342a408d5c7fb2540a893d
+      id: 28008638
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_Attack
+        ObjectType: 3
+        guid: ee7c9c8052342a408d5c7fb2540a893d
+      Path: Events\Entities\Stalker\Stalker_Attack
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stalker_Idle
       guid: eecba46e6b0874428091f7f57f1e83e9
       id: 975243704
@@ -1091,7 +1271,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Stalker
@@ -1100,7 +1280,47 @@ MonoBehaviour:
       - ElementName: Stalker_Idle
         ObjectType: 3
         guid: eecba46e6b0874428091f7f57f1e83e9
-      Path: Events\Entitys\Stalker\Stalker_Idle
+      Path: Events\Entities\Stalker\Stalker_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stalker_IdleMute
+      guid: b160e658d4cf58419e85ccdf2b12824f
+      id: 940689403
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_IdleMute
+        ObjectType: 3
+        guid: b160e658d4cf58419e85ccdf2b12824f
+      Path: Events\Entities\Stalker\Stalker_IdleMute
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stalker_IdleUnMute
+      guid: 0c1916259138dc48a0d53f0efda74db4
+      id: 2709947206
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_IdleUnMute
+        ObjectType: 3
+        guid: 0c1916259138dc48a0d53f0efda74db4
+      Path: Events\Entities\Stalker\Stalker_IdleUnMute
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1111,7 +1331,7 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Stalker
@@ -1120,38 +1340,18 @@ MonoBehaviour:
       - ElementName: Stalker_Killed_Player
         ObjectType: 3
         guid: 0581edc6de44ca4ea32a1945b65ea68b
-      Path: Events\Entitys\Stalker\Stalker_Killed_Player
+      Path: Events\Entities\Stalker\Stalker_Killed_Player
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Stalker_LockedOn
-      guid: 1aa7713aac304c43a33168b9ee618d1c
-      id: 4025238979
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Entitys
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Stalker
-        ObjectType: 12
-        guid: b81cccb666476f448e7d68150e3517a8
-      - ElementName: Stalker_LockedOn
-        ObjectType: 3
-        guid: 1aa7713aac304c43a33168b9ee618d1c
-      Path: Events\Entitys\Stalker\Stalker_LockedOn
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 7.2110314
+      minDuration: 7.2110314
     - name: Stalker_Move
-      guid: ba8525c61122d249bbf85273b1eb6ee3
+      guid: cf3c620019b8c448ab226ddf9a158d46
       id: 2345019145
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Entitys
+      - ElementName: Entities
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Stalker
@@ -1159,11 +1359,31 @@ MonoBehaviour:
         guid: b81cccb666476f448e7d68150e3517a8
       - ElementName: Stalker_Move
         ObjectType: 3
-        guid: ba8525c61122d249bbf85273b1eb6ee3
-      Path: Events\Entitys\Stalker\Stalker_Move
+        guid: cf3c620019b8c448ab226ddf9a158d46
+      Path: Events\Entities\Stalker\Stalker_Move
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stalker_StalkingPlayer
+      guid: 2680a1ca0123ad468be2d7d2d1706a43
+      id: 253065006
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Entities
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: b81cccb666476f448e7d68150e3517a8
+      - ElementName: Stalker_StalkingPlayer
+        ObjectType: 3
+        guid: 2680a1ca0123ad468be2d7d2d1706a43
+      Path: Events\Entities\Stalker\Stalker_StalkingPlayer
+      maxAttenuation: 0
+      maxDuration: 7.119729
+      minDuration: 7.081948
   - PhysicalPath: Events\HostGameMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2371,7 +2591,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584514231190616140
+    m_lastTime: -8584514168470154499
     List:
     - name: Ambience_LightBulb_Idle
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -2433,26 +2653,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 547ad812cd2c604cbafa773e95c741ca
       Path: Events\Maps\Laboratory\Atmo
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Items
-      guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
-      id: 2151963051
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Items
-        ObjectType: 4
-        guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
-      Path: Events\Maps\Laboratory\Items
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2610,80 +2810,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events\Maps\Uranium.wwu
-    PathAndIcons:
-    - ElementName: Events
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Maps
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Laboratory
-      ObjectType: 12
-      guid: b612878506a6a94288464cd99ce6c5d4
-    - ElementName: Items
-      ObjectType: 4
-      guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
-    - ElementName: Uranium
-      ObjectType: 12
-      guid: a40b0b585065564ea6486a79039fd832
-    ParentPath: Events\Maps\Laboratory\Items\Uranium
-    guid: a40b0b585065564ea6486a79039fd832
-    GuidInternal: 
-    m_lastTime: -8584541980522490618
-    List:
-    - name: Ambience_Idle_World
-      guid: 5f91cd8d4aef584a8d862541bae28f64
-      id: 3361983675
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Items
-        ObjectType: 4
-        guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
-      - ElementName: Uranium
-        ObjectType: 12
-        guid: a40b0b585065564ea6486a79039fd832
-      - ElementName: Ambience_Idle_World
-        ObjectType: 3
-        guid: 5f91cd8d4aef584a8d862541bae28f64
-      Path: Events\Maps\Laboratory\Items\Uranium\Ambience_Idle_World
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Uranium_Idle_Equipped
-      guid: 0c311bf00e567f48a987cf307d84ed07
-      id: 1821327543
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Items
-        ObjectType: 4
-        guid: 7a4ad3cc92edac4b8e7f0f12ab99021c
-      - ElementName: Uranium
-        ObjectType: 12
-        guid: a40b0b585065564ea6486a79039fd832
-      - ElementName: Uranium_Idle_Equipped
-        ObjectType: 3
-        guid: 0c311bf00e567f48a987cf307d84ed07
-      Path: Events\Maps\Laboratory\Items\Uranium\Uranium_Idle_Equipped
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   - PhysicalPath: Events\Maps\Win Conditions\Score Area.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2760,7 +2886,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584537722619653903
+    m_lastTime: -8584513289903020731
     List: []
   - PhysicalPath: Events\Props\Flashlight.wwu
     PathAndIcons:
@@ -2776,7 +2902,7 @@ MonoBehaviour:
     ParentPath: Events\Props\Flashlight
     guid: f9e48c148e615f4ca620c5f8484d0594
     GuidInternal: 
-    m_lastTime: -8584514294075804990
+    m_lastTime: -8584514168470144419
     List:
     - name: Flashlight_Drop
       guid: 3e1a95f789dc1d418ea7068843dd18ca
@@ -2795,7 +2921,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3e1a95f789dc1d418ea7068843dd18ca
       Path: Events\Props\Flashlight\Flashlight_Drop
-      maxAttenuation: 10.5
+      maxAttenuation: 6.75
       maxDuration: 0.53743666
       minDuration: 0.4651711
     - name: Flashlight_Idle
@@ -2815,7 +2941,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9853f36447d177419224d9546b504a59
       Path: Events\Props\Flashlight\Flashlight_Idle
-      maxAttenuation: 0
+      maxAttenuation: 6.75
       maxDuration: 0
       minDuration: 0
     - name: Flashlight_Off
@@ -2835,7 +2961,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 5b5bed38a54a4041b0044be37410ecd0
       Path: Events\Props\Flashlight\Flashlight_Off
-      maxAttenuation: 10.5
+      maxAttenuation: 6.75
       maxDuration: 0.35265166
       minDuration: 0.3092718
     - name: Flashlight_On
@@ -2855,7 +2981,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c50e0555d64d624cbf29f69ab354b992
       Path: Events\Props\Flashlight\Flashlight_On
-      maxAttenuation: 10.5
+      maxAttenuation: 6.75
       maxDuration: 0.93632585
       minDuration: 0.9146359
     - name: Flashlight_Pickup
@@ -2875,9 +3001,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6661bc2efa377c40bc53d0b404fc8584
       Path: Events\Props\Flashlight\Flashlight_Pickup
-      maxAttenuation: 10.5
-      maxDuration: 0.50420314
-      minDuration: 0.50420314
+      maxAttenuation: 10
+      maxDuration: 1.7780654
+      minDuration: 0.9472197
   - PhysicalPath: Events\Props\TestCube.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2892,7 +3018,7 @@ MonoBehaviour:
     ParentPath: Events\Props\TestCube
     guid: fbfcae56cd13a74595ef88c61f4b4483
     GuidInternal: 
-    m_lastTime: -8584515064167807161
+    m_lastTime: -8584514168470114028
     List:
     - name: TestCube_Drop
       guid: a354e644d056924e89dd59cbf126fa45
@@ -2911,9 +3037,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: a354e644d056924e89dd59cbf126fa45
       Path: Events\Props\TestCube\TestCube_Drop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 12
+      maxDuration: 0.93917966
+      minDuration: 0.47241867
     - name: TestCube_EmptyCall
       guid: 1f10061be0b4d9419d22ea068ec31b65
       id: 886084000
@@ -2951,9 +3077,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4c1a5a0cad0b0348a0a1e2f53f2241e4
       Path: Events\Props\TestCube\TestCube_Pickup
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 12
+      maxDuration: 1.7780654
+      minDuration: 0.9472197
   - PhysicalPath: Events\Props\Uranium.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2968,7 +3094,7 @@ MonoBehaviour:
     ParentPath: Events\Props\Uranium
     guid: 72fa25fb59b8814ba58708700f241843
     GuidInternal: 
-    m_lastTime: -8584515065844032958
+    m_lastTime: -8584514168470093867
     List:
     - name: Uranium_Drop
       guid: 897e25edc0ed494c869c9553fe2b013f
@@ -2987,9 +3113,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 897e25edc0ed494c869c9553fe2b013f
       Path: Events\Props\Uranium\Uranium_Drop
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 16.5
+      maxDuration: 0.5797305
+      minDuration: 0.26136133
     - name: Uranium_Idle
       guid: 8b7d7194833e8e41b706f7f52a981787
       id: 3642641725
@@ -3067,9 +3193,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6ae1d6a2e2c8114aa23c7c96b89653c4
       Path: Events\Props\Uranium\Uranium_Pickup
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 16.5
+      maxDuration: 1.7780654
+      minDuration: 0.9472197
     - name: Uranium_Unmute
       guid: 1cae4182c964fd49974c30ed6acf31f3
       id: 2325375469
@@ -3140,7 +3266,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584537722619633451
+    m_lastTime: -8584512593880411627
     List:
     - name: Master_Volume
       guid: 2b3d69338de44446820be47ae3949c52
@@ -3398,6 +3524,90 @@ MonoBehaviour:
         ObjectType: 13
         guid: 197ba8edaa73a0409f192073606db710
       Path: Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Turbulence
+  - PhysicalPath: Game Parameters\Stalker.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 9cea611173ceb54889f7c01b3e4271d7
+    - ElementName: Stalker
+      ObjectType: 12
+      guid: 1315252baa85424facffb67809045d19
+    ParentPath: Game Parameters\Default Work Unit\Stalker
+    guid: 1315252baa85424facffb67809045d19
+    GuidInternal: 
+    m_lastTime: -8584512641552782397
+    List:
+    - name: Stalker_IsLockedOnPlayer
+      guid: 46045f44416ac54bb0b4afcb60034328
+      id: 477472600
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: 1315252baa85424facffb67809045d19
+      - ElementName: Stalker_IsLockedOnPlayer
+        ObjectType: 13
+        guid: 46045f44416ac54bb0b4afcb60034328
+      Path: Game Parameters\Default Work Unit\Stalker\Stalker_IsLockedOnPlayer
+    - name: Stalker_IsSeenByPlayer
+      guid: 1c25263f72d26644bb527237469f40d1
+      id: 3803352263
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: 1315252baa85424facffb67809045d19
+      - ElementName: Stalker_IsSeenByPlayer
+        ObjectType: 13
+        guid: 1c25263f72d26644bb527237469f40d1
+      Path: Game Parameters\Default Work Unit\Stalker\Stalker_IsSeenByPlayer
+    - name: Stalker_MovementSpeed
+      guid: b319df96804c99439a558a03f47ad262
+      id: 1658937582
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: 1315252baa85424facffb67809045d19
+      - ElementName: Stalker_MovementSpeed
+        ObjectType: 13
+        guid: b319df96804c99439a558a03f47ad262
+      Path: Game Parameters\Default Work Unit\Stalker\Stalker_MovementSpeed
+    - name: Stalker_RageMeter
+      guid: ffb9be96932d43439d833971da328a28
+      id: 3336472700
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9cea611173ceb54889f7c01b3e4271d7
+      - ElementName: Stalker
+        ObjectType: 12
+        guid: 1315252baa85424facffb67809045d19
+      - ElementName: Stalker_RageMeter
+        ObjectType: 13
+        guid: ffb9be96932d43439d833971da328a28
+      Path: Game Parameters\Default Work Unit\Stalker\Stalker_RageMeter
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -3588,7 +3798,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278424395
     List: []
-  ExpandedFileSystemItemIds: 0200000004000000050000000600000007000000090000000a000000100000001f00000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005f0000006000000062000000630000006700000068000000690000006a0000006b0000007300000081000000830000008a000000930000009400000095000000960000009700000098000000990000009a0000009b0000009e000000a0000000a1000000
+  ExpandedFileSystemItemIds: 02000000040000000600000007000000090000000a0000000b0000000f00000010000000190000001f00000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005f0000006000000062000000630000006700000068000000690000006a0000006b0000007300000081000000830000008a0000008c0000008e000000930000009400000095000000960000009700000098000000990000009a0000009b0000009e000000a0000000a1000000bb000000bc000000cf000000d1000000d2000000e5000000
   ExpandedWaapiItemIds: 020000001f000000270000002c0000002d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

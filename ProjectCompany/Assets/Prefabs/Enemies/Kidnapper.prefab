@@ -273,6 +273,14 @@ MonoBehaviour:
   carryPosition: {fileID: 161055660354528107}
   dropPosition: {fileID: 5873222496690283998}
   attackChance: 1
+  GrabPlayerSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d6e8058133af264caf253146c7d6b44, type: 2}
+  DropOffPlayerSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dde6c84cf3e29fc4d9b807eda449ac8a, type: 2}
 --- !u!114 &2289267833326190374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +325,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 2b51ab922c84a3146965316a882efba0, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []

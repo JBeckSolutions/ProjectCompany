@@ -176,41 +176,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  MaxTimeUntilNextAction: 2
-  timeUntilNextAction: 0
+  maxTimeUntilNextAction: 2
   maxDistance: 10
-  validNewPosition: 0
   walkingSpeed: 3.5
   sprintSpeed: 20
-  playerList: []
+  agent: {fileID: 3311286857594216485}
   enemyHead: {fileID: 3228225618052584842}
   viewRadius: 20
   viewAngle: 360
-  playerSeenThisFrame: 0
-  layerMask: 0
-  attackRange: 2
-  attackCoooldown: 1
-  timeUntilNextAttack: 0
-  timeStunnedAfterAttack: 1
-  timeUntilStunOver: 0
-  attackDamage: 100
   hitbox: {fileID: 1840762221281657280}
+  attackRange: 2
+  attackDamage: 100
+  attackCooldown: 1
+  timeStunnedAfterAttack: 1
   canMoveWhileAttacking: 0
-  isAttacking: 0
-  agent: {fileID: 3311286857594216485}
-  currentState: 0
   stalkSpeed: 2.75
   _rage: 0
-  maxRage: 5
-  lastSeenPlayer: {fileID: 0}
-  layerMaskSeenByPlayerCheck:
-    serializedVersion: 2
-    m_Bits: 0
-  recentlyLookedAt: 0
-  lookedAtLastFrame: 0
-  receneltyLookedAtResetThisFrame: 0
-  killedTarget: 0
-  _timeRecentlyLookedAtReset: 0
+  Event_IdleMute:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4910db562f04b3c4a8f0109995eedf56, type: 2}
+  Event_IdleUnMute:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 94dd6f78f6ae4c849ab73732c962b953, type: 2}
+  Event_KilledPlayer:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b0f829cb48c6fd7418ca8a2b2ffc5761, type: 2}
+  Event_Attack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 068bd881f9ee40646bbf8a0a00764d29, type: 2}
+  Event_StalkingPlayer:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3836d3eb9026e764dac8530af2f169dc, type: 2}
+  RTPC_SeenByPlayer:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 997af568b6e9ec64fa880d1e14be4249, type: 2}
+  RTPC_LockedOnPlayer:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 00100fc984ea00843968447528ca977f, type: 2}
+  RTPC_MovementSpeed:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ee87c1099df293c46a8acc10779f68cc, type: 2}
+  RTPC_Rage:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dfa12fe8abeac48458e28aedab42ba88, type: 2}
 --- !u!195 &3311286857594216485
 NavMeshAgent:
   m_ObjectHideFlags: 0

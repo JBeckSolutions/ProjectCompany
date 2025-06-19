@@ -23,6 +23,14 @@ public class Kidnapper : EnemyBase
     [Header("Attack")]
     [SerializeField] private float attackChance = 0.05f;  // Chance for the enemy to attack
     protected List<PlayerState> playersGettingCarried;    // List of players currently being carried
+    
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event GrabPlayerSoundEvent;
+    [SerializeField] private AK.Wwise.Event DropOffPlayerSoundEvent;
+    
+    [Header("Wwise RTPCs")]
+    [SerializeField] private AK.Wwise.RTPC RTPC_PlayerNotStunned;
+    
 
     protected void Update()
     {
@@ -118,8 +126,6 @@ public class Kidnapper : EnemyBase
 
     protected override void Attack(List<PlayerState> Targets)
     {
-
-
         if (Targets.Count == 0)
         {
             isAttacking = false;
@@ -135,16 +141,17 @@ public class Kidnapper : EnemyBase
 
     protected IEnumerator CarryPlayers()
     {
+        GrabPlayerSoundEvent.Post(gameObject);
+        
         while (isAttacking)
         {
             updatePlayerPositionsServerRpc(carryPosition.position);
             yield return null;
         }
+        DropOffPlayerSoundEvent.Post(gameObject);
         updatePlayerPositionsServerRpc(dropPosition.position);
         EnablePlayerControlsServerRpc();
         timeUntilNextAttack = attackCooldown;
-
-
     }
 
     [ServerRpc]

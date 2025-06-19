@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b26bf0b91890641b221180b61a205b, type: 3}
-  m_Name: C4332CD1-0DAD-48A2-A057-B950E2B782D3
+  m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
+  m_Name: FF83CCF7-A831-4484-9B9F-19A0074E9D28
   m_EditorClassIdentifier: 
-  objectName: Kidnapper
-  id: 3829221857
-  guid: C4332CD1-0DAD-48A2-A057-B950E2B782D3
+  objectName: Kidnapper_IdleUnmute
+  id: 1675306836
+  guid: FF83CCF7-A831-4484-9B9F-19A0074E9D28
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

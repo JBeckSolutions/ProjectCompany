@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b26bf0b91890641b221180b61a205b, type: 3}
-  m_Name: 6597B177-FA3A-43EB-B7EF-DEDA5CF2C599
+  m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
+  m_Name: 58E660B1-CFD4-4158-9E85-CCDF2B12824F
   m_EditorClassIdentifier: 
-  objectName: Stalker
-  id: 2944630615
-  guid: 6597B177-FA3A-43EB-B7EF-DEDA5CF2C599
+  objectName: Stalker_IdleMute
+  id: 940689403
+  guid: 58E660B1-CFD4-4158-9E85-CCDF2B12824F
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

@@ -19,6 +19,9 @@ public class PlayerState : NetworkBehaviour
     public Camera playerCamera;
     public AkAudioListener listener;
     public GameObject model;
+    
+    [Header("Wwise Related References")]
+    public Octopode_animation_SoundEvents AnimationSound;
     public override void OnNetworkSpawn()
     {
         GameManager.Singelton.PlayerStates.Add(this);
@@ -65,6 +68,7 @@ public class PlayerState : NetworkBehaviour
     {
         this.transform.GetComponent<PlayerController>().enabled = false;
         this.transform.GetComponent<CharacterController>().enabled = false;
+        AnimationSound.PlayerStunned = true;
     }
 
     [ClientRpc]
@@ -72,6 +76,7 @@ public class PlayerState : NetworkBehaviour
     {
         this.transform.GetComponent<PlayerController>().enabled = true;
         this.transform.GetComponent<CharacterController>().enabled = true;
+        AnimationSound.PlayerStunned = false;
     }
     [ClientRpc]
     public void SetPlayerPositionClientRpc(Vector3 position)

@@ -172,6 +172,63 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2124507305191435930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9058266487325413158}
+  - component: {fileID: 1055135792948248139}
+  m_Layer: 3
+  m_Name: Wwise Bank Loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &9058266487325413158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124507305191435930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5713789926625853426}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055135792948248139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124507305191435930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f338f9cd2cec9a4688861d3976f1055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 243778689a41c664b93bd31185a97431, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &2310644527338155871
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +958,7 @@ Transform:
   - {fileID: 7281791100075562992}
   - {fileID: 4436834507518324845}
   - {fileID: 8526643153152030879}
+  - {fileID: 9058266487325413158}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &515216710299846791
@@ -1335,6 +1393,10 @@ MonoBehaviour:
   playerHand: {fileID: 7281791100075562992}
   dropLocation: {fileID: 4436834507518324845}
   inventoryUi: {fileID: 4827252211306937142}
+  SwitchInventorySlotEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d0925588a77029f4a96fad12084179f4, type: 2}
 --- !u!114 &-3665451260559732005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,6 +1419,7 @@ MonoBehaviour:
   playerCamera: {fileID: 5637948643663622685}
   listener: {fileID: 7986579520481637618}
   model: {fileID: 7511646305492866254}
+  AnimationSound: {fileID: 2867310553641933355}
 --- !u!136 &8387086731053458592
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2933,6 +2996,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8796442520453952074, guid: c9e4514d23d02ea40b2ff39b386951d9, type: 3}
   m_PrefabInstance: {fileID: 9149577818136298423}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2867310553641933355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6427603470970296732, guid: c9e4514d23d02ea40b2ff39b386951d9, type: 3}
+  m_PrefabInstance: {fileID: 9149577818136298423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3230f57d3e0678249805ace80e0d7c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7191381438132081534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2104658621684879561, guid: c9e4514d23d02ea40b2ff39b386951d9, type: 3}

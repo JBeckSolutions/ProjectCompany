@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using AK.Wwise;
 using UnityEngine;
+using Event = AK.Wwise.Event;
+
 /// <summary>
 /// The code of the this script was written by: Beck Jonas
 /// </summary>
@@ -38,7 +41,21 @@ public class Stalker : EnemyBase
     protected bool lookedAtLastFrame = false; // If the enemy looked at the player last frame
     protected bool receneltyLookedAtResetThisFrame = false; // If the "recently looked at" reset was done this frame
     protected float _timeRecentlyLookedAtReset; // Timer for resetting "recently looked at"
+    
+    [Header("WWise Events")]
+    [SerializeField] private AK.Wwise.Event Event_IdleMute;
+    [SerializeField] private AK.Wwise.Event Event_IdleUnMute;
+    [SerializeField] private AK.Wwise.Event Event_KilledPlayer;
+    [SerializeField] private AK.Wwise.Event Event_Attack;
+    [SerializeField] private AK.Wwise.Event Event_StalkingPlayer;
+    
+    
+    [Header("Wwise RTPCs")]
+    [SerializeField] private AK.Wwise.RTPC RTPC_SeenByPlayer;
+    [SerializeField] private AK.Wwise.RTPC RTPC_LockedOnPlayer;
+    [SerializeField] private AK.Wwise.RTPC RTPC_MovementSpeed;
 
+    [SerializeField] private AK.Wwise.RTPC RTPC_Rage;
     private float rage
     {
         get { return _rage; }
@@ -95,9 +112,13 @@ public class Stalker : EnemyBase
 
         var (playerSeen, player) = CanSeePlayer(playerSeenThisFrame);
         var (seenByPlayer, playerSeenBy) = IsSeenByPlayer();
-
+        
+        RTPC_LockedOnPlayer.SetValue(gameObject, seenByPlayer ? 1 : 0);
+        RTPC_SeenByPlayer.SetValue(gameObject, seenByPlayer ? 1 : 0);
+        
         if (playerSeen)
         {
+            Event_StalkingPlayer.Post(gameObject);
             rage += 2.5f * Time.deltaTime;
             lastSeenPlayer = player;
             playerSeenThisFrame = true;
@@ -114,6 +135,7 @@ public class Stalker : EnemyBase
         // Resets the Stalker when he killed a player
         if (killedTarget)
         {
+            Event_KilledPlayer.Post(gameObject);
             killedTarget = false;
             rage = 0;
             currentState = EnemyState.Hiding;
@@ -133,18 +155,18 @@ public class Stalker : EnemyBase
                 recentlyLookedAt = true;
                 timeRecentlyLookedAtReset = float.MaxValue;
                 rage += 7.5f * Time.deltaTime;
+                
             }
             //else if (recentlyLookedAt && currentState != EnemyState.Hiding)
             //{
             //    currentState = EnemyState.Chasing;
             //}
-
         }
         else if (currentState != EnemyState.Watching && currentState != EnemyState.Stalking && currentState != EnemyState.Chasing)
         {
             rage -= 1 * Time.deltaTime;
         }
-
+        RTPC_Rage.SetValue(gameObject, rage);
 
         // Decides Stalker behaviour
         if (currentState == EnemyState.Hiding)
@@ -368,6 +390,7 @@ public class Stalker : EnemyBase
 
     protected override void Attack(List<PlayerState> Targets)
     {
+        Event_Attack.Post(gameObject);
         foreach (var player in Targets)
         {
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);

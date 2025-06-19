@@ -168,6 +168,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &367201959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 285688999568484597, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+  m_PrefabInstance: {fileID: 1131791165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &367201961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367201959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f338f9cd2cec9a4688861d3976f1055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 78848fe9a76dada4685ee9ff2c87a5dd, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &438892632
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 279232431892933405, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b888035a21b70c64ca1b134c87aa9608, type: 2}
     - target: {fileID: 757167506661575759, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -548,6 +582,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7924860359247852407, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 285688999568484597, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 367201961}
   m_SourcePrefab: {fileID: 100100000, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
 --- !u!1 &1613347225
 GameObject:

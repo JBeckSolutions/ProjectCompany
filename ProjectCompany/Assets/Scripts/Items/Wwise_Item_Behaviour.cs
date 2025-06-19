@@ -6,7 +6,7 @@ public class Wwise_Item_Behaviour : MonoBehaviour
     public AK.Wwise.Event WwiseEventItemDrop;
     public AK.Wwise.Event WwiseEventItemIdle;
     public AK.Wwise.Event WwiseEventItemIdleStop;
-
+    
     public void PlayItemPickupSound()
     {
         WwiseEventItemPickup.Post(gameObject);
