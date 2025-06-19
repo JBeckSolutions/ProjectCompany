@@ -90,3 +90,7 @@ MonoBehaviour:
   ObjectName: End Round
   interactable:
     m_InternalValue: 0
+  EndRoundButtonPressedEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9e1a1e66bcc71a44e8e871f81825d684, type: 2}

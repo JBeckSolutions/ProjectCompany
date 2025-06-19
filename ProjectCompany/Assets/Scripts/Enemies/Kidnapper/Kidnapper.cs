@@ -28,9 +28,6 @@ public class Kidnapper : EnemyBase
     [SerializeField] private AK.Wwise.Event GrabPlayerSoundEvent;
     [SerializeField] private AK.Wwise.Event DropOffPlayerSoundEvent;
     
-    [Header("Wwise RTPCs")]
-    [SerializeField] private AK.Wwise.RTPC RTPC_PlayerNotStunned;
-    
 
     protected void Update()
     {

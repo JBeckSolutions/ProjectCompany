@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using AK.Wwise;
 using UnityEngine;
-using Event = AK.Wwise.Event;
+
 
 /// <summary>
 /// The code of the this script was written by: Beck Jonas
@@ -118,13 +117,13 @@ public class Stalker : EnemyBase
         
         if (playerSeen)
         {
-            Event_StalkingPlayer.Post(gameObject);
             rage += 2.5f * Time.deltaTime;
             lastSeenPlayer = player;
             playerSeenThisFrame = true;
             if (currentState != EnemyState.Chasing && currentState != EnemyState.Hiding)
             {
                 currentState = EnemyState.Watching;
+                Event_StalkingPlayer.Post(gameObject);
             }
         }
         else

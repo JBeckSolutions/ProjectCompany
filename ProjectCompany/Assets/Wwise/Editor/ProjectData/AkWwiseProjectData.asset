@@ -661,7 +661,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Maps
     guid: d908d4c3023d6a43a8cc236aa11ee72e
     GuidInternal: 
-    m_lastTime: -8584520256433701232
+    m_lastTime: -8584512378762070776
     List:
     - name: Laboratory
       guid: da82bc53772c8948a37435d3ab98b885
@@ -1242,7 +1242,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584512450916482811
+    m_lastTime: -8584512360473630121
     List:
     - name: Stalker_Attack
       guid: ee7c9c8052342a408d5c7fb2540a893d
@@ -1341,7 +1341,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0581edc6de44ca4ea32a1945b65ea68b
       Path: Events\Entities\Stalker\Stalker_Killed_Player
-      maxAttenuation: 0
+      maxAttenuation: 26
       maxDuration: 7.2110314
       minDuration: 7.2110314
     - name: Stalker_Move
@@ -1381,7 +1381,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2680a1ca0123ad468be2d7d2d1706a43
       Path: Events\Entities\Stalker\Stalker_StalkingPlayer
-      maxAttenuation: 0
+      maxAttenuation: 26
       maxDuration: 7.119729
       minDuration: 7.081948
   - PhysicalPath: Events\HostGameMenu.wwu
@@ -2591,7 +2591,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584514168470154499
+    m_lastTime: -8584512405832762726
     List:
     - name: Ambience_LightBulb_Idle
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -2725,6 +2725,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Player_Spawn
+      guid: 4af66772e8770848a9a05ee04fddbbb8
+      id: 1028635762
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Player_Spawn
+        ObjectType: 3
+        guid: 4af66772e8770848a9a05ee04fddbbb8
+      Path: Events\Maps\Laboratory\Player_Spawn
+      maxAttenuation: 0
+      maxDuration: 1.7206428
+      minDuration: 1.7206428
     - name: Rooms
       guid: eb4f0e4aaed5de4e9558e96d7e940e82
       id: 1359360203
@@ -2762,7 +2782,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Standard Interactables\InteractableButtons
     guid: a7fa57dad7fe734d93295f132b22a54b
     GuidInternal: 
-    m_lastTime: -8584520256436094878
+    m_lastTime: -8584512405832737615
     List:
     - name: Lobby_Button_GenerateDungeon
       guid: 2984ddbd23a10742847f48bb5083fc57
@@ -2785,8 +2805,8 @@ MonoBehaviour:
         guid: 2984ddbd23a10742847f48bb5083fc57
       Path: Events\Maps\Standard Interactables\InteractableButtons\Lobby_Button_GenerateDungeon
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 8
+      minDuration: 8
     - name: Map_Button_Finish
       guid: c9f538620ae6a04db243671953682367
       id: 3144856458
@@ -2808,8 +2828,8 @@ MonoBehaviour:
         guid: c9f538620ae6a04db243671953682367
       Path: Events\Maps\Standard Interactables\InteractableButtons\Map_Button_Finish
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 8
+      minDuration: 8
   - PhysicalPath: Events\Maps\Win Conditions\Score Area.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2827,7 +2847,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Win Conditions\Score Area
     guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
     GuidInternal: 
-    m_lastTime: -8584520256436084758
+    m_lastTime: -8584512405832727588
     List:
     - name: ScoreArea_Score_Decreased
       guid: 70c66c32487faf49a8e0387d6a07d269
@@ -2850,8 +2870,8 @@ MonoBehaviour:
         guid: 70c66c32487faf49a8e0387d6a07d269
       Path: Events\Maps\Win Conditions\Score Area\ScoreArea_Score_Decreased
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.6242274
+      minDuration: 1.6242274
     - name: ScoreArea_Score_Increased
       guid: 7b4102d35ef3604ab2cdb93176bcedee
       id: 810989404
@@ -2873,8 +2893,8 @@ MonoBehaviour:
         guid: 7b4102d35ef3604ab2cdb93176bcedee
       Path: Events\Maps\Win Conditions\Score Area\ScoreArea_Score_Increased
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.7354759
+      minDuration: 1.7354759
   - PhysicalPath: Events\Menus.wwu
     PathAndIcons:
     - ElementName: Events
@@ -3798,7 +3818,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278424395
     List: []
-  ExpandedFileSystemItemIds: 02000000040000000600000007000000090000000a0000000b0000000f00000010000000190000001f00000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005f0000006000000062000000630000006700000068000000690000006a0000006b0000007300000081000000830000008a0000008c0000008e000000930000009400000095000000960000009700000098000000990000009a0000009b0000009e000000a0000000a1000000bb000000bc000000cf000000d1000000d2000000e5000000
+  ExpandedFileSystemItemIds: 02000000040000000600000007000000090000000a0000000b0000000f00000010000000190000001f00000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005d0000005f00000060000000620000006300000065000000660000006700000068000000690000006a0000006b0000006c0000007300000081000000830000008a0000008c0000008e00000090000000930000009400000095000000960000009700000098000000990000009a0000009b0000009d0000009e000000a0000000a1000000bb000000bc000000be000000cf000000d1000000d2000000e5000000
   ExpandedWaapiItemIds: 020000001f000000270000002c0000002d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

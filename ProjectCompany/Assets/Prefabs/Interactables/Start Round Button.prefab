@@ -260,3 +260,7 @@ MonoBehaviour:
   ObjectName: Start Round (Only the host can start)
   interactable:
     m_InternalValue: 0
+  StartRoundButtonPressedEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d83d5d0f796bf9b478e5d54acefcfc99, type: 2}

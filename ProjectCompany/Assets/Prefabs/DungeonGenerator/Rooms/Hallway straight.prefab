@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 3205204956681851670}
   - component: {fileID: 215808811574473099}
   - component: {fileID: 3025607640116302070}
-  - component: {fileID: 2361641162225420446}
   m_Layer: 11
   m_Name: Hallway straight
   m_TagString: Untagged
@@ -114,32 +113,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.6350384, y: 4.5, z: 9.65141}
   m_Center: {x: 0.08492565, y: 2, z: 0.009616375}
---- !u!114 &2361641162225420446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595446153090595809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553895f289888c94db90fadeb13a636f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  priority: 0
-  reverbAuxBus:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a711158b6701fd94b937767e6072b011, type: 2}
-  reverbLevel: 1
-  transmissionLoss: 1
-  roomToneEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f240e14fc5e8efd48ba9c2d09af238d4, type: 2}
-  roomToneAuxSend: 0
 --- !u!1 &2292168333835867856
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +125,6 @@ GameObject:
   - component: {fileID: 105386546606405481}
   - component: {fileID: 809231621284989536}
   - component: {fileID: 987659924056231575}
-  - component: {fileID: 8185252116538235463}
   m_Layer: 9
   m_Name: ceiling
   m_TagString: Untagged
@@ -249,32 +221,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8185252116538235463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2292168333835867856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a0a86067603334ca9509b3b5e07a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  AcousticTextures:
-  - idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a808fd59ba2d2ac40ba89e77c28be4d5, type: 2}
-  TransmissionLossValues:
-  - 1
-  EnableDiffraction: 1
-  EnableDiffractionOnBoundaryEdges: 0
-  Solid: 1
-  AcousticTextureInternal:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!1 &2455563831302566658
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +539,6 @@ GameObject:
   - component: {fileID: 8765611564421762666}
   - component: {fileID: 8918476853349508207}
   - component: {fileID: 8731189962075038547}
-  - component: {fileID: 2965924273487341817}
   m_Layer: 7
   m_Name: floor
   m_TagString: Untagged
@@ -690,32 +635,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2965924273487341817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2830205152918536906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a0a86067603334ca9509b3b5e07a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  AcousticTextures:
-  - idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a808fd59ba2d2ac40ba89e77c28be4d5, type: 2}
-  TransmissionLossValues:
-  - 1
-  EnableDiffraction: 1
-  EnableDiffractionOnBoundaryEdges: 0
-  Solid: 1
-  AcousticTextureInternal:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!1 &3534748897523137998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,9 +1045,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5180368565925607314}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3058634319965865281}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
 --- !u!4 &115329886193174312 stripped
 Transform:
@@ -1161,32 +1077,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.40000007, y: 4, z: 10.000002}
   m_Center: {x: 0, y: 2.0169458, z: 0}
---- !u!114 &3058634319965865281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779803639118536082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a0a86067603334ca9509b3b5e07a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mesh: {fileID: -7513297493162946847, guid: da0cc35ef1df6534f93cd8c080be26fe, type: 3}
-  AcousticTextures:
-  - idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a808fd59ba2d2ac40ba89e77c28be4d5, type: 2}
-  TransmissionLossValues:
-  - 1
-  EnableDiffraction: 1
-  EnableDiffractionOnBoundaryEdges: 0
-  Solid: 1
-  AcousticTextureInternal:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &1161555134998503103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1195,6 +1085,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205204956681851670}
     m_Modifications:
+    - target: {fileID: 1734194942547214199, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
+      propertyPath: soundEmitterObject
+      value: 
+      objectReference: {fileID: 3724787731527702289}
     - target: {fileID: 5003219645009587346, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
       propertyPath: m_Name
       value: floorlamp
@@ -1244,6 +1138,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
+--- !u!1 &3724787731527702289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2571474610602953134, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
+  m_PrefabInstance: {fileID: 1161555134998503103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6789877185397188759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5630855707998631464, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
@@ -1320,9 +1219,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8526184871613504029}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7700152283621612826}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
 --- !u!1 &1242205737966118925 stripped
 GameObject:
@@ -1350,32 +1246,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.40000007, y: 4, z: 10.000002}
   m_Center: {x: 0, y: 2.0169458, z: 0}
---- !u!114 &7700152283621612826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242205737966118925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a0a86067603334ca9509b3b5e07a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mesh: {fileID: -7513297493162946847, guid: da0cc35ef1df6534f93cd8c080be26fe, type: 3}
-  AcousticTextures:
-  - idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a808fd59ba2d2ac40ba89e77c28be4d5, type: 2}
-  TransmissionLossValues:
-  - 1
-  EnableDiffraction: 1
-  EnableDiffractionOnBoundaryEdges: 0
-  Solid: 1
-  AcousticTextureInternal:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!4 &1906961240825819831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
@@ -1389,6 +1259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205204956681851670}
     m_Modifications:
+    - target: {fileID: 1734194942547214199, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
+      propertyPath: soundEmitterObject
+      value: 
+      objectReference: {fileID: 47298557356946591}
     - target: {fileID: 5003219645009587346, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
       propertyPath: m_Name
       value: floorlamp (1)
@@ -1438,6 +1312,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
+--- !u!1 &47298557356946591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2571474610602953134, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
+  m_PrefabInstance: {fileID: 2524196402935561521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7864250526302980889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5630855707998631464, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
@@ -1514,9 +1393,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 169818471635934536}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1315659031669076652}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
 --- !u!4 &6248629913353506890 stripped
 Transform:
@@ -1549,32 +1425,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.40000007, y: 4, z: 10.000002}
   m_Center: {x: 0, y: 2.0169458, z: 0}
---- !u!114 &1315659031669076652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6772366418187946736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a0a86067603334ca9509b3b5e07a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mesh: {fileID: -7513297493162946847, guid: da0cc35ef1df6534f93cd8c080be26fe, type: 3}
-  AcousticTextures:
-  - idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a808fd59ba2d2ac40ba89e77c28be4d5, type: 2}
-  TransmissionLossValues:
-  - 1
-  EnableDiffraction: 1
-  EnableDiffractionOnBoundaryEdges: 0
-  Solid: 1
-  AcousticTextureInternal:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &7956824291056774512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1646,9 +1496,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7781025420251239366}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2297427948537572097}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
 --- !u!1 &7110401340595916833 stripped
 GameObject:
@@ -1676,32 +1523,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.40000007, y: 4, z: 10.000002}
   m_Center: {x: 0, y: 2.0169458, z: 0}
---- !u!114 &2297427948537572097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7110401340595916833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a0a86067603334ca9509b3b5e07a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mesh: {fileID: -7513297493162946847, guid: da0cc35ef1df6534f93cd8c080be26fe, type: 3}
-  AcousticTextures:
-  - idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a808fd59ba2d2ac40ba89e77c28be4d5, type: 2}
-  TransmissionLossValues:
-  - 1
-  EnableDiffraction: 1
-  EnableDiffractionOnBoundaryEdges: 0
-  Solid: 1
-  AcousticTextureInternal:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!4 &7631042754874575515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}

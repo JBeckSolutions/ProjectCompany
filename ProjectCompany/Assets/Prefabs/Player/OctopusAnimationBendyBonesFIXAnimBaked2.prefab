@@ -1791,6 +1791,7 @@ MonoBehaviour:
   Tentacle_6: {fileID: 2249489271641006965}
   Tentacle_7: {fileID: 8283033102898586353}
   Tentacle_8: {fileID: 499927773986627614}
+  PlayerStunned: 0
 --- !u!4 &2477063039571766702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5125152360046503284, guid: e8db0730451a15c48abc3a0c4adca022, type: 3}
