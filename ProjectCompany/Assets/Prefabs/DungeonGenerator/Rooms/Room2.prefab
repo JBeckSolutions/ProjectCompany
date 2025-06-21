@@ -864,6 +864,7 @@ GameObject:
   - component: {fileID: 3790188531046855587}
   - component: {fileID: 6063884438916043380}
   - component: {fileID: 4521255885349186770}
+  - component: {fileID: 6021903082996999435}
   m_Layer: 11
   m_Name: Room2
   m_TagString: Untagged
@@ -941,6 +942,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.5, y: 4.5, z: 14.5}
   m_Center: {x: 2.5, y: 2, z: 0}
+--- !u!114 &6021903082996999435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846202440844278822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fdffb74fef7514d956849649bdbf1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  excludeOthers: 0
+  isDefault: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8ee972b4c6d2c7e4ebdd4234a3634847, type: 2}
+  priority: 0
+  auxBusIdInternal: 0
+  valueGuidInternal: 
 --- !u!1 &7868297298995678276
 GameObject:
   m_ObjectHideFlags: 0
