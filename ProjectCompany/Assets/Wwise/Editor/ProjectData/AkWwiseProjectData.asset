@@ -918,8 +918,8 @@ MonoBehaviour:
         guid: 552b93b5a744d1408d66ff521f22e248
       Path: Events\Entities\Octopode\Tentacles\Octopode_Land
       maxAttenuation: 10
-      maxDuration: 0.83148
-      minDuration: 0.4642898
+      maxDuration: 0.60695064
+      minDuration: 0.19583876
     - name: Octopode_Swap_InventorySlot
       guid: 4f8fb17978e6d94b8ff1ca58859ef38e
       id: 3672519433
@@ -941,8 +941,8 @@ MonoBehaviour:
         guid: 4f8fb17978e6d94b8ff1ca58859ef38e
       Path: Events\Entities\Octopode\Tentacles\Octopode_Swap_InventorySlot
       maxAttenuation: 10
-      maxDuration: 1.7780654
-      minDuration: 0.9472197
+      maxDuration: 2.1872673
+      minDuration: 0.9108991
     - name: Octopode_Tentacle_Drop
       guid: 8591f89fc4286047a06ed5c0b11661f9
       id: 2041774849
@@ -964,8 +964,8 @@ MonoBehaviour:
         guid: 8591f89fc4286047a06ed5c0b11661f9
       Path: Events\Entities\Octopode\Tentacles\Octopode_Tentacle_Drop
       maxAttenuation: 10
-      maxDuration: 0.9067354
-      minDuration: 0.42575565
+      maxDuration: 0.66188437
+      minDuration: 0.17958494
     - name: Octopode_Tentacle_Lift
       guid: 61e5fd56ca84904a8fe908afc00cb6a3
       id: 1002430261
@@ -1010,8 +1010,8 @@ MonoBehaviour:
         guid: 05106773fa982b40bd56dca08678821a
       Path: Events\Entities\Octopode\Tentacles\Octopode_TentacleStep
       maxAttenuation: 10
-      maxDuration: 0.9036266
-      minDuration: 0.4412692
+      maxDuration: 0.64304185
+      minDuration: 0.18484716
     - name: Tentacles
       guid: 8ef2fda7e98ba445a259f903ff49508f
       id: 1394947262
@@ -3022,8 +3022,8 @@ MonoBehaviour:
         guid: 6661bc2efa377c40bc53d0b404fc8584
       Path: Events\Props\Flashlight\Flashlight_Pickup
       maxAttenuation: 10
-      maxDuration: 1.7780654
-      minDuration: 0.9472197
+      maxDuration: 2.1872673
+      minDuration: 0.9108991
   - PhysicalPath: Events\Props\TestCube.wwu
     PathAndIcons:
     - ElementName: Events
@@ -3098,8 +3098,8 @@ MonoBehaviour:
         guid: 4c1a5a0cad0b0348a0a1e2f53f2241e4
       Path: Events\Props\TestCube\TestCube_Pickup
       maxAttenuation: 12
-      maxDuration: 1.7780654
-      minDuration: 0.9472197
+      maxDuration: 2.1872673
+      minDuration: 0.9108991
   - PhysicalPath: Events\Props\Uranium.wwu
     PathAndIcons:
     - ElementName: Events
@@ -3214,8 +3214,8 @@ MonoBehaviour:
         guid: 6ae1d6a2e2c8114aa23c7c96b89653c4
       Path: Events\Props\Uranium\Uranium_Pickup
       maxAttenuation: 16.5
-      maxDuration: 1.7780654
-      minDuration: 0.9472197
+      maxDuration: 2.1872673
+      minDuration: 0.9108991
     - name: Uranium_Unmute
       guid: 1cae4182c964fd49974c30ed6acf31f3
       id: 2325375469

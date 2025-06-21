@@ -122,8 +122,11 @@ public class Stalker : EnemyBase
             playerSeenThisFrame = true;
             if (currentState != EnemyState.Chasing && currentState != EnemyState.Hiding)
             {
+                if (currentState != EnemyState.Watching)
+                {
+                    Event_StalkingPlayer.Post(gameObject);
+                }
                 currentState = EnemyState.Watching;
-                Event_StalkingPlayer.Post(gameObject);
             }
         }
         else
@@ -154,7 +157,6 @@ public class Stalker : EnemyBase
                 recentlyLookedAt = true;
                 timeRecentlyLookedAtReset = float.MaxValue;
                 rage += 7.5f * Time.deltaTime;
-                
             }
             //else if (recentlyLookedAt && currentState != EnemyState.Hiding)
             //{
