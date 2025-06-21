@@ -568,7 +568,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584538588641023104
+    m_lastTime: -8584510920075172111
     List:
     - name: MainMenu_Ambiences
       guid: adced9441b7f334ab86e4ecd8834bdbd
@@ -2591,11 +2591,11 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584512405832762726
+    m_lastTime: -8584510920076803672
     List:
-    - name: Ambience_LightBulb_Idle
+    - name: Ambience_LightBulb_Idle_Start
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
-      id: 167687086
+      id: 716442375
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2609,11 +2609,34 @@ MonoBehaviour:
       - ElementName: Ambiences
         ObjectType: 4
         guid: 5335b1197d2f6443bc9f093a92fba02d
-      - ElementName: Ambience_LightBulb_Idle
+      - ElementName: Ambience_LightBulb_Idle_Start
         ObjectType: 3
         guid: 7e3ef4aab2200e4790fffcfe635b57a6
-      Path: Events\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle
+      Path: Events\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle_Start
       maxAttenuation: 4
+      maxDuration: 0
+      minDuration: 0
+    - name: Ambience_LightBulb_Idle_Stop
+      guid: dd987496b822c747b2b68da3f8912d1f
+      id: 2233569453
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Maps
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Laboratory
+        ObjectType: 12
+        guid: b612878506a6a94288464cd99ce6c5d4
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 5335b1197d2f6443bc9f093a92fba02d
+      - ElementName: Ambience_LightBulb_Idle_Stop
+        ObjectType: 3
+        guid: dd987496b822c747b2b68da3f8912d1f
+      Path: Events\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle_Stop
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Ambiences
@@ -3818,7 +3841,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278424395
     List: []
-  ExpandedFileSystemItemIds: 02000000040000000600000007000000090000000a0000000b0000000f00000010000000190000001f00000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005d0000005f00000060000000620000006300000065000000660000006700000068000000690000006a0000006b0000006c0000007300000081000000830000008a0000008c0000008e00000090000000930000009400000095000000960000009700000098000000990000009a0000009b0000009d0000009e000000a0000000a1000000bb000000bc000000be000000cf000000d1000000d2000000e5000000
+  ExpandedFileSystemItemIds: 02000000040000000600000007000000090000000a0000000f00000010000000150000001900000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005d0000005e0000005f00000060000000620000006300000065000000660000006700000068000000690000006a0000006b0000006c0000007300000081000000830000008a0000008c0000008e00000090000000930000009400000095000000960000009700000098000000990000009a0000009b0000009d0000009e000000a0000000a1000000bb000000bc000000be000000cf000000d1000000d2000000e5000000
   ExpandedWaapiItemIds: 020000001f000000270000002c0000002d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

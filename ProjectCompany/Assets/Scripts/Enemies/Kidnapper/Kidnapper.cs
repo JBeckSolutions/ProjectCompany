@@ -76,7 +76,7 @@ public class Kidnapper : EnemyBase
 
                     if (canMoveWhileAttacking == false)
                     {
-                        agent.SetDestination(transform.position);   //Stops the enemy to Attack
+                        agent.SetDestination(transform.position);   //fStops the enemy to Attack
                     }
                     isAttacking = true;
                     TargetsToHitAndAttack();
@@ -138,14 +138,15 @@ public class Kidnapper : EnemyBase
 
     protected IEnumerator CarryPlayers()
     {
-        GrabPlayerSoundEvent.Post(gameObject);
+        PostSoundCallServerRPC(GrabPlayerSoundEvent.Id);
+        
         
         while (isAttacking)
         {
             updatePlayerPositionsServerRpc(carryPosition.position);
             yield return null;
         }
-        DropOffPlayerSoundEvent.Post(gameObject);
+        PostSoundCallServerRPC(DropOffPlayerSoundEvent.Id);
         updatePlayerPositionsServerRpc(dropPosition.position);
         EnablePlayerControlsServerRpc();
         timeUntilNextAttack = attackCooldown;
@@ -173,6 +174,20 @@ public class Kidnapper : EnemyBase
         foreach (var player in playersGettingCarried)
         {
             player.SetPlayerPositionClientRpc(target);
+        }
+    }
+
+    [ClientRpc]
+    protected override void PostSoundCallClientRPC(uint wwiseEvent) 
+    {
+        switch (wwiseEvent)
+        {
+            case var v when v == GrabPlayerSoundEvent.Id:
+                GrabPlayerSoundEvent.Post(gameObject);
+                break;
+            case var v when v == DropOffPlayerSoundEvent.Id:
+                DropOffPlayerSoundEvent.Post(gameObject);
+                break;
         }
     }
 }

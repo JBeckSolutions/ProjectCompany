@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2103172317425166704}
   - component: {fileID: 1557083918080016634}
-  - component: {fileID: 1734194942547214199}
+  - component: {fileID: 1099913610521160899}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -297,7 +297,7 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1734194942547214199
+--- !u!114 &1099913610521160899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

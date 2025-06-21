@@ -25,7 +25,8 @@ public class Item : NetworkBehaviour
             {
                 this.GetComponent<NetworkObject>().ChangeOwnership(Player.OwnerClientId);
             }
-            
+
+            PlayItemPickupSoundClientRpc();
             PickupAble.Value = false;
             this.transform.SetParent(Player.transform);
             
@@ -36,7 +37,7 @@ public class Item : NetworkBehaviour
             this.transform.localPosition = localHandPosition;
             this.transform.localRotation = Quaternion.identity;
             this.gameObject.tag = "PickedUp";
-            Wwise_Item_Behaviour.PlayItemPickupSound();
+            
             SyncLocalPositionToClientsClientRpc(localHandPosition);
         }
     }
@@ -61,12 +62,12 @@ public class Item : NetworkBehaviour
         }
         this.transform.position = position;
         this.gameObject.tag = "Untagged";
-        Wwise_Item_Behaviour.PlayItemDropSound();
         DropClientRpc(position);
     }
     [ClientRpc]
     public virtual void DropClientRpc(Vector3 position) //Syncs the position to the clients
     {
+        Wwise_Item_Behaviour.PlayItemDropSound();
         if (GameObject.Find("GeneratedItems(Clone)"))
         {
             this.transform.SetParent(GameObject.Find("GeneratedItems(Clone)").transform);
@@ -91,5 +92,11 @@ public class Item : NetworkBehaviour
             Wwise_Item_Behaviour.UnmuteItemIdleSound();
         else
             Wwise_Item_Behaviour.MuteItemIdleSound();
+    }
+
+    [ClientRpc]
+    public void PlayItemPickupSoundClientRpc()
+    {
+        Wwise_Item_Behaviour.PlayItemPickupSound();
     }
 }

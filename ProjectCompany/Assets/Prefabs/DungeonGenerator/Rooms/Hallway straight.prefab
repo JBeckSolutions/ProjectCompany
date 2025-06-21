@@ -1085,10 +1085,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205204956681851670}
     m_Modifications:
-    - target: {fileID: 1734194942547214199, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-      propertyPath: soundEmitterObject
-      value: 
-      objectReference: {fileID: 3724787731527702289}
     - target: {fileID: 5003219645009587346, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
       propertyPath: m_Name
       value: floorlamp
@@ -1138,11 +1134,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
---- !u!1 &3724787731527702289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2571474610602953134, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-  m_PrefabInstance: {fileID: 1161555134998503103}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6789877185397188759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5630855707998631464, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
@@ -1259,10 +1250,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205204956681851670}
     m_Modifications:
-    - target: {fileID: 1734194942547214199, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-      propertyPath: soundEmitterObject
-      value: 
-      objectReference: {fileID: 47298557356946591}
     - target: {fileID: 5003219645009587346, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
       propertyPath: m_Name
       value: floorlamp (1)
@@ -1312,11 +1299,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
---- !u!1 &47298557356946591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2571474610602953134, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-  m_PrefabInstance: {fileID: 2524196402935561521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7864250526302980889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5630855707998631464, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}

@@ -323,7 +323,7 @@ MonoBehaviour:
   itemValue: 15
   InventoryImage: {fileID: 21300000, guid: 013eb5bb237896f40aa299d4bdac92db, type: 3}
   ItemWeight: 1
-  Wwise_Item_Behaviour: {fileID: 0}
+  Wwise_Item_Behaviour: {fileID: 6995771865509028192}
   model: {fileID: 7747019021075828258}
   itemCollider: {fileID: 3478948981335253013}
 --- !u!65 &3478948981335253013

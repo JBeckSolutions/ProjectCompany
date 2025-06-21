@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
-  m_Name: AAF43E7E-20B2-470E-90FF-FCFE635B57A6
+  m_Name: 0A2A3BC3-A584-4C9B-ABE2-9C6B92C0BF9E
   m_EditorClassIdentifier: 
-  objectName: Ambience_LightBulb_Idle_Start
-  id: 716442375
-  guid: AAF43E7E-20B2-470E-90FF-FCFE635B57A6
+  objectName: Robot_Idle
+  id: 130701592
+  guid: 0A2A3BC3-A584-4C9B-ABE2-9C6B92C0BF9E
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

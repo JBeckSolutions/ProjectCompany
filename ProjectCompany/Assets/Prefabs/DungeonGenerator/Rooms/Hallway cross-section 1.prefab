@@ -1192,10 +1192,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205204956681851670}
     m_Modifications:
-    - target: {fileID: 1734194942547214199, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-      propertyPath: soundEmitterObject
-      value: 
-      objectReference: {fileID: 7954061912459264628}
     - target: {fileID: 5003219645009587346, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
       propertyPath: m_Name
       value: floorlamp (1)
@@ -1248,11 +1244,6 @@ PrefabInstance:
 --- !u!4 &282010219105009138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5630855707998631464, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-  m_PrefabInstance: {fileID: 5606198280145177562}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7954061912459264628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2571474610602953134, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
   m_PrefabInstance: {fileID: 5606198280145177562}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5853886431900841889
@@ -1366,10 +1357,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205204956681851670}
     m_Modifications:
-    - target: {fileID: 1734194942547214199, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-      propertyPath: soundEmitterObject
-      value: 
-      objectReference: {fileID: 8282533116029351330}
     - target: {fileID: 5003219645009587346, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
       propertyPath: m_Name
       value: floorlamp
@@ -1422,11 +1409,6 @@ PrefabInstance:
 --- !u!4 &2268143066525682212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5630855707998631464, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
-  m_PrefabInstance: {fileID: 5863336472143887372}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8282533116029351330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2571474610602953134, guid: 2ed0b67f870cf8d4a8c54103ed78dafd, type: 3}
   m_PrefabInstance: {fileID: 5863336472143887372}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6406521929055814545
@@ -1599,10 +1581,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
       propertyPath: m_Name
       value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5cf4685ad2c18ad46999dd2102bff8d2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
