@@ -659,7 +659,7 @@ Transform:
   - {fileID: 106190610312123529}
   - {fileID: 962917814682591888}
   - {fileID: 5688378673538224710}
-  - {fileID: 5839254249511042366}
+  - {fileID: 2722806557389461395}
   - {fileID: 8527087565332525094}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -781,7 +781,7 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!1001 &4560590752697353773
+--- !u!1001 &5443182678078860416
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -789,21 +789,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5205433254387301306}
     m_Modifications:
+    - target: {fileID: 3495818180810905599, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 3311286857594216485}
+    - target: {fileID: 3495818180810905599, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 1840762221281657280}
+    - target: {fileID: 3495818180810905599, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
+      propertyPath: enemyHead
+      value: 
+      objectReference: {fileID: 5688378673538224710}
     - target: {fileID: 7280239503830081961, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
       propertyPath: m_Name
       value: Roboter
-      objectReference: {fileID: 0}
-    - target: {fileID: 7945277649884986131, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7945277649884986131, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7945277649884986131, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7945277649884986131, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -850,8 +850,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
---- !u!4 &5839254249511042366 stripped
+--- !u!4 &2722806557389461395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7945277649884986131, guid: 8ba28c7609733954c90312c5950b476f, type: 3}
-  m_PrefabInstance: {fileID: 4560590752697353773}
+  m_PrefabInstance: {fileID: 5443182678078860416}
   m_PrefabAsset: {fileID: 0}
