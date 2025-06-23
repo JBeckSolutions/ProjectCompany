@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 9043085692926631689}
   - component: {fileID: 6411132259060902651}
   - component: {fileID: 1559679088149654676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,6 +1495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4602180621116336930, guid: 721d6bed99677674f8c695d01e2ff1b1, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2297693343
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1675,6 +1679,10 @@ PrefabInstance:
     - target: {fileID: 1742984737892947764, guid: e3a323f937de6464898ef3d821016778, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081785691153833162, guid: e3a323f937de6464898ef3d821016778, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2249927146
       objectReference: {fileID: 0}
     - target: {fileID: 2973073081862427790, guid: e3a323f937de6464898ef3d821016778, type: 3}
       propertyPath: m_text

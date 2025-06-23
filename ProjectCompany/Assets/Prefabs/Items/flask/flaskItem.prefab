@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1427443057588804252}
   - component: {fileID: 159030139713425947}
   - component: {fileID: 1491870931019942487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flaskItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,6 +80,7 @@ MonoBehaviour:
   itemValue: 20
   InventoryImage: {fileID: 21300000, guid: 559539f634229b64ca671224435f37bc, type: 3}
   ItemWeight: 1
+  Wwise_Item_Behaviour: {fileID: 0}
   model: {fileID: 8045088046853031412}
   itemCollider: {fileID: 159030139713425947}
 --- !u!65 &159030139713425947
@@ -189,6 +190,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e1a5527a7cfd8c84c81d543e5637aa72, type: 3}
       propertyPath: m_Name
       value: flask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1a5527a7cfd8c84c81d543e5637aa72, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

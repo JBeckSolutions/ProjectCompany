@@ -98,7 +98,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   PickupAble:
     m_InternalValue: 1
-  itemName: Testcube
+  itemName: Sample Box
   itemValue: 40
   InventoryImage: {fileID: 21300000, guid: 8e672eab0c2e1b74f9b4463a60d92a1c, type: 3}
   ItemWeight: 2

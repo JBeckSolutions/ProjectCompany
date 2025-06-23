@@ -2102,6 +2102,7 @@ MonoBehaviour:
   itemValue: 10
   InventoryImage: {fileID: 0}
   ItemWeight: 1
+  Wwise_Item_Behaviour: {fileID: 0}
   model: {fileID: 0}
   itemCollider: {fileID: 0}
 --- !u!4 &1918841762

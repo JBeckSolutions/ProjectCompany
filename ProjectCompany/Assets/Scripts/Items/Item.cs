@@ -67,7 +67,10 @@ public class Item : NetworkBehaviour
     [ClientRpc]
     public virtual void DropClientRpc(Vector3 position) //Syncs the position to the clients
     {
-        Wwise_Item_Behaviour.PlayItemDropSound();
+        if (Wwise_Item_Behaviour != null)
+        {
+            Wwise_Item_Behaviour.PlayItemDropSound();
+        }
         if (GameObject.Find("GeneratedItems(Clone)"))
         {
             this.transform.SetParent(GameObject.Find("GeneratedItems(Clone)").transform);
@@ -88,15 +91,21 @@ public class Item : NetworkBehaviour
     private void ToggleVisibilityClientRpc(bool state)  //Toggles visibility on all clients
     {
         model.SetActive(state);
-        if (state)
-            Wwise_Item_Behaviour.UnmuteItemIdleSound();
-        else
-            Wwise_Item_Behaviour.MuteItemIdleSound();
+        if (Wwise_Item_Behaviour != null)
+        {
+            if (state)
+                Wwise_Item_Behaviour.UnmuteItemIdleSound();
+            else
+                Wwise_Item_Behaviour.MuteItemIdleSound();
+        }
     }
 
     [ClientRpc]
     public void PlayItemPickupSoundClientRpc()
     {
-        Wwise_Item_Behaviour.PlayItemPickupSound();
+        if (Wwise_Item_Behaviour != null)
+        {
+            Wwise_Item_Behaviour.PlayItemPickupSound();
+        }
     }
 }

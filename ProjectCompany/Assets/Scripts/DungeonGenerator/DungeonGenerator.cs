@@ -338,7 +338,7 @@ public class DungeonGenerator : NetworkBehaviour
 
         foreach (var buf_Collider in colliders)
         {
-            if (buf_Collider.isTrigger)
+            if (buf_Collider.isTrigger && buf_Collider.gameObject.layer == LayerMask.NameToLayer("Room"))
             {
                 if (buf_Collider.transform != room.transform)
                 {
