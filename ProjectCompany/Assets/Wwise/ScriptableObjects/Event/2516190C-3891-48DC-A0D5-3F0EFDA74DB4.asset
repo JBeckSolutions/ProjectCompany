@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
+  m_Name: 2516190C-3891-48DC-A0D5-3F0EFDA74DB4
+  m_EditorClassIdentifier: 
+  objectName: Stalker_IdleUnMute
+  id: 2709947206
+  guid: 2516190C-3891-48DC-A0D5-3F0EFDA74DB4
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

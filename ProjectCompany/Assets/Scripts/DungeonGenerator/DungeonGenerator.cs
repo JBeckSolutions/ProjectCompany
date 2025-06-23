@@ -336,11 +336,11 @@ public class DungeonGenerator : NetworkBehaviour
             room.GetComponent<BoxCollider>().size / 2,
             room.transform.rotation);
 
-        foreach (var Collider in colliders)
+        foreach (var buf_Collider in colliders)
         {
-            if (Collider.isTrigger)
+            if (buf_Collider.isTrigger)
             {
-                if (Collider.transform != room.transform)
+                if (buf_Collider.transform != room.transform)
                 {
                     //Debug.Log(Collider.transform.name);
                     return true;

@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2103172317425166704}
   - component: {fileID: 1557083918080016634}
-  - component: {fileID: 1734194942547214199}
+  - component: {fileID: 1099913610521160899}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -292,12 +292,12 @@ MonoBehaviour:
   isStaticObject: 0
   usePositionOffsetData: 0
   m_positionOffsetData:
-    KeepMe: 0
+    KeepMe: 1
     positionOffset: {x: 0, y: 0, z: 0}
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1734194942547214199
+--- !u!114 &1099913610521160899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,6 +395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorlamp
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05efeafc8d39aa24bb75daa1bb48544c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2567032745360294410, guid: 05efeafc8d39aa24bb75daa1bb48544c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -405,6 +409,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567032745360294410, guid: 05efeafc8d39aa24bb75daa1bb48544c, type: 3}
       propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200226578437192943, guid: 05efeafc8d39aa24bb75daa1bb48544c, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

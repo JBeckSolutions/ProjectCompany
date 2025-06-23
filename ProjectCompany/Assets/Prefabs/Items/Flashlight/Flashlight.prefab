@@ -253,6 +253,9 @@ GameObject:
   - component: {fileID: 4476671241014191350}
   - component: {fileID: 3478948981335253013}
   - component: {fileID: 942087365604896194}
+  - component: {fileID: 6995771865509028192}
+  - component: {fileID: 4502666994894239410}
+  - component: {fileID: 4856601484672465536}
   m_Layer: 8
   m_Name: Flashlight
   m_TagString: Untagged
@@ -320,6 +323,7 @@ MonoBehaviour:
   itemValue: 15
   InventoryImage: {fileID: 21300000, guid: 013eb5bb237896f40aa299d4bdac92db, type: 3}
   ItemWeight: 1
+  Wwise_Item_Behaviour: {fileID: 6995771865509028192}
   model: {fileID: 7747019021075828258}
   itemCollider: {fileID: 3478948981335253013}
 --- !u!65 &3478948981335253013
@@ -370,6 +374,92 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6995771865509028192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842293105881680915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5884352b16f2d8479a2976436fbf51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEventItemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7c7f7c9917b37b1459d7dedd15f76c8b, type: 2}
+  WwiseEventItemDrop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6dd315ad878a488429f3bcaaec4bc50b, type: 2}
+  WwiseEventItemIdle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c74b2e9417ba8b745bba12e632e36aa5, type: 2}
+  WwiseEventItemIdleStop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9ad27859a5279e544a48b657287e5e78, type: 2}
+--- !u!114 &4502666994894239410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842293105881680915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206ec1adedbc31c49a14319712bafae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &4856601484672465536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842293105881680915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46ab734a0c311b4787d360c93a9e614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6cfa0b92a3b86ec4593fa0568074f6df, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1001 &7440959307495404403
 PrefabInstance:
   m_ObjectHideFlags: 0

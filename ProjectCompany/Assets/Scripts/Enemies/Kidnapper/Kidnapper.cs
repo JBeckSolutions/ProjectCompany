@@ -23,6 +23,11 @@ public class Kidnapper : EnemyBase
     [Header("Attack")]
     [SerializeField] private float attackChance = 0.05f;  // Chance for the enemy to attack
     protected List<PlayerState> playersGettingCarried;    // List of players currently being carried
+    
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event GrabPlayerSoundEvent;
+    [SerializeField] private AK.Wwise.Event DropOffPlayerSoundEvent;
+    
 
     protected void Update()
     {
@@ -71,7 +76,7 @@ public class Kidnapper : EnemyBase
 
                     if (canMoveWhileAttacking == false)
                     {
-                        agent.SetDestination(transform.position);   //Stops the enemy to Attack
+                        agent.SetDestination(transform.position);   //fStops the enemy to Attack
                     }
                     isAttacking = true;
                     TargetsToHitAndAttack();
@@ -118,8 +123,6 @@ public class Kidnapper : EnemyBase
 
     protected override void Attack(List<PlayerState> Targets)
     {
-
-
         if (Targets.Count == 0)
         {
             isAttacking = false;
@@ -135,16 +138,18 @@ public class Kidnapper : EnemyBase
 
     protected IEnumerator CarryPlayers()
     {
+        PostSoundCallServerRPC(GrabPlayerSoundEvent.Id);
+        
+        
         while (isAttacking)
         {
             updatePlayerPositionsServerRpc(carryPosition.position);
             yield return null;
         }
+        PostSoundCallServerRPC(DropOffPlayerSoundEvent.Id);
         updatePlayerPositionsServerRpc(dropPosition.position);
         EnablePlayerControlsServerRpc();
         timeUntilNextAttack = attackCooldown;
-
-
     }
 
     [ServerRpc]
@@ -169,6 +174,20 @@ public class Kidnapper : EnemyBase
         foreach (var player in playersGettingCarried)
         {
             player.SetPlayerPositionClientRpc(target);
+        }
+    }
+
+    [ClientRpc]
+    protected override void PostSoundCallClientRPC(uint wwiseEvent) 
+    {
+        switch (wwiseEvent)
+        {
+            case var v when v == GrabPlayerSoundEvent.Id:
+                GrabPlayerSoundEvent.Post(gameObject);
+                break;
+            case var v when v == DropOffPlayerSoundEvent.Id:
+                DropOffPlayerSoundEvent.Post(gameObject);
+                break;
         }
     }
 }

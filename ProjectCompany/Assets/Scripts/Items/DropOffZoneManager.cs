@@ -15,6 +15,10 @@ public class DropOffAreaManager : NetworkBehaviour
 
     [SerializeField] private TMP_Text quotaText;
     [SerializeField] private Collider DropOffArea;
+    
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event Event_DropOffArea_ScoreIncreased;
+    [SerializeField] private AK.Wwise.Event Event_DropOffArea_ScoreDecreased;
     private void Start()
     {
         GameManager.Singelton.DropOffAreaManager = this;
@@ -28,7 +32,16 @@ public class DropOffAreaManager : NetworkBehaviour
             if (!ItemList.Contains(itemToAdd))
             {
                 ItemList.Add(itemToAdd);
+                int buffer_ItemValue = ItemValue;
                 CountValue();
+                if (buffer_ItemValue < ItemValue)
+                {
+                    Event_DropOffArea_ScoreIncreased.Post(gameObject);
+                }
+                else if (buffer_ItemValue > ItemValue)
+                {
+                    Event_DropOffArea_ScoreDecreased.Post(gameObject);
+                }
             }
         }
     }
@@ -52,8 +65,17 @@ public class DropOffAreaManager : NetworkBehaviour
             Item itemToRemove = other.GetComponent<Item>();
             if (ItemList.Contains(itemToRemove))
             {
+                int buffer_ItemValue = ItemValue;
                 ItemList.Remove(itemToRemove);
                 CountValue();
+                if (buffer_ItemValue < ItemValue)
+                {
+                    Event_DropOffArea_ScoreIncreased.Post(gameObject);
+                }
+                else if (buffer_ItemValue > ItemValue)
+                {
+                    Event_DropOffArea_ScoreDecreased.Post(gameObject);
+                }
             }
         }
     }

@@ -569,6 +569,14 @@ MonoBehaviour:
   ItemValue: 0
   quotaText: {fileID: 3993555056945712869}
   DropOffArea: {fileID: 8425676976003029762}
+  Event_DropOffArea_ScoreIncreased:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c1cc821e3616fd4988e45e4ad967c4c, type: 2}
+  Event_DropOffArea_ScoreDecreased:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ce10c6d48c301d643b145ec3d864c23a, type: 2}
 --- !u!65 &8425676976003029762
 BoxCollider:
   m_ObjectHideFlags: 0

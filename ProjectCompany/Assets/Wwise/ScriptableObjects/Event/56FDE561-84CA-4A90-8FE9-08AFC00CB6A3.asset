@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
   m_Name: 56FDE561-84CA-4A90-8FE9-08AFC00CB6A3
   m_EditorClassIdentifier: 
-  objectName: Lift
-  id: 2137926
+  objectName: Octopode_Tentacle_Lift
+  id: 1002430261
   guid: 56FDE561-84CA-4A90-8FE9-08AFC00CB6A3
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0
