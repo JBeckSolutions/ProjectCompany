@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584509642647926043
+    m_lastTime: -8584509370386609369
     List:
     - name: Hallway
       guid: 6ceb4210a0155048b139a8543c596c9a
@@ -500,7 +500,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Entities
     guid: 4ca19157b59a9e47b6a0c74b667e252f
     GuidInternal: 
-    m_lastTime: -8584510890498090574
+    m_lastTime: -8584509370354045032
     List:
     - name: Kidnapper
       guid: d12c33c4ad0da248a057b950e2b782d3
@@ -596,7 +596,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584510880020176014
+    m_lastTime: -8584509370354039819
     List:
     - name: MainMenu_Ambiences
       guid: adced9441b7f334ab86e4ecd8834bdbd
@@ -689,7 +689,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Maps
     guid: d908d4c3023d6a43a8cc236aa11ee72e
     GuidInternal: 
-    m_lastTime: -8584510890498090574
+    m_lastTime: -8584509370354034797
     List:
     - name: Laboratory
       guid: da82bc53772c8948a37435d3ab98b885
@@ -747,7 +747,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Kidnapper
     guid: 59f94e8d805e4949a059e20acff299e3
     GuidInternal: 
-    m_lastTime: -8584510890599417674
+    m_lastTime: -8584509370390057738
     List:
     - name: Kidnapper_DropOff_Player
       guid: 8d2c1ceb6016654ba90976578863a560
@@ -863,7 +863,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584510890599417674
+    m_lastTime: -8584509370390057738
     List:
     - name: Octopode_Idle
       guid: ab9b5e3666409c4ba56cf17e1763c376
@@ -1074,7 +1074,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Robot
     guid: 4c02fea6a4b7104c9e686eb299b83c43
     GuidInternal: 
-    m_lastTime: -8584510890599407585
+    m_lastTime: -8584509370390057738
     List:
     - name: Robot_Attack
       guid: 2e5835a7ba06444ca98cf386ef74e70d
@@ -1270,7 +1270,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584510890599407585
+    m_lastTime: -8584509370390042523
     List:
     - name: Stalker_Attack
       guid: ee7c9c8052342a408d5c7fb2540a893d
@@ -2619,7 +2619,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584510880025586654
+    m_lastTime: -8584509370390042523
     List:
     - name: Ambience_LightBulb_Idle_Start
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -2833,7 +2833,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Standard Interactables\InteractableButtons
     guid: a7fa57dad7fe734d93295f132b22a54b
     GuidInternal: 
-    m_lastTime: -8584510890599397586
+    m_lastTime: -8584509370390027309
     List:
     - name: Lobby_Button_GenerateDungeon
       guid: 2984ddbd23a10742847f48bb5083fc57
@@ -2898,7 +2898,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Win Conditions\Score Area
     guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
     GuidInternal: 
-    m_lastTime: -8584510890599397586
+    m_lastTime: -8584509370390027309
     List:
     - name: ScoreArea_Score_Decreased
       guid: 70c66c32487faf49a8e0387d6a07d269
@@ -2957,7 +2957,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584510890599387583
+    m_lastTime: -8584509370390012085
     List: []
   - PhysicalPath: Events\Props\Flashlight.wwu
     PathAndIcons:
@@ -2973,7 +2973,7 @@ MonoBehaviour:
     ParentPath: Events\Props\Flashlight
     guid: f9e48c148e615f4ca620c5f8484d0594
     GuidInternal: 
-    m_lastTime: -8584510890599387583
+    m_lastTime: -8584509370390001978
     List:
     - name: Flashlight_Drop
       guid: 3e1a95f789dc1d418ea7068843dd18ca
@@ -3089,7 +3089,7 @@ MonoBehaviour:
     ParentPath: Events\Props\TestCube
     guid: fbfcae56cd13a74595ef88c61f4b4483
     GuidInternal: 
-    m_lastTime: -8584510890599375266
+    m_lastTime: -8584509370389996861
     List:
     - name: TestCube_Drop
       guid: a354e644d056924e89dd59cbf126fa45
@@ -3165,7 +3165,7 @@ MonoBehaviour:
     ParentPath: Events\Props\Uranium
     guid: 72fa25fb59b8814ba58708700f241843
     GuidInternal: 
-    m_lastTime: -8584510890599375266
+    m_lastTime: -8584509370389996861
     List:
     - name: Uranium_Drop
       guid: 897e25edc0ed494c869c9553fe2b013f
@@ -3337,7 +3337,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584510890599365248
+    m_lastTime: -8584509370389986595
     List:
     - name: Master_Volume
       guid: 2b3d69338de44446820be47ae3949c52
@@ -3609,7 +3609,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit\Stalker
     guid: 1315252baa85424facffb67809045d19
     GuidInternal: 
-    m_lastTime: -8584510890599365248
+    m_lastTime: -8584509370389986595
     List:
     - name: Stalker_IsLockedOnPlayer
       guid: 46045f44416ac54bb0b4afcb60034328

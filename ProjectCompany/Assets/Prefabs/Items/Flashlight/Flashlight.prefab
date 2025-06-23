@@ -321,7 +321,7 @@ MonoBehaviour:
     m_InternalValue: 1
   itemName: Flashlight
   itemValue: 15
-  InventoryImage: {fileID: 21300000, guid: 013eb5bb237896f40aa299d4bdac92db, type: 3}
+  InventoryImage: {fileID: 21300000, guid: 0a363785f76e8b7469bba531930ca16e, type: 3}
   ItemWeight: 1
   Wwise_Item_Behaviour: {fileID: 6995771865509028192}
   model: {fileID: 7747019021075828258}
@@ -458,7 +458,8 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!1001 &7440959307495404403
 PrefabInstance:
