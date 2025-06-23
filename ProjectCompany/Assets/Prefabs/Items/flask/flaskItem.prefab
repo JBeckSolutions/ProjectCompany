@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1427443057588804252}
   - component: {fileID: 159030139713425947}
   - component: {fileID: 1491870931019942487}
+  - component: {fileID: 5849936221243312038}
   m_Layer: 8
   m_Name: flaskItem
   m_TagString: Untagged
@@ -80,7 +81,7 @@ MonoBehaviour:
   itemValue: 20
   InventoryImage: {fileID: 21300000, guid: 559539f634229b64ca671224435f37bc, type: 3}
   ItemWeight: 1
-  Wwise_Item_Behaviour: {fileID: 0}
+  Wwise_Item_Behaviour: {fileID: 5849936221243312038}
   model: {fileID: 8045088046853031412}
   itemCollider: {fileID: 159030139713425947}
 --- !u!65 &159030139713425947
@@ -131,6 +132,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5849936221243312038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760493651447835827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5884352b16f2d8479a2976436fbf51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEventItemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  WwiseEventItemDrop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  WwiseEventItemIdle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  WwiseEventItemIdleStop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &7162004501093136549
 PrefabInstance:
   m_ObjectHideFlags: 0
