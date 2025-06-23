@@ -42,6 +42,9 @@ public class Stalker : EnemyBase
     protected bool receneltyLookedAtResetThisFrame = false; // If the "recently looked at" reset was done this frame
     protected float _timeRecentlyLookedAtReset; // Timer for resetting "recently looked at"
     
+    [Header("Audio Control")]
+[SerializeField] private bool enableSound = true;
+
     [Header("WWise Events")]
     [SerializeField] private AK.Wwise.Event Event_IdleMute;
     [SerializeField] private AK.Wwise.Event Event_IdleUnMute;
@@ -410,6 +413,8 @@ public class Stalker : EnemyBase
     [ClientRpc]
     protected override void PostSoundCallClientRPC(uint wwiseEvent) 
     {
+        if (!enableSound) return;
+
         switch (wwiseEvent)
         {
             case var v when v == Event_IdleMute.Id:
@@ -433,6 +438,8 @@ public class Stalker : EnemyBase
     [ClientRpc]
     protected override void SetSoundRTPCClientRPC(uint wwiseRTPC, float value)
     {
+        if (!enableSound) return;
+
         switch (wwiseRTPC)
         {
             case var v when v == RTPC_SeenByPlayer.Id:

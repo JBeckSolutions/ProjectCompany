@@ -251,6 +251,7 @@ MonoBehaviour:
   canMoveWhileAttacking: 0
   stalkSpeed: 2.75
   _rage: 0
+  enableSound: 0
   Event_IdleMute:
     idInternal: 0
     valueGuidInternal: 
