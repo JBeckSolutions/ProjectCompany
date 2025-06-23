@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
+
+
 /// <summary>
 /// The code of the this script was written by: Beck Jonas
 /// </summary>
@@ -38,7 +41,23 @@ public class Stalker : EnemyBase
     protected bool lookedAtLastFrame = false; // If the enemy looked at the player last frame
     protected bool receneltyLookedAtResetThisFrame = false; // If the "recently looked at" reset was done this frame
     protected float _timeRecentlyLookedAtReset; // Timer for resetting "recently looked at"
+    
+    [Header("Audio Control")]
+[SerializeField] private bool enableSound = true;
 
+    [Header("WWise Events")]
+    [SerializeField] private AK.Wwise.Event Event_IdleMute;
+    [SerializeField] private AK.Wwise.Event Event_IdleUnMute;
+    [SerializeField] private AK.Wwise.Event Event_KilledPlayer;
+    [SerializeField] private AK.Wwise.Event Event_Attack;
+    [SerializeField] private AK.Wwise.Event Event_StalkingPlayer;
+    
+    
+    [Header("Wwise RTPCs")]
+    [SerializeField] private AK.Wwise.RTPC RTPC_SeenByPlayer;
+    [SerializeField] private AK.Wwise.RTPC RTPC_LockedOnPlayer;
+    [SerializeField] private AK.Wwise.RTPC RTPC_MovementSpeed;
+    [SerializeField] private AK.Wwise.RTPC RTPC_Rage;
     private float rage
     {
         get { return _rage; }
@@ -95,7 +114,10 @@ public class Stalker : EnemyBase
 
         var (playerSeen, player) = CanSeePlayer(playerSeenThisFrame);
         var (seenByPlayer, playerSeenBy) = IsSeenByPlayer();
-
+        
+        SetSoundRTPCServerRPC(RTPC_LockedOnPlayer.Id, seenByPlayer ? 1f : 0f);
+        SetSoundRTPCServerRPC(RTPC_SeenByPlayer.Id, seenByPlayer ? 1f : 0f);
+        
         if (playerSeen)
         {
             rage += 2.5f * Time.deltaTime;
@@ -103,6 +125,10 @@ public class Stalker : EnemyBase
             playerSeenThisFrame = true;
             if (currentState != EnemyState.Chasing && currentState != EnemyState.Hiding)
             {
+                if (currentState != EnemyState.Watching)
+                {
+                    PostSoundCallServerRPC(Event_StalkingPlayer.Id);
+                }
                 currentState = EnemyState.Watching;
             }
         }
@@ -114,6 +140,7 @@ public class Stalker : EnemyBase
         // Resets the Stalker when he killed a player
         if (killedTarget)
         {
+            PostSoundCallServerRPC(Event_KilledPlayer.Id);
             killedTarget = false;
             rage = 0;
             currentState = EnemyState.Hiding;
@@ -138,13 +165,13 @@ public class Stalker : EnemyBase
             //{
             //    currentState = EnemyState.Chasing;
             //}
-
         }
         else if (currentState != EnemyState.Watching && currentState != EnemyState.Stalking && currentState != EnemyState.Chasing)
         {
             rage -= 1 * Time.deltaTime;
         }
 
+        SetSoundRTPCServerRPC(RTPC_Rage.Id, rage);
 
         // Decides Stalker behaviour
         if (currentState == EnemyState.Hiding)
@@ -368,6 +395,7 @@ public class Stalker : EnemyBase
 
     protected override void Attack(List<PlayerState> Targets)
     {
+        PostSoundCallServerRPC(Event_Attack.Id);
         foreach (var player in Targets)
         {
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
@@ -381,5 +409,54 @@ public class Stalker : EnemyBase
 
         isAttacking = false;
     }
+
+    [ClientRpc]
+    protected override void PostSoundCallClientRPC(uint wwiseEvent) 
+    {
+        if (!enableSound) return;
+
+        switch (wwiseEvent)
+        {
+            case var v when v == Event_IdleMute.Id:
+                Event_IdleMute.Post(gameObject);
+                break;
+            case var v when v == Event_IdleUnMute.Id:
+                Event_IdleUnMute.Post(gameObject);
+                break;
+            case var v when v == Event_KilledPlayer.Id:
+                Event_KilledPlayer.Post(gameObject);
+                break;
+            case var v when v == Event_Attack.Id:
+                Event_Attack.Post(gameObject);
+                break;
+            case var v when v == Event_StalkingPlayer.Id:
+                Event_StalkingPlayer.Post(gameObject);
+                break;
+        }
+    }
+    
+    [ClientRpc]
+    protected override void SetSoundRTPCClientRPC(uint wwiseRTPC, float value)
+    {
+        if (!enableSound) return;
+
+        switch (wwiseRTPC)
+        {
+            case var v when v == RTPC_SeenByPlayer.Id:
+                RTPC_SeenByPlayer.SetValue(gameObject, value);
+                break;
+            case var v when v == RTPC_LockedOnPlayer.Id:
+                RTPC_LockedOnPlayer.SetValue(gameObject, value);
+                break;
+            case var v when v == RTPC_MovementSpeed.Id:
+                RTPC_MovementSpeed.SetValue(gameObject, value);
+                break;
+            case var v when v == RTPC_Rage.Id:
+                RTPC_Rage.SetValue(gameObject, value);
+                break;
+        }
+    }
+    
+    
 }
 

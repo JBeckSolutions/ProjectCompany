@@ -17,10 +17,7 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
     private WwiseCallIndex[] TentacleList;
     
     private short TentacleIndexStep = 0;
-
-    
-    
-    
+    public bool PlayerStunned = false;
     public void Awake()
     {
         TentacleList = new WwiseCallIndex[8]
@@ -40,7 +37,8 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
     {
         TentacleIndexLift++;
         TentacleIndexLift %= 8;
-        
+
+        if (PlayerStunned) return;
         TentacleList[TentacleIndexLift].PostWwiseEvent("Lift");
     }
     
@@ -49,8 +47,8 @@ public class Octopode_animation_SoundEvents : MonoBehaviour
         TentacleIndexStep++;
         TentacleIndexStep %= 8;
         
+        if (PlayerStunned) return;
         TentacleList[TentacleIndexStep].PostWwiseEvent("Step");
     }
-    
     
 }

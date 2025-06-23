@@ -27,6 +27,8 @@ public class PlayerInventoryManager : NetworkBehaviour
     [SerializeField] private InventoryUi inventoryUi;
 
 
+    public AK.Wwise.Event SwitchInventorySlotEvent;
+
     private void Start()
     {
         inventoryItems = new Item[InventorySpace];
@@ -64,7 +66,8 @@ public class PlayerInventoryManager : NetworkBehaviour
                 inventoryItems[ActiveInventorySlot + i] = ItemToAdd;
                 inventoryUi.InventoryTiles[ActiveInventorySlot + i].SetItemImage(ItemToAdd.InventoryImage, new Color(1,1,1,0.3f));
             }
-
+            
+            ItemToAdd.GetComponent<Wwise_Item_Behaviour>().PlayItemPickupSound();
             PlayerWeight += ItemToAdd.ItemWeight;
         }
     }
@@ -97,9 +100,9 @@ public class PlayerInventoryManager : NetworkBehaviour
                 {
                     inventoryItems[i] = null;
                     inventoryUi.InventoryTiles[i].ResetItemImage();
+                    itemToRemove.GetComponent<Wwise_Item_Behaviour>().PlayItemDropSound();
                 }
             }
-            //[WwiseCall]
         }
     }
     [ServerRpc]
@@ -190,7 +193,6 @@ public class PlayerInventoryManager : NetworkBehaviour
         {
             inventoryItems[ActiveInventorySlot].ToggleVisibilityServerRpc(true);
         }
-        
+        SwitchInventorySlotEvent.Post(gameObject);
     }
-    //[WwiseCall]
 }

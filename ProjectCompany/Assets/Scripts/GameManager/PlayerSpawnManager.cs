@@ -11,6 +11,9 @@ public class PlayerSpawnManager : NetworkBehaviour
     public Transform[] SpawnPoints;
 
     [SerializeField] private List<GameObject> playerPrefabs;
+    
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event Event_PlayerTeleported;
     private void Awake()
     {
         if (Singelton == null)
@@ -109,7 +112,8 @@ public class PlayerSpawnManager : NetworkBehaviour
             player.transform.position = spawnPos;
             player.GetComponent<PlayerController>().enabled = true;
             player.GetComponent<CharacterController>().enabled = true;
-
+            
+            Event_PlayerTeleported.Post(gameObject);
             Debug.Log("Teleported");
         }
     }

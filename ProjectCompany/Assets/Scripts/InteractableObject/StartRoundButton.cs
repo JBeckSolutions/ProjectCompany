@@ -6,8 +6,11 @@ using UnityEngine;
 public class StartRoundButton : InteractableObject
 {
     //Starts a round when the button is pressed
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event StartRoundButtonPressedEvent;
     public override void Use()
     {
+        StartRoundButtonPressedEvent.Post(gameObject);
         if (!IsServer) return;
 
         if (interactable.Value)

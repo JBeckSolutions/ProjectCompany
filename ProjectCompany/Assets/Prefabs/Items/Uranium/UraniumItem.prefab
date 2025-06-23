@@ -186,6 +186,9 @@ GameObject:
   - component: {fileID: 5267790698291885675}
   - component: {fileID: 428000437282272014}
   - component: {fileID: 9182204873710670290}
+  - component: {fileID: 5022973885554943748}
+  - component: {fileID: 8714831219530696999}
+  - component: {fileID: 8499261643322949194}
   m_Layer: 0
   m_Name: UraniumItem
   m_TagString: Untagged
@@ -253,6 +256,7 @@ MonoBehaviour:
   itemValue: 50
   InventoryImage: {fileID: 21300000, guid: 11a87dc9363dde2449c669383167d88f, type: 3}
   ItemWeight: 2
+  Wwise_Item_Behaviour: {fileID: 8499261643322949194}
   model: {fileID: 9098151255441494086}
   itemCollider: {fileID: 428000437282272014}
 --- !u!65 &428000437282272014
@@ -303,3 +307,89 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5022973885554943748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134976987606893072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206ec1adedbc31c49a14319712bafae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &8714831219530696999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134976987606893072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46ab734a0c311b4787d360c93a9e614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 30a0279bf6bb5ea44988178595b3391f, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &8499261643322949194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134976987606893072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5884352b16f2d8479a2976436fbf51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEventItemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5c44f42df337068468e11ea011a63e7c, type: 2}
+  WwiseEventItemDrop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5bd3549551b0b3747a39e6594be92cd3, type: 2}
+  WwiseEventItemIdle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a79a4bc3035901f4d8ccfa9a2db3c448, type: 2}
+  WwiseEventItemIdleStop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 72adae943af901240bbbbbf2a40cb5eb, type: 2}

@@ -5,7 +5,6 @@ public class WwiseCallIndex : MonoBehaviour
 {
     public WwiseEventPost StepPost;
     public WwiseEventPost LiftPost;
-    
     public void PostWwiseEvent(string key)
     {
         switch (key)
@@ -17,7 +16,5 @@ public class WwiseCallIndex : MonoBehaviour
                 LiftPost.PostWwiseEvent();
                 break;
         }
-        
     }
-    
 }

@@ -15,7 +15,8 @@ public class EnemyBaseLegacy : NetworkBehaviour
         Patrolling,
         Chasing
     }
-
+    
+    [Header("Enemy Settings")]
     [SerializeField] protected EnemyState currentState = EnemyState.Idle;
     [SerializeField] protected float MaxTimeUntilNextAction = 2;          //Max time the enemy can stay in the idle State
     [SerializeField] protected float timeUntilNextAction;                 //How long the enemy will stay in the Idle State
@@ -45,6 +46,18 @@ public class EnemyBaseLegacy : NetworkBehaviour
     [SerializeField] protected bool isAttacking = false; //Is the attack finished? (might be unneeded)
 
     [SerializeField] protected NavMeshAgent agent;
+    
+    
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event Event_Attack;
+    [SerializeField] private AK.Wwise.Event Event_Idle_Mute;
+    [SerializeField] private AK.Wwise.Event Event_Idle_UnMute;
+    [SerializeField] private AK.Wwise.Event Event_Killed_Player;
+    [SerializeField] private AK.Wwise.Event Event_Move_Start;
+    [SerializeField] private AK.Wwise.Event Event_Move_Stop;
+    [SerializeField] private AK.Wwise.Event Event_Player_LockedOn;
+    [SerializeField] private AK.Wwise.Event Event_Player_Lost;
+
 
     protected virtual void Start()
     {
@@ -81,6 +94,10 @@ public class EnemyBaseLegacy : NetworkBehaviour
 
         if (playerSeen)
         {
+            if (currentState != EnemyState.Chasing)
+            {
+                //PostSoundCallServerRPC(Event_Player_LockedOn.Id);
+            }
             currentState = EnemyState.Chasing;
             playerSeenThisFrame = true;
         }
@@ -238,6 +255,7 @@ public class EnemyBaseLegacy : NetworkBehaviour
 
     protected virtual void Attack(List<PlayerState> Targets)
     {
+        //PostSoundCallServerRPC(Event_Attack.Id);
         foreach (var player in Targets)
         {
             Debug.Log("Attack hit ClientId: " + player.OwnerClientId);
@@ -282,4 +300,45 @@ public class EnemyBaseLegacy : NetworkBehaviour
             Gizmos.DrawLine(enemyHead.position, enemyHead.position + direction);
         }
     }
+    
+    
+    [ServerRpc]
+    protected void PostSoundCallServerRPC(uint wwiseEvent)
+    {
+        PostSoundCallClientRPC(wwiseEvent);
+    }
+
+    [ClientRpc]
+    protected void PostSoundCallClientRPC(uint wwiseEvent)
+    {
+        switch (wwiseEvent)
+        {
+            case var value when value == Event_Attack.Id: // Event_Attack
+                Event_Attack.Post(gameObject);
+                break;
+            case var value when value == Event_Idle_Mute.Id: // Event_Idle_Mute
+                Event_Idle_Mute.Post(gameObject);
+                break;
+            case var value when value == Event_Idle_UnMute.Id: // Event_Idle_UnMute
+                Event_Idle_UnMute.Post(gameObject);
+                break;
+            case var value when value == Event_Killed_Player.Id: // Event_Killed_Player
+                Event_Killed_Player.Post(gameObject);
+                break;
+            case var value when value == Event_Move_Start.Id: // Event_Move_Start
+                Event_Move_Start.Post(gameObject);
+                break;
+            case var value when value == Event_Move_Stop.Id: // Event_Move_Stop
+                Event_Move_Stop.Post(gameObject);
+                break;
+            case var value when value == Event_Player_LockedOn.Id: // Event_Player_LockedOn
+                Event_Player_LockedOn.Post(gameObject);
+                break;
+            case var value when value == Event_Player_Lost.Id: // Event_Player_Lost
+                Event_Player_Lost.Post(gameObject);
+                break;
+                
+        }
+    }
+    
 }

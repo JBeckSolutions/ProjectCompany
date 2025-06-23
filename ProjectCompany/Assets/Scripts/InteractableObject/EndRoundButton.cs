@@ -7,9 +7,11 @@ using System.Collections;
 public class EndRoundButton : InteractableObject
 {
     //Ends the round when the button is pressed
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event EndRoundButtonPressedEvent;
     public override void Use()
     {
-            GameManager.Singelton.EndRoundServerRpc();
+        EndRoundButtonPressedEvent.Post(gameObject);
+        GameManager.Singelton.EndRoundServerRpc();
     }
-
 }

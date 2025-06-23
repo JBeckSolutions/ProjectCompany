@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3519108564483672428}
   - component: {fileID: 4389020458096892786}
   - component: {fileID: 1629408954511568472}
+  - component: {fileID: -8157543452924925542}
   m_Layer: 8
   m_Name: CubeItem
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   itemValue: 40
   InventoryImage: {fileID: 21300000, guid: 8e672eab0c2e1b74f9b4463a60d92a1c, type: 3}
   ItemWeight: 2
+  Wwise_Item_Behaviour: {fileID: -8157543452924925542}
   model: {fileID: 5118609058765622453}
   itemCollider: {fileID: 1688976576672291614}
 --- !u!54 &1629408954511568472
@@ -130,6 +132,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8157543452924925542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2156017288405549669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5884352b16f2d8479a2976436fbf51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WwiseEventItemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5fdd4b8f68e7bb44db49d657c9eb095c, type: 2}
+  WwiseEventItemDrop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b318b9cd9469388479f42852953a714f, type: 2}
+  WwiseEventItemIdle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f595f6a152e857044b0af1de30236052, type: 2}
+  WwiseEventItemIdleStop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f595f6a152e857044b0af1de30236052, type: 2}
 --- !u!1 &5118609058765622453
 GameObject:
   m_ObjectHideFlags: 0

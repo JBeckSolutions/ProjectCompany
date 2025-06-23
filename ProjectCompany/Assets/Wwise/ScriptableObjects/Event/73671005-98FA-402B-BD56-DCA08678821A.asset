@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
   m_Name: 73671005-98FA-402B-BD56-DCA08678821A
   m_EditorClassIdentifier: 
-  objectName: Step
-  id: 621108255
+  objectName: Octopode_TentacleStep
+  id: 1234234613
   guid: 73671005-98FA-402B-BD56-DCA08678821A
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

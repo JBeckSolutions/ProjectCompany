@@ -202,4 +202,27 @@ public class EnemyBase : NetworkBehaviour
             Gizmos.DrawLine(enemyHead.position, enemyHead.position + direction);
         }
     }
+    
+    [ServerRpc]
+    protected void PostSoundCallServerRPC(uint wwiseEvent)
+    {
+        PostSoundCallClientRPC(wwiseEvent);
+    }
+
+    [ClientRpc]
+    protected virtual void PostSoundCallClientRPC(uint wwiseEvent)
+    {
+    }
+    
+    [ServerRpc]
+    protected void SetSoundRTPCServerRPC(uint wwiseRTPC, float value)
+    {
+        SetSoundRTPCClientRPC(wwiseRTPC, value);
+    }
+
+    [ClientRpc]
+    protected virtual void SetSoundRTPCClientRPC(uint wwiseRTPC, float value)
+    {
+        
+    }
 }
