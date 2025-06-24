@@ -1,0 +1,57 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	810441784	SelectedMap			\Default Work Unit\SelectedMap	
+	2121736680	CurrentScene			\Default Work Unit\CurrentScene	
+
+State	ID	Name	State Group			Notes
+	748895195	None	SelectedMap			
+	766371778	Laboratory	SelectedMap			
+	68007511	SettingsMenu	CurrentScene			
+	748895195	None	CurrentScene			
+	1886836668	HostGameMenu	CurrentScene			
+	3604647259	MainMenu	CurrentScene			
+	3762955427	Tutorial	CurrentScene			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
+	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
+	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
+	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
+	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
+	2058049674	Wood			\Factory Acoustic Textures\Textures\Wood	
+	2412606308	Carpet			\Factory Acoustic Textures\Textures\Carpet	
+	2637588553	Tile			\Factory Acoustic Textures\Textures\Tile	
+	2928161104	Curtains			\Factory Acoustic Textures\Textures\Curtains	
+	3195498748	Cork_Tiles			\Factory Acoustic Textures\Textures\Cork_Tiles	
+	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
+	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4179668880	Master_Volume			\Default Work Unit\Master_Volume	
+	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	290285391	Lobby			\Default Work Unit\Master Audio Bus\Lobby	
+	766371778	Laboratory			\Default Work Unit\Master Audio Bus\Laboratory	
+	985987111	Motion Factory Bus			\Default Work Unit\Motion Factory Bus	
+	2886307548	MusicBus			\Default Work Unit\MusicBus	
+	3600729941	UI Bus			\Default Work Unit\UI Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	155036941	Hallway_TSection			\Default Work Unit\Master Audio Bus\Laboratory\Hallway_TSection	
+	203080930	Room_Storage			\Default Work Unit\Master Audio Bus\Laboratory\Room_Storage	
+	537292363	Room_Office			\Default Work Unit\Master Audio Bus\Laboratory\Room_Office	
+	2198133169	Hallway			\Default Work Unit\Master Audio Bus\Laboratory\Hallway	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1588715066	Echoes_Linear	Wwise Delay			
+	1990128658	Room_Medium	Wwise RoomVerb			
+	2265839006	Not_A_Yellow_Submarine	Wwise RoomVerb			
+	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
+	2995775460	Room_Small	Wwise RoomVerb			
+	3399505373	Reflect_Physically_Based	Wwise Reflect			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+	4230635974	Default_Motion_Device	Motion			
+

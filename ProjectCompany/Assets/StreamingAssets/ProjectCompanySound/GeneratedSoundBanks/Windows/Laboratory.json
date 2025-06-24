@@ -1,0 +1,830 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "766371778",
+    "Type": "User",
+    "GUID": "{53BC82DA-2C77-4889-A374-35D3AB98B885}",
+    "Language": "SFX",
+    "Hash": "{19A22DC9-6864-3DC8-0046-9EA56ED50BE9}",
+    "ObjectPath": "\\SoundBanks\\Maps\\Laboratory",
+    "ShortName": "Laboratory",
+    "Path": "Laboratory.bnk",
+    "Media": [
+     {
+      "Id": "22702131",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flashlight click.wav",
+      "CachePath": "C9/{C9026703-4438-A470-0EED-30E9626B86B1}.wem"
+     },
+     {
+      "Id": "26495306",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TeleportSound.wav",
+      "CachePath": "0D/{0D0D2A7C-994C-7338-3432-58D386A6C181}.wem"
+     },
+     {
+      "Id": "56150773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_5.wav",
+      "CachePath": "CF/{CF972DA4-4EFD-B7BA-9B8C-680FE7FC9ACF}.wem"
+     },
+     {
+      "Id": "71940406",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_8.wav",
+      "CachePath": "84/{84C1D4CD-DE99-7C7A-7884-86AE39639846}.wem"
+     },
+     {
+      "Id": "93978566",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_11.wav",
+      "CachePath": "18/{1890C4B6-67E5-DA90-2D82-0C3E8E273081}.wem"
+     },
+     {
+      "Id": "97064422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Radioactivity.wav",
+      "CachePath": "22/{227DCD79-C4AA-738E-E33A-0FF8860BB239}.wem"
+     },
+     {
+      "Id": "220366424",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_1.wav",
+      "CachePath": "4A/{4A32482D-F255-945B-36EE-D7337BD3BEC6}.wem"
+     },
+     {
+      "Id": "222478994",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flashlight Pickup.wav",
+      "CachePath": "1D/{1D1B0AA9-5CFE-6CD6-7D77-1988766A7E04}.wem"
+     },
+     {
+      "Id": "246159269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_6.wav",
+      "CachePath": "C9/{C9D368B1-724D-323E-5D4E-09F750E60AED}.wem"
+     },
+     {
+      "Id": "296471019",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_5.wav",
+      "CachePath": "8E/{8E74663A-70D5-3FF6-8EF8-9B0DCA2C96E3}.wem"
+     },
+     {
+      "Id": "306192780",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_4.wav",
+      "CachePath": "E9/{E94503D1-447E-C30C-686A-733CA6A8E669}.wem"
+     },
+     {
+      "Id": "306621905",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_7.wav",
+      "CachePath": "FC/{FCBFC569-9BFB-D3E4-70CE-CC47D83A4D95}.wem"
+     },
+     {
+      "Id": "349388133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_9.wav",
+      "CachePath": "5D/{5D39DC02-CBBD-EF6F-F875-26FAEFCFBB9A}.wem"
+     },
+     {
+      "Id": "352113386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_6.wav",
+      "CachePath": "03/{03E42A5B-AE02-37FB-877A-CB4A226377B1}.wem"
+     },
+     {
+      "Id": "435432647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_7.wav",
+      "CachePath": "09/{09CDACAF-4223-D73A-29F1-B032699FCC1D}.wem"
+     },
+     {
+      "Id": "438886559",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ScoreIncreased.wav",
+      "CachePath": "8D/{8D387362-0984-7BA5-C04A-248D95392CB3}.wem"
+     },
+     {
+      "Id": "448956339",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_2.wav",
+      "CachePath": "AC/{ACF9DA5E-5E05-B4C5-3B7E-D1A88A31578C}.wem"
+     },
+     {
+      "Id": "468562709",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_2.wav",
+      "CachePath": "71/{71AE8994-F455-A47D-8C08-EC199ED8B3CE}.wem"
+     },
+     {
+      "Id": "517533562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_4.wav",
+      "CachePath": "26/{2671A317-26E8-3F20-C640-DAA8651396E6}.wem"
+     },
+     {
+      "Id": "552724064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_8.wav",
+      "CachePath": "3E/{3E62F971-0F04-8414-5FF7-F1337DF9F68B}.wem"
+     },
+     {
+      "Id": "560181597",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ScoreDecreased.wav",
+      "CachePath": "5C/{5CF69828-753D-5951-8738-BA0B98C45D75}.wem"
+     },
+     {
+      "Id": "581920733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flashlight Dropped.wav",
+      "CachePath": "C7/{C701DCAE-D2DE-50A1-9C9D-00DEF5D24DFD}.wem"
+     },
+     {
+      "Id": "594547032",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_3.wav",
+      "CachePath": "0B/{0B61EA00-BC2D-54A6-9644-0A659BF62E5A}.wem"
+     },
+     {
+      "Id": "660839250",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_7.wav",
+      "CachePath": "4D/{4D408863-8FB5-1D16-A57E-5A22E85F32E9}.wem"
+     },
+     {
+      "Id": "665798167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_6.wav",
+      "CachePath": "69/{6921E363-7BD0-3B19-A994-0C9E1FC59AD9}.wem"
+     },
+     {
+      "Id": "688781331",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Fluorescent Light Idle.wav",
+      "CachePath": "00/{00248C14-EE6F-C1E7-67B4-0022E45BC2BA}.wem"
+     },
+     {
+      "Id": "724778742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_10.wav",
+      "CachePath": "D0/{D0A183A5-F1CB-D9D9-A2A5-171BEB2E36BD}.wem"
+     },
+     {
+      "Id": "767274683",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_1.wav",
+      "CachePath": "89/{89C7B8FA-199C-B9A3-8932-A50C094697F7}.wem"
+     },
+     {
+      "Id": "858315378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_12.wav",
+      "CachePath": "09/{09639971-914C-234B-0272-9873A58DC86A}.wem"
+     },
+     {
+      "Id": "862256466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Teleport Button Clicked.wav",
+      "CachePath": "34/{3422B3BB-DC19-729F-5E7D-4E6B59CCA532}.wem"
+     },
+     {
+      "Id": "902133255",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_1.wav",
+      "CachePath": "4A/{4A32482D-F255-945B-36EE-D7337BD3BEC6}.wem"
+     },
+     {
+      "Id": "940843974",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_13.wav",
+      "CachePath": "D0/{D0A7DB4C-C504-0251-1E28-E653AAAA3A59}.wem"
+     },
+     {
+      "Id": "988061760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_2.wav",
+      "CachePath": "DB/{DB3738F8-CBE4-280D-A505-005786CBB3D3}.wem"
+     },
+     {
+      "Id": "992206024",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_4.wav",
+      "CachePath": "E9/{E94503D1-447E-C30C-686A-733CA6A8E669}.wem"
+     },
+     {
+      "Id": "1006995463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_8.wav",
+      "CachePath": "A9/{A998D830-2B55-7BC2-1960-0291843A3C95}.wem"
+     },
+     {
+      "Id": "1017549383",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_3.wav",
+      "CachePath": "FB/{FBBABF7A-7FDD-DA6A-6C6D-8E90D097A2F9}.wem"
+     },
+     {
+      "Id": "1030988683",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Uranium_Drop_3.wav",
+      "CachePath": "92/{9290C005-CEA1-5B31-3A77-BB9EC279EA95}.wem"
+     },
+     {
+      "Id": "1049704006",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Testcube_Drop_5.wav",
+      "CachePath": "75/{7546C25C-216A-D996-B04B-86BEBA17EF86}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "285328392",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Props\\Flashlight\\Flashlight\\Flashlight_Click\\Flashlight_Off\\Delay\\Silence",
+       "GUID": "{95CF016E-4CAD-45CF-9FBB-06E01AA1E2E6}",
+       "Color": "4",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "380910287",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Props\\Flashlight\\Flashlight\\Flashlight_Click\\Flashlight_On\\Delay\\Silence",
+       "GUID": "{B718E9B5-9AD1-4CFF-9DE8-3A8510BB417F}",
+       "Color": "4",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "716442375",
+      "Name": "Ambience_LightBulb_Idle_Start",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Ambiences\\Ambience_LightBulb_Idle_Start",
+      "GUID": "{AAF43E7E-20B2-470E-90FF-FCFE635B57A6}",
+      "Color": "3",
+      "MaxAttenuation": "4",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "688781331"
+       }
+      ]
+     },
+     {
+      "Id": "2233569453",
+      "Name": "Ambience_LightBulb_Idle_Stop",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Ambiences\\Ambience_LightBulb_Idle_Stop",
+      "GUID": "{967498DD-22B8-47C7-B2B6-8DA3F8912D1F}",
+      "Color": "3",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1153302829",
+      "Name": "Flashlight_Drop",
+      "ObjectPath": "\\Events\\Props\\Flashlight\\Flashlight_Drop",
+      "GUID": "{F7951A3E-DC89-411D-8EA7-068843DD18CA}",
+      "Color": "4",
+      "MaxAttenuation": "6.75",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4651711",
+      "DurationMax": "0.53743666",
+      "MediaRefs": [
+       {
+        "Id": "581920733"
+       }
+      ]
+     },
+     {
+      "Id": "1721397820",
+      "Name": "Flashlight_Idle",
+      "ObjectPath": "\\Events\\Props\\Flashlight\\Flashlight_Idle",
+      "GUID": "{64F35398-D147-4177-9224-D9546B504A59}",
+      "Color": "4",
+      "MaxAttenuation": "6.75",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "688781331"
+       }
+      ]
+     },
+     {
+      "Id": "1126494853",
+      "Name": "Flashlight_Off",
+      "ObjectPath": "\\Events\\Props\\Flashlight\\Flashlight_Off",
+      "GUID": "{38ED5B5B-4AA5-4140-B004-4BE37410ECD0}",
+      "Color": "4",
+      "MaxAttenuation": "6.75",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3092718",
+      "DurationMax": "0.35265166",
+      "MediaRefs": [
+       {
+        "Id": "22702131"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "285328392"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2033671033",
+      "Name": "Flashlight_On",
+      "ObjectPath": "\\Events\\Props\\Flashlight\\Flashlight_On",
+      "GUID": "{55050EC5-4DD6-4C62-BF29-F69AB354B992}",
+      "Color": "4",
+      "MaxAttenuation": "6.75",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9146359",
+      "DurationMax": "0.93632585",
+      "MediaRefs": [
+       {
+        "Id": "22702131"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "380910287"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3293791586",
+      "Name": "Flashlight_Pickup",
+      "ObjectPath": "\\Events\\Props\\Flashlight\\Flashlight_Pickup",
+      "GUID": "{2EBC6166-37FA-407C-BC53-D0B404FC8584}",
+      "Color": "4",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9108991",
+      "DurationMax": "2.1872673",
+      "MediaRefs": [
+       {
+        "Id": "71940406"
+       },
+       {
+        "Id": "93978566"
+       },
+       {
+        "Id": "222478994"
+       },
+       {
+        "Id": "296471019"
+       },
+       {
+        "Id": "349388133"
+       },
+       {
+        "Id": "352113386"
+       },
+       {
+        "Id": "448956339"
+       },
+       {
+        "Id": "517533562"
+       },
+       {
+        "Id": "594547032"
+       },
+       {
+        "Id": "660839250"
+       },
+       {
+        "Id": "724778742"
+       },
+       {
+        "Id": "767274683"
+       },
+       {
+        "Id": "858315378"
+       },
+       {
+        "Id": "940843974"
+       }
+      ]
+     },
+     {
+      "Id": "2922746229",
+      "Name": "Laboratory_Hallway",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Rooms\\Laboratory_Hallway",
+      "GUID": "{2EF552D6-E5A2-4C70-A722-021C1B7338ED}",
+      "Color": "3",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1252818853",
+      "Name": "Laboratory_Office",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Rooms\\Laboratory_Office",
+      "GUID": "{D623E059-E4DC-4F2E-8A7A-EB4D77C98FBF}",
+      "Color": "3",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1199550744",
+      "Name": "Laboratory_Storage",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Rooms\\Laboratory_Storage",
+      "GUID": "{EEC8616E-9512-4F14-A330-85190FE04BF7}",
+      "Color": "3",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1028635762",
+      "Name": "Player_Spawn",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Player_Spawn",
+      "GUID": "{7267F64A-77E8-4808-A9A0-5EE04FDDBBB8}",
+      "Color": "3",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7206428",
+      "DurationMax": "1.7206428",
+      "MediaRefs": [
+       {
+        "Id": "26495306"
+       },
+       {
+        "Id": "862256466"
+       }
+      ]
+     },
+     {
+      "Id": "121923024",
+      "Name": "ScoreArea_Score_Decreased",
+      "ObjectPath": "\\Events\\Maps\\Win Conditions\\Score Area\\ScoreArea_Score_Decreased",
+      "GUID": "{326CC670-7F48-49AF-A8E0-387D6A07D269}",
+      "Color": "3",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6242274",
+      "DurationMax": "1.6242274",
+      "MediaRefs": [
+       {
+        "Id": "560181597"
+       }
+      ]
+     },
+     {
+      "Id": "810989404",
+      "Name": "ScoreArea_Score_Increased",
+      "ObjectPath": "\\Events\\Maps\\Win Conditions\\Score Area\\ScoreArea_Score_Increased",
+      "GUID": "{D302417B-F35E-4A60-B2CD-B93176BCEDEE}",
+      "Color": "3",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7354759",
+      "DurationMax": "1.7354759",
+      "MediaRefs": [
+       {
+        "Id": "438886559"
+       }
+      ]
+     },
+     {
+      "Id": "745428686",
+      "Name": "TestCube_Drop",
+      "ObjectPath": "\\Events\\Props\\TestCube\\TestCube_Drop",
+      "GUID": "{44E654A3-56D0-4E92-89DD-59CBF126FA45}",
+      "Color": "4",
+      "MaxAttenuation": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "0.47241867",
+      "DurationMax": "0.93917966",
+      "MediaRefs": [
+       {
+        "Id": "220366424"
+       },
+       {
+        "Id": "246159269"
+       },
+       {
+        "Id": "435432647"
+       },
+       {
+        "Id": "988061760"
+       },
+       {
+        "Id": "992206024"
+       },
+       {
+        "Id": "1006995463"
+       },
+       {
+        "Id": "1017549383"
+       },
+       {
+        "Id": "1049704006"
+       }
+      ]
+     },
+     {
+      "Id": "886084000",
+      "Name": "TestCube_EmptyCall",
+      "ObjectPath": "\\Events\\Props\\TestCube\\TestCube_EmptyCall",
+      "GUID": "{1B06101F-B4E0-41D9-9D22-EA068EC31B65}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2398437945",
+      "Name": "TestCube_Pickup",
+      "ObjectPath": "\\Events\\Props\\TestCube\\TestCube_Pickup",
+      "GUID": "{0C5A1A4C-0BAD-4803-A0A1-E2F53F2241E4}",
+      "Color": "4",
+      "MaxAttenuation": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9108991",
+      "DurationMax": "2.1872673",
+      "MediaRefs": [
+       {
+        "Id": "71940406"
+       },
+       {
+        "Id": "93978566"
+       },
+       {
+        "Id": "222478994"
+       },
+       {
+        "Id": "296471019"
+       },
+       {
+        "Id": "349388133"
+       },
+       {
+        "Id": "352113386"
+       },
+       {
+        "Id": "448956339"
+       },
+       {
+        "Id": "517533562"
+       },
+       {
+        "Id": "594547032"
+       },
+       {
+        "Id": "660839250"
+       },
+       {
+        "Id": "724778742"
+       },
+       {
+        "Id": "767274683"
+       },
+       {
+        "Id": "858315378"
+       },
+       {
+        "Id": "940843974"
+       }
+      ]
+     },
+     {
+      "Id": "2487599656",
+      "Name": "Uranium_Drop",
+      "ObjectPath": "\\Events\\Props\\Uranium\\Uranium_Drop",
+      "GUID": "{ED257E89-EDC0-4C49-869C-9553FE2B013F}",
+      "Color": "4",
+      "MaxAttenuation": "16.5",
+      "DurationType": "OneShot",
+      "DurationMin": "0.26136133",
+      "DurationMax": "0.5797305",
+      "MediaRefs": [
+       {
+        "Id": "56150773"
+       },
+       {
+        "Id": "306192780"
+       },
+       {
+        "Id": "306621905"
+       },
+       {
+        "Id": "468562709"
+       },
+       {
+        "Id": "552724064"
+       },
+       {
+        "Id": "665798167"
+       },
+       {
+        "Id": "902133255"
+       },
+       {
+        "Id": "1030988683"
+       }
+      ]
+     },
+     {
+      "Id": "3642641725",
+      "Name": "Uranium_Idle",
+      "ObjectPath": "\\Events\\Props\\Uranium\\Uranium_Idle",
+      "GUID": "{94717D8B-3E83-418E-B706-F7F52A981787}",
+      "Color": "4",
+      "MaxAttenuation": "16.5",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "97064422"
+       }
+      ]
+     },
+     {
+      "Id": "1719140997",
+      "Name": "Uranium_IdleStop",
+      "ObjectPath": "\\Events\\Props\\Uranium\\Uranium_IdleStop",
+      "GUID": "{B46A5C2C-94A5-4F0D-A1DD-F0EDAF538C61}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2571317824",
+      "Name": "Uranium_Mute",
+      "ObjectPath": "\\Events\\Props\\Uranium\\Uranium_Mute",
+      "GUID": "{066B8053-3520-4308-9D74-83E057CB9742}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3332062019",
+      "Name": "Uranium_Pickup",
+      "ObjectPath": "\\Events\\Props\\Uranium\\Uranium_Pickup",
+      "GUID": "{A2D6E16A-C8E2-4A11-A23C-7C96B89653C4}",
+      "Color": "4",
+      "MaxAttenuation": "16.5",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9108991",
+      "DurationMax": "2.1872673",
+      "MediaRefs": [
+       {
+        "Id": "71940406"
+       },
+       {
+        "Id": "93978566"
+       },
+       {
+        "Id": "222478994"
+       },
+       {
+        "Id": "296471019"
+       },
+       {
+        "Id": "349388133"
+       },
+       {
+        "Id": "352113386"
+       },
+       {
+        "Id": "448956339"
+       },
+       {
+        "Id": "517533562"
+       },
+       {
+        "Id": "594547032"
+       },
+       {
+        "Id": "660839250"
+       },
+       {
+        "Id": "724778742"
+       },
+       {
+        "Id": "767274683"
+       },
+       {
+        "Id": "858315378"
+       },
+       {
+        "Id": "940843974"
+       }
+      ]
+     },
+     {
+      "Id": "2325375469",
+      "Name": "Uranium_Unmute",
+      "ObjectPath": "\\Events\\Props\\Uranium\\Uranium_Unmute",
+      "GUID": "{8241AE1C-64C9-49FD-974C-30ED6ACF31F3}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{82690E94-BDC9-199B-6DA2-0B5E1CE1A276}"
+ }
+}

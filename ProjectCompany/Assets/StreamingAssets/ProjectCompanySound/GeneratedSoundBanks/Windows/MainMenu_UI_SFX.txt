@@ -1,0 +1,31 @@
+Event	ID	Name			Wwise Object Path	Notes
+	103313448	HostGameMenu_UI_Button_Hover_StartGame			\Menus\MainMenu\HostGameMenu\MainMenu_HostGameMenu_UI_Button_Hover\HostGameMenu_UI_Button_Hover_StartGame	
+	115838932	MainMenu_UI_Button_Hover_QuitGame			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_QuitGame	
+	386571594	MainMenu_UI_Button_Click_QuitGame			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_QuitGame	
+	530535131	HostGameMenu_UI_Button_Hover_Back			\Menus\MainMenu\HostGameMenu\MainMenu_HostGameMenu_UI_Button_Hover\HostGameMenu_UI_Button_Hover_Back	
+	613594447	MainMenu_SettingsMenu_UI_Button_Hover_Back			\Menus\MainMenu\SettingsMenu\MainMenu_SettingsMenu_UI_Button_Hover\MainMenu_SettingsMenu_UI_Button_Hover_Back	
+	1287529973	MainMenu_UI_Button_Hover_Tutorial			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_Tutorial	
+	1823813971	MainMenu_UI_Button_Click_NewGame			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_NewGame	
+	1826603681	MainMenu_UI_Button_Hover_JoinGame			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_JoinGame	
+	1917398209	MainMenu_SettingsMenu_UI_Button_Click_Back			\Menus\MainMenu\SettingsMenu\MainMenu_SettingsMenu_UI_Button_Click\MainMenu_SettingsMenu_UI_Button_Click_Back	
+	1917916276	MainMenu_TutorialMenu_UI_Button_Hover_Back			\Menus\MainMenu\TutorialMenu\MainMenu_TutorialMenu_UI_Button_Hover\MainMenu_TutorialMenu_UI_Button_Hover_Back	
+	2313975087	MainMenu_UI_Button_Click_Tutorial			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Tutorial	
+	2326452682	MainMenu_TutorialMenu_UI_Button_Click_Back			\Menus\MainMenu\TutorialMenu\MainMenu_TutorialMenu_UI_Button_Click\MainMenu_TutorialMenu_UI_Button_Click_Back	
+	2697549084	MainMenu_HostGameMenu_UI_Button_Click_Back			\Menus\MainMenu\HostGameMenu\MainMenu_HostGameMenu_UI_Button_Click\MainMenu_HostGameMenu_UI_Button_Click_Back	
+	2791905871	InGameMenu_SettingsMenu_UI_Button_Hover_Back			\Menus\InGameMenu\InGameMenu_SettingsMenu\InGameMenu_SettingsMenu_UI_Button_Hover\InGameMenu_SettingsMenu_UI_Button_Hover_Back	
+	3113977793	MainMenu_HostGameMenu_UI_Button_Click_StartGame			\Menus\MainMenu\HostGameMenu\MainMenu_HostGameMenu_UI_Button_Click\MainMenu_HostGameMenu_UI_Button_Click_StartGame	
+	3225697891	MainMenu_UI_Button_Click_JoinGame			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_JoinGame	
+	3539013154	MainMenu_UI_Button_Click_Settings			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Settings	
+	4060264903	MainMenu_UI_Button_Hover_HostGame			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_HostGame	
+	4084181749	MainMenu_UI_Button_Hover_SettingsMenu			\Menus\MainMenu\MainMenu_UI\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_SettingsMenu	
+	4095709633	InGameMenu_SettingsMenu_UI_Button_Click_Back			\Menus\InGameMenu\InGameMenu_SettingsMenu\InGameMenu_SettingsMenu_UI_Button_Click\InGameMenu_SettingsMenu_UI_Button_Click_Back	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	105673869	MainMenu_UI_Button_Click_NewGame	C:\Users\warma\repos\ProjectCompanySound\.cache\82\{82C9E9D2-CA5C-E421-CB4D-8065F885EE41}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_NewGame		473446
+	309162988	MainMenu_UI_Button_Hover_Tutorial	C:\Users\warma\repos\ProjectCompanySound\.cache\92\{924B64A7-10B5-AF23-CF12-E288CBD37DAA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_Tutorial		56461
+	373734261	MainMenu_UI_Button_Click_Default	C:\Users\warma\repos\ProjectCompanySound\.cache\34\{34489743-93CF-6793-A6D0-E15BA72411AD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Default		111858
+	469129549	MainMenu_UI_Button_Hover_SettingsMenu	C:\Users\warma\repos\ProjectCompanySound\.cache\48\{48728DFC-614C-A012-D98A-F3290401BD68}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_SettingsMenu		55274
+	630769676	MainMenu_UI_Button_Hover_QuitGame	C:\Users\warma\repos\ProjectCompanySound\.cache\A9\{A93A8BD9-07DD-36C0-C759-4269AC5C3AC2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_QuitGame		37535
+	792173488	MainMenu_UI_Button_Hover_JoinGame	C:\Users\warma\repos\ProjectCompanySound\.cache\40\{40C77879-3602-4895-E96A-34F7083B11C3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_JoinGame		39041
+	1006236636	MainMenu_UI_Button_Hover_HostGame	C:\Users\warma\repos\ProjectCompanySound\.cache\C9\{C9951E6B-8146-C58A-9C0E-2FB1E9D97CEF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_HostGame		57124
+

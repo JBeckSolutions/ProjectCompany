@@ -1,0 +1,231 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4145999412",
+    "Type": "User",
+    "GUID": "{AF37F928-F28A-4F88-9FB0-8BF08084B341}",
+    "Language": "SFX",
+    "Hash": "{08A18D80-CDE8-7757-0646-557D7E672A03}",
+    "ObjectPath": "\\SoundBanks\\InGameMenu\\InGameMenu_UI",
+    "ShortName": "InGameMenu_UI",
+    "Path": "InGameMenu_UI.bnk",
+    "Media": [
+     {
+      "Id": "21672185",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InGameMenu_UI_Button_Hover_ResumeGame.wav",
+      "CachePath": "8E/{8EDC55B4-412B-C6D3-BEF6-B7BC31B3BEFB}.wem"
+     },
+     {
+      "Id": "373734261",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MainMenu_UI_Button_Click_Default.wav",
+      "CachePath": "34/{34489743-93CF-6793-A6D0-E15BA72411AD}.wem"
+     },
+     {
+      "Id": "469129549",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MainMenu_UI_Button_Hover_SettingsMenu.wav",
+      "CachePath": "48/{48728DFC-614C-A012-D98A-F3290401BD68}.wem"
+     },
+     {
+      "Id": "505860039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InGameMenu_UI_Button_Hover_QuitGame.wav",
+      "CachePath": "BD/{BD589009-DFE3-E3AB-CAF4-888718913052}.wem"
+     },
+     {
+      "Id": "557032363",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InGameMenu_Button_Hover_SettingsMenu.wav",
+      "CachePath": "92/{924B64A7-10B5-AF23-CF12-E288CBD37DAA}.wem"
+     },
+     {
+      "Id": "904424199",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InGameMenu_UI_Button_Hover_BackToMainMenu.wav",
+      "CachePath": "48/{48728DFC-614C-A012-D98A-F3290401BD68}.wem"
+     },
+     {
+      "Id": "1038572597",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InGameMenu_UI_Button_Click_Default.wav",
+      "CachePath": "34/{34489743-93CF-6793-A6D0-E15BA72411AD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4095709633",
+      "Name": "InGameMenu_SettingsMenu_UI_Button_Click_Back",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_SettingsMenu\\InGameMenu_SettingsMenu_UI_Button_Click\\InGameMenu_SettingsMenu_UI_Button_Click_Back",
+      "GUID": "{2F36055A-D08A-4774-A141-F3B4D1A57330}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "373734261"
+       }
+      ]
+     },
+     {
+      "Id": "2791905871",
+      "Name": "InGameMenu_SettingsMenu_UI_Button_Hover_Back",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_SettingsMenu\\InGameMenu_SettingsMenu_UI_Button_Hover\\InGameMenu_SettingsMenu_UI_Button_Hover_Back",
+      "GUID": "{0FBAB101-C980-4107-AFF3-EBDE79EE5012}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "469129549"
+       }
+      ]
+     },
+     {
+      "Id": "227053229",
+      "Name": "InGameMenu_UI_Button_Click_BackToMainMenu",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Click\\InGameMenu_UI_Button_Click_BackToMainMenu",
+      "GUID": "{A123072E-BEE1-448B-99FB-231587907440}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "1038572597"
+       }
+      ]
+     },
+     {
+      "Id": "237757514",
+      "Name": "InGameMenu_UI_Button_Click_QuitGame",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Click\\InGameMenu_UI_Button_Click_QuitGame",
+      "GUID": "{017EF44A-8BD2-426B-A00B-92D196F9BF86}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "1038572597"
+       }
+      ]
+     },
+     {
+      "Id": "1544436598",
+      "Name": "InGameMenu_UI_Button_Click_ResumeGame",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Click\\InGameMenu_UI_Button_Click_ResumeGame",
+      "GUID": "{1E2EA682-3EE9-46E8-82CC-29F6DF56EA2E}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "1038572597"
+       }
+      ]
+     },
+     {
+      "Id": "3357581987",
+      "Name": "InGameMenu_UI_Button_Click_SettingsMenu",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Click\\InGameMenu_UI_Button_Click_SettingsMenu",
+      "GUID": "{A031C3F4-CF65-4A78-BCCC-E04282206E58}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "1038572597"
+       }
+      ]
+     },
+     {
+      "Id": "1802414931",
+      "Name": "InGameMenu_UI_Button_Hover_BackToMainMenu",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Hover\\InGameMenu_UI_Button_Hover_BackToMainMenu",
+      "GUID": "{02DC15DD-B2FF-445C-B860-221A8849B827}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "904424199"
+       }
+      ]
+     },
+     {
+      "Id": "4261992148",
+      "Name": "InGameMenu_UI_Button_Hover_QuitGame",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Hover\\InGameMenu_UI_Button_Hover_QuitGame",
+      "GUID": "{3ACF4370-256D-47A9-8523-156A112AD19A}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "505860039"
+       }
+      ]
+     },
+     {
+      "Id": "994320696",
+      "Name": "InGameMenu_UI_Button_Hover_ResumeGame",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Hover\\InGameMenu_UI_Button_Hover_ResumeGame",
+      "GUID": "{C5272660-F231-449F-A129-C06BFE91E571}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "21672185"
+       }
+      ]
+     },
+     {
+      "Id": "3239993845",
+      "Name": "InGameMenu_UI_Button_Hover_SettingsMenu",
+      "ObjectPath": "\\Events\\Menus\\InGameMenu\\InGameMenu_Main\\InGameMenu_UI_Button_Hover\\InGameMenu_UI_Button_Hover_SettingsMenu",
+      "GUID": "{8D914FF0-5846-4DF9-94EF-6FC20A3A0D1D}",
+      "Color": "22",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "557032363"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{58AF4B78-2344-DB6E-C21B-267A68D3CEB4}"
+ }
+}

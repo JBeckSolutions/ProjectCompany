@@ -1,0 +1,373 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2944630615",
+    "Type": "User",
+    "GUID": "{6597B177-FA3A-43EB-B7EF-DEDA5CF2C599}",
+    "Language": "SFX",
+    "Hash": "{58CD1951-696B-B4EE-2F1C-9C4B42069650}",
+    "ObjectPath": "\\SoundBanks\\Entities\\Stalker",
+    "ShortName": "Stalker",
+    "Path": "Stalker.bnk",
+    "Media": [
+     {
+      "Id": "15846594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_DeathSentence_2.wav",
+      "CachePath": "2C/{2CC075E3-46CB-5AC5-28E6-EDF197687998}.wem"
+     },
+     {
+      "Id": "127682613",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase1_3.wav",
+      "CachePath": "4E/{4ED86497-A340-9788-AD1E-EEDB69D9E3DD}.wem"
+     },
+     {
+      "Id": "146758225",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase3_1.wav",
+      "CachePath": "E7/{E7A5D2AA-27EF-EB07-E78D-C9FAD29FC48A}.wem"
+     },
+     {
+      "Id": "238268523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase1_3.wav",
+      "CachePath": "B3/{B340059D-6018-504C-90C2-414721E509A4}.wem"
+     },
+     {
+      "Id": "240327882",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase2_1.wav",
+      "CachePath": "1D/{1D427788-0E30-2B2B-796A-EED4E32A9B98}.wem"
+     },
+     {
+      "Id": "354152658",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase3_1.wav",
+      "CachePath": "84/{8486F3A8-31D7-6F1F-183D-47A8CF4AC6F2}.wem"
+     },
+     {
+      "Id": "372454336",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase2_1.wav",
+      "CachePath": "2C/{2C28FE18-9981-1CD6-63CF-B280061374E4}.wem"
+     },
+     {
+      "Id": "398848076",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase3_2.wav",
+      "CachePath": "C8/{C82561AA-5A63-C5C9-2BE5-E143C2A8BA46}.wem"
+     },
+     {
+      "Id": "420291259",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase1_1.wav",
+      "CachePath": "30/{30F88AE1-88C4-B1DE-F12C-0D6C0AAE8A98}.wem"
+     },
+     {
+      "Id": "446710925",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase2_3.wav",
+      "CachePath": "E8/{E84B374A-835F-A334-73D1-2F6D3D9C097E}.wem"
+     },
+     {
+      "Id": "532080074",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase2_2.wav",
+      "CachePath": "1A/{1A65A306-0838-F46E-903E-6BBE1EBB9894}.wem"
+     },
+     {
+      "Id": "552396358",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase1_5.wav",
+      "CachePath": "30/{3043D942-C871-983F-7A64-E63339ECB866}.wem"
+     },
+     {
+      "Id": "614557422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase3_3.wav",
+      "CachePath": "D7/{D7EE7419-4354-5BFB-2EDA-C1F39AC78D16}.wem"
+     },
+     {
+      "Id": "641890667",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase2_3.wav",
+      "CachePath": "47/{4767CD15-4C13-2780-C0E1-34588341E4DF}.wem"
+     },
+     {
+      "Id": "675203733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase1_4.wav",
+      "CachePath": "DA/{DA9BABD8-5677-2ED7-EFB2-05801C0F2F02}.wem"
+     },
+     {
+      "Id": "802968411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase1_6.wav",
+      "CachePath": "9B/{9BB7B0EB-BCAB-372B-9997-41E675B8278E}.wem"
+     },
+     {
+      "Id": "842206928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase1_2.wav",
+      "CachePath": "14/{145EF6B2-BEEE-B484-0BE3-EB6DC3580FD6}.wem"
+     },
+     {
+      "Id": "897382017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase1_1.wav",
+      "CachePath": "C6/{C6ABEAD7-4D39-C5C4-BE08-44B1C9FD44D7}.wem"
+     },
+     {
+      "Id": "904890643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_DeathSentence_1.wav",
+      "CachePath": "6A/{6A4591A1-7CBF-75BA-FF53-1A97D226B59D}.wem"
+     },
+     {
+      "Id": "925391547",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase2_2.wav",
+      "CachePath": "2D/{2D5A5BB2-D914-0FEB-7913-2A59174D0005}.wem"
+     },
+     {
+      "Id": "950408675",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase1_2.wav",
+      "CachePath": "A1/{A179B597-B1DC-D572-F1B6-F807E62C827F}.wem"
+     },
+     {
+      "Id": "951056831",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_SeenByPlayer_Phase3_2.wav",
+      "CachePath": "6F/{6F66B43B-BF4B-0797-4E34-27389D10987E}.wem"
+     },
+     {
+      "Id": "990390932",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Stalker_NotSeenByPlayer_Phase2_4.wav",
+      "CachePath": "E9/{E91BCFF0-5F9E-203D-59A6-704AB5D2181E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "28008638",
+      "Name": "Stalker_Attack",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_Attack",
+      "GUID": "{809C7CEE-3452-402A-8D5C-7FB2540A893D}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "975243704",
+      "Name": "Stalker_Idle",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_Idle",
+      "GUID": "{6EA4CBEE-086B-4274-8091-F7F57F1E83E9}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "940689403",
+      "Name": "Stalker_IdleMute",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_IdleMute",
+      "GUID": "{58E660B1-CFD4-4158-9E85-CCDF2B12824F}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2709947206",
+      "Name": "Stalker_IdleUnMute",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_IdleUnMute",
+      "GUID": "{2516190C-3891-48DC-A0D5-3F0EFDA74DB4}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1275891363",
+      "Name": "Stalker_Killed_Player",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_Killed_Player",
+      "GUID": "{C6ED8105-44DE-4ECA-A32A-1945B65EA68B}",
+      "Color": "10",
+      "MaxAttenuation": "26",
+      "DurationType": "OneShot",
+      "DurationMin": "7.2110314",
+      "DurationMax": "7.2110314",
+      "MediaRefs": [
+       {
+        "Id": "15846594"
+       },
+       {
+        "Id": "904890643"
+       }
+      ]
+     },
+     {
+      "Id": "2345019145",
+      "Name": "Stalker_Move",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_Move",
+      "GUID": "{00623CCF-B819-48C4-AB22-6DDF9A158D46}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "253065006",
+      "Name": "Stalker_StalkingPlayer",
+      "ObjectPath": "\\Events\\Entities\\Stalker\\Stalker_StalkingPlayer",
+      "GUID": "{CAA18026-2301-46AD-8BE2-D7D2D1706A43}",
+      "Color": "10",
+      "MaxAttenuation": "26",
+      "DurationType": "OneShot",
+      "DurationMin": "7.081948",
+      "DurationMax": "7.119729",
+      "MediaRefs": [
+       {
+        "Id": "127682613"
+       },
+       {
+        "Id": "146758225"
+       },
+       {
+        "Id": "238268523"
+       },
+       {
+        "Id": "240327882"
+       },
+       {
+        "Id": "354152658"
+       },
+       {
+        "Id": "372454336"
+       },
+       {
+        "Id": "398848076"
+       },
+       {
+        "Id": "420291259"
+       },
+       {
+        "Id": "446710925"
+       },
+       {
+        "Id": "532080074"
+       },
+       {
+        "Id": "552396358"
+       },
+       {
+        "Id": "614557422"
+       },
+       {
+        "Id": "641890667"
+       },
+       {
+        "Id": "675203733"
+       },
+       {
+        "Id": "802968411"
+       },
+       {
+        "Id": "842206928"
+       },
+       {
+        "Id": "897382017"
+       },
+       {
+        "Id": "925391547"
+       },
+       {
+        "Id": "950408675"
+       },
+       {
+        "Id": "951056831"
+       },
+       {
+        "Id": "990390932"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3336472700",
+      "Name": "Stalker_RageMeter",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Stalker\\Stalker_RageMeter",
+      "GUID": "{96BEB9FF-2D93-4343-9D83-3971DA328A28}"
+     },
+     {
+      "Id": "3803352263",
+      "Name": "Stalker_IsSeenByPlayer",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Stalker\\Stalker_IsSeenByPlayer",
+      "GUID": "{3F26251C-D272-4466-BB52-7237469F40D1}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F2B39D93-25C1-30BB-A935-0C374D511206}"
+ }
+}

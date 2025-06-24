@@ -1,0 +1,605 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1930240631",
+    "Type": "User",
+    "GUID": "{50E9E06B-C3B4-4944-B9B2-AC511351C17B}",
+    "Language": "SFX",
+    "Hash": "{61A18300-E94F-A18B-A124-E65E1A3ADCDB}",
+    "ObjectPath": "\\SoundBanks\\Entities\\Robot",
+    "ShortName": "Robot",
+    "Path": "Robot.bnk",
+    "Media": [
+     {
+      "Id": "11636720",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_20.wav",
+      "CachePath": "0D/{0D86FC5B-6AB2-3828-7872-C1F8C4FEC0CD}.wem"
+     },
+     {
+      "Id": "57527851",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_16.wav",
+      "CachePath": "B1/{B1DEB0E6-0190-27CB-E533-529199C78C34}.wem"
+     },
+     {
+      "Id": "99199793",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_32.wav",
+      "CachePath": "AC/{ACAEFD96-F511-74C1-BF03-6CA93AE0C8BA}.wem"
+     },
+     {
+      "Id": "107712891",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_15.wav",
+      "CachePath": "40/{4041FF33-4DD7-A3BD-3AEB-C95B2EA0764F}.wem"
+     },
+     {
+      "Id": "140021636",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_27.wav",
+      "CachePath": "A9/{A9FB8748-C3B6-9D8E-4ACB-1BCFB51057A3}.wem"
+     },
+     {
+      "Id": "162176053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_5.wav",
+      "CachePath": "11/{11CC93F9-F0F4-597E-1253-B8D9760BC1CC}.wem"
+     },
+     {
+      "Id": "172388281",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot Movement Bass Line.wav",
+      "CachePath": "DF/{DF3F3BC1-312E-E4CF-C0FF-D615E4A8CBD3}.wem"
+     },
+     {
+      "Id": "186912253",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_30.wav",
+      "CachePath": "15/{15D90ACB-FFAE-1923-9283-F2DC335F1C9A}.wem"
+     },
+     {
+      "Id": "188088511",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_2.wav",
+      "CachePath": "C4/{C490C4D3-9135-851B-72E0-9B47B01E716E}.wem"
+     },
+     {
+      "Id": "288777166",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_22.wav",
+      "CachePath": "CE/{CE99F975-563F-1E20-8BA2-E8CF07C617F2}.wem"
+     },
+     {
+      "Id": "313544358",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_9.wav",
+      "CachePath": "44/{44C49A3A-0026-191A-B49C-00535C4C431A}.wem"
+     },
+     {
+      "Id": "355284022",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_23.wav",
+      "CachePath": "E5/{E509C337-B809-29CC-A700-03C7EA09F3B7}.wem"
+     },
+     {
+      "Id": "428460762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Voice_Exterminate.wav",
+      "CachePath": "6A/{6A49B46B-3A34-8626-AB97-C69485E58D52}.wem"
+     },
+     {
+      "Id": "455177919",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_28.wav",
+      "CachePath": "96/{961B23D3-8BAD-0F3A-9FF8-75BEEBDF0A00}.wem"
+     },
+     {
+      "Id": "457278748",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_6.wav",
+      "CachePath": "4B/{4B2B14B9-DFB3-17BD-696F-181E3D6D9338}.wem"
+     },
+     {
+      "Id": "479780809",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_10.wav",
+      "CachePath": "75/{75721FE1-06B8-1943-3C7C-CA54557EDF53}.wem"
+     },
+     {
+      "Id": "500061428",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_33.wav",
+      "CachePath": "93/{93A641D9-D952-FCE1-91F0-B08F4EA2AE79}.wem"
+     },
+     {
+      "Id": "522926508",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_7.wav",
+      "CachePath": "43/{4332E24A-D305-1437-AC8F-096614776913}.wem"
+     },
+     {
+      "Id": "571753088",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot Movement White Noise.wav",
+      "CachePath": "F6/{F6055772-5FE8-673B-BDD7-72DDD3533E01}.wem"
+     },
+     {
+      "Id": "576327655",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_24.wav",
+      "CachePath": "5A/{5A5EA419-551B-7C9D-AAA4-E0E2464A7EC0}.wem"
+     },
+     {
+      "Id": "631279615",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_14.wav",
+      "CachePath": "8C/{8C35BA4C-D240-A173-1A8B-2FF8CC193F3A}.wem"
+     },
+     {
+      "Id": "661193785",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_13.wav",
+      "CachePath": "1F/{1F3C010D-FC15-D9B1-2BC3-176260008F5A}.wem"
+     },
+     {
+      "Id": "675052614",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_4.wav",
+      "CachePath": "C7/{C75BF3E5-3597-00DA-4D60-4B5E099E3BEE}.wem"
+     },
+     {
+      "Id": "681469475",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_19.wav",
+      "CachePath": "13/{13B5895F-9D04-CFE5-FF8A-7B20C4745409}.wem"
+     },
+     {
+      "Id": "700701820",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_12.wav",
+      "CachePath": "6F/{6F48D0F0-F2F5-8843-EA01-823FA1197116}.wem"
+     },
+     {
+      "Id": "717619462",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_8.wav",
+      "CachePath": "DD/{DDF60096-DA52-7C12-051B-67DCB39E5688}.wem"
+     },
+     {
+      "Id": "785418472",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_29.wav",
+      "CachePath": "E0/{E00D4E01-5002-D577-80AA-BDA04BA6B682}.wem"
+     },
+     {
+      "Id": "829326515",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_21.wav",
+      "CachePath": "2B/{2B9BC0E6-2706-99CC-7137-539D6705961E}.wem"
+     },
+     {
+      "Id": "833636847",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_17.wav",
+      "CachePath": "A6/{A6E1DEA2-CC15-78E2-09B2-9DBA294A082E}.wem"
+     },
+     {
+      "Id": "848299387",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Voice_TargetEliminated.wav",
+      "CachePath": "FD/{FDE4121C-1E34-755F-4B53-BEB91CE504A2}.wem"
+     },
+     {
+      "Id": "863450332",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_26.wav",
+      "CachePath": "BA/{BA25BE18-8153-C6E6-3018-55891CD534F7}.wem"
+     },
+     {
+      "Id": "881866679",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_18.wav",
+      "CachePath": "7B/{7BE1848A-2BF7-B4A2-3779-E8D7C1156988}.wem"
+     },
+     {
+      "Id": "882356710",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_1.wav",
+      "CachePath": "48/{48087ED4-57AA-C718-5A0C-08396230B16D}.wem"
+     },
+     {
+      "Id": "951057718",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_3.wav",
+      "CachePath": "CA/{CA59FF91-61E7-85DF-D1E9-80C6523CFB81}.wem"
+     },
+     {
+      "Id": "976753135",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_11.wav",
+      "CachePath": "CD/{CD2E4A83-B72F-ABFF-5222-0A6BE108D186}.wem"
+     },
+     {
+      "Id": "982470480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_31.wav",
+      "CachePath": "40/{4069A480-272F-C412-AE55-5C650CA881F6}.wem"
+     },
+     {
+      "Id": "1041520068",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Robot_Squeak_25.wav",
+      "CachePath": "55/{553D91AD-504B-57EE-CD2F-DF8C8C4DB935}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "62321065",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Entities\\Enemies\\Robot\\Robot\\Robot Voicelines\\Robot Voiceline Rotation\\Silence\\Silence",
+       "GUID": "{FF9C9E67-62E4-4A8B-9E2D-E79057A52390}",
+       "Color": "10",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "431206665",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Entities\\Enemies\\Robot\\Robot\\Robot Movement\\Squeaks\\SqueakLoop\\RandomizedSilence\\0,5\\Silence",
+       "GUID": "{D0E55BD3-5185-4E5D-B360-5F63E84E0D33}",
+       "Color": "10",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "863883618",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Entities\\Enemies\\Robot\\Robot\\Robot Movement\\Squeaks\\SqueakLoop\\RandomizedSilence\\0,8\\Silence",
+       "GUID": "{918F32E1-0DB0-4D18-BFE7-92EFB42C1498}",
+       "Color": "10",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "915053910",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Entities\\Enemies\\Robot\\Robot\\Robot Movement\\Squeaks\\SqueakLoop\\RandomizedSilence\\0,2\\Silence",
+       "GUID": "{FF594BF8-D22C-48E7-BFCB-61B243B8A4F5}",
+       "Color": "10",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "950490872",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Entities\\Enemies\\Robot\\Robot\\Robot Movement\\Squeaks\\SqueakLoop\\RandomizedSilence\\0,3\\Silence",
+       "GUID": "{099E0EB4-7F18-4AA0-900F-EC0F7A513F58}",
+       "Color": "10",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3647587358",
+      "Name": "Robot_Attack",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Attack",
+      "GUID": "{A735582E-06BA-4C44-A98C-F386EF74E70D}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "130701592",
+      "Name": "Robot_Idle",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Idle",
+      "GUID": "{0A2A3BC3-A584-4C9B-ABE2-9C6B92C0BF9E}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1219741868",
+      "Name": "Robot_Idle_Mute",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Idle_Mute",
+      "GUID": "{27D8CAB7-E785-4CDD-9F6D-70C4980D77A7}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1305655497",
+      "Name": "Robot_Idle_UnMute",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Idle_UnMute",
+      "GUID": "{6E67F76D-53BB-4984-B9A7-C375C5D31393}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2161314627",
+      "Name": "Robot_Killed_Player",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Killed_Player",
+      "GUID": "{59D6E41B-BAD6-494F-AC3D-84A46A53D409}",
+      "Color": "10",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "848299387"
+       }
+      ]
+     },
+     {
+      "Id": "1323506928",
+      "Name": "Robot_Move_Start",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Move_Start",
+      "GUID": "{9251312F-160C-4990-B4AE-C586F9CC4BAA}",
+      "Color": "10",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "11636720"
+       },
+       {
+        "Id": "57527851"
+       },
+       {
+        "Id": "99199793"
+       },
+       {
+        "Id": "107712891"
+       },
+       {
+        "Id": "140021636"
+       },
+       {
+        "Id": "162176053"
+       },
+       {
+        "Id": "172388281"
+       },
+       {
+        "Id": "186912253"
+       },
+       {
+        "Id": "188088511"
+       },
+       {
+        "Id": "288777166"
+       },
+       {
+        "Id": "313544358"
+       },
+       {
+        "Id": "355284022"
+       },
+       {
+        "Id": "455177919"
+       },
+       {
+        "Id": "457278748"
+       },
+       {
+        "Id": "479780809"
+       },
+       {
+        "Id": "500061428"
+       },
+       {
+        "Id": "522926508"
+       },
+       {
+        "Id": "571753088"
+       },
+       {
+        "Id": "576327655"
+       },
+       {
+        "Id": "631279615"
+       },
+       {
+        "Id": "661193785"
+       },
+       {
+        "Id": "675052614"
+       },
+       {
+        "Id": "681469475"
+       },
+       {
+        "Id": "700701820"
+       },
+       {
+        "Id": "717619462"
+       },
+       {
+        "Id": "785418472"
+       },
+       {
+        "Id": "829326515"
+       },
+       {
+        "Id": "833636847"
+       },
+       {
+        "Id": "863450332"
+       },
+       {
+        "Id": "881866679"
+       },
+       {
+        "Id": "882356710"
+       },
+       {
+        "Id": "951057718"
+       },
+       {
+        "Id": "976753135"
+       },
+       {
+        "Id": "982470480"
+       },
+       {
+        "Id": "1041520068"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "431206665"
+        },
+        {
+         "Id": "863883618"
+        },
+        {
+         "Id": "915053910"
+        },
+        {
+         "Id": "950490872"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3313846876",
+      "Name": "Robot_Move_Stop",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Move_Stop",
+      "GUID": "{E7B888CC-6187-4772-BB8E-98AF80F3D911}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1202760109",
+      "Name": "Robot_Player_LockedOn",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Player_LockedOn",
+      "GUID": "{39F76553-EAB6-4669-AFC1-E358832A93AA}",
+      "Color": "10",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "428460762"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "62321065"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2967608042",
+      "Name": "Robot_Player_Lost",
+      "ObjectPath": "\\Events\\Entities\\Robot\\Robot_Player_Lost",
+      "GUID": "{52D4F7F6-F321-422A-8AA1-78EF60F06EE8}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CDD3F882-05B3-A1A4-3713-3B934773D891}"
+ }
+}

@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	227053229	InGameMenu_UI_Button_Click_BackToMainMenu			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Click\InGameMenu_UI_Button_Click_BackToMainMenu	
+	237757514	InGameMenu_UI_Button_Click_QuitGame			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Click\InGameMenu_UI_Button_Click_QuitGame	
+	994320696	InGameMenu_UI_Button_Hover_ResumeGame			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_ResumeGame	
+	1544436598	InGameMenu_UI_Button_Click_ResumeGame			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Click\InGameMenu_UI_Button_Click_ResumeGame	
+	1802414931	InGameMenu_UI_Button_Hover_BackToMainMenu			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_BackToMainMenu	
+	2791905871	InGameMenu_SettingsMenu_UI_Button_Hover_Back			\Menus\InGameMenu\InGameMenu_SettingsMenu\InGameMenu_SettingsMenu_UI_Button_Hover\InGameMenu_SettingsMenu_UI_Button_Hover_Back	
+	3239993845	InGameMenu_UI_Button_Hover_SettingsMenu			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_SettingsMenu	
+	3357581987	InGameMenu_UI_Button_Click_SettingsMenu			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Click\InGameMenu_UI_Button_Click_SettingsMenu	
+	4095709633	InGameMenu_SettingsMenu_UI_Button_Click_Back			\Menus\InGameMenu\InGameMenu_SettingsMenu\InGameMenu_SettingsMenu_UI_Button_Click\InGameMenu_SettingsMenu_UI_Button_Click_Back	
+	4261992148	InGameMenu_UI_Button_Hover_QuitGame			\Menus\InGameMenu\InGameMenu_Main\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_QuitGame	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	21672185	InGameMenu_UI_Button_Hover_ResumeGame	C:\Users\warma\repos\ProjectCompanySound\.cache\8E\{8EDC55B4-412B-C6D3-BEF6-B7BC31B3BEFB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\InGameMenu\InGameMenu_UI\InGameMenu_UI_Button\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_ResumeGame		56332
+	373734261	MainMenu_UI_Button_Click_Default	C:\Users\warma\repos\ProjectCompanySound\.cache\34\{34489743-93CF-6793-A6D0-E15BA72411AD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Click\MainMenu_UI_Button_Click_Default		111858
+	469129549	MainMenu_UI_Button_Hover_SettingsMenu	C:\Users\warma\repos\ProjectCompanySound\.cache\48\{48728DFC-614C-A012-D98A-F3290401BD68}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\MainMenu\MainMenu_UI\MainMenu_UI_Button\MainMenu_UI_Button_Hover\MainMenu_UI_Button_Hover_SettingsMenu		55274
+	505860039	InGameMenu_UI_Button_Hover_QuitGame	C:\Users\warma\repos\ProjectCompanySound\.cache\BD\{BD589009-DFE3-E3AB-CAF4-888718913052}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\InGameMenu\InGameMenu_UI\InGameMenu_UI_Button\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_QuitGame		54175
+	557032363	InGameMenu_UI_Button_Hover_SettingsMenu	C:\Users\warma\repos\ProjectCompanySound\.cache\92\{924B64A7-10B5-AF23-CF12-E288CBD37DAA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\InGameMenu\InGameMenu_UI\InGameMenu_UI_Button\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_SettingsMenu		56461
+	904424199	InGameMenu_UI_Button_Hover_BackToMainMenu	C:\Users\warma\repos\ProjectCompanySound\.cache\48\{48728DFC-614C-A012-D98A-F3290401BD68}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\InGameMenu\InGameMenu_UI\InGameMenu_UI_Button\InGameMenu_UI_Button_Hover\InGameMenu_UI_Button_Hover_BackToMainMenu		55274
+	1038572597	InGameMenu_UI_Button_Click_Default	C:\Users\warma\repos\ProjectCompanySound\.cache\34\{34489743-93CF-6793-A6D0-E15BA72411AD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Mixer\InGameMenu\InGameMenu_UI\InGameMenu_UI_Button\InGameMenu_UI_Button_Click\InGameMenu_UI_Button_Click_Default		111858
+

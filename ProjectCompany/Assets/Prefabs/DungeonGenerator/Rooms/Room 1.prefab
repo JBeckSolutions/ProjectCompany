@@ -81,6 +81,7 @@ MonoBehaviour:
   ItemSpawns:
   - {fileID: 7046223045286518839}
   - {fileID: 6644415313358224285}
+  - {fileID: 5329214721102201429}
   EnemySpawns:
   - {fileID: 5316107026305022541}
 --- !u!65 &2419261493490942965
@@ -606,7 +607,7 @@ Transform:
   m_GameObject: {fileID: 2004473902601619865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.92, y: 1.887, z: 1.32}
+  m_LocalPosition: {x: -1.92, y: 1.887, z: 1.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

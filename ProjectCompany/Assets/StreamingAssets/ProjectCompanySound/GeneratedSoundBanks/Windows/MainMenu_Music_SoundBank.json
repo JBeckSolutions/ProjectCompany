@@ -1,0 +1,160 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2846546401",
+    "Type": "User",
+    "GUID": "{671EEF6F-B895-49D3-AE7C-1E98F22055F2}",
+    "Language": "SFX",
+    "Hash": "{836EA2C1-E672-117B-F8DD-2127E1109C1F}",
+    "ObjectPath": "\\SoundBanks\\MainMenu\\MainMenu_Music\\MainMenu_Music_SoundBank",
+    "ShortName": "MainMenu_Music_SoundBank",
+    "Path": "MainMenu_Music_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "94477943",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Main Menu Track ab 5_0.wav",
+      "CachePath": "23/{2377C999-98CA-9992-C409-5E673E497E2F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3893434228",
+      "Name": "MainMenu_Loading_FromSplashScreen",
+      "ObjectPath": "\\Events\\Menus\\MainMenu\\MainMenu_Music\\MainMenu_MainTrack\\MainMenu_Loading_FromSplashScreen",
+      "GUID": "{8FA4D9E7-738C-4DD9-B028-AA61A6C8AE53}",
+      "Color": "22",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2121736680",
+         "Id": "0",
+         "GUID": "{E760EB09-C073-4D14-A3B8-76E7EE24A825}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "810441784",
+           "Id": "0",
+           "GUID": "{06CCEFE6-C7A9-4B34-B165-989B0BDEDE2B}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "94477943"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "2121736680",
+         "Id": "1886836668",
+         "GUID": "{4BE6BA4D-E84E-4D6B-AC84-FAFC8F24ABE8}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "810441784",
+           "Id": "748895195",
+           "GUID": "{DD249507-C299-4FEA-9573-836C245AADFD}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "94477943"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "575977795",
+      "Name": "MainMenu_Transition",
+      "ObjectPath": "\\Events\\Menus\\MainMenu\\MainMenu_Music\\MainMenu_MainTrack\\MainMenu_Transition",
+      "GUID": "{D60A85F5-2FC3-4A4D-9AE3-1DD8DF55A0DE}",
+      "Color": "22",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "810441784",
+      "Name": "SelectedMap",
+      "ObjectPath": "\\States\\Default Work Unit\\SelectedMap",
+      "GUID": "{06CCEFE6-C7A9-4B34-B165-989B0BDEDE2B}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\SelectedMap\\None",
+        "GUID": "{DD249507-C299-4FEA-9573-836C245AADFD}"
+       },
+       {
+        "Id": "766371778",
+        "Name": "Laboratory",
+        "ObjectPath": "\\States\\Default Work Unit\\SelectedMap\\Laboratory",
+        "GUID": "{B528C765-89D9-42A6-90A7-FFF224B64E8B}"
+       }
+      ]
+     },
+     {
+      "Id": "2121736680",
+      "Name": "CurrentScene",
+      "ObjectPath": "\\States\\Default Work Unit\\CurrentScene",
+      "GUID": "{E760EB09-C073-4D14-A3B8-76E7EE24A825}",
+      "States": [
+       {
+        "Id": "68007511",
+        "Name": "SettingsMenu",
+        "ObjectPath": "\\States\\Default Work Unit\\CurrentScene\\SettingsMenu",
+        "GUID": "{99020B8C-0529-4B13-85CE-67442A6418D7}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\CurrentScene\\None",
+        "GUID": "{3850FA8C-8C29-4EA9-8BB4-6D7148817728}"
+       },
+       {
+        "Id": "1886836668",
+        "Name": "HostGameMenu",
+        "ObjectPath": "\\States\\Default Work Unit\\CurrentScene\\HostGameMenu",
+        "GUID": "{4BE6BA4D-E84E-4D6B-AC84-FAFC8F24ABE8}"
+       },
+       {
+        "Id": "3604647259",
+        "Name": "MainMenu",
+        "ObjectPath": "\\States\\Default Work Unit\\CurrentScene\\MainMenu",
+        "GUID": "{6C939BFC-7F7C-4C06-BE87-EDB16A797C9E}"
+       },
+       {
+        "Id": "3762955427",
+        "Name": "Tutorial",
+        "ObjectPath": "\\States\\Default Work Unit\\CurrentScene\\Tutorial",
+        "GUID": "{D1BAFA92-8C18-4A1D-BA2F-FF7DA338D0F2}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E7701B19-64C3-7FC6-F08F-B17E79557B3C}"
+ }
+}

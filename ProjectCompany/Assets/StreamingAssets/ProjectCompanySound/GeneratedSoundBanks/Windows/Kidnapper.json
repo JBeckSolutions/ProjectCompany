@@ -1,0 +1,91 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3829221857",
+    "Type": "User",
+    "GUID": "{C4332CD1-0DAD-48A2-A057-B950E2B782D3}",
+    "Language": "SFX",
+    "Hash": "{244A7466-416E-8C69-7C24-4F079D8A5E1A}",
+    "ObjectPath": "\\SoundBanks\\Entities\\Kidnapper",
+    "ShortName": "Kidnapper",
+    "Path": "Kidnapper.bnk",
+    "Media": [
+     {
+      "Id": "749961095",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "schwebe sound effekt.wav",
+      "CachePath": "F8/{F810C784-5B42-2487-03F1-0790BDC3EC6E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2479678270",
+      "Name": "Kidnapper_DropOff_Player",
+      "ObjectPath": "\\Events\\Entities\\Kidnapper\\Kidnapper_DropOff_Player",
+      "GUID": "{EB1C2C8D-1660-4B65-A909-76578863A560}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3267015934",
+      "Name": "Kidnapper_Grab_Player",
+      "ObjectPath": "\\Events\\Entities\\Kidnapper\\Kidnapper_Grab_Player",
+      "GUID": "{DA6FC102-8889-4650-9D59-FB3957DD10E5}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1028771866",
+      "Name": "Kidnapper_Idle",
+      "ObjectPath": "\\Events\\Entities\\Kidnapper\\Kidnapper_Idle",
+      "GUID": "{3948CEF0-03E0-4286-AAD9-BF2B80F2A26D}",
+      "Color": "10",
+      "MaxAttenuation": "14",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "749961095"
+       }
+      ]
+     },
+     {
+      "Id": "3437208085",
+      "Name": "Kidnapper_IdleMute",
+      "ObjectPath": "\\Events\\Entities\\Kidnapper\\Kidnapper_IdleMute",
+      "GUID": "{6FA84A3C-3059-4529-8BD1-D94AF69302E6}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1675306836",
+      "Name": "Kidnapper_IdleUnmute",
+      "ObjectPath": "\\Events\\Entities\\Kidnapper\\Kidnapper_IdleUnmute",
+      "GUID": "{FF83CCF7-A831-4484-9B9F-19A0074E9D28}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B4E78D72-F029-DBFB-ADFE-9818D2D96907}"
+ }
+}

@@ -1,0 +1,57 @@
+Event	ID	Name			Wwise Object Path	Notes
+	130701592	Robot_Idle			\Entities\Robot\Robot_Idle	
+	1202760109	Robot_Player_LockedOn			\Entities\Robot\Robot_Player_LockedOn	
+	1219741868	Robot_Idle_Mute			\Entities\Robot\Robot_Idle_Mute	
+	1305655497	Robot_Idle_UnMute			\Entities\Robot\Robot_Idle_UnMute	
+	1323506928	Robot_Move_Start			\Entities\Robot\Robot_Move_Start	
+	2161314627	Robot_Killed_Player			\Entities\Robot\Robot_Killed_Player	
+	2967608042	Robot_Player_Lost			\Entities\Robot\Robot_Player_Lost	
+	3313846876	Robot_Move_Stop			\Entities\Robot\Robot_Move_Stop	
+	3647587358	Robot_Attack			\Entities\Robot\Robot_Attack	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	62321065	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Voicelines\Robot Voiceline Rotation\Silence\Silence	
+	431206665	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\RandomizedSilence\0,5\Silence	
+	863883618	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\RandomizedSilence\0,8\Silence	
+	915053910	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\RandomizedSilence\0,2\Silence	
+	950490872	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\RandomizedSilence\0,3\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11636720	Robot_Squeak_20	C:\Users\warma\repos\ProjectCompanySound\.cache\0D\{0D86FC5B-6AB2-3828-7872-C1F8C4FEC0CD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_20		20460
+	57527851	Robot_Squeak_16	C:\Users\warma\repos\ProjectCompanySound\.cache\B1\{B1DEB0E6-0190-27CB-E533-529199C78C34}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_16		24773
+	99199793	Robot_Squeak_32	C:\Users\warma\repos\ProjectCompanySound\.cache\AC\{ACAEFD96-F511-74C1-BF03-6CA93AE0C8BA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_32		17486
+	107712891	Robot_Squeak_15	C:\Users\warma\repos\ProjectCompanySound\.cache\40\{4041FF33-4DD7-A3BD-3AEB-C95B2EA0764F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_15		18015
+	140021636	Robot_Squeak_27	C:\Users\warma\repos\ProjectCompanySound\.cache\A9\{A9FB8748-C3B6-9D8E-4ACB-1BCFB51057A3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_27		29599
+	162176053	Robot_Squeak_5	C:\Users\warma\repos\ProjectCompanySound\.cache\11\{11CC93F9-F0F4-597E-1253-B8D9760BC1CC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_5		15477
+	172388281	Robot Movement Bass Line	C:\Users\warma\repos\ProjectCompanySound\.cache\DF\{DF3F3BC1-312E-E4CF-C0FF-D615E4A8CBD3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Wheel\Robot Movement Bass Line		1944718
+	186912253	Robot_Squeak_30	C:\Users\warma\repos\ProjectCompanySound\.cache\15\{15D90ACB-FFAE-1923-9283-F2DC335F1C9A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_30		12399
+	188088511	Robot_Squeak_2	C:\Users\warma\repos\ProjectCompanySound\.cache\C4\{C490C4D3-9135-851B-72E0-9B47B01E716E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_2		20517
+	288777166	Robot_Squeak_22	C:\Users\warma\repos\ProjectCompanySound\.cache\CE\{CE99F975-563F-1E20-8BA2-E8CF07C617F2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_22		28781
+	313544358	Robot_Squeak_9	C:\Users\warma\repos\ProjectCompanySound\.cache\44\{44C49A3A-0026-191A-B49C-00535C4C431A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_9		36785
+	355284022	Robot_Squeak_23	C:\Users\warma\repos\ProjectCompanySound\.cache\E5\{E509C337-B809-29CC-A700-03C7EA09F3B7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_23		16045
+	428460762	Robot_Voice_Exterminate	C:\Users\warma\repos\ProjectCompanySound\.cache\6A\{6A49B46B-3A34-8626-AB97-C69485E58D52}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Voicelines\Robot Voiceline Rotation\Robot_LockedOn_Voicelines\Robot_Voice_Exterminate		56547
+	455177919	Robot_Squeak_28	C:\Users\warma\repos\ProjectCompanySound\.cache\96\{961B23D3-8BAD-0F3A-9FF8-75BEEBDF0A00}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_28		27883
+	457278748	Robot_Squeak_6	C:\Users\warma\repos\ProjectCompanySound\.cache\4B\{4B2B14B9-DFB3-17BD-696F-181E3D6D9338}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_6		21829
+	479780809	Robot_Squeak_10	C:\Users\warma\repos\ProjectCompanySound\.cache\75\{75721FE1-06B8-1943-3C7C-CA54557EDF53}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_10		17077
+	500061428	Robot_Squeak_33	C:\Users\warma\repos\ProjectCompanySound\.cache\93\{93A641D9-D952-FCE1-91F0-B08F4EA2AE79}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_33		19777
+	522926508	Robot_Squeak_7	C:\Users\warma\repos\ProjectCompanySound\.cache\43\{4332E24A-D305-1437-AC8F-096614776913}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_7		26837
+	571753088	Robot Movement White Noise	C:\Users\warma\repos\ProjectCompanySound\.cache\F6\{F6055772-5FE8-673B-BDD7-72DDD3533E01}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Wheel\Robot Movement White Noise		2790851
+	576327655	Robot_Squeak_24	C:\Users\warma\repos\ProjectCompanySound\.cache\5A\{5A5EA419-551B-7C9D-AAA4-E0E2464A7EC0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_24		18247
+	631279615	Robot_Squeak_14	C:\Users\warma\repos\ProjectCompanySound\.cache\8C\{8C35BA4C-D240-A173-1A8B-2FF8CC193F3A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_14		22784
+	661193785	Robot_Squeak_13	C:\Users\warma\repos\ProjectCompanySound\.cache\1F\{1F3C010D-FC15-D9B1-2BC3-176260008F5A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_13		9953
+	675052614	Robot_Squeak_4	C:\Users\warma\repos\ProjectCompanySound\.cache\C7\{C75BF3E5-3597-00DA-4D60-4B5E099E3BEE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_4		18303
+	681469475	Robot_Squeak_19	C:\Users\warma\repos\ProjectCompanySound\.cache\13\{13B5895F-9D04-CFE5-FF8A-7B20C4745409}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_19		28180
+	700701820	Robot_Squeak_12	C:\Users\warma\repos\ProjectCompanySound\.cache\6F\{6F48D0F0-F2F5-8843-EA01-823FA1197116}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_12		21011
+	717619462	Robot_Squeak_8	C:\Users\warma\repos\ProjectCompanySound\.cache\DD\{DDF60096-DA52-7C12-051B-67DCB39E5688}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_8		20606
+	785418472	Robot_Squeak_29	C:\Users\warma\repos\ProjectCompanySound\.cache\E0\{E00D4E01-5002-D577-80AA-BDA04BA6B682}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_29		22051
+	829326515	Robot_Squeak_21	C:\Users\warma\repos\ProjectCompanySound\.cache\2B\{2B9BC0E6-2706-99CC-7137-539D6705961E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_21		20434
+	833636847	Robot_Squeak_17	C:\Users\warma\repos\ProjectCompanySound\.cache\A6\{A6E1DEA2-CC15-78E2-09B2-9DBA294A082E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_17		17212
+	848299387	Robot_Voice_TargetEliminated	C:\Users\warma\repos\ProjectCompanySound\.cache\FD\{FDE4121C-1E34-755F-4B53-BEB91CE504A2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Voicelines\Robot_Voice_TargetEliminated		60869
+	863450332	Robot_Squeak_26	C:\Users\warma\repos\ProjectCompanySound\.cache\BA\{BA25BE18-8153-C6E6-3018-55891CD534F7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_26		24081
+	881866679	Robot_Squeak_18	C:\Users\warma\repos\ProjectCompanySound\.cache\7B\{7BE1848A-2BF7-B4A2-3779-E8D7C1156988}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_18		31712
+	882356710	Robot_Squeak_1	C:\Users\warma\repos\ProjectCompanySound\.cache\48\{48087ED4-57AA-C718-5A0C-08396230B16D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_1		23242
+	951057718	Robot_Squeak_3	C:\Users\warma\repos\ProjectCompanySound\.cache\CA\{CA59FF91-61E7-85DF-D1E9-80C6523CFB81}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_3		13456
+	976753135	Robot_Squeak_11	C:\Users\warma\repos\ProjectCompanySound\.cache\CD\{CD2E4A83-B72F-ABFF-5222-0A6BE108D186}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_11		30032
+	982470480	Robot_Squeak_31	C:\Users\warma\repos\ProjectCompanySound\.cache\40\{4069A480-272F-C412-AE55-5C650CA881F6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_31		33842
+	1041520068	Robot_Squeak_25	C:\Users\warma\repos\ProjectCompanySound\.cache\55\{553D91AD-504B-57EE-CD2F-DF8C8C4DB935}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Robot\Robot\Robot Movement\Squeaks\SqueakLoop\SqueakSelector\Robot_Squeak_25		24305
+

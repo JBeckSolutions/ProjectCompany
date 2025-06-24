@@ -1,0 +1,20 @@
+Event	ID	Name			Wwise Object Path	Notes
+	575977795	MainMenu_Transition			\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack\MainMenu_Transition	
+	3893434228	MainMenu_Loading_FromSplashScreen			\Menus\MainMenu\MainMenu_Music\MainMenu_MainTrack\MainMenu_Loading_FromSplashScreen	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	810441784	SelectedMap			\Default Work Unit\SelectedMap	
+	2121736680	CurrentScene			\Default Work Unit\CurrentScene	
+
+State	ID	Name	State Group			Notes
+	748895195	None	SelectedMap			
+	766371778	Laboratory	SelectedMap			
+	68007511	SettingsMenu	CurrentScene			
+	748895195	None	CurrentScene			
+	1886836668	HostGameMenu	CurrentScene			
+	3604647259	MainMenu	CurrentScene			
+	3762955427	Tutorial	CurrentScene			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	94477943	Main Menu Track ab 5_0	C:\Users\warma\repos\ProjectCompanySound\.cache\23\{2377C999-98CA-9992-C409-5E673E497E2F}.wem		\Interactive Music Hierarchy\GameMusic\MusicSwitch\MainTrackPlaylist\MainTrack\Main Menu Track ab 5_0		7395705
+
