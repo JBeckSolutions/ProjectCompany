@@ -1,0 +1,68 @@
+Event	ID	Name			Wwise Object Path	Notes
+	121923024	ScoreArea_Score_Decreased			\Maps\Win Conditions\Score Area\ScoreArea_Score_Decreased	
+	716442375	Ambience_LightBulb_Idle_Start			\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle_Start	
+	745428686	TestCube_Drop			\Props\TestCube\TestCube_Drop	
+	810989404	ScoreArea_Score_Increased			\Maps\Win Conditions\Score Area\ScoreArea_Score_Increased	
+	886084000	TestCube_EmptyCall			\Props\TestCube\TestCube_EmptyCall	
+	1028635762	Player_Spawn			\Maps\Laboratory\Player_Spawn	
+	1126494853	Flashlight_Off			\Props\Flashlight\Flashlight_Off	
+	1153302829	Flashlight_Drop			\Props\Flashlight\Flashlight_Drop	
+	1199550744	Laboratory_Storage			\Maps\Laboratory\Rooms\Laboratory_Storage	
+	1252818853	Laboratory_Office			\Maps\Laboratory\Rooms\Laboratory_Office	
+	1719140997	Uranium_IdleStop			\Props\Uranium\Uranium_IdleStop	
+	1721397820	Flashlight_Idle			\Props\Flashlight\Flashlight_Idle	
+	2033671033	Flashlight_On			\Props\Flashlight\Flashlight_On	
+	2233569453	Ambience_LightBulb_Idle_Stop			\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle_Stop	
+	2325375469	Uranium_Unmute			\Props\Uranium\Uranium_Unmute	
+	2398437945	TestCube_Pickup			\Props\TestCube\TestCube_Pickup	
+	2487599656	Uranium_Drop			\Props\Uranium\Uranium_Drop	
+	2571317824	Uranium_Mute			\Props\Uranium\Uranium_Mute	
+	2922746229	Laboratory_Hallway			\Maps\Laboratory\Rooms\Laboratory_Hallway	
+	3293791586	Flashlight_Pickup			\Props\Flashlight\Flashlight_Pickup	
+	3332062019	Uranium_Pickup			\Props\Uranium\Uranium_Pickup	
+	3642641725	Uranium_Idle			\Props\Uranium\Uranium_Idle	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	285328392	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Props\Flashlight\Flashlight\Flashlight_Click\Flashlight_Off\Delay\Silence	
+	380910287	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Props\Flashlight\Flashlight\Flashlight_Click\Flashlight_On\Delay\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	22702131	Flashlight click	C:\Users\warma\repos\ProjectCompanySound\.cache\C9\{C9026703-4438-A470-0EED-30E9626B86B1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Flashlight\Flashlight\Flashlight_Click\Flashlight_Off\Flashlight click		3775
+	26495306	PlayerSpawn	C:\Users\warma\repos\ProjectCompanySound\.cache\0D\{0D0D2A7C-994C-7338-3432-58D386A6C181}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\AllMaps\misc\PlayerSpawn		46278
+	56150773	Uranium_Drop_5	C:\Users\warma\repos\ProjectCompanySound\.cache\CF\{CF972DA4-4EFD-B7BA-9B8C-680FE7FC9ACF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_5		16608
+	71940406	Octopode_Tentacle_Slime_8	C:\Users\warma\repos\ProjectCompanySound\.cache\84\{84C1D4CD-DE99-7C7A-7884-86AE39639846}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_8		72673
+	93978566	Octopode_Tentacle_Slime_11	C:\Users\warma\repos\ProjectCompanySound\.cache\18\{1890C4B6-67E5-DA90-2D82-0C3E8E273081}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_11		66059
+	97064422	Radioactivity	C:\Users\warma\repos\ProjectCompanySound\.cache\22\{227DCD79-C4AA-738E-E33A-0FF8860BB239}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\RadioactivityLoop\Radioactivity		1516067
+	220366424	Testcube_Drop_1	C:\Users\warma\repos\ProjectCompanySound\.cache\4A\{4A32482D-F255-945B-36EE-D7337BD3BEC6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_1		15999
+	222478994	Uranium Pickup	C:\Users\warma\repos\ProjectCompanySound\.cache\1D\{1D1B0AA9-5CFE-6CD6-7D77-1988766A7E04}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium Pickup\Uranium Pickup		10330
+	246159269	Testcube_Drop_6	C:\Users\warma\repos\ProjectCompanySound\.cache\C9\{C9D368B1-724D-323E-5D4E-09F750E60AED}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_6		18181
+	296471019	Octopode_Tentacle_Slime_5	C:\Users\warma\repos\ProjectCompanySound\.cache\8E\{8E74663A-70D5-3FF6-8EF8-9B0DCA2C96E3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_5		86340
+	306192780	Uranium_Drop_4	C:\Users\warma\repos\ProjectCompanySound\.cache\E9\{E94503D1-447E-C30C-686A-733CA6A8E669}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_4		19026
+	306621905	Uranium_Drop_7	C:\Users\warma\repos\ProjectCompanySound\.cache\FC\{FCBFC569-9BFB-D3E4-70CE-CC47D83A4D95}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_7		17694
+	349388133	Octopode_Tentacle_Slime_9	C:\Users\warma\repos\ProjectCompanySound\.cache\5D\{5D39DC02-CBBD-EF6F-F875-26FAEFCFBB9A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_9		61681
+	352113386	Octopode_Tentacle_Slime_6	C:\Users\warma\repos\ProjectCompanySound\.cache\03\{03E42A5B-AE02-37FB-877A-CB4A226377B1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_6		86569
+	435432647	Testcube_Drop_7	C:\Users\warma\repos\ProjectCompanySound\.cache\09\{09CDACAF-4223-D73A-29F1-B032699FCC1D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_7		17424
+	438886559	ScoreIncreased	C:\Users\warma\repos\ProjectCompanySound\.cache\8D\{8D387362-0984-7BA5-C04A-248D95392CB3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\AllMaps\misc\ScoreIncreased		83555
+	448956339	Octopode_Tentacle_Slime_2	C:\Users\warma\repos\ProjectCompanySound\.cache\AC\{ACF9DA5E-5E05-B4C5-3B7E-D1A88A31578C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_2		126997
+	468562709	Uranium_Drop_2	C:\Users\warma\repos\ProjectCompanySound\.cache\71\{71AE8994-F455-A47D-8C08-EC199ED8B3CE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_2		20874
+	517533562	Octopode_Tentacle_Slime_4	C:\Users\warma\repos\ProjectCompanySound\.cache\26\{2671A317-26E8-3F20-C640-DAA8651396E6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_4		61962
+	552724064	Uranium_Drop_8	C:\Users\warma\repos\ProjectCompanySound\.cache\3E\{3E62F971-0F04-8414-5FF7-F1337DF9F68B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_8		9335
+	560181597	ScoreDecreased	C:\Users\warma\repos\ProjectCompanySound\.cache\5C\{5CF69828-753D-5951-8738-BA0B98C45D75}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\AllMaps\misc\ScoreDecreased		77333
+	581920733	Flashlight Dropped	C:\Users\warma\repos\ProjectCompanySound\.cache\C7\{C701DCAE-D2DE-50A1-9C9D-00DEF5D24DFD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Flashlight\Flashlight\Flashlight_Drop\Flashlight_DropSelector\Flashlight Dropped		16487
+	594547032	Octopode_Tentacle_Slime_3	C:\Users\warma\repos\ProjectCompanySound\.cache\0B\{0B61EA00-BC2D-54A6-9644-0A659BF62E5A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_3		113681
+	660839250	Octopode_Tentacle_Slime_7	C:\Users\warma\repos\ProjectCompanySound\.cache\4D\{4D408863-8FB5-1D16-A57E-5A22E85F32E9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_7		68744
+	665798167	Uranium_Drop_6	C:\Users\warma\repos\ProjectCompanySound\.cache\69\{6921E363-7BD0-3B19-A994-0C9E1FC59AD9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_6		17808
+	688781331	Fluorescent Light Idle	C:\Users\warma\repos\ProjectCompanySound\.cache\00\{00248C14-EE6F-C1E7-67B4-0022E45BC2BA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Flashlight\Flashlight\Flashlight_Idle\Flashlight Idle Loop\Fluorescent Light Idle		2156561
+	724778742	Octopode_Tentacle_Slime_10	C:\Users\warma\repos\ProjectCompanySound\.cache\D0\{D0A183A5-F1CB-D9D9-A2A5-171BEB2E36BD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_10		56797
+	767274683	Octopode_Tentacle_Slime_1	C:\Users\warma\repos\ProjectCompanySound\.cache\89\{89C7B8FA-199C-B9A3-8932-A50C094697F7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_1		70342
+	858315378	Octopode_Tentacle_Slime_12	C:\Users\warma\repos\ProjectCompanySound\.cache\09\{09639971-914C-234B-0272-9873A58DC86A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_12		56106
+	862256466	Teleport Button Clicked	C:\Users\warma\repos\ProjectCompanySound\.cache\34\{3422B3BB-DC19-729F-5E7D-4E6B59CCA532}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\AllMaps\Interactables\Interactable 3D Buttons\Teleport Button Clicked		43459
+	902133255	Uranium_Drop_1	C:\Users\warma\repos\ProjectCompanySound\.cache\4A\{4A32482D-F255-945B-36EE-D7337BD3BEC6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_1		15999
+	940843974	Octopode_Tentacle_Slime_13	C:\Users\warma\repos\ProjectCompanySound\.cache\D0\{D0A7DB4C-C504-0251-1E28-E653AAAA3A59}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Players\Octopode\Octopode\Misc_TentacleMovements\TentacleSlime\Octopode_Tentacle_Slime_13		76891
+	988061760	Testcube_Drop_2	C:\Users\warma\repos\ProjectCompanySound\.cache\DB\{DB3738F8-CBE4-280D-A505-005786CBB3D3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_2		21038
+	992206024	Testcube_Drop_4	C:\Users\warma\repos\ProjectCompanySound\.cache\E9\{E94503D1-447E-C30C-686A-733CA6A8E669}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_4		19026
+	1006995463	Testcube_Drop_8	C:\Users\warma\repos\ProjectCompanySound\.cache\A9\{A998D830-2B55-7BC2-1960-0291843A3C95}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_8		9361
+	1017549383	Testcube_Drop_3	C:\Users\warma\repos\ProjectCompanySound\.cache\FB\{FBBABF7A-7FDD-DA6A-6C6D-8E90D097A2F9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_3		20567
+	1030988683	Uranium_Drop_3	C:\Users\warma\repos\ProjectCompanySound\.cache\92\{9290C005-CEA1-5B31-3A77-BB9EC279EA95}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Uranium\Uranium\Uranium_DropSelector\Uranium_Drop_3		20294
+	1049704006	Testcube_Drop_5	C:\Users\warma\repos\ProjectCompanySound\.cache\75\{7546C25C-216A-D996-B04B-86BEBA17EF86}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Props\Testcube\Testcube\Testcube_Drop\Testcube_DropSelector\Testcube_Drop_5		16572
+

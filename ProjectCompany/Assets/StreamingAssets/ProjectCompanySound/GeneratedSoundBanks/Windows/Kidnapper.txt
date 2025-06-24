@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1028771866	Kidnapper_Idle			\Entities\Kidnapper\Kidnapper_Idle	
+	1675306836	Kidnapper_IdleUnmute			\Entities\Kidnapper\Kidnapper_IdleUnmute	
+	2479678270	Kidnapper_DropOff_Player			\Entities\Kidnapper\Kidnapper_DropOff_Player	
+	3267015934	Kidnapper_Grab_Player			\Entities\Kidnapper\Kidnapper_Grab_Player	
+	3437208085	Kidnapper_IdleMute			\Entities\Kidnapper\Kidnapper_IdleMute	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	749961095	schwebe sound effekt	C:\Users\warma\repos\ProjectCompanySound\.cache\F8\{F810C784-5B42-2487-03F1-0790BDC3EC6E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Entities\Enemies\Kidnapper\Kidnapper\HoverSounds\HoverLoop\schwebe sound effekt		2639296
+

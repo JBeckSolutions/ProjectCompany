@@ -254,7 +254,7 @@ public class DungeonGenerator : NetworkBehaviour
             GeneratedItemsParentInScene.GetComponent<NetworkObject>().Spawn(true);
 
             // Spawn items
-            int valueToGenerate = (int)(GameManager.Singelton.Quota.Value * 1.3 + Random.NextDouble() * (1.8 - 1.3));
+            int valueToGenerate = (int)(GameManager.Singelton.Quota.Value * 1.3 + Random.NextDouble() * (2.5 - 1.8));
             int valueGenerated = 0;
             int itemsSpawned = 0;
             while(valueGenerated < valueToGenerate)

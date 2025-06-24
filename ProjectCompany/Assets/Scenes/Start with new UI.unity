@@ -2663,6 +2663,18 @@ PrefabInstance:
       propertyPath: gameUi
       value: 
       objectReference: {fileID: 95999855}
+    - target: {fileID: 2668367331509696082, guid: dcefcc785cdcb564889a7ba95c101d9e, type: 3}
+      propertyPath: maxRooms
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668367331509696082, guid: dcefcc785cdcb564889a7ba95c101d9e, type: 3}
+      propertyPath: minRooms
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668367331509696082, guid: dcefcc785cdcb564889a7ba95c101d9e, type: 3}
+      propertyPath: maxSpawnInverval
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2790719361726223215, guid: dcefcc785cdcb564889a7ba95c101d9e, type: 3}
       propertyPath: m_Name
       value: GameManager

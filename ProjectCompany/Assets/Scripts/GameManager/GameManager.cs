@@ -33,8 +33,8 @@ public class GameManager : NetworkBehaviour
 
     [Header("Dungeon Size Configuration")]
     public NetworkVariable<int> DungeonSize = new NetworkVariable<int>(0);
-    [SerializeField] private int minRooms = 50;
-    [SerializeField] private int maxRooms = 750;
+    [SerializeField] private int minRooms = 20;
+    [SerializeField] private int maxRooms = 500;
     [SerializeField] private int QuotaForMaxSize = 10000;
 
     [Header("Scene & Round Management")]

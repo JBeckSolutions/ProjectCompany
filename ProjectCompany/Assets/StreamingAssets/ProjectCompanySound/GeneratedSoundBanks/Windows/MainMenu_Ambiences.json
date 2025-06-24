@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2371512733",
+    "Type": "User",
+    "GUID": "{44D9CEAD-7F1B-4A33-B86E-4ECD8834BDBD}",
+    "Language": "SFX",
+    "Hash": "{9C40E219-91EB-E103-6827-7AA48039C5F1}",
+    "ObjectPath": "\\SoundBanks\\MainMenu\\MainMenu_Ambiences",
+    "ShortName": "MainMenu_Ambiences",
+    "Path": "MainMenu_Ambiences.bnk",
+    "Media": [
+     {
+      "Id": "688781331",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Fluorescent Light Idle.wav",
+      "CachePath": "00/{00248C14-EE6F-C1E7-67B4-0022E45BC2BA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "716442375",
+      "Name": "Ambience_LightBulb_Idle_Start",
+      "ObjectPath": "\\Events\\Maps\\Laboratory\\Ambiences\\Ambience_LightBulb_Idle_Start",
+      "GUID": "{AAF43E7E-20B2-470E-90FF-FCFE635B57A6}",
+      "Color": "3",
+      "MaxAttenuation": "4",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "688781331"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2E8D6FCE-A2E8-5C94-57CD-2E3604B7709C}"
+ }
+}

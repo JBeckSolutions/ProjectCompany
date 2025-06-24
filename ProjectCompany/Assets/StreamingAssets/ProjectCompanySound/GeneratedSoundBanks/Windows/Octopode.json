@@ -1,0 +1,812 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "170740614",
+    "Type": "User",
+    "GUID": "{A9DC722B-6D93-4F96-B181-AE7AB4378E03}",
+    "Language": "SFX",
+    "Hash": "{A5CD3416-38D9-ECC3-D4B6-67772EF10EF1}",
+    "ObjectPath": "\\SoundBanks\\Entities\\Octopode",
+    "ShortName": "Octopode",
+    "Path": "Octopode.bnk",
+    "Media": [
+     {
+      "Id": "20606432",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_6 (Bounce) [2025-06-21 125700].wav",
+      "CachePath": "68/{685AF307-2317-9CC6-9011-BA0F1BFCA2A1}.wem"
+     },
+     {
+      "Id": "62331141",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_5 (Bounce) [2025-06-21 125659].wav",
+      "CachePath": "52/{52E481F7-4267-7BB9-E5FD-5A95A2002DD7}.wem"
+     },
+     {
+      "Id": "71940406",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_8.wav",
+      "CachePath": "84/{84C1D4CD-DE99-7C7A-7884-86AE39639846}.wem"
+     },
+     {
+      "Id": "93533229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_8.wav",
+      "CachePath": "EC/{EC8BDBBB-E213-1657-34F9-F1E087A95541}.wem"
+     },
+     {
+      "Id": "93978566",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_11.wav",
+      "CachePath": "18/{1890C4B6-67E5-DA90-2D82-0C3E8E273081}.wem"
+     },
+     {
+      "Id": "143278605",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_7 (Bounce) [2025-06-21 125703].wav",
+      "CachePath": "FE/{FE25FC34-B53D-7D00-52B8-298581D3A4A5}.wem"
+     },
+     {
+      "Id": "169297157",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_15 (Bounce) [2025-06-21 125716].wav",
+      "CachePath": "07/{07C9903F-9804-D6E4-BBA6-CDAEBAA80F0E}.wem"
+     },
+     {
+      "Id": "177183456",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_17 (Bounce) [2025-06-21 125720].wav",
+      "CachePath": "A2/{A2A6A1C7-B31B-305E-4EE3-2EA288A486DE}.wem"
+     },
+     {
+      "Id": "178764719",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_2.wav",
+      "CachePath": "3B/{3BF3B3C4-361C-7755-85FC-3732E2E4B455}.wem"
+     },
+     {
+      "Id": "225011491",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_14 (Bounce) [2025-06-21 125715].wav",
+      "CachePath": "EF/{EF04E4FA-1E8F-99B5-23FB-DAC8E8FE1D81}.wem"
+     },
+     {
+      "Id": "234491283",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_5.wav",
+      "CachePath": "02/{024E6894-BFCB-74CD-3F4F-96E49B102AC7}.wem"
+     },
+     {
+      "Id": "273531119",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_18 (Bounce) [2025-06-21 125722].wav",
+      "CachePath": "46/{464B5639-73FB-B550-F0DA-6DCA25FE05B7}.wem"
+     },
+     {
+      "Id": "288551070",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_9 (Bounce) [2025-06-21 125706].wav",
+      "CachePath": "11/{116D18A6-AAB2-163A-2135-F4F6A4619FAD}.wem"
+     },
+     {
+      "Id": "296471019",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_5.wav",
+      "CachePath": "8E/{8E74663A-70D5-3FF6-8EF8-9B0DCA2C96E3}.wem"
+     },
+     {
+      "Id": "309442665",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_16 (Bounce) [2025-06-21 125719].wav",
+      "CachePath": "C7/{C75B8E76-AB86-B3AB-13FC-DA6A15F8E00E}.wem"
+     },
+     {
+      "Id": "337521799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_21 (Bounce) [2025-06-21 125727].wav",
+      "CachePath": "20/{20B154AF-EEDD-2614-B52F-0BA4CFD94190}.wem"
+     },
+     {
+      "Id": "349388133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_9.wav",
+      "CachePath": "5D/{5D39DC02-CBBD-EF6F-F875-26FAEFCFBB9A}.wem"
+     },
+     {
+      "Id": "352113386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_6.wav",
+      "CachePath": "03/{03E42A5B-AE02-37FB-877A-CB4A226377B1}.wem"
+     },
+     {
+      "Id": "365853002",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_10 (Bounce) [2025-06-21 125708].wav",
+      "CachePath": "63/{63F14FD0-8ACE-B959-96A5-2B4F1D060D1D}.wem"
+     },
+     {
+      "Id": "399151455",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_7.wav",
+      "CachePath": "78/{7818ABC6-3BC6-4494-9323-EEEB9E9FC4C3}.wem"
+     },
+     {
+      "Id": "448956339",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_2.wav",
+      "CachePath": "AC/{ACF9DA5E-5E05-B4C5-3B7E-D1A88A31578C}.wem"
+     },
+     {
+      "Id": "469565081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_4 (Bounce) [2025-06-21 125657].wav",
+      "CachePath": "72/{72E9C1B8-897D-93BE-DFE1-208B5F78C1C8}.wem"
+     },
+     {
+      "Id": "517533562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_4.wav",
+      "CachePath": "26/{2671A317-26E8-3F20-C640-DAA8651396E6}.wem"
+     },
+     {
+      "Id": "545991775",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_8 (Bounce) [2025-06-21 125705].wav",
+      "CachePath": "08/{08E0A6D9-80E1-0009-443A-0C549712120E}.wem"
+     },
+     {
+      "Id": "594547032",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_3.wav",
+      "CachePath": "0B/{0B61EA00-BC2D-54A6-9644-0A659BF62E5A}.wem"
+     },
+     {
+      "Id": "614884944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_24 (Bounce) [2025-06-21 125735].wav",
+      "CachePath": "9B/{9B913F24-8423-4EC8-9455-00B220E9F343}.wem"
+     },
+     {
+      "Id": "650736296",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_12 (Bounce) [2025-06-21 125711].wav",
+      "CachePath": "A9/{A9DE4684-A8A9-8ED0-B9BA-B28D399EF092}.wem"
+     },
+     {
+      "Id": "651534696",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_23 (Bounce) [2025-06-21 125732].wav",
+      "CachePath": "EF/{EF63B57C-39E8-9889-E217-62EB2DE28443}.wem"
+     },
+     {
+      "Id": "655136187",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_4.wav",
+      "CachePath": "BE/{BE898B27-C4B1-D7DF-88E1-C926BDE82950}.wem"
+     },
+     {
+      "Id": "660839250",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_7.wav",
+      "CachePath": "4D/{4D408863-8FB5-1D16-A57E-5A22E85F32E9}.wem"
+     },
+     {
+      "Id": "664145553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_3 (Bounce) [2025-06-21 125648].wav",
+      "CachePath": "A3/{A36674D7-A0D2-8E25-72E9-76CB4933C3C8}.wem"
+     },
+     {
+      "Id": "701760361",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_13 (Bounce) [2025-06-21 125714].wav",
+      "CachePath": "E9/{E964C4CE-5174-C5D9-2538-6362C5AD8000}.wem"
+     },
+     {
+      "Id": "704982171",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_2 (Bounce) [2025-06-21 125647].wav",
+      "CachePath": "57/{57EBB117-025B-80FA-5ADD-A19FB89D9B7E}.wem"
+     },
+     {
+      "Id": "717473960",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_19 (Bounce) [2025-06-21 125724].wav",
+      "CachePath": "F2/{F2229705-FAA4-14A1-E87A-CD1115DB6B45}.wem"
+     },
+     {
+      "Id": "724639172",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_11 (Bounce) [2025-06-21 125710].wav",
+      "CachePath": "94/{94E560F1-1716-4000-8DEC-9DDBF64D0960}.wem"
+     },
+     {
+      "Id": "724778742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_10.wav",
+      "CachePath": "D0/{D0A183A5-F1CB-D9D9-A2A5-171BEB2E36BD}.wem"
+     },
+     {
+      "Id": "739858594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_3.wav",
+      "CachePath": "58/{5832B531-33A8-B0F5-8F22-B67DF099CB0D}.wem"
+     },
+     {
+      "Id": "741272729",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_1.wav",
+      "CachePath": "63/{63573461-C6E9-C496-0863-1F86B7C07F5C}.wem"
+     },
+     {
+      "Id": "767274683",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_1.wav",
+      "CachePath": "89/{89C7B8FA-199C-B9A3-8932-A50C094697F7}.wem"
+     },
+     {
+      "Id": "858315378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_12.wav",
+      "CachePath": "09/{09639971-914C-234B-0272-9873A58DC86A}.wem"
+     },
+     {
+      "Id": "884401139",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Lift_Plop_ForRandomContainer_6.wav",
+      "CachePath": "C4/{C46386DE-0638-F5EB-ACCC-9C512F5C4F1F}.wem"
+     },
+     {
+      "Id": "940843974",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Octopode_Tentacle_Slime_13.wav",
+      "CachePath": "D0/{D0A7DB4C-C504-0251-1E28-E653AAAA3A59}.wem"
+     },
+     {
+      "Id": "998204421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_22 (Bounce) [2025-06-21 125730].wav",
+      "CachePath": "17/{179E3E38-4029-8E6C-E7D9-CC486C0BBFF3}.wem"
+     },
+     {
+      "Id": "1052925070",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaghetti_Overcooked_Drop_20 (Bounce) [2025-06-21 125726].wav",
+      "CachePath": "69/{69AA05A0-C7D6-EFEE-058A-7CC27EA642BF}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "559315358",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Entities\\Players\\Octopode\\Octopode\\Octopode_Steps\\Octopode_Tentacle_Lift_Sequence\\Silence\\Silence",
+       "GUID": "{4DF431DD-1087-4836-AC04-8E2041259B17}",
+       "Color": "11",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1011200149",
+       "Name": "SlimeImpact",
+       "ObjectPath": "\\Effects\\Default Work Unit\\SlimeImpact",
+       "GUID": "{80A8A258-2917-40FD-9837-738B7760E192}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      },
+      {
+       "Id": "2394171885",
+       "Name": "SlimeJumpImpact",
+       "ObjectPath": "\\Effects\\Default Work Unit\\SlimeJumpImpact",
+       "GUID": "{6A4E75B3-F510-40B2-BB81-E8F6AE54A21E}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "761251815",
+      "Name": "Octopode_Idle",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Octopode_Idle",
+      "GUID": "{365E9BAB-4066-4B9C-A56C-F17E1763C376}",
+      "Color": "11",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1894918901",
+      "Name": "Octopode_Idle_Mute",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Octopode_Idle_Mute",
+      "GUID": "{BDBB6B43-C3C1-40E5-A0AB-647C5EA93EC0}",
+      "Color": "11",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2523899444",
+      "Name": "Octopode_Idle_UnMute",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Octopode_Idle_UnMute",
+      "GUID": "{3DDDF025-07AE-4386-9D5C-D5A08DE44C56}",
+      "Color": "11",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3267649742",
+      "Name": "Octopode_Land",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Tentacles\\Octopode_Land",
+      "GUID": "{B5932B55-44A7-40D1-8D66-FF521F22E248}",
+      "Color": "11",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19583876",
+      "DurationMax": "0.60695064",
+      "MediaRefs": [
+       {
+        "Id": "20606432"
+       },
+       {
+        "Id": "62331141"
+       },
+       {
+        "Id": "143278605"
+       },
+       {
+        "Id": "169297157"
+       },
+       {
+        "Id": "177183456"
+       },
+       {
+        "Id": "225011491"
+       },
+       {
+        "Id": "273531119"
+       },
+       {
+        "Id": "288551070"
+       },
+       {
+        "Id": "309442665"
+       },
+       {
+        "Id": "337521799"
+       },
+       {
+        "Id": "365853002"
+       },
+       {
+        "Id": "469565081"
+       },
+       {
+        "Id": "545991775"
+       },
+       {
+        "Id": "614884944"
+       },
+       {
+        "Id": "650736296"
+       },
+       {
+        "Id": "651534696"
+       },
+       {
+        "Id": "664145553"
+       },
+       {
+        "Id": "701760361"
+       },
+       {
+        "Id": "704982171"
+       },
+       {
+        "Id": "717473960"
+       },
+       {
+        "Id": "724639172"
+       },
+       {
+        "Id": "998204421"
+       },
+       {
+        "Id": "1052925070"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2394171885"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3672519433",
+      "Name": "Octopode_Swap_InventorySlot",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Tentacles\\Octopode_Swap_InventorySlot",
+      "GUID": "{79B18F4F-E678-4BD9-8FF1-CA58859EF38E}",
+      "Color": "11",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9108991",
+      "DurationMax": "2.1872673",
+      "MediaRefs": [
+       {
+        "Id": "71940406"
+       },
+       {
+        "Id": "93978566"
+       },
+       {
+        "Id": "296471019"
+       },
+       {
+        "Id": "349388133"
+       },
+       {
+        "Id": "352113386"
+       },
+       {
+        "Id": "448956339"
+       },
+       {
+        "Id": "517533562"
+       },
+       {
+        "Id": "594547032"
+       },
+       {
+        "Id": "660839250"
+       },
+       {
+        "Id": "724778742"
+       },
+       {
+        "Id": "767274683"
+       },
+       {
+        "Id": "858315378"
+       },
+       {
+        "Id": "940843974"
+       }
+      ]
+     },
+     {
+      "Id": "2041774849",
+      "Name": "Octopode_Tentacle_Drop",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Tentacles\\Octopode_Tentacle_Drop",
+      "GUID": "{9FF89185-28C4-4760-A06E-D5C0B11661F9}",
+      "Color": "11",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.17958494",
+      "DurationMax": "0.66188437",
+      "MediaRefs": [
+       {
+        "Id": "20606432"
+       },
+       {
+        "Id": "62331141"
+       },
+       {
+        "Id": "143278605"
+       },
+       {
+        "Id": "169297157"
+       },
+       {
+        "Id": "177183456"
+       },
+       {
+        "Id": "225011491"
+       },
+       {
+        "Id": "273531119"
+       },
+       {
+        "Id": "288551070"
+       },
+       {
+        "Id": "309442665"
+       },
+       {
+        "Id": "337521799"
+       },
+       {
+        "Id": "365853002"
+       },
+       {
+        "Id": "469565081"
+       },
+       {
+        "Id": "545991775"
+       },
+       {
+        "Id": "614884944"
+       },
+       {
+        "Id": "650736296"
+       },
+       {
+        "Id": "651534696"
+       },
+       {
+        "Id": "664145553"
+       },
+       {
+        "Id": "701760361"
+       },
+       {
+        "Id": "704982171"
+       },
+       {
+        "Id": "717473960"
+       },
+       {
+        "Id": "724639172"
+       },
+       {
+        "Id": "998204421"
+       },
+       {
+        "Id": "1052925070"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1011200149"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1002430261",
+      "Name": "Octopode_Tentacle_Lift",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Tentacles\\Octopode_Tentacle_Lift",
+      "GUID": "{56FDE561-84CA-4A90-8FE9-08AFC00CB6A3}",
+      "Color": "11",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.18624008",
+      "DurationMax": "0.21762024",
+      "MediaRefs": [
+       {
+        "Id": "93533229"
+       },
+       {
+        "Id": "178764719"
+       },
+       {
+        "Id": "234491283"
+       },
+       {
+        "Id": "399151455"
+       },
+       {
+        "Id": "655136187"
+       },
+       {
+        "Id": "739858594"
+       },
+       {
+        "Id": "741272729"
+       },
+       {
+        "Id": "884401139"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "559315358"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1234234613",
+      "Name": "Octopode_TentacleStep",
+      "ObjectPath": "\\Events\\Entities\\Octopode\\Tentacles\\Octopode_TentacleStep",
+      "GUID": "{73671005-98FA-402B-BD56-DCA08678821A}",
+      "Color": "11",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.18484716",
+      "DurationMax": "0.64304185",
+      "MediaRefs": [
+       {
+        "Id": "20606432"
+       },
+       {
+        "Id": "62331141"
+       },
+       {
+        "Id": "143278605"
+       },
+       {
+        "Id": "169297157"
+       },
+       {
+        "Id": "177183456"
+       },
+       {
+        "Id": "225011491"
+       },
+       {
+        "Id": "273531119"
+       },
+       {
+        "Id": "288551070"
+       },
+       {
+        "Id": "309442665"
+       },
+       {
+        "Id": "337521799"
+       },
+       {
+        "Id": "365853002"
+       },
+       {
+        "Id": "469565081"
+       },
+       {
+        "Id": "545991775"
+       },
+       {
+        "Id": "614884944"
+       },
+       {
+        "Id": "650736296"
+       },
+       {
+        "Id": "651534696"
+       },
+       {
+        "Id": "664145553"
+       },
+       {
+        "Id": "701760361"
+       },
+       {
+        "Id": "704982171"
+       },
+       {
+        "Id": "717473960"
+       },
+       {
+        "Id": "724639172"
+       },
+       {
+        "Id": "998204421"
+       },
+       {
+        "Id": "1052925070"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1011200149"
+        }
+       ]
+      }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "436101287",
+      "Name": "Octopode_WalkSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Octopode\\Octopode_WalkSpeed",
+      "GUID": "{3A33F409-9AFE-40A5-A0A7-7C80675B6B86}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{25AFE318-498F-C82B-5F27-376CB5D102B4}"
+ }
+}

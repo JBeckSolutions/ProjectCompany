@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	716442375	Ambience_LightBulb_Idle_Start			\Maps\Laboratory\Ambiences\Ambience_LightBulb_Idle_Start	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	688781331	Fluorescent Light Idle	C:\Users\warma\repos\ProjectCompanySound\.cache\00\{00248C14-EE6F-C1E7-67B4-0022E45BC2BA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\Laboratory\Ambiences\FloorLightBulbs\Fluorescent Light Idle Loop\Fluorescent Light Idle		2156561
+

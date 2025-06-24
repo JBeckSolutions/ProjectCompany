@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3144856458	Map_Button_Finish			\Maps\Standard Interactables\InteractableButtons\Map_Button_Finish	
+	4111103010	Lobby_Button_GenerateDungeon			\Maps\Standard Interactables\InteractableButtons\Lobby_Button_GenerateDungeon	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	929949262	ScoreButtonClicked	C:\Users\warma\repos\ProjectCompanySound\.cache\F8\{F822A712-C517-FED3-BAE5-4AC70F516632}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\AllMaps\Interactables\Interactable 3D Buttons\ScoreButtonClicked		397708
+	976909421	Dungeon Generating	C:\Users\warma\repos\ProjectCompanySound\.cache\23\{23CFFADA-8E16-F1E2-864F-7C7D25F98067}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Maps\AllMaps\Interactables\Interactable 3D Buttons\Dungeon Generating		159694
+

@@ -1,0 +1,71 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "290285391",
+    "Type": "User",
+    "GUID": "{7E1840FE-98DD-4498-BFF0-B462F0C93016}",
+    "Language": "SFX",
+    "Hash": "{BACCE4A0-DA71-69F0-299C-35CE025DF75F}",
+    "ObjectPath": "\\SoundBanks\\Maps\\Lobby",
+    "ShortName": "Lobby",
+    "Path": "Lobby.bnk",
+    "Media": [
+     {
+      "Id": "929949262",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ScoreButtonClicked.wav",
+      "CachePath": "F8/{F822A712-C517-FED3-BAE5-4AC70F516632}.wem"
+     },
+     {
+      "Id": "976909421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Dungeon Generating.wav",
+      "CachePath": "23/{23CFFADA-8E16-F1E2-864F-7C7D25F98067}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4111103010",
+      "Name": "Lobby_Button_GenerateDungeon",
+      "ObjectPath": "\\Events\\Maps\\Standard Interactables\\InteractableButtons\\Lobby_Button_GenerateDungeon",
+      "GUID": "{BDDD8429-A123-4207-847F-48BB5083FC57}",
+      "Color": "3",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "976909421"
+       }
+      ]
+     },
+     {
+      "Id": "3144856458",
+      "Name": "Map_Button_Finish",
+      "ObjectPath": "\\Events\\Maps\\Standard Interactables\\InteractableButtons\\Map_Button_Finish",
+      "GUID": "{6238F5C9-E60A-4DA0-B243-671953682367}",
+      "Color": "3",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "929949262"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3A6DAEFD-A44D-5647-0EAC-3D955A5ACAC1}"
+ }
+}
