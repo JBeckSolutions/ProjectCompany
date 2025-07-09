@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
 using Cursor = UnityEngine.Cursor;
+using System;
 /// <summary>
 /// The Main code of this script was written by: Beck Jonas
 /// Sound related things were written by: Köhler Dennis
@@ -49,7 +50,7 @@ public class PlayerController : NetworkBehaviour
     [Header("Movement State")]
     private bool sprinting = false;
     private bool jumpedThisFrame = false;
-    
+
     public AK.Wwise.RTPC HealthRTPC;
     public AK.Wwise.RTPC MovementSpeedRTPC;
     
@@ -67,6 +68,7 @@ public class PlayerController : NetworkBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
         }
     }
     private void Update()
@@ -240,10 +242,18 @@ public class PlayerController : NetworkBehaviour
     {
         if (!controllsEnabled)
         {
-            lookInput = new Vector2(0, 0);
+            lookInput = Vector2.zero;
             return;
         }
+
         lookInput = context.ReadValue<Vector2>();
+
+        InputDevice device = context.control.device;
+        if (!(device is Mouse))
+        {
+            // Apply higher sensitivity for controller
+            lookInput *= 60;
+        }
         //Debug.Log(lookInput);
     }
     public void OnOpenMenu(InputAction.CallbackContext context)
@@ -335,16 +345,22 @@ public class PlayerController : NetworkBehaviour
             Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
             Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(screenCenter);
             Debug.DrawRay(ray.origin, ray.direction * 5f, Color.red);
-            if (Physics.Raycast(ray, out RaycastHit hitinfo, 5f))
+
+            RaycastHit[] hits = Physics.RaycastAll(ray, 5f);
+            foreach (RaycastHit hit in hits)
             {
-                //Debug.Log(hitinfo.transform.name);
-                if (hitinfo.collider.GetComponent<Item>())
+                if (hit.collider.CompareTag("Lamp")) continue;
+
+                if (hit.collider.TryGetComponent<Item>(out var item))
                 {
-                    playerInventory.AddItem(hitinfo.collider.GetComponent<Item>());
+                    playerInventory.AddItem(item);
+                    break;
                 }
-                if (hitinfo.collider.GetComponent<InteractableObject>())
+
+                if (hit.collider.TryGetComponent<InteractableObject>(out var interactable))
                 {
-                    hitinfo.collider.GetComponent<InteractableObject>().Use();
+                    interactable.Use();
+                    break;
                 }
             }
         }

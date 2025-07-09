@@ -201,9 +201,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   DropOffAreaManager: {fileID: 0}
-  ItemValueLastRound: 0
-  Quota: 0
+  MapGenerator: {fileID: 0}
+  ItemValueLastRound:
+    m_InternalValue: 0
   PlayerStates: []
+  gameUi: {fileID: 0}
+  maxRoundTimer: 900
+  currentTimeInLvl: 0
+  spawnRateOverTime:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minSpawnInterval: 10
+  maxSpawnInverval: 45
+  Quota:
+    m_InternalValue: 0
+  playerDeaths:
+    m_InternalValue: 0
+  currentDay: 1
+  DungeonSize:
+    m_InternalValue: 0
+  minRooms: 50
+  maxRooms: 750
+  QuotaForMaxSize: 10000
 --- !u!4 &302103462
 Transform:
   m_ObjectHideFlags: 0
@@ -257,8 +279,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  playerPrefab: {fileID: 4515320656422679868, guid: 579479e990282524c8d8f200a05379fd, type: 3}
   SpawnPoints: []
+  playerPrefabs: []
+  Event_PlayerTeleported:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &333433460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1753,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7924860359247852407, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d09fce3e1b8d9ee4789560dcf71f9aa1, type: 3}
 --- !u!1 &1260479489
 GameObject:
@@ -2497,6 +2526,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772524525}
   m_CullTransparentMesh: 1
+--- !u!1 &1857218101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857218103}
+  - component: {fileID: 1857218102}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1857218102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857218101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002d426be2945fb40946b88ee541b17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: e65c24f07e52bf5459b21c9e4ae6e796, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &1857218103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857218101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887536406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,3 +2708,4 @@ SceneRoots:
   - {fileID: 302103462}
   - {fileID: 258090513}
   - {fileID: 1131791165}
+  - {fileID: 1857218103}
