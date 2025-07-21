@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
-  m_Name: 2EF552D6-E5A2-4C70-A722-021C1B7338ED
+  m_Script: {fileID: 11500000, guid: f1b26bf0b91890641b221180b61a205b, type: 3}
+  m_Name: 110C99C0-5855-4130-96F3-9473A18A31B6
   m_EditorClassIdentifier: 
-  objectName: Laboratory_Hallway
-  id: 2922746229
-  guid: 2EF552D6-E5A2-4C70-A722-021C1B7338ED
-  IsInUserDefinedSoundBank: 1
-  IsAutoBankLoaded: 0
+  objectName: Lamps
+  id: 4135178078
+  guid: 110C99C0-5855-4130-96F3-9473A18A31B6

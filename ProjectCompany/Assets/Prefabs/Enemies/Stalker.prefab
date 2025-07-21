@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 7531501313497297681}
   - component: {fileID: 5936535537657331622}
   - component: {fileID: 3789594181740225117}
+  - component: {fileID: 2169523166294465867}
   m_Layer: 6
   m_Name: Stalker
   m_TagString: Untagged
@@ -270,7 +271,7 @@ MonoBehaviour:
   Event_StalkingPlayer:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3836d3eb9026e764dac8530af2f169dc, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f595f6a152e857044b0af1de30236052, type: 2}
   RTPC_SeenByPlayer:
     idInternal: 0
     valueGuidInternal: 
@@ -392,6 +393,35 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &2169523166294465867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924282795677139858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec86cfb07db45b4baa875efa8a801cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3836d3eb9026e764dac8530af2f169dc, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1001 &3590903579059467640
 PrefabInstance:
   m_ObjectHideFlags: 0

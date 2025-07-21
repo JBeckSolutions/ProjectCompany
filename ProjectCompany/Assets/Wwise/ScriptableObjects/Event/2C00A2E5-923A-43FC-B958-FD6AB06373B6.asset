@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a98eaa4b07581c49af02c9f012e57cf, type: 3}
-  m_Name: EEC8616E-9512-4F14-A330-85190FE04BF7
+  m_Name: 2C00A2E5-923A-43FC-B958-FD6AB06373B6
   m_EditorClassIdentifier: 
-  objectName: Laboratory_Storage
-  id: 1199550744
-  guid: EEC8616E-9512-4F14-A330-85190FE04BF7
+  objectName: MainMenu_TutorialMenu_UI_Button_Click_Back
+  id: 2326452682
+  guid: 2C00A2E5-923A-43FC-B958-FD6AB06373B6
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

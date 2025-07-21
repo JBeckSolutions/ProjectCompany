@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9435b3018e932844810423795d8ed08f
     GuidInternal: 
-    m_lastTime: -8584510865339638671
+    m_lastTime: -8584484939129457854
     List:
     - name: Hallway
       guid: 6ceb4210a0155048b139a8543c596c9a
@@ -487,8 +487,36 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 084717a941d77741be78aa107d3a6c80
     GuidInternal: 
-    m_lastTime: -8584557558278454981
-    List: []
+    m_lastTime: -8584484909136997097
+    List:
+    - name: Lamps
+      guid: c0990c115558304196f39473a18a31b6
+      id: 4135178078
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 084717a941d77741be78aa107d3a6c80
+      - ElementName: Lamps
+        ObjectType: 7
+        guid: c0990c115558304196f39473a18a31b6
+      Path: SoundBanks\Default Work Unit\Lamps
+    - name: RumblePack
+      guid: dbb649c6889c4247957eab8712547a01
+      id: 2215557837
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 084717a941d77741be78aa107d3a6c80
+      - ElementName: RumblePack
+        ObjectType: 7
+        guid: dbb649c6889c4247957eab8712547a01
+      Path: SoundBanks\Default Work Unit\RumblePack
   - PhysicalPath: SoundBanks\Entities.wwu
     PathAndIcons:
     - ElementName: SoundBanks
@@ -500,7 +528,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Entities
     guid: 4ca19157b59a9e47b6a0c74b667e252f
     GuidInternal: 
-    m_lastTime: -8584513289890673221
+    m_lastTime: -8584484939085397524
     List:
     - name: Kidnapper
       guid: d12c33c4ad0da248a057b950e2b782d3
@@ -596,7 +624,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\MainMenu
     guid: 5cb50de92668ac4c91b9a6cf590a2b99
     GuidInternal: 
-    m_lastTime: -8584510920075172111
+    m_lastTime: -8584484939085377558
     List:
     - name: MainMenu_Ambiences
       guid: adced9441b7f334ab86e4ecd8834bdbd
@@ -689,7 +717,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Maps
     guid: d908d4c3023d6a43a8cc236aa11ee72e
     GuidInternal: 
-    m_lastTime: -8584512378762070776
+    m_lastTime: -8584484909136987044
     List:
     - name: Laboratory
       guid: da82bc53772c8948a37435d3ab98b885
@@ -747,7 +775,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Kidnapper
     guid: 59f94e8d805e4949a059e20acff299e3
     GuidInternal: 
-    m_lastTime: -8584513289903055914
+    m_lastTime: -8584484939135263367
     List:
     - name: Kidnapper_DropOff_Player
       guid: 8d2c1ceb6016654ba90976578863a560
@@ -863,7 +891,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Octopode
     guid: c47b5c31ed996c459f2f2953e04a1de5
     GuidInternal: 
-    m_lastTime: -8584512620391432523
+    m_lastTime: -8584484939135248324
     List:
     - name: Octopode_Idle
       guid: ab9b5e3666409c4ba56cf17e1763c376
@@ -1074,7 +1102,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Robot
     guid: 4c02fea6a4b7104c9e686eb299b83c43
     GuidInternal: 
-    m_lastTime: -8584512727028035636
+    m_lastTime: -8584484939135233252
     List:
     - name: Robot_Attack
       guid: 2e5835a7ba06444ca98cf386ef74e70d
@@ -1270,7 +1298,7 @@ MonoBehaviour:
     ParentPath: Events\Entities\Stalker
     guid: b81cccb666476f448e7d68150e3517a8
     GuidInternal: 
-    m_lastTime: -8584512360473630121
+    m_lastTime: -8584484909138637804
     List:
     - name: Stalker_Attack
       guid: ee7c9c8052342a408d5c7fb2540a893d
@@ -1409,9 +1437,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2680a1ca0123ad468be2d7d2d1706a43
       Path: Events\Entities\Stalker\Stalker_StalkingPlayer
-      maxAttenuation: 26
-      maxDuration: 7.119729
-      minDuration: 7.081948
+      maxAttenuation: 34
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\HostGameMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2619,7 +2647,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Laboratory
     guid: b612878506a6a94288464cd99ce6c5d4
     GuidInternal: 
-    m_lastTime: -8584510920076803672
+    m_lastTime: -8584484924650832379
     List:
     - name: Ambience_LightBulb_Idle_Start
       guid: 7e3ef4aab2200e4790fffcfe635b57a6
@@ -2687,95 +2715,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Atmo
-      guid: 547ad812cd2c604cbafa773e95c741ca
-      id: 3083130986
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Atmo
-        ObjectType: 4
-        guid: 547ad812cd2c604cbafa773e95c741ca
-      Path: Events\Maps\Laboratory\Atmo
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Laboratory_Hallway
-      guid: d652f52ea2e5704ca722021c1b7338ed
-      id: 2922746229
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Rooms
-        ObjectType: 4
-        guid: eb4f0e4aaed5de4e9558e96d7e940e82
-      - ElementName: Laboratory_Hallway
-        ObjectType: 3
-        guid: d652f52ea2e5704ca722021c1b7338ed
-      Path: Events\Maps\Laboratory\Rooms\Laboratory_Hallway
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Laboratory_Office
-      guid: 59e023d6dce42e4f8a7aeb4d77c98fbf
-      id: 1252818853
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Rooms
-        ObjectType: 4
-        guid: eb4f0e4aaed5de4e9558e96d7e940e82
-      - ElementName: Laboratory_Office
-        ObjectType: 3
-        guid: 59e023d6dce42e4f8a7aeb4d77c98fbf
-      Path: Events\Maps\Laboratory\Rooms\Laboratory_Office
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Laboratory_Storage
-      guid: 6e61c8ee1295144fa33085190fe04bf7
-      id: 1199550744
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Rooms
-        ObjectType: 4
-        guid: eb4f0e4aaed5de4e9558e96d7e940e82
-      - ElementName: Laboratory_Storage
-        ObjectType: 3
-        guid: 6e61c8ee1295144fa33085190fe04bf7
-      Path: Events\Maps\Laboratory\Rooms\Laboratory_Storage
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Player_Spawn
       guid: 4af66772e8770848a9a05ee04fddbbb8
       id: 1028635762
@@ -2796,26 +2735,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.7206428
       minDuration: 1.7206428
-    - name: Rooms
-      guid: eb4f0e4aaed5de4e9558e96d7e940e82
-      id: 1359360203
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Maps
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Laboratory
-        ObjectType: 12
-        guid: b612878506a6a94288464cd99ce6c5d4
-      - ElementName: Rooms
-        ObjectType: 4
-        guid: eb4f0e4aaed5de4e9558e96d7e940e82
-      Path: Events\Maps\Laboratory\Rooms
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
   - PhysicalPath: Events\Maps\Standard Interactables\InteractableButtons.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2833,7 +2752,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Standard Interactables\InteractableButtons
     guid: a7fa57dad7fe734d93295f132b22a54b
     GuidInternal: 
-    m_lastTime: -8584512405832737615
+    m_lastTime: -8584484939135193132
     List:
     - name: Lobby_Button_GenerateDungeon
       guid: 2984ddbd23a10742847f48bb5083fc57
@@ -2898,7 +2817,7 @@ MonoBehaviour:
     ParentPath: Events\Maps\Win Conditions\Score Area
     guid: 9c20fd7aff9fde42b17f3a8b40d0c4a5
     GuidInternal: 
-    m_lastTime: -8584512405832727588
+    m_lastTime: -8584484939135183128
     List:
     - name: ScoreArea_Score_Decreased
       guid: 70c66c32487faf49a8e0387d6a07d269
@@ -2957,7 +2876,7 @@ MonoBehaviour:
     ParentPath: Events\Menus
     guid: ea3e7bcc2a9f4848a83afaed02a844bc
     GuidInternal: 
-    m_lastTime: -8584513289903020731
+    m_lastTime: -8584484939135178078
     List: []
   - PhysicalPath: Events\Props\Flashlight.wwu
     PathAndIcons:
@@ -2973,7 +2892,7 @@ MonoBehaviour:
     ParentPath: Events\Props\Flashlight
     guid: f9e48c148e615f4ca620c5f8484d0594
     GuidInternal: 
-    m_lastTime: -8584514168470144419
+    m_lastTime: -8584484899391078065
     List:
     - name: Flashlight_Drop
       guid: 3e1a95f789dc1d418ea7068843dd18ca
@@ -3089,7 +3008,7 @@ MonoBehaviour:
     ParentPath: Events\Props\TestCube
     guid: fbfcae56cd13a74595ef88c61f4b4483
     GuidInternal: 
-    m_lastTime: -8584514168470114028
+    m_lastTime: -8584484939135158029
     List:
     - name: TestCube_Drop
       guid: a354e644d056924e89dd59cbf126fa45
@@ -3165,7 +3084,7 @@ MonoBehaviour:
     ParentPath: Events\Props\Uranium
     guid: 72fa25fb59b8814ba58708700f241843
     GuidInternal: 
-    m_lastTime: -8584514168470093867
+    m_lastTime: -8584484939135148017
     List:
     - name: Uranium_Drop
       guid: 897e25edc0ed494c869c9553fe2b013f
@@ -3287,6 +3206,1264 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\RumblePack.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: RumblePack
+      ObjectType: 12
+      guid: 22ed3d74325bf94dbbe3432e691d3f3c
+    ParentPath: Events\RumblePack
+    guid: 22ed3d74325bf94dbbe3432e691d3f3c
+    GuidInternal: 
+    m_lastTime: -8584484939135132978
+    List:
+    - name: Basic
+      guid: 4725ccf72749444dbede2ab130bd5231
+      id: 3340296461
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      Path: Events\RumblePack\Basic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Complex
+      guid: cdbfdf9ab87deb4880742cb0ea870dde
+      id: 258520151
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Complex
+        ObjectType: 4
+        guid: cdbfdf9ab87deb4880742cb0ea870dde
+      Path: Events\RumblePack\Complex
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Context
+      guid: f8f3e9901000ca43a4b6241ab488685f
+      id: 2878499266
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      Path: Events\RumblePack\Context
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Double Click
+      guid: 8b31cddc2e07244387c1adb7aecb82f6
+      id: 752528770
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      Path: Events\RumblePack\Basic\Double Click
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Down
+      guid: 3907f82edfeb0c4e8942cc69dc3706f0
+      id: 2280510569
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Down
+        ObjectType: 4
+        guid: 3907f82edfeb0c4e8942cc69dc3706f0
+      Path: Events\RumblePack\Basic\Double Click\Down
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Interaction
+      guid: f57fac4b723a2c4da2b9fc3f0f08133b
+      id: 3900887599
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Interaction
+        ObjectType: 4
+        guid: f57fac4b723a2c4da2b9fc3f0f08133b
+      Path: Events\RumblePack\Context\Interaction
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Long
+      guid: 06850e2d9d1fe04cb53ff8c27149ac20
+      id: 674228435
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Long
+        ObjectType: 4
+        guid: 06850e2d9d1fe04cb53ff8c27149ac20
+      Path: Events\RumblePack\Basic\Slide\Long
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Long Press
+      guid: 6358fc80ceb37c40b24da64fc001cb6d
+      id: 3116967142
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Long Press
+        ObjectType: 4
+        guid: 6358fc80ceb37c40b24da64fc001cb6d
+      Path: Events\RumblePack\Basic\Long Press
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Loop
+      guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      id: 691006007
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      Path: Events\RumblePack\Basic\Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Multiple Clicks
+      guid: d01c0c6f6a34844ca3188f9854cf1c31
+      id: 759307352
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Multiple Clicks
+        ObjectType: 4
+        guid: d01c0c6f6a34844ca3188f9854cf1c31
+      Path: Events\RumblePack\Basic\Multiple Clicks
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Rumble_Dazed_And_Confused
+      guid: 96618455b5bd8348a50bf329a75078af
+      id: 565956947
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Complex
+        ObjectType: 4
+        guid: cdbfdf9ab87deb4880742cb0ea870dde
+      - ElementName: Rumble_Dazed_And_Confused
+        ObjectType: 3
+        guid: 96618455b5bd8348a50bf329a75078af
+      Path: Events\RumblePack\Complex\Rumble_Dazed_And_Confused
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Down_Double_Click_Moderate
+      guid: 514d58a7103e2741b06b89b720391e85
+      id: 3458981394
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Down
+        ObjectType: 4
+        guid: 3907f82edfeb0c4e8942cc69dc3706f0
+      - ElementName: Rumble_Down_Double_Click_Moderate
+        ObjectType: 3
+        guid: 514d58a7103e2741b06b89b720391e85
+      Path: Events\RumblePack\Basic\Double Click\Down\Rumble_Down_Double_Click_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Down_Double_Click_Soft
+      guid: 53d1b840e3bb7e4f91b0cddf399a746b
+      id: 2801393277
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Down
+        ObjectType: 4
+        guid: 3907f82edfeb0c4e8942cc69dc3706f0
+      - ElementName: Rumble_Down_Double_Click_Soft
+        ObjectType: 3
+        guid: 53d1b840e3bb7e4f91b0cddf399a746b
+      Path: Events\RumblePack\Basic\Double Click\Down\Rumble_Down_Double_Click_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Down_Double_Click_Strong
+      guid: a2eb5fd405814e49b313883860e4f5dd
+      id: 3962422812
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Down
+        ObjectType: 4
+        guid: 3907f82edfeb0c4e8942cc69dc3706f0
+      - ElementName: Rumble_Down_Double_Click_Strong
+        ObjectType: 3
+        guid: a2eb5fd405814e49b313883860e4f5dd
+      Path: Events\RumblePack\Basic\Double Click\Down\Rumble_Down_Double_Click_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Drop_Item
+      guid: acb4d7ca59fcdb4d9960579f35c6b0ed
+      id: 3731156200
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Interaction
+        ObjectType: 4
+        guid: f57fac4b723a2c4da2b9fc3f0f08133b
+      - ElementName: Rumble_Drop_Item
+        ObjectType: 3
+        guid: acb4d7ca59fcdb4d9960579f35c6b0ed
+      Path: Events\RumblePack\Context\Interaction\Rumble_Drop_Item
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Heartbeat
+      guid: 8e30543073b44c4f861f6e1e21597992
+      id: 2618644251
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Variation
+        ObjectType: 4
+        guid: ce65774ac3bbc0469eec447f9e1938a4
+      - ElementName: Rumble_Heartbeat
+        ObjectType: 3
+        guid: 8e30543073b44c4f861f6e1e21597992
+      Path: Events\RumblePack\Context\Variation\Rumble_Heartbeat
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Impact_Long
+      guid: c39151ac5afe064aac4b528f80028fad
+      id: 466484020
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b1270ec5fdfaf241a6c0d3497b581601
+      - ElementName: Rumble_Impact_Long
+        ObjectType: 3
+        guid: c39151ac5afe064aac4b528f80028fad
+      Path: Events\RumblePack\Context\SFX\Rumble_Impact_Long
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Impact_Short
+      guid: 732a5613d26e30449012471f5d2199ac
+      id: 3100765564
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b1270ec5fdfaf241a6c0d3497b581601
+      - ElementName: Rumble_Impact_Short
+        ObjectType: 3
+        guid: 732a5613d26e30449012471f5d2199ac
+      Path: Events\RumblePack\Context\SFX\Rumble_Impact_Short
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Interference
+      guid: 844e5e4336d2f840a538f1d7bc189e58
+      id: 3954293857
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Complex
+        ObjectType: 4
+        guid: cdbfdf9ab87deb4880742cb0ea870dde
+      - ElementName: Rumble_Interference
+        ObjectType: 3
+        guid: 844e5e4336d2f840a538f1d7bc189e58
+      Path: Events\RumblePack\Complex\Rumble_Interference
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Long_Press_Moderate
+      guid: 93b581a33d05bc4389f2009767feeab8
+      id: 939995117
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Long Press
+        ObjectType: 4
+        guid: 6358fc80ceb37c40b24da64fc001cb6d
+      - ElementName: Rumble_Long_Press_Moderate
+        ObjectType: 3
+        guid: 93b581a33d05bc4389f2009767feeab8
+      Path: Events\RumblePack\Basic\Long Press\Rumble_Long_Press_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Long_Press_Soft
+      guid: dc50344a803b7745a6c0b61bfb7be236
+      id: 3603969006
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Long Press
+        ObjectType: 4
+        guid: 6358fc80ceb37c40b24da64fc001cb6d
+      - ElementName: Rumble_Long_Press_Soft
+        ObjectType: 3
+        guid: dc50344a803b7745a6c0b61bfb7be236
+      Path: Events\RumblePack\Basic\Long Press\Rumble_Long_Press_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Long_Press_Strong
+      guid: aa68c3af2fc17f4ca279a017c49bc545
+      id: 2103756715
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Long Press
+        ObjectType: 4
+        guid: 6358fc80ceb37c40b24da64fc001cb6d
+      - ElementName: Rumble_Long_Press_Strong
+        ObjectType: 3
+        guid: aa68c3af2fc17f4ca279a017c49bc545
+      Path: Events\RumblePack\Basic\Long Press\Rumble_Long_Press_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Long_Slide_Moderate
+      guid: bb1d3a5304d1dd4c8395c9f83d5014e3
+      id: 113888631
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Long
+        ObjectType: 4
+        guid: 06850e2d9d1fe04cb53ff8c27149ac20
+      - ElementName: Rumble_Long_Slide_Moderate
+        ObjectType: 3
+        guid: bb1d3a5304d1dd4c8395c9f83d5014e3
+      Path: Events\RumblePack\Basic\Slide\Long\Rumble_Long_Slide_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Long_Slide_Soft
+      guid: 66b9eacb0631154f9364c1b4d529e38a
+      id: 2883004180
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Long
+        ObjectType: 4
+        guid: 06850e2d9d1fe04cb53ff8c27149ac20
+      - ElementName: Rumble_Long_Slide_Soft
+        ObjectType: 3
+        guid: 66b9eacb0631154f9364c1b4d529e38a
+      Path: Events\RumblePack\Basic\Slide\Long\Rumble_Long_Slide_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Long_Slide_Strong
+      guid: c9b06d62a7d0794693f73538fcbfe5b2
+      id: 645780001
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Long
+        ObjectType: 4
+        guid: 06850e2d9d1fe04cb53ff8c27149ac20
+      - ElementName: Rumble_Long_Slide_Strong
+        ObjectType: 3
+        guid: c9b06d62a7d0794693f73538fcbfe5b2
+      Path: Events\RumblePack\Basic\Slide\Long\Rumble_Long_Slide_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Loop_Moderate_Start
+      guid: 463615cc3df442458817272bc132b853
+      id: 3736850760
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Start
+        ObjectType: 4
+        guid: b8fe0092d051004aa7866c0c446d0008
+      - ElementName: Rumble_Loop_Moderate_Start
+        ObjectType: 3
+        guid: 463615cc3df442458817272bc132b853
+      Path: Events\RumblePack\Basic\Loop\Start\Rumble_Loop_Moderate_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Loop_Moderate_Stop
+      guid: 054ccc1e03693a41b7df48b41d421d88
+      id: 3051073172
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Stop
+        ObjectType: 4
+        guid: d1eaa77344c4c4418f257dba4a0c4322
+      - ElementName: Rumble_Loop_Moderate_Stop
+        ObjectType: 3
+        guid: 054ccc1e03693a41b7df48b41d421d88
+      Path: Events\RumblePack\Basic\Loop\Stop\Rumble_Loop_Moderate_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Loop_Soft_Start
+      guid: bdbf851cdda1bd49a00dd6927adeb8cc
+      id: 163788619
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Start
+        ObjectType: 4
+        guid: b8fe0092d051004aa7866c0c446d0008
+      - ElementName: Rumble_Loop_Soft_Start
+        ObjectType: 3
+        guid: bdbf851cdda1bd49a00dd6927adeb8cc
+      Path: Events\RumblePack\Basic\Loop\Start\Rumble_Loop_Soft_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Loop_Soft_Stop
+      guid: a1b4ab2ddc59c54cb4e389b351803b77
+      id: 1866670057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Stop
+        ObjectType: 4
+        guid: d1eaa77344c4c4418f257dba4a0c4322
+      - ElementName: Rumble_Loop_Soft_Stop
+        ObjectType: 3
+        guid: a1b4ab2ddc59c54cb4e389b351803b77
+      Path: Events\RumblePack\Basic\Loop\Stop\Rumble_Loop_Soft_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Loop_Strong_Start
+      guid: 0ca57226080bcc458a357f3fdabe1cb3
+      id: 4062466626
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Start
+        ObjectType: 4
+        guid: b8fe0092d051004aa7866c0c446d0008
+      - ElementName: Rumble_Loop_Strong_Start
+        ObjectType: 3
+        guid: 0ca57226080bcc458a357f3fdabe1cb3
+      Path: Events\RumblePack\Basic\Loop\Start\Rumble_Loop_Strong_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Loop_Strong_Stop
+      guid: 5eaee9546e0ef64fbd505d5271904cad
+      id: 2528916666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Stop
+        ObjectType: 4
+        guid: d1eaa77344c4c4418f257dba4a0c4322
+      - ElementName: Rumble_Loop_Strong_Stop
+        ObjectType: 3
+        guid: 5eaee9546e0ef64fbd505d5271904cad
+      Path: Events\RumblePack\Basic\Loop\Stop\Rumble_Loop_Strong_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Multiple_Clicks_Moderate
+      guid: ec3fa4486a69484c954ca782a9ca3d54
+      id: 2725327425
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Multiple Clicks
+        ObjectType: 4
+        guid: d01c0c6f6a34844ca3188f9854cf1c31
+      - ElementName: Rumble_Multiple_Clicks_Moderate
+        ObjectType: 3
+        guid: ec3fa4486a69484c954ca782a9ca3d54
+      Path: Events\RumblePack\Basic\Multiple Clicks\Rumble_Multiple_Clicks_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Multiple_Clicks_Soft
+      guid: aa1d1189f2b13b4abdc8bb74bf5ae4b5
+      id: 3086519466
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Multiple Clicks
+        ObjectType: 4
+        guid: d01c0c6f6a34844ca3188f9854cf1c31
+      - ElementName: Rumble_Multiple_Clicks_Soft
+        ObjectType: 3
+        guid: aa1d1189f2b13b4abdc8bb74bf5ae4b5
+      Path: Events\RumblePack\Basic\Multiple Clicks\Rumble_Multiple_Clicks_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Multiple_Clicks_Strong
+      guid: 4f0003358c3ab1459c4e43e69ed04091
+      id: 2474067775
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Multiple Clicks
+        ObjectType: 4
+        guid: d01c0c6f6a34844ca3188f9854cf1c31
+      - ElementName: Rumble_Multiple_Clicks_Strong
+        ObjectType: 3
+        guid: 4f0003358c3ab1459c4e43e69ed04091
+      Path: Events\RumblePack\Basic\Multiple Clicks\Rumble_Multiple_Clicks_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Open_Door
+      guid: bd93d276df379546ac6329a64df8cb65
+      id: 1734460416
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Interaction
+        ObjectType: 4
+        guid: f57fac4b723a2c4da2b9fc3f0f08133b
+      - ElementName: Rumble_Open_Door
+        ObjectType: 3
+        guid: bd93d276df379546ac6329a64df8cb65
+      Path: Events\RumblePack\Context\Interaction\Rumble_Open_Door
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Open_Vault
+      guid: 04a3841097d6bf4898f99e178dceffdf
+      id: 3954634652
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Interaction
+        ObjectType: 4
+        guid: f57fac4b723a2c4da2b9fc3f0f08133b
+      - ElementName: Rumble_Open_Vault
+        ObjectType: 3
+        guid: 04a3841097d6bf4898f99e178dceffdf
+      Path: Events\RumblePack\Context\Interaction\Rumble_Open_Vault
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_PickUp_Item
+      guid: 6e83e4bd8247af4b8c1836ca85b7f918
+      id: 1029149793
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Interaction
+        ObjectType: 4
+        guid: f57fac4b723a2c4da2b9fc3f0f08133b
+      - ElementName: Rumble_PickUp_Item
+        ObjectType: 3
+        guid: 6e83e4bd8247af4b8c1836ca85b7f918
+      Path: Events\RumblePack\Context\Interaction\Rumble_PickUp_Item
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Short_Slide_Moderate
+      guid: b95ed9ec132eb84facbd4576e7669ef9
+      id: 3220023001
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Short
+        ObjectType: 4
+        guid: 086f02256d4f8746945d0af8fc8f60d5
+      - ElementName: Rumble_Short_Slide_Moderate
+        ObjectType: 3
+        guid: b95ed9ec132eb84facbd4576e7669ef9
+      Path: Events\RumblePack\Basic\Slide\Short\Rumble_Short_Slide_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Short_Slide_Soft
+      guid: 6017e623c7756d4ba11a010e88cbe6ec
+      id: 2703477330
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Short
+        ObjectType: 4
+        guid: 086f02256d4f8746945d0af8fc8f60d5
+      - ElementName: Rumble_Short_Slide_Soft
+        ObjectType: 3
+        guid: 6017e623c7756d4ba11a010e88cbe6ec
+      Path: Events\RumblePack\Basic\Slide\Short\Rumble_Short_Slide_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Short_Slide_Strong
+      guid: e7ce6b540e847e4aa026a4f860152cfe
+      id: 2692583735
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Short
+        ObjectType: 4
+        guid: 086f02256d4f8746945d0af8fc8f60d5
+      - ElementName: Rumble_Short_Slide_Strong
+        ObjectType: 3
+        guid: e7ce6b540e847e4aa026a4f860152cfe
+      Path: Events\RumblePack\Basic\Slide\Short\Rumble_Short_Slide_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Single_Click_Moderate
+      guid: 6daaf7ee98944245be20ef97dabdb463
+      id: 3057800948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Single Click
+        ObjectType: 4
+        guid: 945cce36109d3946a63f5c9d43bc3832
+      - ElementName: Rumble_Single_Click_Moderate
+        ObjectType: 3
+        guid: 6daaf7ee98944245be20ef97dabdb463
+      Path: Events\RumblePack\Basic\Single Click\Rumble_Single_Click_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Single_Click_Soft
+      guid: 7e681086111f4b4b8546c4d99fc5355d
+      id: 1525349235
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Single Click
+        ObjectType: 4
+        guid: 945cce36109d3946a63f5c9d43bc3832
+      - ElementName: Rumble_Single_Click_Soft
+        ObjectType: 3
+        guid: 7e681086111f4b4b8546c4d99fc5355d
+      Path: Events\RumblePack\Basic\Single Click\Rumble_Single_Click_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Single_Click_Strong
+      guid: 70df504de3b8d242bbee9ee5f009405c
+      id: 1187842594
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Single Click
+        ObjectType: 4
+        guid: 945cce36109d3946a63f5c9d43bc3832
+      - ElementName: Rumble_Single_Click_Strong
+        ObjectType: 3
+        guid: 70df504de3b8d242bbee9ee5f009405c
+      Path: Events\RumblePack\Basic\Single Click\Rumble_Single_Click_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Up_Double_Click_Moderate
+      guid: e874449cb2ab1546adc7d009489634eb
+      id: 106909173
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Up
+        ObjectType: 4
+        guid: 9a57b2103f9386498bb5a89f270037a0
+      - ElementName: Rumble_Up_Double_Click_Moderate
+        ObjectType: 3
+        guid: e874449cb2ab1546adc7d009489634eb
+      Path: Events\RumblePack\Basic\Double Click\Up\Rumble_Up_Double_Click_Moderate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Up_Double_Click_Soft
+      guid: ec75d2235cc93d48845d8400b23c2506
+      id: 2178405126
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Up
+        ObjectType: 4
+        guid: 9a57b2103f9386498bb5a89f270037a0
+      - ElementName: Rumble_Up_Double_Click_Soft
+        ObjectType: 3
+        guid: ec75d2235cc93d48845d8400b23c2506
+      Path: Events\RumblePack\Basic\Double Click\Up\Rumble_Up_Double_Click_Soft
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rumble_Up_Double_Click_Strong
+      guid: 4036fa41b072a6418a4592af934b4d87
+      id: 229850739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Up
+        ObjectType: 4
+        guid: 9a57b2103f9386498bb5a89f270037a0
+      - ElementName: Rumble_Up_Double_Click_Strong
+        ObjectType: 3
+        guid: 4036fa41b072a6418a4592af934b4d87
+      Path: Events\RumblePack\Basic\Double Click\Up\Rumble_Up_Double_Click_Strong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX
+      guid: b1270ec5fdfaf241a6c0d3497b581601
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b1270ec5fdfaf241a6c0d3497b581601
+      Path: Events\RumblePack\Context\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Short
+      guid: 086f02256d4f8746945d0af8fc8f60d5
+      id: 2585211341
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      - ElementName: Short
+        ObjectType: 4
+        guid: 086f02256d4f8746945d0af8fc8f60d5
+      Path: Events\RumblePack\Basic\Slide\Short
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Single Click
+      guid: 945cce36109d3946a63f5c9d43bc3832
+      id: 999643621
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Single Click
+        ObjectType: 4
+        guid: 945cce36109d3946a63f5c9d43bc3832
+      Path: Events\RumblePack\Basic\Single Click
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Slide
+      guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      id: 3686556480
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Slide
+        ObjectType: 4
+        guid: 0f9b059bff4ddf4fbae8702f9b4c44f8
+      Path: Events\RumblePack\Basic\Slide
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Start
+      guid: b8fe0092d051004aa7866c0c446d0008
+      id: 1281810935
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Start
+        ObjectType: 4
+        guid: b8fe0092d051004aa7866c0c446d0008
+      Path: Events\RumblePack\Basic\Loop\Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop
+      guid: d1eaa77344c4c4418f257dba4a0c4322
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Loop
+        ObjectType: 4
+        guid: b3ba6cee1272474dbbe4dd71a57d0fc8
+      - ElementName: Stop
+        ObjectType: 4
+        guid: d1eaa77344c4c4418f257dba4a0c4322
+      Path: Events\RumblePack\Basic\Loop\Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Up
+      guid: 9a57b2103f9386498bb5a89f270037a0
+      id: 1551306158
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Basic
+        ObjectType: 4
+        guid: 4725ccf72749444dbede2ab130bd5231
+      - ElementName: Double Click
+        ObjectType: 4
+        guid: 8b31cddc2e07244387c1adb7aecb82f6
+      - ElementName: Up
+        ObjectType: 4
+        guid: 9a57b2103f9386498bb5a89f270037a0
+      Path: Events\RumblePack\Basic\Double Click\Up
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Variation
+      guid: ce65774ac3bbc0469eec447f9e1938a4
+      id: 4134974548
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: RumblePack
+        ObjectType: 12
+        guid: 22ed3d74325bf94dbbe3432e691d3f3c
+      - ElementName: Context
+        ObjectType: 4
+        guid: f8f3e9901000ca43a4b6241ab488685f
+      - ElementName: Variation
+        ObjectType: 4
+        guid: ce65774ac3bbc0469eec447f9e1938a4
+      Path: Events\RumblePack\Context\Variation
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\SettingsMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -3337,7 +4514,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9cea611173ceb54889f7c01b3e4271d7
     GuidInternal: 
-    m_lastTime: -8584512593880411627
+    m_lastTime: -8584484939135122912
     List:
     - name: Master_Volume
       guid: 2b3d69338de44446820be47ae3949c52
@@ -3609,7 +4786,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit\Stalker
     guid: 1315252baa85424facffb67809045d19
     GuidInternal: 
-    m_lastTime: -8584512641552782397
+    m_lastTime: -8584484939135107845
     List:
     - name: Stalker_IsLockedOnPlayer
       guid: 46045f44416ac54bb0b4afcb60034328
@@ -3869,7 +5046,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584557558278424395
     List: []
-  ExpandedFileSystemItemIds: 02000000040000000600000007000000090000000a0000000f00000010000000150000001900000022000000230000002500000027000000290000002c0000002d0000002e000000510000005500000056000000570000005c0000005d0000005e0000005f00000060000000620000006300000065000000660000006700000068000000690000006a0000006b0000006c0000007300000081000000830000008a0000008c0000008e00000090000000930000009400000095000000960000009700000098000000990000009a0000009b0000009d0000009e000000a0000000a1000000a2000000a3000000a4000000bb000000bc000000be000000cf000000d1000000d2000000e5000000
+  ExpandedFileSystemItemIds: 01000000020000000600000007000000090000000a0000000f0000001000000015000000190000002200000023000000250000002700000028000000290000002c0000002d0000002e0000003b0000003e0000004a0000004b0000004d000000510000005500000056000000570000005d0000005e0000005f00000060000000620000006300000065000000660000006700000068000000690000006a0000006b0000006c0000007300000081000000830000008a0000008c0000008e00000090000000930000009400000095000000960000009700000098000000990000009a0000009b0000009d0000009e000000a0000000a1000000a2000000a3000000a4000000bb000000bc000000be000000c1000000c2000000cf000000d2000000e5000000
   ExpandedWaapiItemIds: 020000001f000000270000002c0000002d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
